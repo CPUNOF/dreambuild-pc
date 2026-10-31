@@ -1,7 +1,5 @@
 # DreamBuild PC
 
-Publicação do site e da API: consulte [o guia da Vercel](docs/publicacao-vercel.md). Use a raiz do repositório como Root Directory.
-
 Projeto acadêmico de **Breno Dantas e Kaio Marques**.
 
 Loja de hardware com catálogo, carrinho, montagem de computadores, verificação de compatibilidade, comparação de preços, compra simulada e comunidade de configurações. As compras não geram cobranças nem entregas reais.
