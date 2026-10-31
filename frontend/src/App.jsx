@@ -454,9 +454,11 @@ export default function App() {
             </p>
           </div>
           <ServiceStatus />
-          <a href="/api-docs/" target="_blank" rel="noreferrer">
-            Documentação da API
-          </a>
+          {!auth.loading && auth.user?.role === "ADMIN" && (
+            <a href="/api-docs/" target="_blank" rel="noreferrer">
+              Documentação da API
+            </a>
+          )}
         </div>
       </footer>
     </>
