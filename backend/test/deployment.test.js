@@ -2,6 +2,7 @@ import assert from "node:assert/strict";
 import { test } from "node:test";
 import { generateKeyPairSync } from "node:crypto";
 import { spawnSync } from "node:child_process";
+import { cookieOptions } from "../src/config/sessionConfig.js";
 import { getApps, deleteApp } from "firebase-admin/app";
 import {
   getDatabase,
@@ -21,17 +22,40 @@ test("Firebase Auth inicia mesmo quando o runtime não permite require de módul
   assert.equal(result.status, 0, result.stderr);
 });
 
+test("entrada da nuvem recusa iniciar sem segredo mesmo se o provedor não definir NODE_ENV", () => {
+  const result = spawnSync(
+    process.execPath,
+    [
+      "--input-type=module",
+      "-e",
+      "import('../api/server.js').then(() => process.exit(1), error => process.exit(error.message.includes('SESSION_SECRET') ? 0 : 2))",
+    ],
+    {
+      cwd: new URL("..", import.meta.url),
+      env: { ...process.env, NODE_ENV: "", SESSION_SECRET: "" },
+      encoding: "utf8",
+    },
+  );
+  assert.equal(result.status, 0, result.stderr);
+});
+
 test("entrypoint da nuvem atende HTTP e restringe origens sem consultar o banco", async () => {
   const previous = {
     origin: process.env.FRONTEND_ORIGINS,
     domain: process.env.VERCEL_PROJECT_PRODUCTION_URL,
+    environment: process.env.NODE_ENV,
+    secret: process.env.SESSION_SECRET,
   };
   let server;
   try {
     delete process.env.FRONTEND_ORIGINS;
+    process.env.SESSION_SECRET =
+      "segredo-exclusivo-do-teste-de-deploy-32-caracteres";
     process.env.VERCEL_PROJECT_PRODUCTION_URL =
       "dreambuild-deployment-test.vercel.app";
     server = (await import("../../api/server.js")).default;
+    assert.equal(process.env.NODE_ENV, "production");
+    assert.equal(cookieOptions().secure, true);
     await new Promise((resolve) => server.listen(0, "127.0.0.1", resolve));
     const address = `http://127.0.0.1:${server.address().port}/api/health`;
     const ok = await fetch(address, {
@@ -55,6 +79,10 @@ test("entrypoint da nuvem atende HTTP e restringe origens sem consultar o banco"
     if (previous.domain === undefined)
       delete process.env.VERCEL_PROJECT_PRODUCTION_URL;
     else process.env.VERCEL_PROJECT_PRODUCTION_URL = previous.domain;
+    if (previous.environment === undefined) delete process.env.NODE_ENV;
+    else process.env.NODE_ENV = previous.environment;
+    if (previous.secret === undefined) delete process.env.SESSION_SECRET;
+    else process.env.SESSION_SECRET = previous.secret;
   }
 });
 

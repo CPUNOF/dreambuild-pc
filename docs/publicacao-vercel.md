@@ -17,6 +17,8 @@ O Firebase Admin está fixado em 14.5.0. O `overrides` da raiz limita apenas o `
 
 O domínio padrão é obtido das variáveis de sistema `VERCEL_PROJECT_PRODUCTION_URL` e `VERCEL_URL`. Se usar domínio próprio, configure `FRONTEND_ORIGINS` com a origem HTTPS exata; várias origens são separadas por vírgulas. Não use `*` com sessões. Configure também o domínio do site em Firebase Authentication → Settings → Authorized domains, para o login Google.
 
+A entrada `api/server.js` ativa explicitamente o modo de produção do backend, inclusive no preset Other: a sessão exige `SESSION_SECRET`, usa cookies HTTPS e reconhece o proxy da Vercel.
+
 ## Conferência no endereço publicado
 
 1. `/api/health` deve retornar JSON; `database: not-checked` confirma apenas presença da configuração, não uma leitura do Firestore.

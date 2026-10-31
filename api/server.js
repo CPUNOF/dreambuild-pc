@@ -1,6 +1,9 @@
 import { createApp } from "../backend/src/app.js";
 import { createHttpServer } from "../backend/src/httpServer.js";
 
+// A entrada da nuvem exige segredo persistente e cookies HTTPS mesmo no preset Other.
+process.env.NODE_ENV = "production";
+
 // No deploy, a interface e a API compartilham o mesmo domínio.
 const domains = [
   process.env.VERCEL_PROJECT_PRODUCTION_URL,
