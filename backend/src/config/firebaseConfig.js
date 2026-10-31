@@ -9,25 +9,32 @@ export class FirebaseConfigurationError extends Error {}
 export function getDatabase() {
   const projectId = process.env.FIREBASE_PROJECT_ID?.trim();
   const credentialPath = process.env.GOOGLE_APPLICATION_CREDENTIALS?.trim();
-  if (!projectId || !credentialPath) {
+  const credentialJson = process.env.FIREBASE_SERVICE_ACCOUNT_JSON?.trim();
+  if (!projectId || (!credentialPath && !credentialJson)) {
     throw new FirebaseConfigurationError(
-      "Configure FIREBASE_PROJECT_ID e GOOGLE_APPLICATION_CREDENTIALS no backend/.env.",
+      "Configure FIREBASE_PROJECT_ID e uma credencial de serviço no ambiente do backend.",
     );
   }
   let isFile = false;
   try {
-    isFile = isAbsolute(credentialPath) && statSync(credentialPath).isFile();
+    isFile =
+      !!credentialPath &&
+      isAbsolute(credentialPath) &&
+      statSync(credentialPath).isFile();
   } catch {
     /* Arquivo ausente ou sem permissão de leitura. */
   }
-  if (!isFile) {
+  if (!credentialJson && !isFile) {
     throw new FirebaseConfigurationError(
       "O caminho das credenciais deve ser absoluto e apontar para o JSON salvo no computador.",
     );
   }
   let credential;
   try {
-    credential = cert(credentialPath);
+    const source = credentialJson ? JSON.parse(credentialJson) : credentialPath;
+    if (credentialJson && source.project_id !== projectId)
+      throw new Error("Projeto divergente");
+    credential = cert(source);
   } catch {
     throw new FirebaseConfigurationError(
       "O arquivo precisa ser o JSON de conta de serviço baixado do Firebase, com uma chave privada válida.",

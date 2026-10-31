@@ -1,5 +1,7 @@
 # Documentação técnica
 
+Publicação: [guia da Vercel](publicacao-vercel.md), incluindo API, credenciais no painel e verificação do site completo.
+
 | Documento | Conteúdo |
 | --- | --- |
 | [API](api.md) | Rotas, entradas, permissões, respostas e WebSocket |

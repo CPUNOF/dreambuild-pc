@@ -10,7 +10,8 @@ export class HealthController {
         version: "0.1.0",
         database:
           process.env.FIREBASE_PROJECT_ID &&
-          process.env.GOOGLE_APPLICATION_CREDENTIALS
+          (process.env.GOOGLE_APPLICATION_CREDENTIALS ||
+            process.env.FIREBASE_SERVICE_ACCOUNT_JSON)
             ? "not-checked"
             : "not-configured",
       },
