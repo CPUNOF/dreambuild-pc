@@ -7,6 +7,43 @@ import {
   FirebaseConfigurationError,
 } from "../src/config/firebaseConfig.js";
 
+test("entrypoint da nuvem atende HTTP e restringe origens sem consultar o banco", async () => {
+  const previous = {
+    origin: process.env.FRONTEND_ORIGINS,
+    domain: process.env.VERCEL_PROJECT_PRODUCTION_URL,
+  };
+  let server;
+  try {
+    delete process.env.FRONTEND_ORIGINS;
+    process.env.VERCEL_PROJECT_PRODUCTION_URL =
+      "dreambuild-deployment-test.vercel.app";
+    server = (await import("../../api/server.js")).default;
+    await new Promise((resolve) => server.listen(0, "127.0.0.1", resolve));
+    const address = `http://127.0.0.1:${server.address().port}/api/health`;
+    const ok = await fetch(address, {
+      headers: { Origin: "https://dreambuild-deployment-test.vercel.app" },
+    });
+    assert.equal(ok.status, 200);
+    assert.equal(
+      ok.headers.get("access-control-allow-origin"),
+      "https://dreambuild-deployment-test.vercel.app",
+    );
+    assert.equal((await ok.json()).data.service, "dreambuild-api");
+    const denied = await fetch(address, {
+      headers: { Origin: "https://unexpected.example" },
+    });
+    assert.equal(denied.headers.get("access-control-allow-origin"), null);
+    assert.ok(server.io);
+  } finally {
+    if (server) await new Promise((resolve) => server.io.close(resolve));
+    if (previous.origin === undefined) delete process.env.FRONTEND_ORIGINS;
+    else process.env.FRONTEND_ORIGINS = previous.origin;
+    if (previous.domain === undefined)
+      delete process.env.VERCEL_PROJECT_PRODUCTION_URL;
+    else process.env.VERCEL_PROJECT_PRODUCTION_URL = previous.domain;
+  }
+});
+
 test("credencial por variável rejeita JSON inválido/projeto divergente sem expor seu conteúdo", () => {
   const old = {
     id: process.env.FIREBASE_PROJECT_ID,
