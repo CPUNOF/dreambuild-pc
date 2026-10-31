@@ -8,13 +8,17 @@
   "functions": {
     "api/server.js": {
       "maxDuration": 180,
-      "includeFiles": "{backend/data/**,frontend/public/models/**}"
+      "includeFiles": "{backend/data/**,frontend/public/models/**,node_modules/swagger-ui-dist/**}"
     }
   },
   "rewrites": [
     { "source": "/api/:path*", "destination": "/api/server" },
+    { "source": "/socket.io/", "destination": "/api/server" },
+    { "source": "/socket.io", "destination": "/api/server" },
     { "source": "/socket.io/:path*", "destination": "/api/server" },
     { "source": "/openapi.json", "destination": "/api/server" },
+    { "source": "/api-docs/", "destination": "/api/server" },
+    { "source": "/api-docs", "destination": "/api/server" },
     { "source": "/api-docs/:path*", "destination": "/api/server" },
     {
       "source": "/(.*)",

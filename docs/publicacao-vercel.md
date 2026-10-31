@@ -19,6 +19,8 @@ O domínio padrão é obtido das variáveis de sistema `VERCEL_PROJECT_PRODUCTIO
 
 A entrada `api/server.js` ativa explicitamente o modo de produção do backend, inclusive no preset Other: a sessão exige `SESSION_SECRET`, usa cookies HTTPS e reconhece o proxy da Vercel.
 
+As rotas exatas `/socket.io/` e `/api-docs/`, com e sem barra final, precisam chegar à função antes do fallback da interface. Os arquivos de `swagger-ui-dist` são incluídos explicitamente no pacote da função para que CSS e JavaScript da documentação sejam servidos corretamente.
+
 ## Conferência no endereço publicado
 
 1. `/api/health` deve retornar JSON; `database: not-checked` confirma apenas presença da configuração, não uma leitura do Firestore.
