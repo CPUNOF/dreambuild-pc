@@ -13,6 +13,8 @@ Em Settings → Environment Variables, configure para Production (e para Preview
 
 Não envie o JSON pelo chat ou pelo GitHub. Não configure `GOOGLE_APPLICATION_CREDENTIALS` com um caminho `C:/...` na nuvem. A credencial é lida em memória; localmente o caminho de arquivo continua funcionando. Alterações nas variáveis exigem novo deploy.
 
+O Firebase Admin está fixado em 14.5.0. O `overrides` da raiz limita apenas o `jose` usado por `jwks-rsa` a 5.10.0: essa versão oferece as APIs de conversão de chaves necessárias e uma entrada CommonJS. Isso evita o `ERR_REQUIRE_ESM` encontrado na inicialização da função da Vercel, conforme os problemas [firebase-admin-node #3181](https://github.com/firebase/firebase-admin-node/issues/3181) e [node-jwks-rsa #507](https://github.com/auth0/node-jwks-rsa/issues/507). Reavalie a exceção quando o upstream corrigir o carregamento; o teste de deploy também executa o import com `require(ESM)` desativado.
+
 O domínio padrão é obtido das variáveis de sistema `VERCEL_PROJECT_PRODUCTION_URL` e `VERCEL_URL`. Se usar domínio próprio, configure `FRONTEND_ORIGINS` com a origem HTTPS exata; várias origens são separadas por vírgulas. Não use `*` com sessões. Configure também o domínio do site em Firebase Authentication → Settings → Authorized domains, para o login Google.
 
 ## Conferência no endereço publicado

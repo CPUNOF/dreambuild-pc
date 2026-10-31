@@ -1,11 +1,25 @@
 import assert from "node:assert/strict";
 import { test } from "node:test";
 import { generateKeyPairSync } from "node:crypto";
+import { spawnSync } from "node:child_process";
 import { getApps, deleteApp } from "firebase-admin/app";
 import {
   getDatabase,
   FirebaseConfigurationError,
 } from "../src/config/firebaseConfig.js";
+
+test("Firebase Auth inicia mesmo quando o runtime não permite require de módulos ESM", () => {
+  const result = spawnSync(
+    process.execPath,
+    [
+      "--no-experimental-require-module",
+      "-e",
+      "require('firebase-admin/auth')",
+    ],
+    { cwd: new URL("..", import.meta.url), encoding: "utf8" },
+  );
+  assert.equal(result.status, 0, result.stderr);
+});
 
 test("entrypoint da nuvem atende HTTP e restringe origens sem consultar o banco", async () => {
   const previous = {

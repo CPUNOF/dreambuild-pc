@@ -22,5 +22,10 @@
   "devDependencies": {
     "concurrently": "^9.2.0",
     "prettier": "^3.9.10"
+  },
+  "overrides": {
+    "jwks-rsa": {
+      "jose": "5.10.0"
+    }
   }
 }
