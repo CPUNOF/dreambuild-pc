@@ -1,6 +1,6 @@
 # DreamBuild PC
 
-Projeto acadêmico de **Breno Dantas e Kaio Marques**, desenvolvido para Programação Web Avançada.
+Projeto acadêmico de **Breno Dantas e Kaio Marques**.
 
 Loja de hardware com catálogo, carrinho, montagem de computadores, verificação de compatibilidade, comparação de preços, compra simulada e comunidade de configurações. As compras não geram cobranças nem entregas reais.
 
