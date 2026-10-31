@@ -32,4 +32,18 @@ As rotas exatas `/socket.io/` e `/api-docs/`, com e sem barra final, precisam ch
 
 A implementação usa Socket.IO com transporte WebSocket. Segundo a [documentação da Vercel](https://vercel.com/docs/functions/websockets), Fluid Compute é necessário e conexões terminam ao atingir a duração da função. A configuração deste projeto limita a função a 180 segundos e a simulação já limita cada execução a dois minutos. Uma reconexão pode atingir outra instância; uma simulação interrompida precisa ser iniciada novamente. Controles e notificações mantidos em memória não fornecem coordenação global entre instâncias. Persistência de contas, montagens e pedidos permanece no Firestore.
 
-A cota do Firebase e os limites do plano da Vercel continuam valendo. Esta preparação e os testes locais não equivalem a um deploy validado: registre o endereço e o resultado da conferência após publicar.
+A cota do Firebase e os limites do plano da Vercel continuam valendo.
+
+## Validação de produção — 31/10/2026
+
+Endereço: [dreambuild-pc.vercel.app](https://dreambuild-pc.vercel.app/). Código da aplicação validado: `84faf19`.
+
+- API e catálogo com leitura real do Firestore; referências de FPS, sistemas, ranking e galeria responderam corretamente.
+- Login e sessão CLIENT/ADMIN; cliente bloqueado na área administrativa; consulta de métricas como administrador e logout.
+- Montagem temporária criada, reaberta no Firestore e removida ao terminar a conferência.
+- Compra acadêmica de um cooler disponível: cartão fictício, recibo persistido, carrinho esvaziado e repetição da confirmação sem gerar outro pedido.
+- WebSocket autenticado: início da bancada, recebimento de amostra e parada confirmados no servidor publicado.
+- Recarga direta das páginas e documentação com HTML, CSS e JavaScript servidos corretamente.
+- 73 testes automatizados aprovados, build concluído e auditoria das dependências de produção sem alertas no momento da publicação.
+
+O provedor Google está ativado e o domínio de produção foi autorizado no Firebase. A conclusão interativa do login com a conta Google deve ser conferida pelo usuário no navegador normal; essa etapa não foi automatizada. A conferência não criou participantes fictícios no ranking público.
