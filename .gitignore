@@ -1,0 +1,24 @@
+node_modules/
+dist/
+coverage/
+.env
+.env.*
+!.env.example
+*.log
+.npm-cache/
+.cache/
+tmp/
+.DS_Store
+Thumbs.db
+.secrets/
+*-firebase-adminsdk-*.json
+firebase-service-account.json
+
+# Ferramentas locais e arquivos de trabalho
+.agents/
+.codex/
+.claude/
+skills-lock.json
+AGENTS.md
+tasks/
+blender_scripts/

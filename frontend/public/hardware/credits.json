@@ -1,0 +1,46 @@
+[
+  {
+    "id": "ryzen",
+    "file": "ryzen.jpg",
+    "title": "AMD@5nmCCD(6nmIOD)@Zen4@Raphael@Ryzen 7 7800X3D@100-000000910 BS 2312PGY 9LW3390030138 DSCx01.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:AMD@5nmCCD(6nmIOD)@Zen4@Raphael@Ryzen_7_7800X3D@100-000000910_BS_2312PGY_9LW3390030138_DSCx01.jpg",
+    "source": "https://upload.wikimedia.org/wikipedia/commons/c/cd/AMD%405nmCCD%286nmIOD%29%40Zen4%40Raphael%40Ryzen_7_7800X3D%40100-000000910_BS_2312PGY_9LW3390030138_DSCx01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "author": "FritzchensFritz",
+    "license": "CC0",
+    "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "description": "AMD Ryzen 7 7800X3D\n(Zen 4 | Raphael)"
+  },
+  {
+    "id": "rtx4090",
+    "file": "rtx4090.jpg",
+    "title": "Asus Strix RTX 4090.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Asus_Strix_RTX_4090.jpg",
+    "source": "https://upload.wikimedia.org/wikipedia/commons/7/76/Asus_Strix_RTX_4090.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "author": "<a href=\"//commons.wikimedia.org/wiki/User:Benlisquare\" title=\"User:Benlisquare\">Benlisquare</a>",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "description": "An <a href=\"https://en.wikipedia.org/wiki/GeForce_40_series\" class=\"extiw\" title=\"en:GeForce 40 series\">NVIDIA RTX 4090</a> graphics card (AIB variant: <a href=\"https://en.wikipedia.org/wiki/Asus\" class=\"extiw\" title=\"en:Asus\">Asus</a> ROG Strix)."
+  },
+  {
+    "id": "corsair",
+    "file": "corsair.jpg",
+    "title": "2023 Pamięci Corsair Vengeance RGB.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:2023_Pami%C4%99ci_Corsair_Vengeance_RGB.jpg",
+    "source": "https://upload.wikimedia.org/wikipedia/commons/5/53/2023_Pami%C4%99ci_Corsair_Vengeance_RGB.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "author": "<a href=\"//commons.wikimedia.org/wiki/User:Jacek_Halicki\" title=\"User:Jacek Halicki\">Jacek Halicki</a>",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "description": "Corsair Vengeance RGB, DDR5, 32 GB, 6000MHz, CL36 memories"
+  },
+  {
+    "id": "samsung",
+    "file": "samsung.jpg",
+    "title": "Samsung 980 PRO PCIe 4.0 NVMe SSD 1TB-top PNr°0915.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Samsung_980_PRO_PCIe_4.0_NVMe_SSD_1TB-top_PNr%C2%B00915.jpg",
+    "source": "https://upload.wikimedia.org/wikipedia/commons/7/75/Samsung_980_PRO_PCIe_4.0_NVMe_SSD_1TB-top_PNr%C2%B00915.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "author": "<a href=\"//commons.wikimedia.org/wiki/User:D-Kuru\" title=\"User:D-Kuru\">D-Kuru</a>",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "description": "A Samsung 980 Pro <a href=\"https://en.wikipedia.org/wiki/M.2\" class=\"extiw\" title=\"en:M.2\">m.2</a> PCIe <a href=\"https://en.wikipedia.org/wiki/NVM_Express\" class=\"extiw\" title=\"en:NVM Express\">NVMe</a> <a href=\"https://en.wikipedia.org/wiki/Solid-state_drive\" class=\"extiw\" title=\"en:Solid-state drive\">SSD</a> with 1TB of storage capacity"
+  }
+]

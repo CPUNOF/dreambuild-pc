@@ -1,0 +1,1405 @@
+[
+  {
+    "id": "tuf-b650",
+    "expectedModel": "TUF GAMING B650-PLUS WIFI",
+    "hardware": {
+      "ramSlots": 4,
+      "maxRamGb": 256,
+      "sataPorts": 4,
+      "m2Slots": [
+        {
+          "id": "M.2_1",
+          "protocols": [
+            "nvme"
+          ],
+          "formats": [
+            "M.2 2242",
+            "M.2 2260",
+            "M.2 2280"
+          ]
+        },
+        {
+          "id": "M.2_2",
+          "protocols": [
+            "nvme"
+          ],
+          "formats": [
+            "M.2 2242",
+            "M.2 2260",
+            "M.2 2280",
+            "M.2 22110"
+          ]
+        },
+        {
+          "id": "M.2_3",
+          "protocols": [
+            "nvme"
+          ],
+          "formats": [
+            "M.2 2242",
+            "M.2 2260",
+            "M.2 2280"
+          ]
+        }
+      ],
+      "storageFormats": [
+        "M.2 2242",
+        "M.2 2260",
+        "M.2 2280",
+        "M.2 22110",
+        "2.5 inch",
+        "3.5 inch"
+      ]
+    },
+    "technicalSource": "https://www.asus.com/motherboards-components/motherboards/tuf-gaming/tuf-gaming-b650-plus-wifi/techspec/",
+    "checkedAt": "2026-10-30",
+    "specifications": []
+  },
+  {
+    "id": "kabum-100672",
+    "expectedModel": "B450M Steel Legend",
+    "hardware": {
+      "ramSlots": 4,
+      "maxRamGb": 128,
+      "sataPorts": 4,
+      "m2Slots": [
+        {
+          "id": "M2_1",
+          "protocols": [
+            "nvme"
+          ],
+          "formats": [
+            "M.2 2242",
+            "M.2 2260",
+            "M.2 2280"
+          ]
+        },
+        {
+          "id": "M2_2",
+          "protocols": [
+            "sata"
+          ],
+          "formats": [
+            "M.2 2230",
+            "M.2 2242",
+            "M.2 2260",
+            "M.2 2280"
+          ],
+          "disabledSataPorts": [
+            3
+          ]
+        }
+      ],
+      "storageFormats": [
+        "M.2 2242",
+        "M.2 2260",
+        "M.2 2280",
+        "M.2 2230",
+        "2.5 inch",
+        "3.5 inch"
+      ]
+    },
+    "technicalSource": "https://www.asrock.com/MB/AMD/B450M%20Steel%20Legend/index.asp",
+    "checkedAt": "2026-10-30",
+    "specifications": []
+  },
+  {
+    "id": "kabum-133767",
+    "expectedModel": "Catálogo KaBuM! 133767",
+    "hardware": {
+      "ramSlots": 4,
+      "maxRamGb": 128,
+      "sataPorts": 4,
+      "m2Slots": [
+        {
+          "id": "M2_1",
+          "protocols": [
+            "nvme"
+          ],
+          "formats": [
+            "M.2 2242",
+            "M.2 2260",
+            "M.2 2280"
+          ]
+        },
+        {
+          "id": "M2_2",
+          "protocols": [
+            "sata"
+          ],
+          "formats": [
+            "M.2 2230",
+            "M.2 2242",
+            "M.2 2260",
+            "M.2 2280"
+          ],
+          "disabledSataPorts": [
+            3
+          ]
+        }
+      ],
+      "storageFormats": [
+        "M.2 2242",
+        "M.2 2260",
+        "M.2 2280",
+        "M.2 2230",
+        "2.5 inch",
+        "3.5 inch"
+      ]
+    },
+    "technicalSource": "https://www.asrock.com/MB/AMD/B450M%20Steel%20Legend/index.asp",
+    "checkedAt": "2026-10-30",
+    "specifications": []
+  },
+  {
+    "id": "kabum-1047422",
+    "expectedModel": "B550 GAMING WIFI6E",
+    "hardware": {
+      "ramSlots": 4,
+      "maxRamGb": 128,
+      "sataPorts": 6,
+      "m2Slots": [
+        {
+          "id": "M.2_1",
+          "protocols": [
+            "nvme",
+            "sata"
+          ],
+          "formats": [
+            "M.2 2242",
+            "M.2 2260",
+            "M.2 2280",
+            "M.2 22110"
+          ]
+        },
+        {
+          "id": "M.2_2",
+          "protocols": [
+            "nvme"
+          ],
+          "formats": [
+            "M.2 2242",
+            "M.2 2260",
+            "M.2 2280"
+          ]
+        }
+      ],
+      "storageFormats": [
+        "M.2 2242",
+        "M.2 2260",
+        "M.2 2280",
+        "M.2 22110",
+        "2.5 inch",
+        "3.5 inch"
+      ]
+    },
+    "technicalSource": "https://www.msi.com/Motherboard/B550-GAMING-WIFI6E/Specification",
+    "checkedAt": "2026-10-30",
+    "specifications": []
+  },
+  {
+    "id": "kabum-1047423",
+    "expectedModel": "B550M GAMING PLUS WIFI6E",
+    "hardware": {
+      "ramSlots": 4,
+      "maxRamGb": 128,
+      "sataPorts": 4,
+      "m2Slots": [
+        {
+          "id": "M.2_1",
+          "protocols": [
+            "nvme",
+            "sata"
+          ],
+          "formats": [
+            "M.2 2242",
+            "M.2 2260",
+            "M.2 2280"
+          ]
+        },
+        {
+          "id": "M.2_2",
+          "protocols": [
+            "nvme"
+          ],
+          "formats": [
+            "M.2 2242",
+            "M.2 2260",
+            "M.2 2280"
+          ]
+        }
+      ],
+      "storageFormats": [
+        "M.2 2242",
+        "M.2 2260",
+        "M.2 2280",
+        "2.5 inch",
+        "3.5 inch"
+      ]
+    },
+    "technicalSource": "https://www.msi.com/Motherboard/B550M-GAMING-PLUS-WIFI6E/Specification",
+    "checkedAt": "2026-10-30",
+    "specifications": []
+  },
+  {
+    "id": "kabum-114781",
+    "expectedModel": "B550M AORUS ELITE",
+    "hardware": {
+      "ramSlots": 4,
+      "maxRamGb": 128,
+      "sataPorts": 4,
+      "m2Slots": [
+        {
+          "id": "M2A_CPU",
+          "protocols": [
+            "nvme",
+            "sata"
+          ],
+          "formats": [
+            "M.2 2242",
+            "M.2 2260",
+            "M.2 2280",
+            "M.2 22110"
+          ]
+        },
+        {
+          "id": "M2B_SB",
+          "protocols": [
+            "nvme",
+            "sata"
+          ],
+          "formats": [
+            "M.2 2242",
+            "M.2 2260",
+            "M.2 2280"
+          ]
+        }
+      ],
+      "storageFormats": [
+        "M.2 2242",
+        "M.2 2260",
+        "M.2 2280",
+        "M.2 22110",
+        "2.5 inch",
+        "3.5 inch"
+      ]
+    },
+    "technicalSource": "https://www.gigabyte.com/Motherboard/B550M-AORUS-ELITE-rev-13/sp",
+    "checkedAt": "2026-10-30",
+    "specifications": []
+  },
+  {
+    "id": "kabum-229919",
+    "expectedModel": "Catálogo KaBuM! 229919",
+    "hardware": {
+      "ramSlots": 4,
+      "maxRamGb": 128,
+      "sataPorts": 4,
+      "m2Slots": [
+        {
+          "id": "M2A_CPU",
+          "protocols": [
+            "nvme",
+            "sata"
+          ],
+          "formats": [
+            "M.2 2242",
+            "M.2 2260",
+            "M.2 2280",
+            "M.2 22110"
+          ]
+        },
+        {
+          "id": "M2B_SB",
+          "protocols": [
+            "nvme",
+            "sata"
+          ],
+          "formats": [
+            "M.2 2242",
+            "M.2 2260",
+            "M.2 2280"
+          ]
+        }
+      ],
+      "storageFormats": [
+        "M.2 2242",
+        "M.2 2260",
+        "M.2 2280",
+        "M.2 22110",
+        "2.5 inch",
+        "3.5 inch"
+      ]
+    },
+    "technicalSource": "https://www.gigabyte.com/Motherboard/B550M-AORUS-ELITE-rev-13/sp",
+    "checkedAt": "2026-10-30",
+    "specifications": []
+  },
+  {
+    "id": "kabum-115216",
+    "expectedModel": "90MB14A0-C1BAY0",
+    "hardware": {
+      "ramSlots": 4,
+      "maxRamGb": 128,
+      "sataPorts": 4,
+      "m2Slots": [
+        {
+          "id": "M.2_1",
+          "protocols": [
+            "nvme",
+            "sata"
+          ],
+          "formats": [
+            "M.2 2242",
+            "M.2 2260",
+            "M.2 2280"
+          ]
+        },
+        {
+          "id": "M.2_2",
+          "protocols": [
+            "nvme",
+            "sata"
+          ],
+          "formats": [
+            "M.2 2242",
+            "M.2 2260",
+            "M.2 2280",
+            "M.2 22110"
+          ]
+        }
+      ],
+      "storageFormats": [
+        "M.2 2242",
+        "M.2 2260",
+        "M.2 2280",
+        "M.2 22110",
+        "2.5 inch",
+        "3.5 inch"
+      ]
+    },
+    "technicalSource": "https://www.asus.com/motherboards-components/motherboards/tuf-gaming/tuf-gaming-b550m-plus/techspec/",
+    "checkedAt": "2026-10-30",
+    "specifications": []
+  },
+  {
+    "id": "kabum-165124",
+    "expectedModel": "90MB17F0-M0EAY0",
+    "hardware": {
+      "ramSlots": 4,
+      "maxRamGb": 128,
+      "sataPorts": 4,
+      "m2Slots": [
+        {
+          "id": "M.2",
+          "protocols": [
+            "nvme",
+            "sata"
+          ],
+          "formats": [
+            "M.2 2242",
+            "M.2 2260",
+            "M.2 2280"
+          ]
+        }
+      ],
+      "storageFormats": [
+        "M.2 2242",
+        "M.2 2260",
+        "M.2 2280",
+        "2.5 inch",
+        "3.5 inch"
+      ]
+    },
+    "technicalSource": "https://www.asus.com/motherboards-components/motherboards/tuf-gaming/tuf-gaming-a520m-plus-wifi/techspec/",
+    "checkedAt": "2026-10-30",
+    "specifications": []
+  },
+  {
+    "id": "kabum-165133",
+    "expectedModel": "90MB17G0-M0EAY0",
+    "hardware": {
+      "ramSlots": 4,
+      "maxRamGb": 128,
+      "sataPorts": 4,
+      "m2Slots": [
+        {
+          "id": "M.2",
+          "protocols": [
+            "nvme",
+            "sata"
+          ],
+          "formats": [
+            "M.2 2242",
+            "M.2 2260",
+            "M.2 2280"
+          ]
+        }
+      ],
+      "storageFormats": [
+        "M.2 2242",
+        "M.2 2260",
+        "M.2 2280",
+        "2.5 inch",
+        "3.5 inch"
+      ]
+    },
+    "technicalSource": "https://www.asus.com/motherboards-components/motherboards/tuf-gaming/tuf-gaming-a520m-plus-ii/techspec/",
+    "checkedAt": "2026-10-30",
+    "specifications": []
+  },
+  {
+    "id": "kabum-280890",
+    "expectedModel": "A520M-A PRO",
+    "hardware": {
+      "ramSlots": 2,
+      "maxRamGb": 64,
+      "sataPorts": 4,
+      "m2Slots": [
+        {
+          "id": "M.2",
+          "protocols": [
+            "nvme",
+            "sata"
+          ],
+          "formats": [
+            "M.2 2242",
+            "M.2 2260",
+            "M.2 2280"
+          ]
+        }
+      ],
+      "storageFormats": [
+        "M.2 2242",
+        "M.2 2260",
+        "M.2 2280",
+        "2.5 inch",
+        "3.5 inch"
+      ]
+    },
+    "technicalSource": "https://www.msi.com/Motherboard/A520M-A-PRO/Specification",
+    "checkedAt": "2026-10-30",
+    "specifications": []
+  },
+  {
+    "id": "kabum-457818",
+    "expectedModel": "A520M DS3H V2",
+    "hardware": {
+      "ramSlots": 4,
+      "maxRamGb": 128,
+      "sataPorts": 4,
+      "m2Slots": [
+        {
+          "id": "M.2",
+          "protocols": [
+            "nvme",
+            "sata"
+          ],
+          "formats": [
+            "M.2 2242",
+            "M.2 2260",
+            "M.2 2280"
+          ]
+        }
+      ],
+      "storageFormats": [
+        "M.2 2242",
+        "M.2 2260",
+        "M.2 2280",
+        "2.5 inch",
+        "3.5 inch"
+      ],
+      "socket": "AM4"
+    },
+    "technicalSource": "https://www.gigabyte.com/Motherboard/A520M-DS3H-V2-rev-10/sp",
+    "checkedAt": "2026-10-30",
+    "specifications": []
+  },
+  {
+    "id": "kabum-474499",
+    "expectedModel": "A520m-K-V2",
+    "hardware": {
+      "ramSlots": 2,
+      "maxRamGb": 64,
+      "sataPorts": 4,
+      "m2Slots": [
+        {
+          "id": "M.2",
+          "protocols": [
+            "nvme",
+            "sata"
+          ],
+          "formats": [
+            "M.2 2280"
+          ]
+        }
+      ],
+      "storageFormats": [
+        "M.2 2280",
+        "2.5 inch",
+        "3.5 inch"
+      ],
+      "formFactor": "microATX"
+    },
+    "technicalSource": "https://www.gigabyte.com/Motherboard/A520M-K-V2-rev-10/sp",
+    "checkedAt": "2026-10-30",
+    "specifications": []
+  },
+  {
+    "id": "kabum-523145",
+    "expectedModel": "90MB1FV0-M0EAY0",
+    "hardware": {
+      "ramSlots": 4,
+      "maxRamGb": 192,
+      "sataPorts": 4,
+      "m2Slots": [
+        {
+          "id": "M.2_1",
+          "protocols": [
+            "nvme"
+          ],
+          "formats": [
+            "M.2 2242",
+            "M.2 2260",
+            "M.2 2280"
+          ]
+        },
+        {
+          "id": "M.2_2",
+          "protocols": [
+            "nvme"
+          ],
+          "formats": [
+            "M.2 2242",
+            "M.2 2260",
+            "M.2 2280"
+          ]
+        }
+      ],
+      "storageFormats": [
+        "M.2 2242",
+        "M.2 2260",
+        "M.2 2280",
+        "2.5 inch",
+        "3.5 inch"
+      ],
+      "formFactor": "microATX"
+    },
+    "technicalSource": "https://www.asus.com/motherboards-components/motherboards/tuf-gaming/tuf-gaming-b650m-e-wifi/techspec/",
+    "checkedAt": "2026-10-30",
+    "specifications": []
+  },
+  {
+    "id": "kabum-685202",
+    "expectedModel": "PRO B650M-B",
+    "hardware": {
+      "ramSlots": 2,
+      "maxRamGb": 128,
+      "sataPorts": 4,
+      "m2Slots": [
+        {
+          "id": "M.2_1",
+          "protocols": [
+            "nvme"
+          ],
+          "formats": [
+            "M.2 2260",
+            "M.2 2280"
+          ]
+        }
+      ],
+      "storageFormats": [
+        "M.2 2260",
+        "M.2 2280",
+        "2.5 inch",
+        "3.5 inch"
+      ]
+    },
+    "technicalSource": "https://www.msi.com/Motherboard/PRO-B650M-B/Specification",
+    "checkedAt": "2026-10-30",
+    "specifications": []
+  },
+  {
+    "id": "kabum-701357",
+    "expectedModel": "X870ETOMAHAWKWIFI",
+    "hardware": {
+      "ramSlots": 4,
+      "maxRamGb": 256,
+      "sataPorts": 4,
+      "m2Slots": [
+        {
+          "id": "M.2_1",
+          "protocols": [
+            "nvme"
+          ],
+          "formats": [
+            "M.2 2280",
+            "M.2 22110"
+          ]
+        },
+        {
+          "id": "M.2_2",
+          "protocols": [
+            "nvme"
+          ],
+          "formats": [
+            "M.2 2260",
+            "M.2 2280"
+          ],
+          "excludedCpuModels": [
+            "8500",
+            "8300"
+          ]
+        },
+        {
+          "id": "M.2_3",
+          "protocols": [
+            "nvme"
+          ],
+          "formats": [
+            "M.2 2260",
+            "M.2 2280"
+          ]
+        },
+        {
+          "id": "M.2_4",
+          "protocols": [
+            "nvme"
+          ],
+          "formats": [
+            "M.2 2260",
+            "M.2 2280"
+          ]
+        }
+      ],
+      "storageFormats": [
+        "M.2 2280",
+        "M.2 22110",
+        "M.2 2260",
+        "2.5 inch",
+        "3.5 inch"
+      ]
+    },
+    "technicalSource": "https://www.msi.com/Motherboard/MAG-X870E-TOMAHAWK-WIFI/Specification",
+    "checkedAt": "2026-10-30",
+    "specifications": []
+  },
+  {
+    "id": "kabum-726929",
+    "expectedModel": "90MB1KI0-M0EAY0",
+    "hardware": {
+      "ramSlots": 2,
+      "maxRamGb": 96,
+      "sataPorts": 4,
+      "m2Slots": [
+        {
+          "id": "M.2_1",
+          "protocols": [
+            "nvme"
+          ],
+          "formats": [
+            "M.2 2280"
+          ]
+        },
+        {
+          "id": "M.2_2",
+          "protocols": [
+            "nvme"
+          ],
+          "formats": [
+            "M.2 2280"
+          ]
+        }
+      ],
+      "storageFormats": [
+        "M.2 2280",
+        "2.5 inch",
+        "3.5 inch"
+      ]
+    },
+    "technicalSource": "https://www.asus.com/motherboards-components/motherboards/others/b650m-ayw-wifi/techspec/",
+    "checkedAt": "2026-10-30",
+    "specifications": []
+  },
+  {
+    "id": "kabum-875852",
+    "expectedModel": "B550M DS3H AC R2",
+    "hardware": {
+      "ramSlots": 4,
+      "maxRamGb": 128,
+      "sataPorts": 4,
+      "m2Slots": [
+        {
+          "id": "M2A_CPU",
+          "protocols": [
+            "nvme",
+            "sata"
+          ],
+          "formats": [
+            "M.2 2280"
+          ]
+        },
+        {
+          "id": "M2B_SB",
+          "protocols": [
+            "nvme",
+            "sata"
+          ],
+          "formats": [
+            "M.2 2280"
+          ]
+        }
+      ],
+      "storageFormats": [
+        "M.2 2280",
+        "2.5 inch",
+        "3.5 inch"
+      ]
+    },
+    "technicalSource": "https://www.gigabyte.com/Motherboard/B550M-DS3H-AC-R2-rev-10/sp",
+    "checkedAt": "2026-10-30",
+    "specifications": []
+  },
+  {
+    "id": "kabum-910136",
+    "expectedModel": "Catálogo KaBuM! 910136",
+    "hardware": {
+      "ramSlots": 2,
+      "maxRamGb": 64,
+      "sataPorts": 4,
+      "m2Slots": [
+        {
+          "id": "M.2",
+          "protocols": [
+            "nvme",
+            "sata"
+          ],
+          "formats": [
+            "M.2 2242",
+            "M.2 2260",
+            "M.2 2280"
+          ]
+        }
+      ],
+      "storageFormats": [
+        "M.2 2242",
+        "M.2 2260",
+        "M.2 2280",
+        "2.5 inch",
+        "3.5 inch"
+      ]
+    },
+    "technicalSource": "https://www.asus.com/motherboards-components/motherboards/prime/prime-a520m-r/techspec/",
+    "checkedAt": "2026-10-30",
+    "specifications": []
+  },
+  {
+    "id": "kabum-941241",
+    "expectedModel": "PROB760MAWIFI",
+    "hardware": {
+      "ramSlots": 4,
+      "maxRamGb": 256,
+      "sataPorts": 4,
+      "m2Slots": [
+        {
+          "id": "M.2_1",
+          "protocols": [
+            "nvme"
+          ],
+          "formats": [
+            "M.2 2242",
+            "M.2 2260",
+            "M.2 2280"
+          ]
+        },
+        {
+          "id": "M.2_2",
+          "protocols": [
+            "nvme",
+            "sata"
+          ],
+          "formats": [
+            "M.2 2242",
+            "M.2 2260",
+            "M.2 2280"
+          ],
+          "disabledSataPorts": [
+            8
+          ],
+          "disabledSataWhen": "sata"
+        }
+      ],
+      "storageFormats": [
+        "M.2 2242",
+        "M.2 2260",
+        "M.2 2280",
+        "2.5 inch",
+        "3.5 inch"
+      ],
+      "sataPortIds": [
+        5,
+        6,
+        7,
+        8
+      ]
+    },
+    "technicalSource": "https://www.msi.com/Motherboard/PRO-B760M-A-WIFI/Specification",
+    "checkedAt": "2026-10-30",
+    "specifications": []
+  },
+  {
+    "id": "kabum-941251",
+    "expectedModel": "B850MGPWIFI6E",
+    "hardware": {
+      "ramSlots": 4,
+      "maxRamGb": 256,
+      "sataPorts": 4,
+      "m2Slots": [
+        {
+          "id": "M.2_1",
+          "protocols": [
+            "nvme"
+          ],
+          "formats": [
+            "M.2 2260",
+            "M.2 2280"
+          ]
+        },
+        {
+          "id": "M.2_2",
+          "protocols": [
+            "nvme"
+          ],
+          "formats": [
+            "M.2 2260",
+            "M.2 2280"
+          ]
+        }
+      ],
+      "storageFormats": [
+        "M.2 2260",
+        "M.2 2280",
+        "2.5 inch",
+        "3.5 inch"
+      ]
+    },
+    "technicalSource": "https://www.msi.com/Motherboard/B850M-GAMING-PLUS-WIFI6E/Specification",
+    "checkedAt": "2026-10-30",
+    "specifications": []
+  },
+  {
+    "id": "kabum-941257",
+    "expectedModel": "B550MAPRO",
+    "hardware": {
+      "ramSlots": 2,
+      "maxRamGb": 64,
+      "sataPorts": 4,
+      "m2Slots": [
+        {
+          "id": "M.2",
+          "protocols": [
+            "nvme",
+            "sata"
+          ],
+          "formats": [
+            "M.2 2242",
+            "M.2 2260",
+            "M.2 2280"
+          ]
+        }
+      ],
+      "storageFormats": [
+        "M.2 2242",
+        "M.2 2260",
+        "M.2 2280",
+        "2.5 inch",
+        "3.5 inch"
+      ]
+    },
+    "technicalSource": "https://www.msi.com/Motherboard/B550M-A-PRO/Specification",
+    "checkedAt": "2026-10-30",
+    "specifications": []
+  },
+  {
+    "id": "kabum-283713",
+    "expectedModel": "BX8071512400",
+    "hardware": {
+      "coolerPackage": "included",
+      "boxedCoolerName": "Intel Laminar RM1"
+    },
+    "technicalSource": "https://www.intel.com/content/www/us/en/support/articles/000089190/processors/intel-core-processors.html",
+    "checkedAt": "2026-10-30",
+    "specifications": []
+  },
+  {
+    "id": "kabum-283715",
+    "expectedModel": "BX8071512100",
+    "hardware": {
+      "coolerPackage": "included",
+      "boxedCoolerName": "Intel Laminar RM1"
+    },
+    "technicalSource": "https://www.intel.com/content/www/us/en/support/articles/000089190/processors/intel-core-processors.html",
+    "checkedAt": "2026-10-30",
+    "specifications": []
+  },
+  {
+    "id": "kabum-283718",
+    "expectedModel": "BX8071512400F",
+    "hardware": {
+      "coolerPackage": "included",
+      "boxedCoolerName": "Intel Laminar RM1"
+    },
+    "technicalSource": "https://www.intel.com/content/www/us/en/support/articles/000089190/processors/intel-core-processors.html",
+    "checkedAt": "2026-10-30",
+    "specifications": []
+  },
+  {
+    "id": "kabum-283719",
+    "expectedModel": "BX8071512100F",
+    "hardware": {
+      "coolerPackage": "included",
+      "boxedCoolerName": "Intel Laminar RM1"
+    },
+    "technicalSource": "https://www.intel.com/content/www/us/en/support/articles/000089190/processors/intel-core-processors.html",
+    "checkedAt": "2026-10-30",
+    "specifications": []
+  },
+  {
+    "id": "kabum-904655",
+    "expectedModel": "BX8071514100",
+    "hardware": {
+      "coolerPackage": "included",
+      "boxedCoolerName": "Intel Laminar RM1"
+    },
+    "technicalSource": "https://www.intel.com/content/www/us/en/support/articles/000089190/processors/intel-core-processors.html",
+    "checkedAt": "2026-10-30",
+    "specifications": []
+  },
+  {
+    "id": "kabum-904660",
+    "expectedModel": "BX8071514700F",
+    "hardware": {
+      "coolerPackage": "included",
+      "boxedCoolerName": "Intel Laminar RM1"
+    },
+    "technicalSource": "https://www.intel.com/content/www/us/en/support/articles/000089190/processors/intel-core-processors.html",
+    "checkedAt": "2026-10-30",
+    "specifications": []
+  },
+  {
+    "id": "kabum-405799",
+    "expectedModel": "100-100001015BOX",
+    "hardware": {
+      "coolerPackage": "included",
+      "boxedCoolerName": "AMD Wraith Stealth",
+      "tdpWatts": 65,
+      "maxRamGb": 128
+    },
+    "technicalSource": "https://www.amd.com/en/products/processors/desktops/ryzen/7000-series/amd-ryzen-5-7600.html",
+    "checkedAt": "2026-10-30",
+    "specifications": []
+  },
+  {
+    "id": "kingston-sfyr2d-8t1",
+    "expectedModel": "SFYR2D/8T1",
+    "hardware": {
+      "capacityGb": 8000
+    },
+    "technicalSource": "https://www.kingstonstore.com.br/products/sfyr2d-8t1",
+    "checkedAt": "2026-10-30",
+    "specifications": []
+  },
+  {
+    "id": "kingston-sfyr2s-1t0",
+    "expectedModel": "SFYR2S/1T0",
+    "hardware": {
+      "capacityGb": 1000
+    },
+    "technicalSource": "https://www.kingstonstore.com.br/products/sfyr2s-1t0",
+    "checkedAt": "2026-10-30",
+    "specifications": []
+  },
+  {
+    "id": "kingston-sfyr2s-2t0",
+    "expectedModel": "SFYR2S/2T0",
+    "hardware": {
+      "capacityGb": 2000
+    },
+    "technicalSource": "https://www.kingstonstore.com.br/products/sfyr2s-2t0",
+    "checkedAt": "2026-10-30",
+    "specifications": []
+  },
+  {
+    "id": "kingston-sfyr2s-4t0",
+    "expectedModel": "SFYR2S/4T0",
+    "hardware": {
+      "capacityGb": 4000
+    },
+    "technicalSource": "https://www.kingstonstore.com.br/products/sfyr2s-4t0",
+    "checkedAt": "2026-10-30",
+    "specifications": []
+  },
+  {
+    "id": "kingston-snv3s-1000g",
+    "expectedModel": "SNV3S/1000G",
+    "hardware": {
+      "capacityGb": 1000
+    },
+    "technicalSource": "https://www.kingstonstore.com.br/products/snv3s-1000g",
+    "checkedAt": "2026-10-30",
+    "specifications": []
+  },
+  {
+    "id": "kingston-snv3s-2000g",
+    "expectedModel": "SNV3S/2000G",
+    "hardware": {
+      "capacityGb": 2000
+    },
+    "technicalSource": "https://www.kingstonstore.com.br/products/snv3s-2000g",
+    "checkedAt": "2026-10-30",
+    "specifications": []
+  },
+  {
+    "id": "kingston-snv3s-4000g",
+    "expectedModel": "SNV3S/4000G",
+    "hardware": {
+      "capacityGb": 4000
+    },
+    "technicalSource": "https://www.kingstonstore.com.br/products/snv3s-4000g",
+    "checkedAt": "2026-10-30",
+    "specifications": []
+  },
+  {
+    "id": "kingston-snv3s-500g",
+    "expectedModel": "SNV3S/500G",
+    "hardware": {
+      "capacityGb": 500
+    },
+    "technicalSource": "https://www.kingstonstore.com.br/products/snv3s-500g",
+    "checkedAt": "2026-10-30",
+    "specifications": []
+  },
+  {
+    "id": "samsung",
+    "expectedModel": "MZ-V8P1T0B/AM",
+    "hardware": {
+      "capacityGb": 1000
+    },
+    "technicalSource": "https://download.semiconductor.samsung.com/resources/data-sheet/Samsung-NVMe-SSD-980-PRO-Data-Sheet_Rev.2.1_230509_10129500052824.pdf",
+    "checkedAt": "2026-10-30",
+    "specifications": []
+  },
+  {
+    "id": "kabum-320799",
+    "expectedModel": "100-100000457BOX",
+    "hardware": {
+      "coolerPackage": "included",
+      "boxedCoolerName": "AMD Wraith Stealth",
+      "tdpWatts": 65,
+      "ramType": "DDR4"
+    },
+    "technicalSource": "https://www.amd.com/en/support/downloads/drivers.html/processors/ryzen/ryzen-5000-series/amd-ryzen-5-5500.html",
+    "checkedAt": "2026-10-30",
+    "specifications": []
+  },
+  {
+    "id": "kabum-520368",
+    "expectedModel": "100-100001488BOX",
+    "hardware": {
+      "coolerPackage": "included",
+      "boxedCoolerName": "AMD Wraith Stealth",
+      "tdpWatts": 65,
+      "ramType": "DDR4"
+    },
+    "technicalSource": "https://www.amd.com/en/support/downloads/drivers.html/processors/ryzen/ryzen-5000-series/amd-ryzen-5-5600gt.html",
+    "checkedAt": "2026-10-30",
+    "specifications": []
+  },
+  {
+    "id": "kabum-181089",
+    "expectedModel": "100-100000263BOX",
+    "hardware": {
+      "coolerPackage": "included",
+      "boxedCoolerName": "AMD Wraith Stealth",
+      "tdpWatts": 65,
+      "ramType": "DDR4"
+    },
+    "technicalSource": "https://www.amd.com/en/support/downloads/drivers.html/processors/ryzen/ryzen-5000-series/amd-ryzen-7-5700g.html",
+    "checkedAt": "2026-10-30",
+    "specifications": []
+  },
+  {
+    "id": "kabum-102248",
+    "expectedModel": "YD3200C5FHBOX",
+    "hardware": {
+      "coolerPackage": "included",
+      "boxedCoolerName": "AMD Wraith Stealth",
+      "tdpWatts": 65,
+      "ramType": "DDR4"
+    },
+    "technicalSource": "https://www.amd.com/en/support/downloads/drivers.html/processors/ryzen/ryzen-3000-series/amd-ryzen-3-3200g.html",
+    "checkedAt": "2026-10-30",
+    "specifications": []
+  },
+  {
+    "id": "kabum-85198",
+    "expectedModel": "SA400S37/480G",
+    "hardware": {
+      "interface": "SATA 6Gb/s",
+      "formFactor": "2.5 inch"
+    },
+    "technicalSource": "https://www.kingston.com/datasheets/sa400s37_us.pdf",
+    "checkedAt": "2026-10-30",
+    "specifications": []
+  },
+  {
+    "id": "kabum-95217",
+    "expectedModel": "SA400S37/960G",
+    "hardware": {
+      "interface": "SATA 6Gb/s",
+      "formFactor": "2.5 inch"
+    },
+    "technicalSource": "https://www.kingston.com/datasheets/sa400s37_us.pdf",
+    "checkedAt": "2026-10-30",
+    "specifications": []
+  },
+  {
+    "id": "kabum-105015",
+    "expectedModel": "ASU650SS-240GT-R",
+    "hardware": {
+      "interface": "SATA 6Gb/s",
+      "formFactor": "2.5 inch"
+    },
+    "technicalSource": "https://www.adata.com/storage/downloadfile/datasheet_ultimate_su650_25_inch_sata_ssd_v2.pdf",
+    "checkedAt": "2026-10-30",
+    "specifications": []
+  },
+  {
+    "id": "kabum-476239",
+    "expectedModel": "SXS1000/1000G",
+    "hardware": {
+      "interface": "USB 3.2",
+      "formFactor": "External"
+    },
+    "technicalSource": "https://www.kingston.com/en/ssd/xs1000-external-ssd",
+    "checkedAt": "2026-10-30",
+    "specifications": []
+  },
+  {
+    "id": "kabum-615713",
+    "expectedModel": "SXS1000R/1000G",
+    "hardware": {
+      "interface": "USB 3.2",
+      "formFactor": "External"
+    },
+    "technicalSource": "https://www.kingston.com/en/ssd/xs1000-external-ssd",
+    "checkedAt": "2026-10-30",
+    "specifications": []
+  },
+  {
+    "id": "5000d",
+    "expectedModel": "CC-9011210-WW",
+    "hardware": {
+      "radiatorSizes": [
+        120,
+        140,
+        240,
+        280,
+        360
+      ]
+    },
+    "technicalSource": "https://www.corsair.com/us/en/p/pc-cases/cc-9011210-ww/5000d-airflow-tempered-glass-mid-tower-atx-pc-case-black-cc-9011210-ww",
+    "checkedAt": "2026-10-30",
+    "specifications": []
+  },
+  {
+    "id": "kabum-994928",
+    "expectedModel": "NX600ARGBB",
+    "hardware": {
+      "supportedSockets": [
+        "AM4",
+        "AM5",
+        "LGA1700",
+        "LGA1851",
+        "LGA1200",
+        "LGA1150",
+        "LGA1151",
+        "LGA1155",
+        "LGA1156"
+      ],
+      "coolingType": "air",
+      "heightMm": 160
+    },
+    "technicalSource": "https://www.montechpc.com/nx600-argb",
+    "checkedAt": "2026-10-30",
+    "specifications": []
+  },
+  {
+    "id": "kabum-679304",
+    "expectedModel": "MAG CORELIQUID A13 360",
+    "hardware": {
+      "supportedSockets": [
+        "AM4",
+        "AM5",
+        "LGA1700",
+        "LGA1851"
+      ],
+      "coolingType": "liquid",
+      "radiatorSizeMm": 360
+    },
+    "technicalSource": "https://www.msi.com/Liquid-Cooling/MAG-CORELIQUID-A13-360/Specification",
+    "checkedAt": "2026-10-30",
+    "specifications": []
+  },
+  {
+    "id": "kabum-679305",
+    "expectedModel": "MAG CORELIQUID A13 240",
+    "hardware": {
+      "supportedSockets": [
+        "AM4",
+        "AM5",
+        "LGA1700",
+        "LGA1851"
+      ],
+      "coolingType": "liquid",
+      "radiatorSizeMm": 240
+    },
+    "technicalSource": "https://www.msi.com/Liquid-Cooling/MAG-CORELIQUID-A13-240/Specification",
+    "checkedAt": "2026-10-30",
+    "specifications": []
+  },
+  {
+    "id": "kabum-715998",
+    "expectedModel": "CLA15360",
+    "hardware": {
+      "supportedSockets": [
+        "AM4",
+        "AM5",
+        "LGA1700",
+        "LGA1851"
+      ],
+      "coolingType": "liquid",
+      "radiatorSizeMm": 360
+    },
+    "technicalSource": "https://www.msi.com/Liquid-Cooling/MAG-CORELIQUID-A15-360/Specification",
+    "checkedAt": "2026-10-30",
+    "specifications": []
+  },
+  {
+    "id": "kabum-716000",
+    "expectedModel": "CLA12360",
+    "hardware": {
+      "supportedSockets": [
+        "AM4",
+        "AM5",
+        "LGA1700",
+        "LGA1851"
+      ],
+      "coolingType": "liquid",
+      "radiatorSizeMm": 360
+    },
+    "technicalSource": "https://storage-asset.msi.com/datasheet/liquid-cooling/us/MAG-CORELIQUID-A12-360.pdf",
+    "checkedAt": "2026-10-30",
+    "specifications": []
+  },
+  {
+    "id": "kabum-716001",
+    "expectedModel": "CLA12240",
+    "hardware": {
+      "supportedSockets": [
+        "AM4",
+        "AM5",
+        "LGA1700",
+        "LGA1851"
+      ],
+      "coolingType": "liquid",
+      "radiatorSizeMm": 240
+    },
+    "technicalSource": "https://storage-asset.msi.com/datasheet/liquid-cooling/us/MAG-CORELIQUID-A12-240.pdf",
+    "checkedAt": "2026-10-30",
+    "specifications": []
+  },
+  {
+    "id": "kabum-688177",
+    "expectedModel": "CW-9060088-WW",
+    "hardware": {
+      "supportedSockets": [
+        "AM4",
+        "AM5",
+        "LGA1700",
+        "LGA1851"
+      ],
+      "coolingType": "liquid",
+      "radiatorSizeMm": 240
+    },
+    "technicalSource": "https://www.corsair.com/us/en/p/cpu-coolers/cw-9060088-ww/nautilus-240-rs-liquid-cpu-cooler-cw-9060088-ww",
+    "checkedAt": "2026-10-30",
+    "specifications": []
+  },
+  {
+    "id": "kabum-1019513",
+    "expectedModel": "GP-GIGABYTE EAGLE 360",
+    "hardware": {
+      "supportedSockets": [
+        "AM4",
+        "AM5",
+        "LGA1700",
+        "LGA1851",
+        "LGA1200",
+        "LGA1150",
+        "LGA1151",
+        "LGA1155",
+        "LGA1156"
+      ],
+      "coolingType": "liquid",
+      "radiatorSizeMm": 360
+    },
+    "technicalSource": "https://www.gigabyte.com/CPU-Cooler/GIGABYTE-EAGLE-360/sp",
+    "checkedAt": "2026-10-30",
+    "specifications": []
+  },
+  {
+    "id": "kabum-776521",
+    "expectedModel": "GP-GIGABYTE GME 360",
+    "hardware": {
+      "supportedSockets": [
+        "AM4",
+        "AM5",
+        "LGA1700",
+        "LGA1851",
+        "LGA1200",
+        "LGA1150",
+        "LGA1151",
+        "LGA1155",
+        "LGA1156"
+      ],
+      "coolingType": "liquid",
+      "radiatorSizeMm": 360
+    },
+    "technicalSource": "https://www.gigabyte.com/CPU-Cooler/GIGABYTE-GAMING-360/sp",
+    "checkedAt": "2026-10-30",
+    "specifications": []
+  },
+  {
+    "id": "kabum-532493",
+    "expectedModel": "RR-S4NA-17PA-R1",
+    "hardware": {
+      "supportedSockets": [
+        "AM4",
+        "AM5",
+        "LGA1700",
+        "LGA1851",
+        "LGA1200",
+        "LGA1150",
+        "LGA1151",
+        "LGA1155",
+        "LGA1156"
+      ],
+      "coolingType": "air",
+      "heightMm": 152
+    },
+    "technicalSource": "https://www.coolermaster.com/en-global/products/RR-S4NA-17PA-R1.html",
+    "checkedAt": "2026-10-30",
+    "specifications": []
+  }
+]

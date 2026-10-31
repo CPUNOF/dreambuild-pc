@@ -1,0 +1,46 @@
+[
+  {
+    "id": "cyberpunk-2077",
+    "title": "Cyberpunk 2077",
+    "appId": 1091500,
+    "weight": 1.25,
+    "coverUrl": "/games/cyberpunk-2077-cover.jpg",
+    "screenshotUrl": "/games/cyberpunk-2077-scene.jpg",
+    "sourceUrl": "https://store.steampowered.com/app/1091500/",
+    "calibrated": false,
+    "modelLabel": "Cenário didático, sem benchmark medido"
+  },
+  {
+    "id": "red-dead-redemption-2",
+    "title": "Red Dead Redemption 2",
+    "appId": 1174180,
+    "weight": 1.15,
+    "coverUrl": "/games/red-dead-redemption-2-cover.jpg",
+    "screenshotUrl": "/games/red-dead-redemption-2-scene.jpg",
+    "sourceUrl": "https://store.steampowered.com/app/1174180/",
+    "calibrated": false,
+    "modelLabel": "Cenário didático, sem benchmark medido"
+  },
+  {
+    "id": "counter-strike-2",
+    "title": "Counter-Strike 2",
+    "appId": 730,
+    "weight": 0.35,
+    "coverUrl": "/games/counter-strike-2-cover.jpg",
+    "screenshotUrl": "/games/counter-strike-2-scene.jpg",
+    "sourceUrl": "https://store.steampowered.com/app/730/",
+    "calibrated": false,
+    "modelLabel": "Cenário didático, sem benchmark medido"
+  },
+  {
+    "id": "gta-v-legacy",
+    "title": "Grand Theft Auto V Legacy",
+    "appId": 271590,
+    "weight": 0.75,
+    "coverUrl": "/games/gta-v-legacy-cover.jpg",
+    "screenshotUrl": "/games/gta-v-legacy-scene.jpg",
+    "sourceUrl": "https://store.steampowered.com/app/271590/",
+    "calibrated": false,
+    "modelLabel": "Cenário didático, sem benchmark medido"
+  }
+]

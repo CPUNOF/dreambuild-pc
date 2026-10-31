@@ -1,0 +1,192 @@
+/* Superfície metálica, circuitos e luz: o fundo dá identidade sem mover o conteúdo. */
+:root {
+  --theme-page: #e2e7ed;
+  --ambient-circuit: #5b718b38;
+  --ambient-copper: #ba491e;
+  --ambient-blue: #367b9a;
+}
+html[data-theme="dark"] {
+  --ambient-circuit: #7193ae30;
+  --ambient-copper: #ff9c61;
+  --ambient-blue: #68c8e7;
+}
+.ambient-background {
+  background: linear-gradient(135deg, #edf0f3 0%, #dce3eb 48%, #e8e9e8 100%);
+}
+.ambient-background::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: repeating-linear-gradient(
+    125deg,
+    transparent 0 88px,
+    #65809a08 88px 89px,
+    transparent 89px 176px
+  );
+}
+.ambient-circuits {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  color: var(--ambient-circuit);
+}
+.ambient-light {
+  width: 900px;
+  height: 900px;
+  max-width: 100vw;
+  max-height: 100vw;
+  animation: ambient-drift 11s cubic-bezier(0.45, 0, 0.55, 1) infinite alternate;
+}
+.ambient-light.amber {
+  top: 0;
+  left: -22%;
+  background: radial-gradient(
+    ellipse,
+    #df9b6570 0%,
+    #df9b6528 37%,
+    transparent 68%
+  );
+}
+.ambient-light.ice {
+  top: 30%;
+  right: -24%;
+  bottom: auto;
+  background: radial-gradient(
+    ellipse,
+    #6b9eb960 0%,
+    #6b9eb92b 36%,
+    transparent 68%
+  );
+  animation-duration: 14s;
+  animation-delay: -7s;
+  animation-direction: alternate-reverse;
+}
+.ambient-grain {
+  opacity: 0.3;
+}
+.ambient-signal {
+  position: absolute;
+  left: 0;
+  width: 260px;
+  height: 1px;
+  color: var(--ambient-copper);
+  background: linear-gradient(
+    90deg,
+    transparent,
+    currentColor 80%,
+    transparent
+  );
+  box-shadow: 0 0 12px currentColor;
+  animation: ambient-signal 12s linear infinite;
+}
+.ambient-signal::after {
+  content: "";
+  position: absolute;
+  right: 17%;
+  top: -2px;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: currentColor;
+  box-shadow: 0 0 10px currentColor;
+}
+.signal-one {
+  top: 25%;
+  animation-delay: -4s;
+}
+.signal-two {
+  top: 62%;
+  color: var(--ambient-blue);
+  animation-duration: 16s;
+  animation-delay: -11s;
+}
+.signal-three {
+  top: 84%;
+  animation-duration: 19s;
+  animation-delay: -2s;
+}
+[data-theme="dark"] .ambient-background {
+  background: linear-gradient(135deg, #101b29, #0b131f 52%, #152333);
+}
+[data-theme="dark"] .ambient-light.amber {
+  background: radial-gradient(
+    ellipse,
+    #bd642b48,
+    #bd642b16 40%,
+    transparent 68%
+  );
+}
+[data-theme="dark"] .ambient-light.ice {
+  background: radial-gradient(
+    ellipse,
+    #287c9e50,
+    #287c9e16 40%,
+    transparent 68%
+  );
+}
+.ambient-background.is-paused .ambient-light,
+.ambient-background.is-paused .ambient-signal {
+  animation-play-state: paused;
+}
+@keyframes ambient-drift {
+  from {
+    transform: translate3d(-24px, -30px, 0) scale(0.9);
+    opacity: 0.65;
+  }
+  to {
+    transform: translate3d(80px, 70px, 0) scale(1.12);
+    opacity: 1;
+  }
+}
+@keyframes ambient-signal {
+  0% {
+    transform: translate3d(-280px, 0, 0);
+    opacity: 0;
+  }
+  10%,
+  85% {
+    opacity: 0.75;
+  }
+  100% {
+    transform: translate3d(calc(100vw + 280px), 0, 0);
+    opacity: 0;
+  }
+}
+@media (max-width: 540px) {
+  .ambient-light {
+    width: 640px;
+    height: 640px;
+    max-width: none;
+    max-height: none;
+  }
+  .ambient-light.amber {
+    left: -420px;
+    top: 10%;
+  }
+  .ambient-light.ice {
+    right: -440px;
+    top: 55%;
+  }
+  .ambient-signal {
+    width: 140px;
+  }
+  .signal-three {
+    display: none;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .ambient-background .ambient-light,
+  .ambient-background .ambient-signal {
+    animation: none;
+  }
+  .ambient-signal {
+    display: none;
+  }
+}
+@media print {
+  .ambient-background,
+  .ambient-control {
+    display: none;
+  }
+}

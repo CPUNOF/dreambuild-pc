@@ -1,0 +1,16 @@
+[
+  {
+    "id": "kabum-1003731",
+    "expectedModel": "MAGA1000PLSPCIE5",
+    "technicalSource": "https://www.msi.com/Power-Supply/MAG-A1000PLS-PCIE5/Specification",
+    "checkedAt": "2026-10-30",
+    "hardware": {"wattage":1000,"lengthMm":150,"connectors":["atx24","eps8","eps8","16pin","pcie8","pcie8","pcie8","pcie8"]},
+    "specifications": [
+      ["Potência nominal verificada", "1000 W"],
+      ["Dimensões publicadas (profundidade × largura × altura)", "150 × 150 × 86 mm"],
+      ["Conectores ATX / CPU", "1 × 24 pinos; 1 × EPS 4+4 pinos; 1 × EPS 8 pinos"],
+      ["Conectores para GPU", "1 × PCIe 5 12+4 pinos, até 600 W; 4 × PCIe 6+2 pinos"],
+      ["Fonte técnica", "Ficha oficial MSI MAG A1000PLS PCIE5, consultada em 30/10/2026"]
+    ]
+  }
+]

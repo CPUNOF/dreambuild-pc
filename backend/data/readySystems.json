@@ -1,0 +1,881 @@
+[
+  {
+    "id": "bluepc-9800x3d-5080",
+    "type": "desktop",
+    "name": "BluePC RTX 5080",
+    "subtitle": "PC Gamer | Workstation - Amd Ryzen 7 9800x3d, Geforce RTX 5080 16gb, 32gb Ddr5, SSD 1TB Nvme, Fonte 850w 80 Plus, Bluepc Pgbp-wo1045",
+    "cpu": "Ryzen 7 9800X3D",
+    "gpu": "RTX 5080",
+    "ram": "32 GB DDR5 · frequência não informada",
+    "storage": "SSD NVMe 1 TB",
+    "psu": "Fonte anunciada de 850 W · modelo não confirmado",
+    "cooler": "Confira o sistema de refrigeração no anúncio",
+    "mobo": "Modelo não informado no anúncio resumido",
+    "source": "https://www.tomshardware.com/pc-components/gpus/nvidia-geforce-rtx-5080-review/4",
+    "setupSource": "https://www.tomshardware.com/pc-components/gpus/nvidia-geforce-rtx-5080-review/3",
+    "image": "/hardware/systems/bluepc-9800x3d-5080.webp",
+    "imageNote": "Foto do produto anunciado na loja. Direitos do fabricante/vendedor.",
+    "priceCents": 2489294,
+    "kind": "reference",
+    "games": [
+      {
+        "id": "mirage",
+        "name": "Assassin’s Creed Mirage",
+        "preset": "Ultra — FPS Target Off",
+        "steamId": 3035570,
+        "source": "https://www.tomshardware.com/pc-components/gpus/nvidia-geforce-rtx-5080-review/4",
+        "results": {
+          "1440p": 166.1,
+          "1080p": 194.6
+        },
+        "preview": {
+          "poster": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3035570/header.jpg?t=1792777978",
+          "video": "https://video.akamai.steamstatic.com/store_trailers/3035570/765019/929fdbfbb946a6ac54ced94844a708f7bcb0cdd6/1750823088/hls_264_master.m3u8?t=1763405438",
+          "source": "https://store.steampowered.com/app/3035570/",
+          "title": "Assassin's Creed Mirage"
+        }
+      },
+      {
+        "id": "baldurs-gate-3",
+        "name": "Baldur’s Gate 3",
+        "preset": "Ultra",
+        "steamId": 1086940,
+        "source": "https://www.tomshardware.com/pc-components/gpus/nvidia-geforce-rtx-5080-review/4",
+        "results": {
+          "1440p": 173.5,
+          "1080p": 177.2
+        },
+        "preview": {
+          "poster": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1086940/48a2fcbda8565bb45025e98fd8ebde8a7203f6a0/header.jpg?t=1777363040",
+          "video": "https://video.akamai.steamstatic.com/store_trailers/1086940/637951/59ca25b847b0e471638d1e2474acf71b068d57f0/1750615003/hls_264_master.m3u8?t=1702007645",
+          "source": "https://store.steampowered.com/app/1086940/",
+          "title": "Baldur's Gate 3"
+        }
+      },
+      {
+        "id": "wukong",
+        "name": "Black Myth: Wukong",
+        "preset": "Very High — sem RT",
+        "steamId": 2358720,
+        "source": "https://www.tomshardware.com/pc-components/gpus/nvidia-geforce-rtx-5080-review/4",
+        "results": {
+          "1440p": 67,
+          "1080p": 86.7
+        },
+        "preview": {
+          "poster": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2358720/header.jpg?t=1760601605",
+          "video": "https://video.akamai.steamstatic.com/store_trailers/2358720/743632/6acf4311bb6a59d300b902ab6a3f445215089d9c/1750812851/hls_264_master.m3u8?t=1729236218",
+          "source": "https://store.steampowered.com/app/2358720/",
+          "title": "Black Myth: Wukong"
+        }
+      },
+      {
+        "id": "veilguard",
+        "name": "Dragon Age: The Veilguard",
+        "preset": "Ultra",
+        "steamId": 1845910,
+        "source": "https://www.tomshardware.com/pc-components/gpus/nvidia-geforce-rtx-5080-review/4",
+        "results": {
+          "1440p": 125.8,
+          "1080p": 152.6
+        },
+        "preview": {
+          "poster": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1845910/header.jpg?t=1777414790",
+          "video": "https://video.akamai.steamstatic.com/store_trailers/1845910/786133/a7a8f94c068d120ee2be81a3e3bb6e867fe1a6d6/1750738374/hls_264_master.m3u8?t=1737678877",
+          "source": "https://store.steampowered.com/app/1845910/",
+          "title": "Dragon Age™: The Veilguard"
+        }
+      },
+      {
+        "id": "ff16",
+        "name": "Final Fantasy XVI",
+        "preset": "Ultra",
+        "steamId": 2515020,
+        "source": "https://www.tomshardware.com/pc-components/gpus/nvidia-geforce-rtx-5080-review/4",
+        "results": {
+          "1440p": 63.7,
+          "1080p": 84.4
+        },
+        "preview": {
+          "poster": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2515020/header.jpg?t=1773294537",
+          "video": "https://video.akamai.steamstatic.com/store_trailers/2515020/741490/93de12947124472b3783d5807698142b57d62189/1750816165/hls_264_master.m3u8?t=1724082993",
+          "source": "https://store.steampowered.com/app/2515020/",
+          "title": "FINAL FANTASY XVI"
+        }
+      },
+      {
+        "id": "flight-2020",
+        "name": "Microsoft Flight Simulator 2020",
+        "preset": "Ultra",
+        "steamId": 1250410,
+        "source": "https://www.tomshardware.com/pc-components/gpus/nvidia-geforce-rtx-5080-review/4",
+        "results": {
+          "1440p": 107.6,
+          "1080p": 107.8
+        },
+        "preview": {
+          "poster": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1250410/header.jpg?t=1787671433",
+          "video": "https://video.akamai.steamstatic.com/store_trailers/1250410/513209/00254739b742d4548e5727ecb713f685ec39e659/1750651547/hls_264_master.m3u8?t=1684358207",
+          "source": "https://store.steampowered.com/app/1250410/",
+          "title": "Microsoft Flight Simulator (2020) 40th Anniversary Edition"
+        }
+      },
+      {
+        "id": "flight-2024",
+        "name": "Microsoft Flight Simulator 2024",
+        "preset": "Ultra",
+        "steamId": 2537590,
+        "source": "https://www.tomshardware.com/pc-components/gpus/nvidia-geforce-rtx-5080-review/4",
+        "results": {
+          "1440p": 84.8,
+          "1080p": 99.9
+        },
+        "preview": {
+          "poster": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2537590/header.jpg?t=1791557822",
+          "video": "https://video.akamai.steamstatic.com/store_trailers/2537590/827511385/d26d8722335317080ea548c0006fe57f9f86e582/1780852466/hls_264_master.m3u8?t=1787591448",
+          "source": "https://store.steampowered.com/app/2537590/",
+          "title": "Microsoft Flight Simulator 2024"
+        }
+      },
+      {
+        "id": "ragnarok",
+        "name": "God of War Ragnarök",
+        "preset": "Ultra",
+        "steamId": 2322010,
+        "source": "https://www.tomshardware.com/pc-components/gpus/nvidia-geforce-rtx-5080-review/4",
+        "results": {
+          "1440p": 151,
+          "1080p": 181
+        },
+        "preview": {
+          "poster": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2322010/header.jpg?t=1776465233",
+          "video": "https://video.akamai.steamstatic.com/store_trailers/2322010/754785/cd4512509a851f1f5e98b3ddffdda87de8bac9f1/1750811709/hls_264_master.m3u8?t=1726759092",
+          "source": "https://store.steampowered.com/app/2322010/",
+          "title": "God of War Ragnarök"
+        }
+      },
+      {
+        "id": "horizon",
+        "name": "Horizon Forbidden West",
+        "preset": "Very High",
+        "steamId": 2420110,
+        "source": "https://www.tomshardware.com/pc-components/gpus/nvidia-geforce-rtx-5080-review/4",
+        "results": {
+          "1440p": 141.8,
+          "1080p": 174.9
+        },
+        "preview": {
+          "poster": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2420110/header.jpg?t=1789585745",
+          "video": "https://video.akamai.steamstatic.com/store_trailers/2420110/673729/da330af842f0deee5a8b1b84a79c0f1cd24f68df/1750814445/hls_264_master.m3u8?t=1711032973",
+          "source": "https://store.steampowered.com/app/2420110/",
+          "title": " Horizon Forbidden West™ Edição Completa"
+        }
+      },
+      {
+        "id": "last-of-us",
+        "name": "The Last of Us Part I",
+        "preset": "Ultra",
+        "steamId": 1888930,
+        "source": "https://www.tomshardware.com/pc-components/gpus/nvidia-geforce-rtx-5080-review/4",
+        "results": {
+          "1440p": 109.1,
+          "1080p": 145
+        },
+        "preview": {
+          "poster": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1888930/header.jpg?t=1750959031",
+          "video": "https://video.akamai.steamstatic.com/store_trailers/1888930/550396/09468ce88d62c431fbbbbbc89c3a0c1b84e50ca8/1750740074/hls_264_master.m3u8?t=1680015399",
+          "source": "https://store.steampowered.com/app/1888930/",
+          "title": "The Last of Us™ Parte I"
+        }
+      },
+      {
+        "id": "plague",
+        "name": "A Plague Tale: Requiem",
+        "preset": "Ultra",
+        "steamId": 1182900,
+        "source": "https://www.tomshardware.com/pc-components/gpus/nvidia-geforce-rtx-5080-review/4",
+        "results": {
+          "1440p": 120.1,
+          "1080p": 158
+        },
+        "preview": {
+          "poster": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1182900/header.jpg?t=1784712272",
+          "video": "https://video.akamai.steamstatic.com/store_trailers/1182900/511732/2f9fb439ffce76b95396f9902ebcfb2c7bd7e1c6/1750635289/hls_264_master.m3u8?t=1667820594",
+          "source": "https://store.steampowered.com/app/1182900/",
+          "title": "A Plague Tale: Requiem"
+        }
+      },
+      {
+        "id": "stalker",
+        "name": "S.T.A.L.K.E.R. 2",
+        "preset": "Epic",
+        "steamId": 1643320,
+        "source": "https://www.tomshardware.com/pc-components/gpus/nvidia-geforce-rtx-5080-review/4",
+        "results": {
+          "1440p": 81.7,
+          "1080p": 93.7
+        },
+        "preview": {
+          "poster": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1643320/b22b59aeed7ff6305f91e6198cea1df6e9a489d3/header_alt_assets_8_portuguese.jpg?t=1793009305",
+          "video": "https://video.akamai.steamstatic.com/store_trailers/1643320/660577322/19dcb9b32cdb9cf62d51cd34e0b79e8cc43bb987/1790240404/hls_264_master.m3u8?t=1790259591",
+          "source": "https://store.steampowered.com/app/1643320/",
+          "title": "S.T.A.L.K.E.R. 2: Heart of Chornobyl"
+        }
+      }
+    ],
+    "benchmarkNote": "Referência gráfica da RTX 5080 com Ryzen 7 9800X3D. RAM, placa-mãe, SSD e refrigeração do PC anunciado diferem da bancada da fonte; o PC completo não foi medido.",
+    "retailerId": 1076725,
+    "paymentMethod": "À vista — confira a modalidade na loja",
+    "sellerName": "2Eletro",
+    "storeName": "KaBuM! Marketplace",
+    "available": true,
+    "offerUrl": "https://www.kabum.com.br/produto/1076725/pc-gamer-workstation-amd-ryzen-7-9800x3d-geforce-rtx-5080-16gb-32gb-ddr5-ssd-1tb-nvme-fonte-850w-80-plus-bluepc-pgbp-wo1045",
+    "priceCheckedAt": "2026-10-30T22:18:33.127Z",
+    "shippingIncluded": false,
+    "displayOrder": 0,
+    "imageSource": "https://images.kabum.com.br/produtos/fotos/sync_mirakl/1076725/large/PC-Gamer-Workstation-Amd-Ryzen-7-9800x3d-Geforce-RTX-5080-16gb-32gb-Ddr5-SSD-1TB-Nvme-Fonte-850w-80-Plus-Bluepc-Pgbp-wo1045_1790621028.jpg"
+  },
+  {
+    "id": "kalango-9800x3d-5080",
+    "type": "desktop",
+    "name": "Kalango Aquário RTX 5080",
+    "subtitle": "PC Gamer Aquário Amd Ryzen 7 9800x3d, RTX 5080, 64gb Ddr5, Nvme 2TB, W11 - Kalango Games",
+    "cpu": "Ryzen 7 9800X3D",
+    "gpu": "RTX 5080",
+    "ram": "64 GB DDR5 · frequência não informada",
+    "storage": "SSD NVMe 2 TB",
+    "psu": "Modelo e potência da fonte não confirmados nesta cotação",
+    "cooler": "Confira o sistema de refrigeração no anúncio",
+    "mobo": "Modelo não informado no anúncio resumido",
+    "source": "https://www.tomshardware.com/pc-components/gpus/nvidia-geforce-rtx-5080-review/4",
+    "setupSource": "https://www.tomshardware.com/pc-components/gpus/nvidia-geforce-rtx-5080-review/3",
+    "image": "/hardware/systems/kalango-9800x3d-5080.webp",
+    "imageNote": "Foto do produto anunciado na loja. Direitos do fabricante/vendedor.",
+    "priceCents": 3679920,
+    "kind": "reference",
+    "games": [
+      {
+        "id": "mirage",
+        "name": "Assassin’s Creed Mirage",
+        "preset": "Ultra — FPS Target Off",
+        "steamId": 3035570,
+        "source": "https://www.tomshardware.com/pc-components/gpus/nvidia-geforce-rtx-5080-review/4",
+        "results": {
+          "1440p": 166.1,
+          "1080p": 194.6
+        },
+        "preview": {
+          "poster": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3035570/header.jpg?t=1792777978",
+          "video": "https://video.akamai.steamstatic.com/store_trailers/3035570/765019/929fdbfbb946a6ac54ced94844a708f7bcb0cdd6/1750823088/hls_264_master.m3u8?t=1763405438",
+          "source": "https://store.steampowered.com/app/3035570/",
+          "title": "Assassin's Creed Mirage"
+        }
+      },
+      {
+        "id": "baldurs-gate-3",
+        "name": "Baldur’s Gate 3",
+        "preset": "Ultra",
+        "steamId": 1086940,
+        "source": "https://www.tomshardware.com/pc-components/gpus/nvidia-geforce-rtx-5080-review/4",
+        "results": {
+          "1440p": 173.5,
+          "1080p": 177.2
+        },
+        "preview": {
+          "poster": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1086940/48a2fcbda8565bb45025e98fd8ebde8a7203f6a0/header.jpg?t=1777363040",
+          "video": "https://video.akamai.steamstatic.com/store_trailers/1086940/637951/59ca25b847b0e471638d1e2474acf71b068d57f0/1750615003/hls_264_master.m3u8?t=1702007645",
+          "source": "https://store.steampowered.com/app/1086940/",
+          "title": "Baldur's Gate 3"
+        }
+      },
+      {
+        "id": "wukong",
+        "name": "Black Myth: Wukong",
+        "preset": "Very High — sem RT",
+        "steamId": 2358720,
+        "source": "https://www.tomshardware.com/pc-components/gpus/nvidia-geforce-rtx-5080-review/4",
+        "results": {
+          "1440p": 67,
+          "1080p": 86.7
+        },
+        "preview": {
+          "poster": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2358720/header.jpg?t=1760601605",
+          "video": "https://video.akamai.steamstatic.com/store_trailers/2358720/743632/6acf4311bb6a59d300b902ab6a3f445215089d9c/1750812851/hls_264_master.m3u8?t=1729236218",
+          "source": "https://store.steampowered.com/app/2358720/",
+          "title": "Black Myth: Wukong"
+        }
+      },
+      {
+        "id": "veilguard",
+        "name": "Dragon Age: The Veilguard",
+        "preset": "Ultra",
+        "steamId": 1845910,
+        "source": "https://www.tomshardware.com/pc-components/gpus/nvidia-geforce-rtx-5080-review/4",
+        "results": {
+          "1440p": 125.8,
+          "1080p": 152.6
+        },
+        "preview": {
+          "poster": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1845910/header.jpg?t=1777414790",
+          "video": "https://video.akamai.steamstatic.com/store_trailers/1845910/786133/a7a8f94c068d120ee2be81a3e3bb6e867fe1a6d6/1750738374/hls_264_master.m3u8?t=1737678877",
+          "source": "https://store.steampowered.com/app/1845910/",
+          "title": "Dragon Age™: The Veilguard"
+        }
+      },
+      {
+        "id": "ff16",
+        "name": "Final Fantasy XVI",
+        "preset": "Ultra",
+        "steamId": 2515020,
+        "source": "https://www.tomshardware.com/pc-components/gpus/nvidia-geforce-rtx-5080-review/4",
+        "results": {
+          "1440p": 63.7,
+          "1080p": 84.4
+        },
+        "preview": {
+          "poster": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2515020/header.jpg?t=1773294537",
+          "video": "https://video.akamai.steamstatic.com/store_trailers/2515020/741490/93de12947124472b3783d5807698142b57d62189/1750816165/hls_264_master.m3u8?t=1724082993",
+          "source": "https://store.steampowered.com/app/2515020/",
+          "title": "FINAL FANTASY XVI"
+        }
+      },
+      {
+        "id": "flight-2020",
+        "name": "Microsoft Flight Simulator 2020",
+        "preset": "Ultra",
+        "steamId": 1250410,
+        "source": "https://www.tomshardware.com/pc-components/gpus/nvidia-geforce-rtx-5080-review/4",
+        "results": {
+          "1440p": 107.6,
+          "1080p": 107.8
+        },
+        "preview": {
+          "poster": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1250410/header.jpg?t=1787671433",
+          "video": "https://video.akamai.steamstatic.com/store_trailers/1250410/513209/00254739b742d4548e5727ecb713f685ec39e659/1750651547/hls_264_master.m3u8?t=1684358207",
+          "source": "https://store.steampowered.com/app/1250410/",
+          "title": "Microsoft Flight Simulator (2020) 40th Anniversary Edition"
+        }
+      },
+      {
+        "id": "flight-2024",
+        "name": "Microsoft Flight Simulator 2024",
+        "preset": "Ultra",
+        "steamId": 2537590,
+        "source": "https://www.tomshardware.com/pc-components/gpus/nvidia-geforce-rtx-5080-review/4",
+        "results": {
+          "1440p": 84.8,
+          "1080p": 99.9
+        },
+        "preview": {
+          "poster": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2537590/header.jpg?t=1791557822",
+          "video": "https://video.akamai.steamstatic.com/store_trailers/2537590/827511385/d26d8722335317080ea548c0006fe57f9f86e582/1780852466/hls_264_master.m3u8?t=1787591448",
+          "source": "https://store.steampowered.com/app/2537590/",
+          "title": "Microsoft Flight Simulator 2024"
+        }
+      },
+      {
+        "id": "ragnarok",
+        "name": "God of War Ragnarök",
+        "preset": "Ultra",
+        "steamId": 2322010,
+        "source": "https://www.tomshardware.com/pc-components/gpus/nvidia-geforce-rtx-5080-review/4",
+        "results": {
+          "1440p": 151,
+          "1080p": 181
+        },
+        "preview": {
+          "poster": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2322010/header.jpg?t=1776465233",
+          "video": "https://video.akamai.steamstatic.com/store_trailers/2322010/754785/cd4512509a851f1f5e98b3ddffdda87de8bac9f1/1750811709/hls_264_master.m3u8?t=1726759092",
+          "source": "https://store.steampowered.com/app/2322010/",
+          "title": "God of War Ragnarök"
+        }
+      },
+      {
+        "id": "horizon",
+        "name": "Horizon Forbidden West",
+        "preset": "Very High",
+        "steamId": 2420110,
+        "source": "https://www.tomshardware.com/pc-components/gpus/nvidia-geforce-rtx-5080-review/4",
+        "results": {
+          "1440p": 141.8,
+          "1080p": 174.9
+        },
+        "preview": {
+          "poster": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2420110/header.jpg?t=1789585745",
+          "video": "https://video.akamai.steamstatic.com/store_trailers/2420110/673729/da330af842f0deee5a8b1b84a79c0f1cd24f68df/1750814445/hls_264_master.m3u8?t=1711032973",
+          "source": "https://store.steampowered.com/app/2420110/",
+          "title": " Horizon Forbidden West™ Edição Completa"
+        }
+      },
+      {
+        "id": "last-of-us",
+        "name": "The Last of Us Part I",
+        "preset": "Ultra",
+        "steamId": 1888930,
+        "source": "https://www.tomshardware.com/pc-components/gpus/nvidia-geforce-rtx-5080-review/4",
+        "results": {
+          "1440p": 109.1,
+          "1080p": 145
+        },
+        "preview": {
+          "poster": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1888930/header.jpg?t=1750959031",
+          "video": "https://video.akamai.steamstatic.com/store_trailers/1888930/550396/09468ce88d62c431fbbbbbc89c3a0c1b84e50ca8/1750740074/hls_264_master.m3u8?t=1680015399",
+          "source": "https://store.steampowered.com/app/1888930/",
+          "title": "The Last of Us™ Parte I"
+        }
+      },
+      {
+        "id": "plague",
+        "name": "A Plague Tale: Requiem",
+        "preset": "Ultra",
+        "steamId": 1182900,
+        "source": "https://www.tomshardware.com/pc-components/gpus/nvidia-geforce-rtx-5080-review/4",
+        "results": {
+          "1440p": 120.1,
+          "1080p": 158
+        },
+        "preview": {
+          "poster": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1182900/header.jpg?t=1784712272",
+          "video": "https://video.akamai.steamstatic.com/store_trailers/1182900/511732/2f9fb439ffce76b95396f9902ebcfb2c7bd7e1c6/1750635289/hls_264_master.m3u8?t=1667820594",
+          "source": "https://store.steampowered.com/app/1182900/",
+          "title": "A Plague Tale: Requiem"
+        }
+      },
+      {
+        "id": "stalker",
+        "name": "S.T.A.L.K.E.R. 2",
+        "preset": "Epic",
+        "steamId": 1643320,
+        "source": "https://www.tomshardware.com/pc-components/gpus/nvidia-geforce-rtx-5080-review/4",
+        "results": {
+          "1440p": 81.7,
+          "1080p": 93.7
+        },
+        "preview": {
+          "poster": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1643320/b22b59aeed7ff6305f91e6198cea1df6e9a489d3/header_alt_assets_8_portuguese.jpg?t=1793009305",
+          "video": "https://video.akamai.steamstatic.com/store_trailers/1643320/660577322/19dcb9b32cdb9cf62d51cd34e0b79e8cc43bb987/1790240404/hls_264_master.m3u8?t=1790259591",
+          "source": "https://store.steampowered.com/app/1643320/",
+          "title": "S.T.A.L.K.E.R. 2: Heart of Chornobyl"
+        }
+      }
+    ],
+    "benchmarkNote": "Referência gráfica da RTX 5080 com Ryzen 7 9800X3D. RAM, placa-mãe, SSD e refrigeração do PC anunciado diferem da bancada da fonte; o PC completo não foi medido.",
+    "retailerId": 881022,
+    "paymentMethod": "À vista — confira a modalidade na loja",
+    "sellerName": "KALANGO GAMES",
+    "storeName": "KaBuM! Marketplace",
+    "available": true,
+    "offerUrl": "https://www.kabum.com.br/produto/881022/pc-gamer-aquario-amd-ryzen-7-9800x3d-rtx-5080-64gb-ddr5-nvme-2tb-kalango-games",
+    "priceCheckedAt": "2026-10-30T22:18:33.127Z",
+    "shippingIncluded": false,
+    "displayOrder": 1,
+    "imageSource": "https://images.kabum.com.br/produtos/fotos/sync_mirakl/881022/large/PC-Gamer-Aqu-rio-Amd-Ryzen-7-9800x3d-RTX-5080-64gb-Ddr5-Nvme-2TB-W11-Kalango-Games_1775948010.png"
+  },
+  {
+    "id": "acer-nitro-v15-51uz",
+    "type": "laptop",
+    "name": "Acer Nitro V 15",
+    "subtitle": "Notebook Gamer Acer Nitro V15, Intel Core i5-13420h, 16GB, RTX 4050, SSD 512GB, Tela 15.6\" FHD, Linux - Anv15-51-51uz - NH.QS8AL.005",
+    "cpu": "Core i5-13420H",
+    "gpu": "RTX 4050 Laptop · 6 GB",
+    "tgpWatts": 75,
+    "ram": "16 GB DDR5-5600 · um módulo",
+    "storage": "SK hynix PC801 512 GB",
+    "mode": "Balanced · ventoinha automática",
+    "source": "https://www.notebookcheck.net/Acer-Nitro-V-15-ANV15-51-review-Budget-gaming-laptop-with-RTX-4050.794098.0.html",
+    "image": "/hardware/systems/acer-nitro-v15-51uz.webp",
+    "imageNote": "Foto do produto anunciado na loja. Direitos do fabricante/vendedor.",
+    "priceCents": 629910,
+    "kind": "reference",
+    "games": [
+      {
+        "id": "gta-v",
+        "name": "GTA V",
+        "preset": "Highest · 4× MSAA + FXAA",
+        "steamId": 271590,
+        "source": "https://www.notebookcheck.net/Acer-Nitro-V-15-ANV15-51-review-Budget-gaming-laptop-with-RTX-4050.794098.0.html",
+        "results": {
+          "1080p": 86.9
+        },
+        "preview": {
+          "poster": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/271590/header.jpg?t=1765387725",
+          "video": "https://video.akamai.steamstatic.com/store_trailers/271590/844302/de4ad49997171bd3f4d05299cc3e718cfe0307ee/1751269402/hls_264_master.m3u8?t=1741119978",
+          "source": "https://store.steampowered.com/app/271590/",
+          "title": "Grand Theft Auto V Legacy"
+        }
+      },
+      {
+        "id": "witcher3",
+        "name": "The Witcher 3 (2015)",
+        "preset": "Ultra · HBAO+",
+        "steamId": 292030,
+        "source": "https://www.notebookcheck.net/Acer-Nitro-V-15-ANV15-51-review-Budget-gaming-laptop-with-RTX-4050.794098.0.html",
+        "results": {
+          "1080p": 78
+        },
+        "preview": {
+          "poster": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/292030/e8afc4252e3fee8ed2525ab2fd7675cca39aa38d/header_alt_assets_1.jpg?t=1790845156",
+          "video": "https://video.akamai.steamstatic.com/store_trailers/292030/1018852715/bf5e4c4a6409b1714754e691e778ae9f66ab9907/1790683068/hls_264_master.m3u8?t=1790693333",
+          "source": "https://store.steampowered.com/app/292030/",
+          "title": "The Witcher 3: Wild Hunt — Remastered"
+        }
+      },
+      {
+        "id": "dota2",
+        "name": "Dota 2 Reborn",
+        "preset": "Ultra",
+        "steamId": 570,
+        "source": "https://www.notebookcheck.net/Acer-Nitro-V-15-ANV15-51-review-Budget-gaming-laptop-with-RTX-4050.794098.0.html",
+        "results": {
+          "1080p": 120.3
+        },
+        "preview": {
+          "poster": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/570/header.jpg?t=1791407503",
+          "video": "https://video.akamai.steamstatic.com/store_trailers/570/116737/313addee2092d0bd6f538d164610061ea8bbe79c/1749859757/hls_264_master.m3u8?t=1762820639",
+          "source": "https://store.steampowered.com/app/570/",
+          "title": "Dota 2"
+        }
+      },
+      {
+        "id": "ff15",
+        "name": "Final Fantasy XV Benchmark",
+        "preset": "High Quality",
+        "steamId": 637650,
+        "source": "https://www.notebookcheck.net/Acer-Nitro-V-15-ANV15-51-review-Budget-gaming-laptop-with-RTX-4050.794098.0.html",
+        "results": {
+          "1080p": 76.5
+        },
+        "preview": {
+          "poster": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/637650/header.jpg?t=1775105127",
+          "video": "https://video.akamai.steamstatic.com/store_trailers/637650/195232/d64451d849dc73fa7bef6c71ab8ae43b278421d7/1750565040/hls_264_master.m3u8?t=1542104574",
+          "source": "https://store.steampowered.com/app/637650/",
+          "title": "FINAL FANTASY XV WINDOWS EDITION"
+        }
+      },
+      {
+        "id": "xplane11",
+        "name": "X-Plane 11.11",
+        "preset": "High · fps_test=3",
+        "steamId": 269950,
+        "source": "https://www.notebookcheck.net/Acer-Nitro-V-15-ANV15-51-review-Budget-gaming-laptop-with-RTX-4050.794098.0.html",
+        "results": {
+          "1080p": 77
+        },
+        "preview": {
+          "poster": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/269950/header.jpg?t=1791020865",
+          "video": "https://video.akamai.steamstatic.com/store_trailers/269950/84835/5a004c9a2083b5db09d0fad42e3b3495bdbbd477/1750499565/hls_264_master.m3u8?t=1482444216",
+          "source": "https://store.steampowered.com/app/269950/",
+          "title": "X-Plane 11"
+        }
+      },
+      {
+        "id": "farcry5",
+        "name": "Far Cry 5",
+        "preset": "Ultra",
+        "steamId": 552520,
+        "source": "https://www.notebookcheck.net/Acer-Nitro-V-15-ANV15-51-review-Budget-gaming-laptop-with-RTX-4050.794098.0.html",
+        "results": {
+          "1080p": 102
+        },
+        "preview": {
+          "poster": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/552520/0dbbd22689fafc2b5b86996257a8e115ff935e81/header.jpg?t=1792530774",
+          "video": "https://video.akamai.steamstatic.com/store_trailers/552520/1470190032/cadcba83da028861b79cd904fa195c970f3003eb/1792529945/hls_264_master.m3u8?t=1792530773",
+          "source": "https://store.steampowered.com/app/552520/",
+          "title": "Far Cry® 5"
+        }
+      },
+      {
+        "id": "strange-brigade",
+        "name": "Strange Brigade",
+        "preset": "Ultra · 16× AF · Ultra AA",
+        "steamId": 312670,
+        "source": "https://www.notebookcheck.net/Acer-Nitro-V-15-ANV15-51-review-Budget-gaming-laptop-with-RTX-4050.794098.0.html",
+        "results": {
+          "1080p": 135.2
+        },
+        "preview": {
+          "poster": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/312670/header.jpg?t=1589878497",
+          "video": "https://video.akamai.steamstatic.com/store_trailers/312670/106102/8698960c6a199bb89961ccc53c7eb91f2ede9334/1751263336/hls_264_master.m3u8?t=1536080187",
+          "source": "https://store.steampowered.com/app/312670/",
+          "title": "Strange Brigade"
+        }
+      },
+      {
+        "id": "cs2",
+        "name": "Counter-Strike 2",
+        "preset": "Very High",
+        "steamId": 730,
+        "source": "https://www.notebookcheck.net/Acer-Nitro-V-15-ANV15-51-review-Budget-gaming-laptop-with-RTX-4050.794098.0.html",
+        "results": {
+          "1080p": 80.9
+        },
+        "preview": {
+          "poster": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/730/162664aa5da85f418105350c5d67ca565f6c3713/header.jpg?t=1793054556",
+          "video": "https://video.akamai.steamstatic.com/store_trailers/730/612468/aa5a28c78f12232e6b6839034550c28b162fad3e/1748810724/hls_264_master.m3u8?t=1696005467",
+          "source": "https://store.steampowered.com/app/730/",
+          "title": "Counter-Strike 2"
+        }
+      },
+      {
+        "id": "mirage",
+        "name": "Assassin’s Creed Mirage",
+        "preset": "Ultra High · Adaptive Quality Off",
+        "steamId": 3035570,
+        "source": "https://www.notebookcheck.net/Acer-Nitro-V-15-ANV15-51-review-Budget-gaming-laptop-with-RTX-4050.794098.0.html",
+        "results": {
+          "1080p": 63
+        },
+        "preview": {
+          "poster": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3035570/header.jpg?t=1792777978",
+          "video": "https://video.akamai.steamstatic.com/store_trailers/3035570/765019/929fdbfbb946a6ac54ced94844a708f7bcb0cdd6/1750823088/hls_264_master.m3u8?t=1763405438",
+          "source": "https://store.steampowered.com/app/3035570/",
+          "title": "Assassin's Creed Mirage"
+        }
+      },
+      {
+        "id": "total-war",
+        "name": "Total War: Pharaoh",
+        "preset": "Ultra",
+        "steamId": 1937780,
+        "source": "https://www.notebookcheck.net/Acer-Nitro-V-15-ANV15-51-review-Budget-gaming-laptop-with-RTX-4050.794098.0.html",
+        "results": {
+          "1080p": 59.7
+        },
+        "preview": {
+          "poster": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1937780/header.jpg?t=1763646681",
+          "video": "https://video.akamai.steamstatic.com/store_trailers/1937780/650277/e5d59b30ba654831acff839607ab31ebdbc966f4/1750741495/hls_264_master.m3u8?t=1705417145",
+          "source": "https://store.steampowered.com/app/1937780/",
+          "title": "Total War: PHARAOH"
+        }
+      },
+      {
+        "id": "lords-fallen",
+        "name": "Lords of the Fallen",
+        "preset": "Ultra",
+        "steamId": 1501750,
+        "source": "https://www.notebookcheck.net/Acer-Nitro-V-15-ANV15-51-review-Budget-gaming-laptop-with-RTX-4050.794098.0.html",
+        "results": {
+          "1080p": 27.3
+        },
+        "preview": {
+          "poster": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1501750/c793d85dc133f22112c7283b79dd89e2c0aa58a4/header.jpg?t=1792592985",
+          "video": "https://video.akamai.steamstatic.com/store_trailers/1501750/170487388/1b8a50508c583d875392102479968527163a79ca/1765529793/hls_264_master.m3u8?t=1765533589",
+          "source": "https://store.steampowered.com/app/1501750/",
+          "title": "Lords of the Fallen"
+        }
+      },
+      {
+        "id": "wrc",
+        "name": "EA Sports WRC",
+        "preset": "Ultra · 16× AF · Epic AA",
+        "steamId": 1849250,
+        "source": "https://www.notebookcheck.net/Acer-Nitro-V-15-ANV15-51-review-Budget-gaming-laptop-with-RTX-4050.794098.0.html",
+        "results": {
+          "1080p": 61
+        },
+        "preview": null
+      }
+    ],
+    "benchmarkNote": "Teste da variante ANV15-51-582S: mesmo Core i5-13420H, RTX 4050 e 16 GB; SKU, sistema operacional e organização da RAM podem diferir. O TGP de 75 W pertence à unidade testada, não foi confirmado no anúncio brasileiro.",
+    "retailerId": 876264,
+    "paymentMethod": "À vista — confira a modalidade na loja",
+    "sellerName": "Acer",
+    "storeName": "KaBuM! Marketplace",
+    "available": false,
+    "offerUrl": "https://www.kabum.com.br/produto/876264/notebook-gamer-acer-nitro-v15-intel-core-i5-13420h-16gb-ram-rtx-4050-ssd-512gb-tela-15-6-full-hd-ips-linux-gutta-anv15-51-51uz",
+    "priceCheckedAt": "2026-10-30T22:18:33.128Z",
+    "shippingIncluded": false,
+    "displayOrder": 2,
+    "imageSource": "https://images.kabum.com.br/produtos/fotos/sync_mirakl/876264/large/Notebook-Gamer-Acer-Nitro-V15-Intel-Core-i5-13420h-16GB-RTX-4050-SSD-512GB-Tela-15-6-FHD-Linux-Anv15-51-51uz-NH-QS8AL-005_1764109725.jpg"
+  },
+  {
+    "id": "asus-tuf-a15-7735hs",
+    "type": "laptop",
+    "name": "ASUS TUF Gaming A15",
+    "subtitle": "Notebook Gamer Asus Tuf A15, AMD Ryzen 7-7735hs, 16GB RAM, RTX 4050, SSD 1TB NVMe, Tela 15 Full HD, Windows 11 Home",
+    "cpu": "Ryzen 7 7735HS",
+    "gpu": "RTX 4050 Laptop · 6 GB",
+    "ram": "16 GB DDR5",
+    "storage": "SSD NVMe 1 TB",
+    "tgpWatts": 95,
+    "mode": "Balanced · unidade FA507NU-LP031",
+    "source": "https://www.notebookcheck.net/Asus-TUF-Gaming-A15-laptop-review-A-budget-gamer-with-an-RTX-4050-and-a-144-Hz-screen.725720.0.html",
+    "kind": "reference",
+    "benchmarkNote": "Resultados da unidade FA507NU-LP031 com SSD 512 GB e 16 GB DDR5-4800 em dois módulos. O anúncio brasileiro tem SSD 1 TB; TGP de 95 W é o da unidade testada, não confirmado na oferta.",
+    "games": [
+      {
+        "id": "witcher3",
+        "name": "The Witcher 3 (2015)",
+        "preset": "Ultra · HBAO+",
+        "steamId": 292030,
+        "source": "https://www.notebookcheck.net/Asus-TUF-Gaming-A15-laptop-review-A-budget-gamer-with-an-RTX-4050-and-a-144-Hz-screen.725720.0.html",
+        "results": {
+          "1080p": 82.2
+        },
+        "preview": {
+          "poster": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/292030/e8afc4252e3fee8ed2525ab2fd7675cca39aa38d/header_alt_assets_1.jpg?t=1790845156",
+          "video": "https://video.akamai.steamstatic.com/store_trailers/292030/1018852715/bf5e4c4a6409b1714754e691e778ae9f66ab9907/1790683068/hls_264_master.m3u8?t=1790693333",
+          "source": "https://store.steampowered.com/app/292030/",
+          "title": "The Witcher 3: Wild Hunt — Remastered"
+        }
+      },
+      {
+        "id": "dota2",
+        "name": "Dota 2 Reborn",
+        "preset": "Ultra",
+        "steamId": 570,
+        "source": "https://www.notebookcheck.net/Asus-TUF-Gaming-A15-laptop-review-A-budget-gamer-with-an-RTX-4050-and-a-144-Hz-screen.725720.0.html",
+        "results": {
+          "1080p": 115.8
+        },
+        "preview": {
+          "poster": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/570/header.jpg?t=1791407503",
+          "video": "https://video.akamai.steamstatic.com/store_trailers/570/116737/313addee2092d0bd6f538d164610061ea8bbe79c/1749859757/hls_264_master.m3u8?t=1762820639",
+          "source": "https://store.steampowered.com/app/570/",
+          "title": "Dota 2"
+        }
+      },
+      {
+        "id": "ff15",
+        "name": "Final Fantasy XV Benchmark",
+        "preset": "High Quality",
+        "steamId": 637650,
+        "source": "https://www.notebookcheck.net/Asus-TUF-Gaming-A15-laptop-review-A-budget-gamer-with-an-RTX-4050-and-a-144-Hz-screen.725720.0.html",
+        "results": {
+          "1080p": 81.5
+        },
+        "preview": {
+          "poster": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/637650/header.jpg?t=1775105127",
+          "video": "https://video.akamai.steamstatic.com/store_trailers/637650/195232/d64451d849dc73fa7bef6c71ab8ae43b278421d7/1750565040/hls_264_master.m3u8?t=1542104574",
+          "source": "https://store.steampowered.com/app/637650/",
+          "title": "FINAL FANTASY XV WINDOWS EDITION"
+        }
+      },
+      {
+        "id": "xplane11",
+        "name": "X-Plane 11.11",
+        "preset": "High · fps_test=3",
+        "steamId": 269950,
+        "source": "https://www.notebookcheck.net/Asus-TUF-Gaming-A15-laptop-review-A-budget-gamer-with-an-RTX-4050-and-a-144-Hz-screen.725720.0.html",
+        "results": {
+          "1080p": 77.8
+        },
+        "preview": {
+          "poster": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/269950/header.jpg?t=1791020865",
+          "video": "https://video.akamai.steamstatic.com/store_trailers/269950/84835/5a004c9a2083b5db09d0fad42e3b3495bdbbd477/1750499565/hls_264_master.m3u8?t=1482444216",
+          "source": "https://store.steampowered.com/app/269950/",
+          "title": "X-Plane 11"
+        }
+      },
+      {
+        "id": "farcry5",
+        "name": "Far Cry 5",
+        "preset": "Ultra",
+        "steamId": 552520,
+        "source": "https://www.notebookcheck.net/Asus-TUF-Gaming-A15-laptop-review-A-budget-gamer-with-an-RTX-4050-and-a-144-Hz-screen.725720.0.html",
+        "results": {
+          "1080p": 99
+        },
+        "preview": {
+          "poster": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/552520/0dbbd22689fafc2b5b86996257a8e115ff935e81/header.jpg?t=1792530774",
+          "video": "https://video.akamai.steamstatic.com/store_trailers/552520/1470190032/cadcba83da028861b79cd904fa195c970f3003eb/1792529945/hls_264_master.m3u8?t=1792530773",
+          "source": "https://store.steampowered.com/app/552520/",
+          "title": "Far Cry® 5"
+        }
+      },
+      {
+        "id": "strange-brigade",
+        "name": "Strange Brigade",
+        "preset": "Ultra · 16× AF · Ultra AA",
+        "steamId": 312670,
+        "source": "https://www.notebookcheck.net/Asus-TUF-Gaming-A15-laptop-review-A-budget-gamer-with-an-RTX-4050-and-a-144-Hz-screen.725720.0.html",
+        "results": {
+          "1080p": 147
+        },
+        "preview": {
+          "poster": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/312670/header.jpg?t=1589878497",
+          "video": "https://video.akamai.steamstatic.com/store_trailers/312670/106102/8698960c6a199bb89961ccc53c7eb91f2ede9334/1751263336/hls_264_master.m3u8?t=1536080187",
+          "source": "https://store.steampowered.com/app/312670/",
+          "title": "Strange Brigade"
+        }
+      },
+      {
+        "id": "f1-2021",
+        "name": "F1 2021",
+        "preset": "Ultra High · RT",
+        "steamId": 1134570,
+        "source": "https://www.notebookcheck.net/Asus-TUF-Gaming-A15-laptop-review-A-budget-gamer-with-an-RTX-4050-and-a-144-Hz-screen.725720.0.html",
+        "results": {
+          "1080p": 110.3
+        },
+        "preview": {
+          "poster": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1134570/header.jpg?t=1683125705",
+          "video": "https://video.akamai.steamstatic.com/store_trailers/1134570/410415/5ea4ea3642edf66afc87ecd2d073d0e1b2462c3e/1751193410/hls_264_master.m3u8?t=1634757276",
+          "source": "https://store.steampowered.com/app/1134570/",
+          "title": "F1® 2021"
+        }
+      },
+      {
+        "id": "cyberpunk16",
+        "name": "Cyberpunk 2077 1.6",
+        "preset": "Ultra",
+        "steamId": 1091500,
+        "source": "https://www.notebookcheck.net/Asus-TUF-Gaming-A15-laptop-review-A-budget-gamer-with-an-RTX-4050-and-a-144-Hz-screen.725720.0.html",
+        "results": {
+          "1080p": 66
+        },
+        "preview": {
+          "poster": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1091500/48a93d6445a67520ea49833c93dae8f2e68fc540/header_alt_assets_9.jpg?t=1792682505",
+          "video": "https://video.akamai.steamstatic.com/store_trailers/1091500/512843956/7ddc0c953816d19d719b299eb76b1ce188e17225/1792676918/hls_264_master.m3u8?t=1792682496",
+          "source": "https://store.steampowered.com/app/1091500/",
+          "title": "Cyberpunk 2077"
+        }
+      },
+      {
+        "id": "f1-22",
+        "name": "F1 22",
+        "preset": "Ultra High · 16× AF · TAA",
+        "steamId": 1692250,
+        "source": "https://www.notebookcheck.net/Asus-TUF-Gaming-A15-laptop-review-A-budget-gamer-with-an-RTX-4050-and-a-144-Hz-screen.725720.0.html",
+        "results": {
+          "1080p": 56.4
+        },
+        "preview": {
+          "poster": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1692250/header.jpg?t=1709056193",
+          "video": "https://video.akamai.steamstatic.com/store_trailers/1692250/537687/4307bb5c3f1d949436c8c1c0170a823a7ac9a8e5/1751020333/hls_264_master.m3u8?t=1675947904",
+          "source": "https://store.steampowered.com/app/1692250/",
+          "title": "F1® 22"
+        }
+      },
+      {
+        "id": "hogwarts",
+        "name": "Hogwarts Legacy",
+        "preset": "Ultra · TAA",
+        "steamId": 990080,
+        "source": "https://www.notebookcheck.net/Asus-TUF-Gaming-A15-laptop-review-A-budget-gamer-with-an-RTX-4050-and-a-144-Hz-screen.725720.0.html",
+        "results": {
+          "1080p": 49
+        },
+        "preview": {
+          "poster": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/990080/be2971b1023bccb04f993887d70ef4d2060262cf/header.jpg?t=1790708992",
+          "video": "https://video.akamai.steamstatic.com/store_trailers/990080/1375135040/954f940cc193696b7733f9eacfa43a2cdadb1db5/1778796137/hls_264_master.m3u8?t=1778797472",
+          "source": "https://store.steampowered.com/app/990080/",
+          "title": "Hogwarts Legacy"
+        }
+      }
+    ],
+    "retailerId": 497084,
+    "priceCents": 1206000,
+    "paymentMethod": "À vista — confira a modalidade na loja",
+    "sellerName": "LAPTOP SHOP",
+    "storeName": "KaBuM! Marketplace",
+    "available": false,
+    "offerUrl": "https://www.kabum.com.br/produto/497084/notebook-gamer-asus-tuf-a15-amd-ryzen-7-7735hs-16gb-ram-rtx-4050-ssd-1tb-nvme-tela-15-full-hd-windows-11-home",
+    "priceCheckedAt": "2026-10-30T22:18:33.128Z",
+    "shippingIncluded": false,
+    "image": "/hardware/systems/asus-tuf-a15-7735hs.webp",
+    "imageNote": "Foto do produto anunciado na loja. Direitos do fabricante/vendedor.",
+    "displayOrder": 3,
+    "imageSource": "https://images.kabum.com.br/produtos/fotos/sync_mirakl/497084/large/Notebook-Gamer-Asus-Tuf-A15-AMD-Ryzen-7-7735hs-16GB-RAM-RTX-4050-SSD-1TB-NVMe-Tela-15-Full-HD-Windows-11-Home_1765308817.png"
+  }
+]

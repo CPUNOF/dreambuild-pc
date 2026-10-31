@@ -1,0 +1,90 @@
+export const categoryNames = {
+  cpu: "Processador",
+  gpu: "Placa de vídeo",
+  mobo: "Placa-mãe",
+  ram: "Memória RAM",
+  storage: "Armazenamento",
+  psu: "Fonte",
+  case: "Gabinete",
+  cooler: "Cooler",
+};
+export const hardwareFields = {
+  cpu: [
+    [
+      "coolerPackage",
+      "Cooler na embalagem (included / not_included / unknown)",
+    ],
+    ["boxedCoolerName", "Nome do cooler incluído"],
+    [
+      "boxedCoolerHeightMm",
+      "Altura do cooler incluído (mm, se confirmada)",
+      "number",
+    ],
+    ["maxRamGb", "RAM máxima da CPU (GB)", "number"],
+    ["socket", "Socket"],
+    ["ramType", "Padrão da RAM"],
+    ["tdpWatts", "TDP de referência (W)", "number"],
+    [
+      "maxPowerWatts",
+      "Potência máxima/turbo publicada (W, quando verificada)",
+      "number",
+    ],
+  ],
+  gpu: [
+    ["lengthMm", "Comprimento (mm)", "number"],
+    ["slots", "Slots ocupados", "number"],
+    ["referencePowerWatts", "Potência de referência da GPU (W)", "number"],
+    ["recommendedPsuWatts", "Fonte recomendada pelo fabricante (W)", "number"],
+    ["powerConnector", "Conector de energia (ex.: 16pin)"],
+    ["vramGb", "Memória de vídeo (GB)", "number"],
+  ],
+  mobo: [
+    ["socket", "Socket"],
+    ["ramType", "Padrão da RAM"],
+    ["formFactor", "Formato (ex.: ATX)"],
+    ["ramSlots", "Slots de RAM", "number"],
+    ["maxRamGb", "RAM máxima (GB)", "number"],
+    ["sataPorts", "Portas SATA de dados", "number"],
+    ["sataPortIds", "IDs reais das portas SATA (JSON, ex.: [1,2,3,4])", "json"],
+    ["m2Slots", "Mapa de slots M.2 (JSON com id, protocols e formats)", "json"],
+    ["storageFormats", "Formatos de SSD (ex.: M.2 2280)", "list"],
+  ],
+  ram: [
+    ["ramType", "Padrão (DDR4 / DDR5)"],
+    ["capacityGb", "Capacidade total (GB)", "number"],
+    ["modules", "Quantidade de módulos", "number"],
+    ["speedMts", "Velocidade anunciada (MT/s)", "number"],
+    ["profile", "Perfil (ex.: Intel XMP)"],
+  ],
+  storage: [
+    ["interface", "Interface"],
+    ["formFactor", "Formato (ex.: M.2 2280)"],
+    ["capacityGb", "Capacidade nominal (GB)", "number"],
+  ],
+  psu: [
+    ["wattage", "Potência nominal (W)", "number"],
+    ["lengthMm", "Comprimento (mm)", "number"],
+    ["connectors", "Conectores (ex.: 16pin, eps8, pcie8)", "list"],
+  ],
+  case: [
+    [
+      "radiatorSizes",
+      "Radiadores suportados (ex.: 240,360; conforme manual)",
+      "list",
+    ],
+    ["formFactors", "Formatos de placa-mãe (separados por vírgula)", "list"],
+    ["maxGpuLengthMm", "Limite de GPU (mm)", "number"],
+    ["maxCoolerHeightMm", "Limite de cooler (mm)", "number"],
+    ["maxPsuLengthMm", "Limite de fonte (mm)", "number"],
+  ],
+  cooler: [
+    ["coolingType", "Tipo de cooler (air ou liquid)"],
+    [
+      "radiatorSizeMm",
+      "Tamanho nominal do radiador (mm, water cooler)",
+      "number",
+    ],
+    ["supportedSockets", "Sockets suportados (separados por vírgula)", "list"],
+    ["heightMm", "Altura (mm)", "number"],
+  ],
+};

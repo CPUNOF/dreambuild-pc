@@ -1,0 +1,4858 @@
+[
+  {
+    "id": "kabum-1053828",
+    "slug": "kabum-1053828",
+    "category": "cpu",
+    "categoryName": "Processador",
+    "brand": "AMD",
+    "name": "AMD Ryzen 7 5800X3D, 3.4GHz (4.5GHz Max Turbo)",
+    "fullName": "Processador AMD Ryzen 7 5800X3D, 3.4GHz (4.5GHz Max Turbo), Cache 100MB, 8 Núcleos, 16 Threads, AM4, Sem Vídeo Integrado - 100-100000651POF",
+    "model": "100-100000651POF",
+    "image": "/hardware/expanded/kabum-1053828-1.jpg",
+    "gallery": [
+      {
+        "src": "/hardware/expanded/kabum-1053828-1.jpg",
+        "alt": "Processador AMD Ryzen 7 5800X3D, 3.4GHz (4.5GHz Max Turbo), Cache 100MB, 8 Núcleos, 16 Threads, AM4, Sem Vídeo Integrado - 100-100000651POF — foto 1 publicada no cadastro da loja"
+      },
+      {
+        "src": "/hardware/expanded/kabum-1053828-2.jpg",
+        "alt": "Processador AMD Ryzen 7 5800X3D, 3.4GHz (4.5GHz Max Turbo), Cache 100MB, 8 Núcleos, 16 Threads, AM4, Sem Vídeo Integrado - 100-100000651POF — foto 2 publicada no cadastro da loja"
+      }
+    ],
+    "description": "AMD Ryzen 7 5800X3D, 3.4GHz (4.5GHz Max Turbo). 3.4GHz (4.5GHz Max Turbo). Cache 100MB. 8 Núcleos. A variante anunciada é 100-100000651POF. Confira os requisitos do seu conjunto e as informações detalhadas do fabricante antes de escolher.",
+    "highlights": [
+      "3.4GHz (4.5GHz Max Turbo)",
+      "Cache 100MB",
+      "8 Núcleos"
+    ],
+    "specifications": [
+      [
+        "Marca",
+        "AMD"
+      ],
+      [
+        "Modelo anunciado",
+        "100-100000651POF"
+      ],
+      [
+        "Código na loja",
+        "1053828"
+      ],
+      [
+        "Socket",
+        "AM4"
+      ]
+    ],
+    "compatibilityNote": "Confira BIOS, dimensões, conexões e instalação para o conjunto escolhido. Dados técnicos não identificados nesta ficha precisam de conferência e não são presumidos pelo montador.",
+    "manufacturerUrl": "https://www.kabum.com.br/produto/1053828/processador-amd-ryzen-7-5800x3d-3-4ghz-8-core-cache-100mb-am4-100-100000651pof",
+    "technicalSource": "https://www.kabum.com.br/produto/1053828/processador-amd-ryzen-7-5800x3d-3-4ghz-8-core-cache-100mb-am4-100-100000651pof",
+    "sourceLabel": "Página do produto na KaBuM!",
+    "checkedAt": "2026-10-30",
+    "hardware": {
+      "socket": "AM4"
+    },
+    "offers": [
+      {
+        "store": "kabum",
+        "paymentMethod": "pix",
+        "availability": "in_stock",
+        "priceCents": 204999,
+        "sourceUrl": "https://www.kabum.com.br/produto/1053828/processador-amd-ryzen-7-5800x3d-3-4ghz-8-core-cache-100mb-am4-100-100000651pof",
+        "checkedAt": "2026-10-30T15:36:34.542Z"
+      }
+    ]
+  },
+  {
+    "id": "kabum-320799",
+    "slug": "kabum-320799",
+    "category": "cpu",
+    "categoryName": "Processador",
+    "brand": "AMD",
+    "name": "AMD Ryzen 5 5500, 3.6GHz (4.2GHz Max Turbo)",
+    "fullName": "Processador AMD Ryzen 5 5500, 3.6GHz (4.2GHz Max Turbo), Cache 19MB, 6 Núcleos, 12 Threads, AM4, Sem Vídeo Integrado - 100-100000457BOX",
+    "model": "100-100000457BOX",
+    "image": "/hardware/expanded/kabum-320799-1.jpg",
+    "gallery": [
+      {
+        "src": "/hardware/expanded/kabum-320799-1.jpg",
+        "alt": "Processador AMD Ryzen 5 5500, 3.6GHz (4.2GHz Max Turbo), Cache 19MB, 6 Núcleos, 12 Threads, AM4, Sem Vídeo Integrado - 100-100000457BOX — foto 1 publicada no cadastro da loja"
+      },
+      {
+        "src": "/hardware/expanded/kabum-320799-2.jpg",
+        "alt": "Processador AMD Ryzen 5 5500, 3.6GHz (4.2GHz Max Turbo), Cache 19MB, 6 Núcleos, 12 Threads, AM4, Sem Vídeo Integrado - 100-100000457BOX — foto 2 publicada no cadastro da loja"
+      }
+    ],
+    "description": "AMD Ryzen 5 5500, 3.6GHz (4.2GHz Max Turbo). 3.6GHz (4.2GHz Max Turbo). Cache 19MB. 6 Núcleos. A variante anunciada é 100-100000457BOX. Confira os requisitos do seu conjunto e as informações detalhadas do fabricante antes de escolher.",
+    "highlights": [
+      "3.6GHz (4.2GHz Max Turbo)",
+      "Cache 19MB",
+      "6 Núcleos"
+    ],
+    "specifications": [
+      [
+        "Marca",
+        "AMD"
+      ],
+      [
+        "Modelo anunciado",
+        "100-100000457BOX"
+      ],
+      [
+        "Código na loja",
+        "320799"
+      ],
+      [
+        "Socket",
+        "AM4"
+      ]
+    ],
+    "compatibilityNote": "Confira BIOS, dimensões, conexões e instalação para o conjunto escolhido. Dados técnicos não identificados nesta ficha precisam de conferência e não são presumidos pelo montador.",
+    "manufacturerUrl": "https://www.kabum.com.br/produto/320799/processador-amd-ryzen-5-5500-3-6ghz-4-2ghz-max-turbo-cache-19mb-6-nucleos-12-threads-am4-sem-video-integrado-100-100000457box",
+    "technicalSource": "https://www.kabum.com.br/produto/320799/processador-amd-ryzen-5-5500-3-6ghz-4-2ghz-max-turbo-cache-19mb-6-nucleos-12-threads-am4-sem-video-integrado-100-100000457box",
+    "sourceLabel": "Página do produto na KaBuM!",
+    "checkedAt": "2026-10-30",
+    "hardware": {
+      "socket": "AM4"
+    },
+    "offers": [
+      {
+        "store": "kabum",
+        "paymentMethod": "pix",
+        "availability": "in_stock",
+        "priceCents": 52999,
+        "sourceUrl": "https://www.kabum.com.br/produto/320799/processador-amd-ryzen-5-5500-3-6ghz-4-2ghz-max-turbo-cache-19mb-6-nucleos-12-threads-am4-sem-video-integrado-100-100000457box",
+        "checkedAt": "2026-10-30T15:36:35.717Z"
+      }
+    ]
+  },
+  {
+    "id": "kabum-662405",
+    "slug": "kabum-662405",
+    "category": "cpu",
+    "categoryName": "Processador",
+    "brand": "AMD",
+    "name": "AMD Ryzen 7 9800X3D, 4.7GHz (5.2GHz Max Turbo)",
+    "fullName": "Processador AMD Ryzen 7 9800X3D, 4.7GHz (5.2GHz Max Turbo), Cache 104MB, 8 Núcleos, 16 Threads, AM5, Com Vídeo Integrado - 100-100001084WOF",
+    "model": "100-100001084WOF",
+    "image": "/hardware/expanded/kabum-662405-1.jpg",
+    "gallery": [
+      {
+        "src": "/hardware/expanded/kabum-662405-1.jpg",
+        "alt": "Processador AMD Ryzen 7 9800X3D, 4.7GHz (5.2GHz Max Turbo), Cache 104MB, 8 Núcleos, 16 Threads, AM5, Com Vídeo Integrado - 100-100001084WOF — foto 1 publicada no cadastro da loja"
+      },
+      {
+        "src": "/hardware/expanded/kabum-662405-2.jpg",
+        "alt": "Processador AMD Ryzen 7 9800X3D, 4.7GHz (5.2GHz Max Turbo), Cache 104MB, 8 Núcleos, 16 Threads, AM5, Com Vídeo Integrado - 100-100001084WOF — foto 2 publicada no cadastro da loja"
+      }
+    ],
+    "description": "AMD Ryzen 7 9800X3D, 4.7GHz (5.2GHz Max Turbo). 4.7GHz (5.2GHz Max Turbo). Cache 104MB. 8 Núcleos. A variante anunciada é 100-100001084WOF. Confira os requisitos do seu conjunto e as informações detalhadas do fabricante antes de escolher.",
+    "highlights": [
+      "4.7GHz (5.2GHz Max Turbo)",
+      "Cache 104MB",
+      "8 Núcleos"
+    ],
+    "specifications": [
+      [
+        "Marca",
+        "AMD"
+      ],
+      [
+        "Modelo anunciado",
+        "100-100001084WOF"
+      ],
+      [
+        "Código na loja",
+        "662405"
+      ],
+      [
+        "Socket",
+        "AM5"
+      ]
+    ],
+    "compatibilityNote": "Confira BIOS, dimensões, conexões e instalação para o conjunto escolhido. Dados técnicos não identificados nesta ficha precisam de conferência e não são presumidos pelo montador.",
+    "manufacturerUrl": "https://www.kabum.com.br/produto/662405/processador-amd-ryzen-7-9800x3d-4-7ghz-5-2ghz-max-turbo-cache-104mb-8-nucleos-16-threads-am5-com-video-integrado-100-100001084wof",
+    "technicalSource": "https://www.kabum.com.br/produto/662405/processador-amd-ryzen-7-9800x3d-4-7ghz-5-2ghz-max-turbo-cache-104mb-8-nucleos-16-threads-am5-com-video-integrado-100-100001084wof",
+    "sourceLabel": "Página do produto na KaBuM!",
+    "checkedAt": "2026-10-30",
+    "hardware": {
+      "socket": "AM5"
+    },
+    "offers": []
+  },
+  {
+    "id": "kabum-320797",
+    "slug": "kabum-320797",
+    "category": "cpu",
+    "categoryName": "Processador",
+    "brand": "AMD",
+    "name": "AMD Ryzen 7 5700X, 3.4GHz (4.6GHz Max Turbo)",
+    "fullName": "Processador AMD Ryzen 7 5700X, 3.4GHz (4.6GHz Max Turbo), Cache 36MB, 8 Núcleos, 16 Threads, AM4, Sem Vídeo Integrado - 100-100000926WOF",
+    "model": "100-100000926WOF",
+    "image": "/hardware/expanded/kabum-320797-1.jpg",
+    "gallery": [
+      {
+        "src": "/hardware/expanded/kabum-320797-1.jpg",
+        "alt": "Processador AMD Ryzen 7 5700X, 3.4GHz (4.6GHz Max Turbo), Cache 36MB, 8 Núcleos, 16 Threads, AM4, Sem Vídeo Integrado - 100-100000926WOF — foto 1 publicada no cadastro da loja"
+      },
+      {
+        "src": "/hardware/expanded/kabum-320797-2.jpg",
+        "alt": "Processador AMD Ryzen 7 5700X, 3.4GHz (4.6GHz Max Turbo), Cache 36MB, 8 Núcleos, 16 Threads, AM4, Sem Vídeo Integrado - 100-100000926WOF — foto 2 publicada no cadastro da loja"
+      }
+    ],
+    "description": "AMD Ryzen 7 5700X, 3.4GHz (4.6GHz Max Turbo). 3.4GHz (4.6GHz Max Turbo). Cache 36MB. 8 Núcleos. A variante anunciada é 100-100000926WOF. Confira os requisitos do seu conjunto e as informações detalhadas do fabricante antes de escolher.",
+    "highlights": [
+      "3.4GHz (4.6GHz Max Turbo)",
+      "Cache 36MB",
+      "8 Núcleos"
+    ],
+    "specifications": [
+      [
+        "Marca",
+        "AMD"
+      ],
+      [
+        "Modelo anunciado",
+        "100-100000926WOF"
+      ],
+      [
+        "Código na loja",
+        "320797"
+      ],
+      [
+        "Socket",
+        "AM4"
+      ]
+    ],
+    "compatibilityNote": "Confira BIOS, dimensões, conexões e instalação para o conjunto escolhido. Dados técnicos não identificados nesta ficha precisam de conferência e não são presumidos pelo montador.",
+    "manufacturerUrl": "https://www.kabum.com.br/produto/320797/processador-amd-ryzen-7-5700x-3-4ghz-4-6ghz-max-turbo-cache-36mb-8-nucleos-16-threads-am4-sem-video-integrado-100-100000926wof",
+    "technicalSource": "https://www.kabum.com.br/produto/320797/processador-amd-ryzen-7-5700x-3-4ghz-4-6ghz-max-turbo-cache-36mb-8-nucleos-16-threads-am4-sem-video-integrado-100-100000926wof",
+    "sourceLabel": "Página do produto na KaBuM!",
+    "checkedAt": "2026-10-30",
+    "hardware": {
+      "socket": "AM4"
+    },
+    "offers": [
+      {
+        "store": "kabum",
+        "paymentMethod": "pix",
+        "availability": "in_stock",
+        "priceCents": 119999,
+        "sourceUrl": "https://www.kabum.com.br/produto/320797/processador-amd-ryzen-7-5700x-3-4ghz-4-6ghz-max-turbo-cache-36mb-8-nucleos-16-threads-am4-sem-video-integrado-100-100000926wof",
+        "checkedAt": "2026-10-30T15:36:37.619Z"
+      }
+    ]
+  },
+  {
+    "id": "kabum-520366",
+    "slug": "kabum-520366",
+    "category": "cpu",
+    "categoryName": "Processador",
+    "brand": "AMD",
+    "name": "AMD Ryzen 5 8500G, 3.5 GHz (5.0GHz Max Turbo)",
+    "fullName": "Processador AMD Ryzen 5 8500G, 3.5 GHz (5.0GHz Max Turbo), Cache 22MB, 6 Núcleos, 12 Threads, AM5, Com Vídeo Integrado - 100-100000931BOX",
+    "model": "100-100000931BOX",
+    "image": "/hardware/expanded/kabum-520366-1.jpg",
+    "gallery": [
+      {
+        "src": "/hardware/expanded/kabum-520366-1.jpg",
+        "alt": "Processador AMD Ryzen 5 8500G, 3.5 GHz (5.0GHz Max Turbo), Cache 22MB, 6 Núcleos, 12 Threads, AM5, Com Vídeo Integrado - 100-100000931BOX — foto 1 publicada no cadastro da loja"
+      },
+      {
+        "src": "/hardware/expanded/kabum-520366-2.jpg",
+        "alt": "Processador AMD Ryzen 5 8500G, 3.5 GHz (5.0GHz Max Turbo), Cache 22MB, 6 Núcleos, 12 Threads, AM5, Com Vídeo Integrado - 100-100000931BOX — foto 2 publicada no cadastro da loja"
+      }
+    ],
+    "description": "AMD Ryzen 5 8500G, 3.5 GHz (5.0GHz Max Turbo). 3.5 GHz (5.0GHz Max Turbo). Cache 22MB. 6 Núcleos. A variante anunciada é 100-100000931BOX. Confira os requisitos do seu conjunto e as informações detalhadas do fabricante antes de escolher.",
+    "highlights": [
+      "3.5 GHz (5.0GHz Max Turbo)",
+      "Cache 22MB",
+      "6 Núcleos"
+    ],
+    "specifications": [
+      [
+        "Marca",
+        "AMD"
+      ],
+      [
+        "Modelo anunciado",
+        "100-100000931BOX"
+      ],
+      [
+        "Código na loja",
+        "520366"
+      ],
+      [
+        "Socket",
+        "AM5"
+      ]
+    ],
+    "compatibilityNote": "Confira BIOS, dimensões, conexões e instalação para o conjunto escolhido. Dados técnicos não identificados nesta ficha precisam de conferência e não são presumidos pelo montador.",
+    "manufacturerUrl": "https://www.kabum.com.br/produto/520366/processador-amd-ryzen-5-8500g-3-5-ghz-5-0ghz-max-turbo-cache-22mb-6-nucleos-12-threads-am5-com-video-integrado-100-100000931box",
+    "technicalSource": "https://www.kabum.com.br/produto/520366/processador-amd-ryzen-5-8500g-3-5-ghz-5-0ghz-max-turbo-cache-22mb-6-nucleos-12-threads-am5-com-video-integrado-100-100000931box",
+    "sourceLabel": "Página do produto na KaBuM!",
+    "checkedAt": "2026-10-30",
+    "hardware": {
+      "socket": "AM5"
+    },
+    "offers": [
+      {
+        "store": "kabum",
+        "paymentMethod": "pix",
+        "availability": "in_stock",
+        "priceCents": 79999,
+        "sourceUrl": "https://www.kabum.com.br/produto/520366/processador-amd-ryzen-5-8500g-3-5-ghz-5-0ghz-max-turbo-cache-22mb-6-nucleos-12-threads-am5-com-video-integrado-100-100000931box",
+        "checkedAt": "2026-10-30T15:36:39.268Z"
+      }
+    ]
+  },
+  {
+    "id": "kabum-283713",
+    "slug": "kabum-283713",
+    "category": "cpu",
+    "categoryName": "Processador",
+    "brand": "Intel",
+    "name": "Intel Core i5-12400, 2.5GHz (4.4GHz Max Turbo)",
+    "fullName": "Processador Intel Core i5-12400, 2.5GHz (4.4GHz Max Turbo), Cache 18MB, 6 Núcleos, 12 Threads, LGA 1700, Com Vídeo Integrado - BX8071512400",
+    "model": "BX8071512400",
+    "image": "/hardware/expanded/kabum-283713-1.jpg",
+    "gallery": [
+      {
+        "src": "/hardware/expanded/kabum-283713-1.jpg",
+        "alt": "Processador Intel Core i5-12400, 2.5GHz (4.4GHz Max Turbo), Cache 18MB, 6 Núcleos, 12 Threads, LGA 1700, Com Vídeo Integrado - BX8071512400 — foto 1 publicada no cadastro da loja"
+      },
+      {
+        "src": "/hardware/expanded/kabum-283713-2.jpg",
+        "alt": "Processador Intel Core i5-12400, 2.5GHz (4.4GHz Max Turbo), Cache 18MB, 6 Núcleos, 12 Threads, LGA 1700, Com Vídeo Integrado - BX8071512400 — foto 2 publicada no cadastro da loja"
+      }
+    ],
+    "description": "Intel Core i5-12400, 2.5GHz (4.4GHz Max Turbo). 2.5GHz (4.4GHz Max Turbo). Cache 18MB. 6 Núcleos. A variante anunciada é BX8071512400. Confira os requisitos do seu conjunto e as informações detalhadas do fabricante antes de escolher.",
+    "highlights": [
+      "2.5GHz (4.4GHz Max Turbo)",
+      "Cache 18MB",
+      "6 Núcleos"
+    ],
+    "specifications": [
+      [
+        "Marca",
+        "Intel"
+      ],
+      [
+        "Modelo anunciado",
+        "BX8071512400"
+      ],
+      [
+        "Código na loja",
+        "283713"
+      ],
+      [
+        "Socket",
+        "LGA1700"
+      ]
+    ],
+    "compatibilityNote": "Confira BIOS, dimensões, conexões e instalação para o conjunto escolhido. Dados técnicos não identificados nesta ficha precisam de conferência e não são presumidos pelo montador.",
+    "manufacturerUrl": "https://www.kabum.com.br/produto/283713/processador-intel-core-i5-12400-2-5ghz-4-4ghz-max-turbo-cache-18mb-6-nucleos-12-threads-lga-1700-com-video-integrado-bx8071512400",
+    "technicalSource": "https://www.kabum.com.br/produto/283713/processador-intel-core-i5-12400-2-5ghz-4-4ghz-max-turbo-cache-18mb-6-nucleos-12-threads-lga-1700-com-video-integrado-bx8071512400",
+    "sourceLabel": "Página do produto na KaBuM!",
+    "checkedAt": "2026-10-30",
+    "hardware": {
+      "socket": "LGA1700"
+    },
+    "offers": [
+      {
+        "store": "kabum",
+        "paymentMethod": "pix",
+        "availability": "in_stock",
+        "priceCents": 109999,
+        "sourceUrl": "https://www.kabum.com.br/produto/283713/processador-intel-core-i5-12400-2-5ghz-4-4ghz-max-turbo-cache-18mb-6-nucleos-12-threads-lga-1700-com-video-integrado-bx8071512400",
+        "checkedAt": "2026-10-30T15:36:40.397Z"
+      }
+    ]
+  },
+  {
+    "id": "kabum-181089",
+    "slug": "kabum-181089",
+    "category": "cpu",
+    "categoryName": "Processador",
+    "brand": "AMD",
+    "name": "AMD Ryzen 7 5700G, 3.8GHz (4.6GHz Max Turbo)",
+    "fullName": "Processador AMD Ryzen 7 5700G, 3.8GHz (4.6GHz Max Turbo), Cache 20MB, 8 Núcleos, 16 Threads, AM4, Com Vídeo Integrado - 100-100000263BOX",
+    "model": "100-100000263BOX",
+    "image": "/hardware/expanded/kabum-181089-1.jpg",
+    "gallery": [
+      {
+        "src": "/hardware/expanded/kabum-181089-1.jpg",
+        "alt": "Processador AMD Ryzen 7 5700G, 3.8GHz (4.6GHz Max Turbo), Cache 20MB, 8 Núcleos, 16 Threads, AM4, Com Vídeo Integrado - 100-100000263BOX — foto 1 publicada no cadastro da loja"
+      },
+      {
+        "src": "/hardware/expanded/kabum-181089-2.jpg",
+        "alt": "Processador AMD Ryzen 7 5700G, 3.8GHz (4.6GHz Max Turbo), Cache 20MB, 8 Núcleos, 16 Threads, AM4, Com Vídeo Integrado - 100-100000263BOX — foto 2 publicada no cadastro da loja"
+      }
+    ],
+    "description": "AMD Ryzen 7 5700G, 3.8GHz (4.6GHz Max Turbo). 3.8GHz (4.6GHz Max Turbo). Cache 20MB. 8 Núcleos. A variante anunciada é 100-100000263BOX. Confira os requisitos do seu conjunto e as informações detalhadas do fabricante antes de escolher.",
+    "highlights": [
+      "3.8GHz (4.6GHz Max Turbo)",
+      "Cache 20MB",
+      "8 Núcleos"
+    ],
+    "specifications": [
+      [
+        "Marca",
+        "AMD"
+      ],
+      [
+        "Modelo anunciado",
+        "100-100000263BOX"
+      ],
+      [
+        "Código na loja",
+        "181089"
+      ],
+      [
+        "Socket",
+        "AM4"
+      ]
+    ],
+    "compatibilityNote": "Confira BIOS, dimensões, conexões e instalação para o conjunto escolhido. Dados técnicos não identificados nesta ficha precisam de conferência e não são presumidos pelo montador.",
+    "manufacturerUrl": "https://www.kabum.com.br/produto/181089/processador-amd-ryzen-7-5700g-3-8ghz-4-6ghz-max-turbo-cache-20mb-8-nucleos-16-threads-am4-com-video-integrado-100-100000263box",
+    "technicalSource": "https://www.kabum.com.br/produto/181089/processador-amd-ryzen-7-5700g-3-8ghz-4-6ghz-max-turbo-cache-20mb-8-nucleos-16-threads-am4-com-video-integrado-100-100000263box",
+    "sourceLabel": "Página do produto na KaBuM!",
+    "checkedAt": "2026-10-30",
+    "hardware": {
+      "socket": "AM4"
+    },
+    "offers": [
+      {
+        "store": "kabum",
+        "paymentMethod": "pix",
+        "availability": "in_stock",
+        "priceCents": 129999,
+        "sourceUrl": "https://www.kabum.com.br/produto/181089/processador-amd-ryzen-7-5700g-3-8ghz-4-6ghz-max-turbo-cache-20mb-8-nucleos-16-threads-am4-com-video-integrado-100-100000263box",
+        "checkedAt": "2026-10-30T15:36:41.888Z"
+      }
+    ]
+  },
+  {
+    "id": "kabum-520368",
+    "slug": "kabum-520368",
+    "category": "cpu",
+    "categoryName": "Processador",
+    "brand": "AMD",
+    "name": "AMD Ryzen 5 5600GT, 3.6 GHz (4.6GHz Max Turbo)",
+    "fullName": "Processador AMD Ryzen 5 5600GT, 3.6 GHz (4.6GHz Max Turbo), Cache 4MB, 6 Núcleos, 12 Threads, AM4, Com Vídeo Integrado - 100-100001488BOX",
+    "model": "100-100001488BOX",
+    "image": "/hardware/expanded/kabum-520368-1.jpg",
+    "gallery": [
+      {
+        "src": "/hardware/expanded/kabum-520368-1.jpg",
+        "alt": "Processador AMD Ryzen 5 5600GT, 3.6 GHz (4.6GHz Max Turbo), Cache 4MB, 6 Núcleos, 12 Threads, AM4, Com Vídeo Integrado - 100-100001488BOX — foto 1 publicada no cadastro da loja"
+      },
+      {
+        "src": "/hardware/expanded/kabum-520368-2.jpg",
+        "alt": "Processador AMD Ryzen 5 5600GT, 3.6 GHz (4.6GHz Max Turbo), Cache 4MB, 6 Núcleos, 12 Threads, AM4, Com Vídeo Integrado - 100-100001488BOX — foto 2 publicada no cadastro da loja"
+      }
+    ],
+    "description": "AMD Ryzen 5 5600GT, 3.6 GHz (4.6GHz Max Turbo). 3.6 GHz (4.6GHz Max Turbo). Cache 4MB. 6 Núcleos. A variante anunciada é 100-100001488BOX. Confira os requisitos do seu conjunto e as informações detalhadas do fabricante antes de escolher.",
+    "highlights": [
+      "3.6 GHz (4.6GHz Max Turbo)",
+      "Cache 4MB",
+      "6 Núcleos"
+    ],
+    "specifications": [
+      [
+        "Marca",
+        "AMD"
+      ],
+      [
+        "Modelo anunciado",
+        "100-100001488BOX"
+      ],
+      [
+        "Código na loja",
+        "520368"
+      ],
+      [
+        "Socket",
+        "AM4"
+      ]
+    ],
+    "compatibilityNote": "Confira BIOS, dimensões, conexões e instalação para o conjunto escolhido. Dados técnicos não identificados nesta ficha precisam de conferência e não são presumidos pelo montador.",
+    "manufacturerUrl": "https://www.kabum.com.br/produto/520368/processador-amd-ryzen-5-5600gt-3-6-ghz-4-6ghz-max-turbo-cache-4mb-6-nucleos-12-threads-am4-com-video-integrado-100-100001488box",
+    "technicalSource": "https://www.kabum.com.br/produto/520368/processador-amd-ryzen-5-5600gt-3-6-ghz-4-6ghz-max-turbo-cache-4mb-6-nucleos-12-threads-am4-com-video-integrado-100-100001488box",
+    "sourceLabel": "Página do produto na KaBuM!",
+    "checkedAt": "2026-10-30",
+    "hardware": {
+      "socket": "AM4"
+    },
+    "offers": [
+      {
+        "store": "kabum",
+        "paymentMethod": "pix",
+        "availability": "in_stock",
+        "priceCents": 99999,
+        "sourceUrl": "https://www.kabum.com.br/produto/520368/processador-amd-ryzen-5-5600gt-3-6-ghz-4-6ghz-max-turbo-cache-4mb-6-nucleos-12-threads-am4-com-video-integrado-100-100001488box",
+        "checkedAt": "2026-10-30T15:36:42.566Z"
+      }
+    ]
+  },
+  {
+    "id": "kabum-283715",
+    "slug": "kabum-283715",
+    "category": "cpu",
+    "categoryName": "Processador",
+    "brand": "Intel",
+    "name": "Intel Core i3-12100, 3.3GHz (4.3GHz Max Turbo)",
+    "fullName": "Processador Intel Core i3-12100, 3.3GHz (4.3GHz Max Turbo), Cache 12MB, 4 Núcleos, 8 Threads, LGA 1700, Com Vídeo Integrado - BX8071512100",
+    "model": "BX8071512100",
+    "image": "/hardware/expanded/kabum-283715-1.jpg",
+    "gallery": [
+      {
+        "src": "/hardware/expanded/kabum-283715-1.jpg",
+        "alt": "Processador Intel Core i3-12100, 3.3GHz (4.3GHz Max Turbo), Cache 12MB, 4 Núcleos, 8 Threads, LGA 1700, Com Vídeo Integrado - BX8071512100 — foto 1 publicada no cadastro da loja"
+      },
+      {
+        "src": "/hardware/expanded/kabum-283715-2.jpg",
+        "alt": "Processador Intel Core i3-12100, 3.3GHz (4.3GHz Max Turbo), Cache 12MB, 4 Núcleos, 8 Threads, LGA 1700, Com Vídeo Integrado - BX8071512100 — foto 2 publicada no cadastro da loja"
+      }
+    ],
+    "description": "Intel Core i3-12100, 3.3GHz (4.3GHz Max Turbo). 3.3GHz (4.3GHz Max Turbo). Cache 12MB. 4 Núcleos. A variante anunciada é BX8071512100. Confira os requisitos do seu conjunto e as informações detalhadas do fabricante antes de escolher.",
+    "highlights": [
+      "3.3GHz (4.3GHz Max Turbo)",
+      "Cache 12MB",
+      "4 Núcleos"
+    ],
+    "specifications": [
+      [
+        "Marca",
+        "Intel"
+      ],
+      [
+        "Modelo anunciado",
+        "BX8071512100"
+      ],
+      [
+        "Código na loja",
+        "283715"
+      ],
+      [
+        "Socket",
+        "LGA1700"
+      ]
+    ],
+    "compatibilityNote": "Confira BIOS, dimensões, conexões e instalação para o conjunto escolhido. Dados técnicos não identificados nesta ficha precisam de conferência e não são presumidos pelo montador.",
+    "manufacturerUrl": "https://www.kabum.com.br/produto/283715/processador-intel-core-i3-12100-3-3ghz-4-3ghz-max-turbo-cache-12mb-4-nucleos-8-threads-lga-1700-com-video-integrado-bx8071512100",
+    "technicalSource": "https://www.kabum.com.br/produto/283715/processador-intel-core-i3-12100-3-3ghz-4-3ghz-max-turbo-cache-12mb-4-nucleos-8-threads-lga-1700-com-video-integrado-bx8071512100",
+    "sourceLabel": "Página do produto na KaBuM!",
+    "checkedAt": "2026-10-30",
+    "hardware": {
+      "socket": "LGA1700"
+    },
+    "offers": [
+      {
+        "store": "kabum",
+        "paymentMethod": "pix",
+        "availability": "in_stock",
+        "priceCents": 75999,
+        "sourceUrl": "https://www.kabum.com.br/produto/283715/processador-intel-core-i3-12100-3-3ghz-4-3ghz-max-turbo-cache-12mb-4-nucleos-8-threads-lga-1700-com-video-integrado-bx8071512100",
+        "checkedAt": "2026-10-30T15:36:43.725Z"
+      }
+    ]
+  },
+  {
+    "id": "kabum-102248",
+    "slug": "kabum-102248",
+    "category": "cpu",
+    "categoryName": "Processador",
+    "brand": "AMD",
+    "name": "AMD Ryzen 3 3200G, 3.6GHz (4GHz Max Turbo)",
+    "fullName": "Processador AMD Ryzen 3 3200G, 3.6GHz (4GHz Max Turbo), Cache 4MB, 4 Núcleos, 4 Threads, AM4, Com video Integrado - YD3200C5FHBOX",
+    "model": "YD3200C5FHBOX",
+    "image": "/hardware/expanded/kabum-102248-1.jpg",
+    "gallery": [
+      {
+        "src": "/hardware/expanded/kabum-102248-1.jpg",
+        "alt": "Processador AMD Ryzen 3 3200G, 3.6GHz (4GHz Max Turbo), Cache 4MB, 4 Núcleos, 4 Threads, AM4, Com video Integrado - YD3200C5FHBOX — foto 1 publicada no cadastro da loja"
+      },
+      {
+        "src": "/hardware/expanded/kabum-102248-2.jpg",
+        "alt": "Processador AMD Ryzen 3 3200G, 3.6GHz (4GHz Max Turbo), Cache 4MB, 4 Núcleos, 4 Threads, AM4, Com video Integrado - YD3200C5FHBOX — foto 2 publicada no cadastro da loja"
+      }
+    ],
+    "description": "AMD Ryzen 3 3200G, 3.6GHz (4GHz Max Turbo). 3.6GHz (4GHz Max Turbo). Cache 4MB. 4 Núcleos. A variante anunciada é YD3200C5FHBOX. Confira os requisitos do seu conjunto e as informações detalhadas do fabricante antes de escolher.",
+    "highlights": [
+      "3.6GHz (4GHz Max Turbo)",
+      "Cache 4MB",
+      "4 Núcleos"
+    ],
+    "specifications": [
+      [
+        "Marca",
+        "AMD"
+      ],
+      [
+        "Modelo anunciado",
+        "YD3200C5FHBOX"
+      ],
+      [
+        "Código na loja",
+        "102248"
+      ],
+      [
+        "Socket",
+        "AM4"
+      ]
+    ],
+    "compatibilityNote": "Confira BIOS, dimensões, conexões e instalação para o conjunto escolhido. Dados técnicos não identificados nesta ficha precisam de conferência e não são presumidos pelo montador.",
+    "manufacturerUrl": "https://www.kabum.com.br/produto/102248/processador-amd-ryzen-3-3200g-36ghz-4ghz-max-turbo-cache-4mb-4-nucleos-4-threads-am4-com-video-integrado-yd3200c5fhbox",
+    "technicalSource": "https://www.kabum.com.br/produto/102248/processador-amd-ryzen-3-3200g-36ghz-4ghz-max-turbo-cache-4mb-4-nucleos-4-threads-am4-com-video-integrado-yd3200c5fhbox",
+    "sourceLabel": "Página do produto na KaBuM!",
+    "checkedAt": "2026-10-30",
+    "hardware": {
+      "socket": "AM4"
+    },
+    "offers": [
+      {
+        "store": "kabum",
+        "paymentMethod": "pix",
+        "availability": "in_stock",
+        "priceCents": 39999,
+        "sourceUrl": "https://www.kabum.com.br/produto/102248/processador-amd-ryzen-3-3200g-36ghz-4ghz-max-turbo-cache-4mb-4-nucleos-4-threads-am4-com-video-integrado-yd3200c5fhbox",
+        "checkedAt": "2026-10-30T15:36:45.188Z"
+      }
+    ]
+  },
+  {
+    "id": "kabum-283718",
+    "slug": "kabum-283718",
+    "category": "cpu",
+    "categoryName": "Processador",
+    "brand": "Intel",
+    "name": "Intel Core i5-12400F, 2.5GHz (4.4GHz Max Turbo)",
+    "fullName": "Processador Intel Core i5-12400F, 2.5GHz (4.4GHz Max Turbo), Cache 18MB, 6 Núcleos, 12 Threads, LGA 1700, Sem Vídeo Integrado - BX8071512400F",
+    "model": "BX8071512400F",
+    "image": "/hardware/expanded/kabum-283718-1.jpg",
+    "gallery": [
+      {
+        "src": "/hardware/expanded/kabum-283718-1.jpg",
+        "alt": "Processador Intel Core i5-12400F, 2.5GHz (4.4GHz Max Turbo), Cache 18MB, 6 Núcleos, 12 Threads, LGA 1700, Sem Vídeo Integrado - BX8071512400F — foto 1 publicada no cadastro da loja"
+      },
+      {
+        "src": "/hardware/expanded/kabum-283718-2.jpg",
+        "alt": "Processador Intel Core i5-12400F, 2.5GHz (4.4GHz Max Turbo), Cache 18MB, 6 Núcleos, 12 Threads, LGA 1700, Sem Vídeo Integrado - BX8071512400F — foto 2 publicada no cadastro da loja"
+      }
+    ],
+    "description": "Intel Core i5-12400F, 2.5GHz (4.4GHz Max Turbo). 2.5GHz (4.4GHz Max Turbo). Cache 18MB. 6 Núcleos. A variante anunciada é BX8071512400F. Confira os requisitos do seu conjunto e as informações detalhadas do fabricante antes de escolher.",
+    "highlights": [
+      "2.5GHz (4.4GHz Max Turbo)",
+      "Cache 18MB",
+      "6 Núcleos"
+    ],
+    "specifications": [
+      [
+        "Marca",
+        "Intel"
+      ],
+      [
+        "Modelo anunciado",
+        "BX8071512400F"
+      ],
+      [
+        "Código na loja",
+        "283718"
+      ],
+      [
+        "Socket",
+        "LGA1700"
+      ]
+    ],
+    "compatibilityNote": "Confira BIOS, dimensões, conexões e instalação para o conjunto escolhido. Dados técnicos não identificados nesta ficha precisam de conferência e não são presumidos pelo montador.",
+    "manufacturerUrl": "https://www.kabum.com.br/produto/283718/processador-intel-core-i5-12400f-2-5ghz-4-4ghz-max-turbo-cache-18mb-6-nucleos-12-threads-lga-1700-sem-video-integrado-bx8071512400f",
+    "technicalSource": "https://www.kabum.com.br/produto/283718/processador-intel-core-i5-12400f-2-5ghz-4-4ghz-max-turbo-cache-18mb-6-nucleos-12-threads-lga-1700-sem-video-integrado-bx8071512400f",
+    "sourceLabel": "Página do produto na KaBuM!",
+    "checkedAt": "2026-10-30",
+    "hardware": {
+      "socket": "LGA1700"
+    },
+    "offers": [
+      {
+        "store": "kabum",
+        "paymentMethod": "pix",
+        "availability": "in_stock",
+        "priceCents": 85999,
+        "sourceUrl": "https://www.kabum.com.br/produto/283718/processador-intel-core-i5-12400f-2-5ghz-4-4ghz-max-turbo-cache-18mb-6-nucleos-12-threads-lga-1700-sem-video-integrado-bx8071512400f",
+        "checkedAt": "2026-10-30T15:36:46.470Z"
+      }
+    ]
+  },
+  {
+    "id": "kabum-708039",
+    "slug": "kabum-708039",
+    "category": "cpu",
+    "categoryName": "Processador",
+    "brand": "AMD",
+    "name": "AMD Ryzen 9 9950X3D, 4.4 GHz (5.7 GHz Max Turbo)",
+    "fullName": "Processador AMD Ryzen 9 9950X3D, 4.4 GHz (5.7 GHz Max Turbo), Cache 144MB, 16 Núcleos, 32 Threads, AM5, Com Vídeo Integrado - 100-100000719WOF",
+    "model": "100-100000719WOF",
+    "image": "/hardware/expanded/kabum-708039-1.jpg",
+    "gallery": [
+      {
+        "src": "/hardware/expanded/kabum-708039-1.jpg",
+        "alt": "Processador AMD Ryzen 9 9950X3D, 4.4 GHz (5.7 GHz Max Turbo), Cache 144MB, 16 Núcleos, 32 Threads, AM5, Com Vídeo Integrado - 100-100000719WOF — foto 1 publicada no cadastro da loja"
+      },
+      {
+        "src": "/hardware/expanded/kabum-708039-2.jpg",
+        "alt": "Processador AMD Ryzen 9 9950X3D, 4.4 GHz (5.7 GHz Max Turbo), Cache 144MB, 16 Núcleos, 32 Threads, AM5, Com Vídeo Integrado - 100-100000719WOF — foto 2 publicada no cadastro da loja"
+      }
+    ],
+    "description": "AMD Ryzen 9 9950X3D, 4.4 GHz (5.7 GHz Max Turbo). 4.4 GHz (5.7 GHz Max Turbo). Cache 144MB. 16 Núcleos. A variante anunciada é 100-100000719WOF. Confira os requisitos do seu conjunto e as informações detalhadas do fabricante antes de escolher.",
+    "highlights": [
+      "4.4 GHz (5.7 GHz Max Turbo)",
+      "Cache 144MB",
+      "16 Núcleos"
+    ],
+    "specifications": [
+      [
+        "Marca",
+        "AMD"
+      ],
+      [
+        "Modelo anunciado",
+        "100-100000719WOF"
+      ],
+      [
+        "Código na loja",
+        "708039"
+      ],
+      [
+        "Socket",
+        "AM5"
+      ]
+    ],
+    "compatibilityNote": "Confira BIOS, dimensões, conexões e instalação para o conjunto escolhido. Dados técnicos não identificados nesta ficha precisam de conferência e não são presumidos pelo montador.",
+    "manufacturerUrl": "https://www.kabum.com.br/produto/708039/processador-amd-ryzen-9-9950x3d-4-4-ghz-5-7-ghz-max-turbo-cache-144mb-16-nucleos-32-threads-am5-com-video-integrado-100-100000719wof",
+    "technicalSource": "https://www.kabum.com.br/produto/708039/processador-amd-ryzen-9-9950x3d-4-4-ghz-5-7-ghz-max-turbo-cache-144mb-16-nucleos-32-threads-am5-com-video-integrado-100-100000719wof",
+    "sourceLabel": "Página do produto na KaBuM!",
+    "checkedAt": "2026-10-30",
+    "hardware": {
+      "socket": "AM5"
+    },
+    "offers": [
+      {
+        "store": "kabum",
+        "paymentMethod": "pix",
+        "availability": "in_stock",
+        "priceCents": 439999,
+        "sourceUrl": "https://www.kabum.com.br/produto/708039/processador-amd-ryzen-9-9950x3d-4-4-ghz-5-7-ghz-max-turbo-cache-144mb-16-nucleos-32-threads-am5-com-video-integrado-100-100000719wof",
+        "checkedAt": "2026-10-30T15:36:47.625Z"
+      }
+    ]
+  },
+  {
+    "id": "kabum-938497",
+    "slug": "kabum-938497",
+    "category": "cpu",
+    "categoryName": "Processador",
+    "brand": "AMD",
+    "name": "AMD Ryzen 7 5700, 3.7 GHz (4.6GHz Max Turbo)",
+    "fullName": "Processador AMD Ryzen 7 5700, 3.7 GHz (4.6GHz Max Turbo), Cache 20MB, 8 Núcleos, 16 Threads, AM4, Sem Vídeo Integrado - 100-100000743SBX",
+    "model": "100-100000743SBX",
+    "image": "/hardware/expanded/kabum-938497-1.jpg",
+    "gallery": [
+      {
+        "src": "/hardware/expanded/kabum-938497-1.jpg",
+        "alt": "Processador AMD Ryzen 7 5700, 3.7 GHz (4.6GHz Max Turbo), Cache 20MB, 8 Núcleos, 16 Threads, AM4, Sem Vídeo Integrado - 100-100000743SBX — foto 1 publicada no cadastro da loja"
+      }
+    ],
+    "description": "AMD Ryzen 7 5700, 3.7 GHz (4.6GHz Max Turbo). 3.7 GHz (4.6GHz Max Turbo). Cache 20MB. 8 Núcleos. A variante anunciada é 100-100000743SBX. Confira os requisitos do seu conjunto e as informações detalhadas do fabricante antes de escolher.",
+    "highlights": [
+      "3.7 GHz (4.6GHz Max Turbo)",
+      "Cache 20MB",
+      "8 Núcleos"
+    ],
+    "specifications": [
+      [
+        "Marca",
+        "AMD"
+      ],
+      [
+        "Modelo anunciado",
+        "100-100000743SBX"
+      ],
+      [
+        "Código na loja",
+        "938497"
+      ],
+      [
+        "Socket",
+        "AM4"
+      ]
+    ],
+    "compatibilityNote": "Confira BIOS, dimensões, conexões e instalação para o conjunto escolhido. Dados técnicos não identificados nesta ficha precisam de conferência e não são presumidos pelo montador.",
+    "manufacturerUrl": "https://www.kabum.com.br/produto/938497/processador-amd-ryzen-7-5700-3-7-ghz-4-6ghz-max-turbo-cache-20mb-8-nucleos-16-threads-am4-sem-video-integrado-100-100000743sbx",
+    "technicalSource": "https://www.kabum.com.br/produto/938497/processador-amd-ryzen-7-5700-3-7-ghz-4-6ghz-max-turbo-cache-20mb-8-nucleos-16-threads-am4-sem-video-integrado-100-100000743sbx",
+    "sourceLabel": "Página do produto na KaBuM!",
+    "checkedAt": "2026-10-30",
+    "hardware": {
+      "socket": "AM4"
+    },
+    "offers": [
+      {
+        "store": "kabum",
+        "paymentMethod": "pix",
+        "availability": "in_stock",
+        "priceCents": 89999,
+        "sourceUrl": "https://www.kabum.com.br/produto/938497/processador-amd-ryzen-7-5700-3-7-ghz-4-6ghz-max-turbo-cache-20mb-8-nucleos-16-threads-am4-sem-video-integrado-100-100000743sbx",
+        "checkedAt": "2026-10-30T15:36:48.524Z"
+      }
+    ]
+  },
+  {
+    "id": "kabum-497579",
+    "slug": "kabum-497579",
+    "category": "cpu",
+    "categoryName": "Processador",
+    "brand": "Intel",
+    "name": "Intel Core i5-14600KF, 3.5GHz (5.3 GHz Max Turbo)",
+    "fullName": "Processador Intel Core i5-14600KF, 3.5GHz (5.3 GHz Max Turbo), Cache 24MB, 14 Núcleos, 20 Threads, LGA 1700, Sem Vídeo Integrado - BX8071514600KF",
+    "model": "BX8071514600KF",
+    "image": "/hardware/expanded/kabum-497579-1.jpg",
+    "gallery": [
+      {
+        "src": "/hardware/expanded/kabum-497579-1.jpg",
+        "alt": "Processador Intel Core i5-14600KF, 3.5GHz (5.3 GHz Max Turbo), Cache 24MB, 14 Núcleos, 20 Threads, LGA 1700, Sem Vídeo Integrado - BX8071514600KF — foto 1 publicada no cadastro da loja"
+      },
+      {
+        "src": "/hardware/expanded/kabum-497579-2.jpg",
+        "alt": "Processador Intel Core i5-14600KF, 3.5GHz (5.3 GHz Max Turbo), Cache 24MB, 14 Núcleos, 20 Threads, LGA 1700, Sem Vídeo Integrado - BX8071514600KF — foto 2 publicada no cadastro da loja"
+      }
+    ],
+    "description": "Intel Core i5-14600KF, 3.5GHz (5.3 GHz Max Turbo). 3.5GHz (5.3 GHz Max Turbo). Cache 24MB. 14 Núcleos. A variante anunciada é BX8071514600KF. Confira os requisitos do seu conjunto e as informações detalhadas do fabricante antes de escolher.",
+    "highlights": [
+      "3.5GHz (5.3 GHz Max Turbo)",
+      "Cache 24MB",
+      "14 Núcleos"
+    ],
+    "specifications": [
+      [
+        "Marca",
+        "Intel"
+      ],
+      [
+        "Modelo anunciado",
+        "BX8071514600KF"
+      ],
+      [
+        "Código na loja",
+        "497579"
+      ],
+      [
+        "Socket",
+        "LGA1700"
+      ]
+    ],
+    "compatibilityNote": "Confira BIOS, dimensões, conexões e instalação para o conjunto escolhido. Dados técnicos não identificados nesta ficha precisam de conferência e não são presumidos pelo montador.",
+    "manufacturerUrl": "https://www.kabum.com.br/produto/497579/processador-intel-core-i5-14600kf-3-5ghz-5-3-ghz-max-turbo-cache-24mb-14-nucleos-20-threads-lga-1700-sem-video-integrado-bx8071514600kf",
+    "technicalSource": "https://www.kabum.com.br/produto/497579/processador-intel-core-i5-14600kf-3-5ghz-5-3-ghz-max-turbo-cache-24mb-14-nucleos-20-threads-lga-1700-sem-video-integrado-bx8071514600kf",
+    "sourceLabel": "Página do produto na KaBuM!",
+    "checkedAt": "2026-10-30",
+    "hardware": {
+      "socket": "LGA1700"
+    },
+    "offers": [
+      {
+        "store": "kabum",
+        "paymentMethod": "pix",
+        "availability": "in_stock",
+        "priceCents": 149999,
+        "sourceUrl": "https://www.kabum.com.br/produto/497579/processador-intel-core-i5-14600kf-3-5ghz-5-3-ghz-max-turbo-cache-24mb-14-nucleos-20-threads-lga-1700-sem-video-integrado-bx8071514600kf",
+        "checkedAt": "2026-10-30T15:36:50.352Z"
+      }
+    ]
+  },
+  {
+    "id": "kabum-497575",
+    "slug": "kabum-497575",
+    "category": "cpu",
+    "categoryName": "Processador",
+    "brand": "Intel",
+    "name": "Intel Core i7-14700K, 3.4GHz (5.6 GHz Max Turbo)",
+    "fullName": "Processador Intel Core i7-14700K, 3.4GHz (5.6 GHz Max Turbo), Cache 33MB, 20 Núcleos, 28 Threads, LGA 1700, Com Vídeo Integrado - BX8071514700K",
+    "model": "BX8071514700K",
+    "image": "/hardware/expanded/kabum-497575-1.jpg",
+    "gallery": [
+      {
+        "src": "/hardware/expanded/kabum-497575-1.jpg",
+        "alt": "Processador Intel Core i7-14700K, 3.4GHz (5.6 GHz Max Turbo), Cache 33MB, 20 Núcleos, 28 Threads, LGA 1700, Com Vídeo Integrado - BX8071514700K — foto 1 publicada no cadastro da loja"
+      },
+      {
+        "src": "/hardware/expanded/kabum-497575-2.jpg",
+        "alt": "Processador Intel Core i7-14700K, 3.4GHz (5.6 GHz Max Turbo), Cache 33MB, 20 Núcleos, 28 Threads, LGA 1700, Com Vídeo Integrado - BX8071514700K — foto 2 publicada no cadastro da loja"
+      }
+    ],
+    "description": "Intel Core i7-14700K, 3.4GHz (5.6 GHz Max Turbo). 3.4GHz (5.6 GHz Max Turbo). Cache 33MB. 20 Núcleos. A variante anunciada é BX8071514700K. Confira os requisitos do seu conjunto e as informações detalhadas do fabricante antes de escolher.",
+    "highlights": [
+      "3.4GHz (5.6 GHz Max Turbo)",
+      "Cache 33MB",
+      "20 Núcleos"
+    ],
+    "specifications": [
+      [
+        "Marca",
+        "Intel"
+      ],
+      [
+        "Modelo anunciado",
+        "BX8071514700K"
+      ],
+      [
+        "Código na loja",
+        "497575"
+      ],
+      [
+        "Socket",
+        "LGA1700"
+      ]
+    ],
+    "compatibilityNote": "Confira BIOS, dimensões, conexões e instalação para o conjunto escolhido. Dados técnicos não identificados nesta ficha precisam de conferência e não são presumidos pelo montador.",
+    "manufacturerUrl": "https://www.kabum.com.br/produto/497575/processador-intel-core-i7-14700k-3-4ghz-5-6-ghz-max-turbo-cache-33mb-20-nucleos-28-threads-lga-1700-com-video-integrado-bx8071514700k",
+    "technicalSource": "https://www.kabum.com.br/produto/497575/processador-intel-core-i7-14700k-3-4ghz-5-6-ghz-max-turbo-cache-33mb-20-nucleos-28-threads-lga-1700-com-video-integrado-bx8071514700k",
+    "sourceLabel": "Página do produto na KaBuM!",
+    "checkedAt": "2026-10-30",
+    "hardware": {
+      "socket": "LGA1700"
+    },
+    "offers": [
+      {
+        "store": "kabum",
+        "paymentMethod": "pix",
+        "availability": "in_stock",
+        "priceCents": 209999,
+        "sourceUrl": "https://www.kabum.com.br/produto/497575/processador-intel-core-i7-14700k-3-4ghz-5-6-ghz-max-turbo-cache-33mb-20-nucleos-28-threads-lga-1700-com-video-integrado-bx8071514700k",
+        "checkedAt": "2026-10-30T15:36:51.660Z"
+      }
+    ]
+  },
+  {
+    "id": "kabum-609952",
+    "slug": "kabum-609952",
+    "category": "cpu",
+    "categoryName": "Processador",
+    "brand": "AMD",
+    "name": "AMD Ryzen 9 9900X, 4.4 GHz (5.6 GHz Max Turbo)",
+    "fullName": "Processador AMD Ryzen 9 9900X, 4.4 GHz (5.6 GHz Max Turbo), Cache 76MB, 12 Núcleos, 24 Threads, AM5, Com Vídeo Integrado - 100-100000662WOF",
+    "model": "100-100000662WOF",
+    "image": "/hardware/expanded/kabum-609952-1.jpg",
+    "gallery": [
+      {
+        "src": "/hardware/expanded/kabum-609952-1.jpg",
+        "alt": "Processador AMD Ryzen 9 9900X, 4.4 GHz (5.6 GHz Max Turbo), Cache 76MB, 12 Núcleos, 24 Threads, AM5, Com Vídeo Integrado - 100-100000662WOF — foto 1 publicada no cadastro da loja"
+      },
+      {
+        "src": "/hardware/expanded/kabum-609952-2.jpg",
+        "alt": "Processador AMD Ryzen 9 9900X, 4.4 GHz (5.6 GHz Max Turbo), Cache 76MB, 12 Núcleos, 24 Threads, AM5, Com Vídeo Integrado - 100-100000662WOF — foto 2 publicada no cadastro da loja"
+      }
+    ],
+    "description": "AMD Ryzen 9 9900X, 4.4 GHz (5.6 GHz Max Turbo). 4.4 GHz (5.6 GHz Max Turbo). Cache 76MB. 12 Núcleos. A variante anunciada é 100-100000662WOF. Confira os requisitos do seu conjunto e as informações detalhadas do fabricante antes de escolher.",
+    "highlights": [
+      "4.4 GHz (5.6 GHz Max Turbo)",
+      "Cache 76MB",
+      "12 Núcleos"
+    ],
+    "specifications": [
+      [
+        "Marca",
+        "AMD"
+      ],
+      [
+        "Modelo anunciado",
+        "100-100000662WOF"
+      ],
+      [
+        "Código na loja",
+        "609952"
+      ],
+      [
+        "Socket",
+        "AM5"
+      ]
+    ],
+    "compatibilityNote": "Confira BIOS, dimensões, conexões e instalação para o conjunto escolhido. Dados técnicos não identificados nesta ficha precisam de conferência e não são presumidos pelo montador.",
+    "manufacturerUrl": "https://www.kabum.com.br/produto/609952/processador-amd-ryzen-9-9900x-4-4-ghz-5-6-ghz-max-turbo-cache-76mb-12-nucleos-24-threads-am5-com-video-integrado-100-100000662wof",
+    "technicalSource": "https://www.kabum.com.br/produto/609952/processador-amd-ryzen-9-9900x-4-4-ghz-5-6-ghz-max-turbo-cache-76mb-12-nucleos-24-threads-am5-com-video-integrado-100-100000662wof",
+    "sourceLabel": "Página do produto na KaBuM!",
+    "checkedAt": "2026-10-30",
+    "hardware": {
+      "socket": "AM5"
+    },
+    "offers": [
+      {
+        "store": "kabum",
+        "paymentMethod": "pix",
+        "availability": "in_stock",
+        "priceCents": 219999,
+        "sourceUrl": "https://www.kabum.com.br/produto/609952/processador-amd-ryzen-9-9900x-4-4-ghz-5-6-ghz-max-turbo-cache-76mb-12-nucleos-24-threads-am5-com-video-integrado-100-100000662wof",
+        "checkedAt": "2026-10-30T15:36:53.453Z"
+      }
+    ]
+  },
+  {
+    "id": "kabum-405799",
+    "slug": "kabum-405799",
+    "category": "cpu",
+    "categoryName": "Processador",
+    "brand": "AMD",
+    "name": "AMD Ryzen 5 7600, 3.8GHz (5.1GHz Max Turbo)",
+    "fullName": "Processador AMD Ryzen 5 7600, 3.8GHz (5.1GHz Max Turbo), Cache 38MB, 6 Núcleos, 12 Threads, AM5, Com Vídeo Integrado - 100-100001015BOX",
+    "model": "100-100001015BOX",
+    "image": "/hardware/expanded/kabum-405799-1.jpg",
+    "gallery": [
+      {
+        "src": "/hardware/expanded/kabum-405799-1.jpg",
+        "alt": "Processador AMD Ryzen 5 7600, 3.8GHz (5.1GHz Max Turbo), Cache 38MB, 6 Núcleos, 12 Threads, AM5, Com Vídeo Integrado - 100-100001015BOX — foto 1 publicada no cadastro da loja"
+      },
+      {
+        "src": "/hardware/expanded/kabum-405799-2.jpg",
+        "alt": "Processador AMD Ryzen 5 7600, 3.8GHz (5.1GHz Max Turbo), Cache 38MB, 6 Núcleos, 12 Threads, AM5, Com Vídeo Integrado - 100-100001015BOX — foto 2 publicada no cadastro da loja"
+      }
+    ],
+    "description": "AMD Ryzen 5 7600, 3.8GHz (5.1GHz Max Turbo). 3.8GHz (5.1GHz Max Turbo). Cache 38MB. 6 Núcleos. A variante anunciada é 100-100001015BOX. Confira os requisitos do seu conjunto e as informações detalhadas do fabricante antes de escolher.",
+    "highlights": [
+      "3.8GHz (5.1GHz Max Turbo)",
+      "Cache 38MB",
+      "6 Núcleos"
+    ],
+    "specifications": [
+      [
+        "Marca",
+        "AMD"
+      ],
+      [
+        "Modelo anunciado",
+        "100-100001015BOX"
+      ],
+      [
+        "Código na loja",
+        "405799"
+      ],
+      [
+        "Socket",
+        "AM5"
+      ]
+    ],
+    "compatibilityNote": "Confira BIOS, dimensões, conexões e instalação para o conjunto escolhido. Dados técnicos não identificados nesta ficha precisam de conferência e não são presumidos pelo montador.",
+    "manufacturerUrl": "https://www.kabum.com.br/produto/405799/processador-amd-ryzen-5-7600-3-8ghz-5-1ghz-max-turbo-cache-38mb-6-nucleos-12-threads-am5-com-video-integrado-100-100001015box",
+    "technicalSource": "https://www.kabum.com.br/produto/405799/processador-amd-ryzen-5-7600-3-8ghz-5-1ghz-max-turbo-cache-38mb-6-nucleos-12-threads-am5-com-video-integrado-100-100001015box",
+    "sourceLabel": "Página do produto na KaBuM!",
+    "checkedAt": "2026-10-30",
+    "hardware": {
+      "socket": "AM5"
+    },
+    "offers": [
+      {
+        "store": "kabum",
+        "paymentMethod": "pix",
+        "availability": "in_stock",
+        "priceCents": 99999,
+        "sourceUrl": "https://www.kabum.com.br/produto/405799/processador-amd-ryzen-5-7600-3-8ghz-5-1ghz-max-turbo-cache-38mb-6-nucleos-12-threads-am5-com-video-integrado-100-100001015box",
+        "checkedAt": "2026-10-30T15:36:55.155Z"
+      }
+    ]
+  },
+  {
+    "id": "kabum-938498",
+    "slug": "kabum-938498",
+    "category": "cpu",
+    "categoryName": "Processador",
+    "brand": "AMD",
+    "name": "AMD Ryzen 7 5800XT, 3.8 GHz (4.8 GHz Max Turbo)",
+    "fullName": "Processador AMD Ryzen 7 5800XT, 3.8 GHz (4.8 GHz Max Turbo), Cache 32MB, 8 Núcleos, 16 Threads, AM4, Sem Vídeo Integrado - 100-100001582WOF",
+    "model": "100-100001582WOF",
+    "image": "/hardware/expanded/kabum-938498-1.jpg",
+    "gallery": [
+      {
+        "src": "/hardware/expanded/kabum-938498-1.jpg",
+        "alt": "Processador AMD Ryzen 7 5800XT, 3.8 GHz (4.8 GHz Max Turbo), Cache 32MB, 8 Núcleos, 16 Threads, AM4, Sem Vídeo Integrado - 100-100001582WOF — foto 1 publicada no cadastro da loja"
+      }
+    ],
+    "description": "AMD Ryzen 7 5800XT, 3.8 GHz (4.8 GHz Max Turbo). 3.8 GHz (4.8 GHz Max Turbo). Cache 32MB. 8 Núcleos. A variante anunciada é 100-100001582WOF. Confira os requisitos do seu conjunto e as informações detalhadas do fabricante antes de escolher.",
+    "highlights": [
+      "3.8 GHz (4.8 GHz Max Turbo)",
+      "Cache 32MB",
+      "8 Núcleos"
+    ],
+    "specifications": [
+      [
+        "Marca",
+        "AMD"
+      ],
+      [
+        "Modelo anunciado",
+        "100-100001582WOF"
+      ],
+      [
+        "Código na loja",
+        "938498"
+      ],
+      [
+        "Socket",
+        "AM4"
+      ]
+    ],
+    "compatibilityNote": "Confira BIOS, dimensões, conexões e instalação para o conjunto escolhido. Dados técnicos não identificados nesta ficha precisam de conferência e não são presumidos pelo montador.",
+    "manufacturerUrl": "https://www.kabum.com.br/produto/938498/processador-amd-ryzen-7-5800xt-3-8-ghz-4-8-ghz-max-turbo-cache-32mb-8-nucleos-16-threads-am4-sem-video-integrado-100-100001582wof",
+    "technicalSource": "https://www.kabum.com.br/produto/938498/processador-amd-ryzen-7-5800xt-3-8-ghz-4-8-ghz-max-turbo-cache-32mb-8-nucleos-16-threads-am4-sem-video-integrado-100-100001582wof",
+    "sourceLabel": "Página do produto na KaBuM!",
+    "checkedAt": "2026-10-30",
+    "hardware": {
+      "socket": "AM4"
+    },
+    "offers": [
+      {
+        "store": "kabum",
+        "paymentMethod": "pix",
+        "availability": "in_stock",
+        "priceCents": 143999,
+        "sourceUrl": "https://www.kabum.com.br/produto/938498/processador-amd-ryzen-7-5800xt-3-8-ghz-4-8-ghz-max-turbo-cache-32mb-8-nucleos-16-threads-am4-sem-video-integrado-100-100001582wof",
+        "checkedAt": "2026-10-30T15:36:56.121Z"
+      }
+    ]
+  },
+  {
+    "id": "kabum-497578",
+    "slug": "kabum-497578",
+    "category": "cpu",
+    "categoryName": "Processador",
+    "brand": "Intel",
+    "name": "Intel Core i5-14600K, 3.5GHz (5.3 GHz Max Turbo)",
+    "fullName": "Processador Intel Core i5-14600K, 3.5GHz (5.3 GHz Max Turbo), Cache 24MB, 14 Núcleos, 20 Threads, LGA 1700, Com Vídeo Integrado - BX8071514600K",
+    "model": "BX8071514600K",
+    "image": "/hardware/expanded/kabum-497578-1.jpg",
+    "gallery": [
+      {
+        "src": "/hardware/expanded/kabum-497578-1.jpg",
+        "alt": "Processador Intel Core i5-14600K, 3.5GHz (5.3 GHz Max Turbo), Cache 24MB, 14 Núcleos, 20 Threads, LGA 1700, Com Vídeo Integrado - BX8071514600K — foto 1 publicada no cadastro da loja"
+      },
+      {
+        "src": "/hardware/expanded/kabum-497578-2.jpg",
+        "alt": "Processador Intel Core i5-14600K, 3.5GHz (5.3 GHz Max Turbo), Cache 24MB, 14 Núcleos, 20 Threads, LGA 1700, Com Vídeo Integrado - BX8071514600K — foto 2 publicada no cadastro da loja"
+      }
+    ],
+    "description": "Intel Core i5-14600K, 3.5GHz (5.3 GHz Max Turbo). 3.5GHz (5.3 GHz Max Turbo). Cache 24MB. 14 Núcleos. A variante anunciada é BX8071514600K. Confira os requisitos do seu conjunto e as informações detalhadas do fabricante antes de escolher.",
+    "highlights": [
+      "3.5GHz (5.3 GHz Max Turbo)",
+      "Cache 24MB",
+      "14 Núcleos"
+    ],
+    "specifications": [
+      [
+        "Marca",
+        "Intel"
+      ],
+      [
+        "Modelo anunciado",
+        "BX8071514600K"
+      ],
+      [
+        "Código na loja",
+        "497578"
+      ],
+      [
+        "Socket",
+        "LGA1700"
+      ]
+    ],
+    "compatibilityNote": "Confira BIOS, dimensões, conexões e instalação para o conjunto escolhido. Dados técnicos não identificados nesta ficha precisam de conferência e não são presumidos pelo montador.",
+    "manufacturerUrl": "https://www.kabum.com.br/produto/497578/processador-intel-core-i5-14600k-3-5ghz-5-3-ghz-max-turbo-cache-24mb-14-nucleos-20-threads-lga-1700-com-video-integrado-bx8071514600k",
+    "technicalSource": "https://www.kabum.com.br/produto/497578/processador-intel-core-i5-14600k-3-5ghz-5-3-ghz-max-turbo-cache-24mb-14-nucleos-20-threads-lga-1700-com-video-integrado-bx8071514600k",
+    "sourceLabel": "Página do produto na KaBuM!",
+    "checkedAt": "2026-10-30",
+    "hardware": {
+      "socket": "LGA1700"
+    },
+    "offers": [
+      {
+        "store": "kabum",
+        "paymentMethod": "pix",
+        "availability": "in_stock",
+        "priceCents": 167899,
+        "sourceUrl": "https://www.kabum.com.br/produto/497578/processador-intel-core-i5-14600k-3-5ghz-5-3-ghz-max-turbo-cache-24mb-14-nucleos-20-threads-lga-1700-com-video-integrado-bx8071514600k",
+        "checkedAt": "2026-10-30T15:36:58.018Z"
+      }
+    ]
+  },
+  {
+    "id": "kabum-904655",
+    "slug": "kabum-904655",
+    "category": "cpu",
+    "categoryName": "Processador",
+    "brand": "Intel",
+    "name": "Intel Core i3-14100, 3.5GHz (4.70 GHz Max Turbo)",
+    "fullName": "Processador Intel Core i3-14100, 3.5GHz (4.70 GHz Max Turbo), Cache 12MB, 4 Núcleos, 8 Threads, LGA 1700, Com Vídeo Integrado - BX8071514100",
+    "model": "BX8071514100",
+    "image": "/hardware/expanded/kabum-904655-1.jpg",
+    "gallery": [
+      {
+        "src": "/hardware/expanded/kabum-904655-1.jpg",
+        "alt": "Processador Intel Core i3-14100, 3.5GHz (4.70 GHz Max Turbo), Cache 12MB, 4 Núcleos, 8 Threads, LGA 1700, Com Vídeo Integrado - BX8071514100 — foto 1 publicada no cadastro da loja"
+      }
+    ],
+    "description": "Intel Core i3-14100, 3.5GHz (4.70 GHz Max Turbo). 3.5GHz (4.70 GHz Max Turbo). Cache 12MB. 4 Núcleos. A variante anunciada é BX8071514100. Confira os requisitos do seu conjunto e as informações detalhadas do fabricante antes de escolher.",
+    "highlights": [
+      "3.5GHz (4.70 GHz Max Turbo)",
+      "Cache 12MB",
+      "4 Núcleos"
+    ],
+    "specifications": [
+      [
+        "Marca",
+        "Intel"
+      ],
+      [
+        "Modelo anunciado",
+        "BX8071514100"
+      ],
+      [
+        "Código na loja",
+        "904655"
+      ],
+      [
+        "Socket",
+        "LGA1700"
+      ]
+    ],
+    "compatibilityNote": "Confira BIOS, dimensões, conexões e instalação para o conjunto escolhido. Dados técnicos não identificados nesta ficha precisam de conferência e não são presumidos pelo montador.",
+    "manufacturerUrl": "https://www.kabum.com.br/produto/904655/processador-intel-core-i3-14100-3-5ghz-4-70-ghz-max-turbo-cache-12mb-4-nucleos-8-threads-lga-1700-com-video-integrado-bx8071514100-",
+    "technicalSource": "https://www.kabum.com.br/produto/904655/processador-intel-core-i3-14100-3-5ghz-4-70-ghz-max-turbo-cache-12mb-4-nucleos-8-threads-lga-1700-com-video-integrado-bx8071514100-",
+    "sourceLabel": "Página do produto na KaBuM!",
+    "checkedAt": "2026-10-30",
+    "hardware": {
+      "socket": "LGA1700"
+    },
+    "offers": [
+      {
+        "store": "kabum",
+        "paymentMethod": "pix",
+        "availability": "in_stock",
+        "priceCents": 89999,
+        "sourceUrl": "https://www.kabum.com.br/produto/904655/processador-intel-core-i3-14100-3-5ghz-4-70-ghz-max-turbo-cache-12mb-4-nucleos-8-threads-lga-1700-com-video-integrado-bx8071514100-",
+        "checkedAt": "2026-10-30T15:36:58.535Z"
+      }
+    ]
+  },
+  {
+    "id": "kabum-378414",
+    "slug": "kabum-378414",
+    "category": "cpu",
+    "categoryName": "Processador",
+    "brand": "AMD",
+    "name": "AMD Ryzen 5 7600X, 4.7GHz (5.3GHz Max Turbo)",
+    "fullName": "Processador AMD Ryzen 5 7600X, 4.7GHz (5.3GHz Max Turbo), Cache 38MB, 6 Núcleos, 12 Threads, AM5, Com Vídeo Integrado - 100-100000593WOF",
+    "model": "100-100000593WOF",
+    "image": "/hardware/expanded/kabum-378414-1.jpg",
+    "gallery": [
+      {
+        "src": "/hardware/expanded/kabum-378414-1.jpg",
+        "alt": "Processador AMD Ryzen 5 7600X, 4.7GHz (5.3GHz Max Turbo), Cache 38MB, 6 Núcleos, 12 Threads, AM5, Com Vídeo Integrado - 100-100000593WOF — foto 1 publicada no cadastro da loja"
+      },
+      {
+        "src": "/hardware/expanded/kabum-378414-2.jpg",
+        "alt": "Processador AMD Ryzen 5 7600X, 4.7GHz (5.3GHz Max Turbo), Cache 38MB, 6 Núcleos, 12 Threads, AM5, Com Vídeo Integrado - 100-100000593WOF — foto 2 publicada no cadastro da loja"
+      }
+    ],
+    "description": "AMD Ryzen 5 7600X, 4.7GHz (5.3GHz Max Turbo). 4.7GHz (5.3GHz Max Turbo). Cache 38MB. 6 Núcleos. A variante anunciada é 100-100000593WOF. Confira os requisitos do seu conjunto e as informações detalhadas do fabricante antes de escolher.",
+    "highlights": [
+      "4.7GHz (5.3GHz Max Turbo)",
+      "Cache 38MB",
+      "6 Núcleos"
+    ],
+    "specifications": [
+      [
+        "Marca",
+        "AMD"
+      ],
+      [
+        "Modelo anunciado",
+        "100-100000593WOF"
+      ],
+      [
+        "Código na loja",
+        "378414"
+      ],
+      [
+        "Socket",
+        "AM5"
+      ]
+    ],
+    "compatibilityNote": "Confira BIOS, dimensões, conexões e instalação para o conjunto escolhido. Dados técnicos não identificados nesta ficha precisam de conferência e não são presumidos pelo montador.",
+    "manufacturerUrl": "https://www.kabum.com.br/produto/378414/processador-amd-ryzen-5-7600x-4-7ghz-5-3ghz-max-turbo-cache-38mb-6-nucleos-12-threads-am5-com-video-integrado-100-100000593wof",
+    "technicalSource": "https://www.kabum.com.br/produto/378414/processador-amd-ryzen-5-7600x-4-7ghz-5-3ghz-max-turbo-cache-38mb-6-nucleos-12-threads-am5-com-video-integrado-100-100000593wof",
+    "sourceLabel": "Página do produto na KaBuM!",
+    "checkedAt": "2026-10-30",
+    "hardware": {
+      "socket": "AM5"
+    },
+    "offers": [
+      {
+        "store": "kabum",
+        "paymentMethod": "pix",
+        "availability": "in_stock",
+        "priceCents": 108999,
+        "sourceUrl": "https://www.kabum.com.br/produto/378414/processador-amd-ryzen-5-7600x-4-7ghz-5-3ghz-max-turbo-cache-38mb-6-nucleos-12-threads-am5-com-video-integrado-100-100000593wof",
+        "checkedAt": "2026-10-30T15:37:00.024Z"
+      }
+    ]
+  },
+  {
+    "id": "kabum-937012",
+    "slug": "kabum-937012",
+    "category": "cpu",
+    "categoryName": "Processador",
+    "brand": "AMD",
+    "name": "AMD Ryzen 5 5600XT, 3.7GHz (4.7GHz Max Turbo)",
+    "fullName": "Processador AMD Ryzen 5 5600XT, 3.7GHz (4.7GHz Max Turbo), Cache 32MB, 6 Núcleos, 12 Threads, AM4, Sem Vídeo Integrado - 100-100001585BOX",
+    "model": "100-100001585BOX",
+    "image": "/hardware/expanded/kabum-937012-1.jpg",
+    "gallery": [
+      {
+        "src": "/hardware/expanded/kabum-937012-1.jpg",
+        "alt": "Processador AMD Ryzen 5 5600XT, 3.7GHz (4.7GHz Max Turbo), Cache 32MB, 6 Núcleos, 12 Threads, AM4, Sem Vídeo Integrado - 100-100001585BOX — foto 1 publicada no cadastro da loja"
+      }
+    ],
+    "description": "AMD Ryzen 5 5600XT, 3.7GHz (4.7GHz Max Turbo). 3.7GHz (4.7GHz Max Turbo). Cache 32MB. 6 Núcleos. A variante anunciada é 100-100001585BOX. Confira os requisitos do seu conjunto e as informações detalhadas do fabricante antes de escolher.",
+    "highlights": [
+      "3.7GHz (4.7GHz Max Turbo)",
+      "Cache 32MB",
+      "6 Núcleos"
+    ],
+    "specifications": [
+      [
+        "Marca",
+        "AMD"
+      ],
+      [
+        "Modelo anunciado",
+        "100-100001585BOX"
+      ],
+      [
+        "Código na loja",
+        "937012"
+      ],
+      [
+        "Socket",
+        "AM4"
+      ]
+    ],
+    "compatibilityNote": "Confira BIOS, dimensões, conexões e instalação para o conjunto escolhido. Dados técnicos não identificados nesta ficha precisam de conferência e não são presumidos pelo montador.",
+    "manufacturerUrl": "https://www.kabum.com.br/produto/937012/processador-amd-ryzen-5-5600xt-3-7ghz-4-7ghz-max-turbo-cache-32mb-6-nucleos-12-threads-am4-sem-video-integrado-100-100001585box",
+    "technicalSource": "https://www.kabum.com.br/produto/937012/processador-amd-ryzen-5-5600xt-3-7ghz-4-7ghz-max-turbo-cache-32mb-6-nucleos-12-threads-am4-sem-video-integrado-100-100001585box",
+    "sourceLabel": "Página do produto na KaBuM!",
+    "checkedAt": "2026-10-30",
+    "hardware": {
+      "socket": "AM4"
+    },
+    "offers": [
+      {
+        "store": "kabum",
+        "paymentMethod": "pix",
+        "availability": "in_stock",
+        "priceCents": 119999,
+        "sourceUrl": "https://www.kabum.com.br/produto/937012/processador-amd-ryzen-5-5600xt-3-7ghz-4-7ghz-max-turbo-cache-32mb-6-nucleos-12-threads-am4-sem-video-integrado-100-100001585box",
+        "checkedAt": "2026-10-30T15:37:00.779Z"
+      }
+    ]
+  },
+  {
+    "id": "kabum-904660",
+    "slug": "kabum-904660",
+    "category": "cpu",
+    "categoryName": "Processador",
+    "brand": "Intel",
+    "name": "Intel Core i7-14700F, 2.1GHz (5.40 GHz Max Turbo)",
+    "fullName": "Processador Intel Core i7-14700F, 2.1GHz (5.40 GHz Max Turbo), Cache 33MB, 20 Núcleos, 28 Threads, LGA 1700, Sem Vídeo Integrado - BX8071514700F",
+    "model": "BX8071514700F",
+    "image": "/hardware/expanded/kabum-904660-1.jpg",
+    "gallery": [
+      {
+        "src": "/hardware/expanded/kabum-904660-1.jpg",
+        "alt": "Processador Intel Core i7-14700F, 2.1GHz (5.40 GHz Max Turbo), Cache 33MB, 20 Núcleos, 28 Threads, LGA 1700, Sem Vídeo Integrado - BX8071514700F — foto 1 publicada no cadastro da loja"
+      }
+    ],
+    "description": "Intel Core i7-14700F, 2.1GHz (5.40 GHz Max Turbo). 2.1GHz (5.40 GHz Max Turbo). Cache 33MB. 20 Núcleos. A variante anunciada é BX8071514700F. Confira os requisitos do seu conjunto e as informações detalhadas do fabricante antes de escolher.",
+    "highlights": [
+      "2.1GHz (5.40 GHz Max Turbo)",
+      "Cache 33MB",
+      "20 Núcleos"
+    ],
+    "specifications": [
+      [
+        "Marca",
+        "Intel"
+      ],
+      [
+        "Modelo anunciado",
+        "BX8071514700F"
+      ],
+      [
+        "Código na loja",
+        "904660"
+      ],
+      [
+        "Socket",
+        "LGA1700"
+      ]
+    ],
+    "compatibilityNote": "Confira BIOS, dimensões, conexões e instalação para o conjunto escolhido. Dados técnicos não identificados nesta ficha precisam de conferência e não são presumidos pelo montador.",
+    "manufacturerUrl": "https://www.kabum.com.br/produto/904660/processador-intel-core-i7-14700f-2-1ghz-5-40-ghz-max-turbo-cache-33mb-20-nucleos-28-threads-lga-1700-sem-video-integrado-bx8071514700f",
+    "technicalSource": "https://www.kabum.com.br/produto/904660/processador-intel-core-i7-14700f-2-1ghz-5-40-ghz-max-turbo-cache-33mb-20-nucleos-28-threads-lga-1700-sem-video-integrado-bx8071514700f",
+    "sourceLabel": "Página do produto na KaBuM!",
+    "checkedAt": "2026-10-30",
+    "hardware": {
+      "socket": "LGA1700"
+    },
+    "offers": [
+      {
+        "store": "kabum",
+        "paymentMethod": "pix",
+        "availability": "in_stock",
+        "priceCents": 199999,
+        "sourceUrl": "https://www.kabum.com.br/produto/904660/processador-intel-core-i7-14700f-2-1ghz-5-40-ghz-max-turbo-cache-33mb-20-nucleos-28-threads-lga-1700-sem-video-integrado-bx8071514700f",
+        "checkedAt": "2026-10-30T15:37:01.281Z"
+      }
+    ]
+  },
+  {
+    "id": "kabum-283719",
+    "slug": "kabum-283719",
+    "category": "cpu",
+    "categoryName": "Processador",
+    "brand": "Intel",
+    "name": "Intel Core i3-12100F, 3.3GHz (4.3GHz Max Turbo)",
+    "fullName": "Processador Intel Core i3-12100F, 3.3GHz (4.3GHz Max Turbo), Cache 12MB, 4 Núcleos, 8 Threads, LGA 1700, Sem Vídeo Integrado - BX8071512100F",
+    "model": "BX8071512100F",
+    "image": "/hardware/expanded/kabum-283719-1.jpg",
+    "gallery": [
+      {
+        "src": "/hardware/expanded/kabum-283719-1.jpg",
+        "alt": "Processador Intel Core i3-12100F, 3.3GHz (4.3GHz Max Turbo), Cache 12MB, 4 Núcleos, 8 Threads, LGA 1700, Sem Vídeo Integrado - BX8071512100F — foto 1 publicada no cadastro da loja"
+      },
+      {
+        "src": "/hardware/expanded/kabum-283719-2.jpg",
+        "alt": "Processador Intel Core i3-12100F, 3.3GHz (4.3GHz Max Turbo), Cache 12MB, 4 Núcleos, 8 Threads, LGA 1700, Sem Vídeo Integrado - BX8071512100F — foto 2 publicada no cadastro da loja"
+      }
+    ],
+    "description": "Intel Core i3-12100F, 3.3GHz (4.3GHz Max Turbo). 3.3GHz (4.3GHz Max Turbo). Cache 12MB. 4 Núcleos. A variante anunciada é BX8071512100F. Confira os requisitos do seu conjunto e as informações detalhadas do fabricante antes de escolher.",
+    "highlights": [
+      "3.3GHz (4.3GHz Max Turbo)",
+      "Cache 12MB",
+      "4 Núcleos"
+    ],
+    "specifications": [
+      [
+        "Marca",
+        "Intel"
+      ],
+      [
+        "Modelo anunciado",
+        "BX8071512100F"
+      ],
+      [
+        "Código na loja",
+        "283719"
+      ],
+      [
+        "Socket",
+        "LGA1700"
+      ]
+    ],
+    "compatibilityNote": "Confira BIOS, dimensões, conexões e instalação para o conjunto escolhido. Dados técnicos não identificados nesta ficha precisam de conferência e não são presumidos pelo montador.",
+    "manufacturerUrl": "https://www.kabum.com.br/produto/283719/processador-intel-core-i3-12100f-3-3ghz-4-3ghz-max-turbo-cache-12mb-4-nucleos-8-threads-lga-1700-sem-video-integrado-bx8071512100f",
+    "technicalSource": "https://www.kabum.com.br/produto/283719/processador-intel-core-i3-12100f-3-3ghz-4-3ghz-max-turbo-cache-12mb-4-nucleos-8-threads-lga-1700-sem-video-integrado-bx8071512100f",
+    "sourceLabel": "Página do produto na KaBuM!",
+    "checkedAt": "2026-10-30",
+    "hardware": {
+      "socket": "LGA1700"
+    },
+    "offers": [
+      {
+        "store": "kabum",
+        "paymentMethod": "pix",
+        "availability": "in_stock",
+        "priceCents": 54999,
+        "sourceUrl": "https://www.kabum.com.br/produto/283719/processador-intel-core-i3-12100f-3-3ghz-4-3ghz-max-turbo-cache-12mb-4-nucleos-8-threads-lga-1700-sem-video-integrado-bx8071512100f",
+        "checkedAt": "2026-10-30T15:37:02.775Z"
+      }
+    ]
+  },
+  {
+    "id": "kabum-996572",
+    "slug": "kabum-996572",
+    "category": "gpu",
+    "categoryName": "Placa de vídeo",
+    "brand": "Husky",
+    "name": "Husky Alpha RTX 3060, Nvidia",
+    "fullName": "Placa De Vídeo Husky Alpha RTX 3060, Nvidia, 12GB, GDDR6, 192-Bit, Dual Fan, HDMI, 3x DisplayPort - HVG023060",
+    "model": "HVG023060",
+    "image": "/hardware/expanded/kabum-996572-1.jpg",
+    "gallery": [
+      {
+        "src": "/hardware/expanded/kabum-996572-1.jpg",
+        "alt": "Placa De Vídeo Husky Alpha RTX 3060, Nvidia, 12GB, GDDR6, 192-Bit, Dual Fan, HDMI, 3x DisplayPort - HVG023060 — foto 1 publicada no cadastro da loja"
+      },
+      {
+        "src": "/hardware/expanded/kabum-996572-2.jpg",
+        "alt": "Placa De Vídeo Husky Alpha RTX 3060, Nvidia, 12GB, GDDR6, 192-Bit, Dual Fan, HDMI, 3x DisplayPort - HVG023060 — foto 2 publicada no cadastro da loja"
+      }
+    ],
+    "description": "Husky Alpha RTX 3060, Nvidia. Nvidia. 12GB. GDDR6. A variante anunciada é HVG023060. Confira os requisitos do seu conjunto e as informações detalhadas do fabricante antes de escolher.",
+    "highlights": [
+      "Nvidia",
+      "12GB",
+      "GDDR6"
+    ],
+    "specifications": [
+      [
+        "Marca",
+        "Husky"
+      ],
+      [
+        "Modelo anunciado",
+        "HVG023060"
+      ],
+      [
+        "Código na loja",
+        "996572"
+      ],
+      [
+        "Memória de vídeo",
+        "12 GB"
+      ]
+    ],
+    "compatibilityNote": "Confira BIOS, dimensões, conexões e instalação para o conjunto escolhido. Dados técnicos não identificados nesta ficha precisam de conferência e não são presumidos pelo montador.",
+    "manufacturerUrl": "https://www.kabum.com.br/produto/996572/placa-de-video-husky-alpha-rtx-3060-nvidia-12gb-gddr6-192-bit-dual-fan-hdmi-3x-displayport-hvg023060",
+    "technicalSource": "https://www.kabum.com.br/produto/996572/placa-de-video-husky-alpha-rtx-3060-nvidia-12gb-gddr6-192-bit-dual-fan-hdmi-3x-displayport-hvg023060",
+    "sourceLabel": "Página do produto na KaBuM!",
+    "checkedAt": "2026-10-30",
+    "hardware": {
+      "vramGb": 12
+    },
+    "offers": [
+      {
+        "store": "kabum",
+        "paymentMethod": "pix",
+        "availability": "in_stock",
+        "priceCents": 229999,
+        "sourceUrl": "https://www.kabum.com.br/produto/996572/placa-de-video-husky-alpha-rtx-3060-nvidia-12gb-gddr6-192-bit-dual-fan-hdmi-3x-displayport-hvg023060",
+        "checkedAt": "2026-10-30T15:37:05.754Z"
+      }
+    ]
+  },
+  {
+    "id": "kabum-692461",
+    "slug": "kabum-692461",
+    "category": "gpu",
+    "categoryName": "Placa de vídeo",
+    "brand": "Husky",
+    "name": "Husky Alpha RX 580, AMD",
+    "fullName": "Placa De Vídeo Husky Alpha RX 580, AMD, 8GB, GDDR5, 256-Bit, HDMI, DVI, DisplayPort - HVG580",
+    "model": "HVG580",
+    "image": "/hardware/expanded/kabum-692461-1.jpg",
+    "gallery": [
+      {
+        "src": "/hardware/expanded/kabum-692461-1.jpg",
+        "alt": "Placa De Vídeo Husky Alpha RX 580, AMD, 8GB, GDDR5, 256-Bit, HDMI, DVI, DisplayPort - HVG580 — foto 1 publicada no cadastro da loja"
+      },
+      {
+        "src": "/hardware/expanded/kabum-692461-2.jpg",
+        "alt": "Placa De Vídeo Husky Alpha RX 580, AMD, 8GB, GDDR5, 256-Bit, HDMI, DVI, DisplayPort - HVG580 — foto 2 publicada no cadastro da loja"
+      }
+    ],
+    "description": "Husky Alpha RX 580, AMD. AMD. 8GB. GDDR5. A variante anunciada é HVG580. Confira os requisitos do seu conjunto e as informações detalhadas do fabricante antes de escolher.",
+    "highlights": [
+      "AMD",
+      "8GB",
+      "GDDR5"
+    ],
+    "specifications": [
+      [
+        "Marca",
+        "Husky"
+      ],
+      [
+        "Modelo anunciado",
+        "HVG580"
+      ],
+      [
+        "Código na loja",
+        "692461"
+      ],
+      [
+        "Memória de vídeo",
+        "8 GB"
+      ]
+    ],
+    "compatibilityNote": "Confira BIOS, dimensões, conexões e instalação para o conjunto escolhido. Dados técnicos não identificados nesta ficha precisam de conferência e não são presumidos pelo montador.",
+    "manufacturerUrl": "https://www.kabum.com.br/produto/692461/placa-de-video-husky-alpha-rx-580-amd-8gb-gddr5-256-bit-hdmi-dvi-displayport-hvg580",
+    "technicalSource": "https://www.kabum.com.br/produto/692461/placa-de-video-husky-alpha-rx-580-amd-8gb-gddr5-256-bit-hdmi-dvi-displayport-hvg580",
+    "sourceLabel": "Página do produto na KaBuM!",
+    "checkedAt": "2026-10-30",
+    "hardware": {
+      "vramGb": 8
+    },
+    "offers": [
+      {
+        "store": "kabum",
+        "paymentMethod": "pix",
+        "availability": "in_stock",
+        "priceCents": 83999,
+        "sourceUrl": "https://www.kabum.com.br/produto/692461/placa-de-video-husky-alpha-rx-580-amd-8gb-gddr5-256-bit-hdmi-dvi-displayport-hvg580",
+        "checkedAt": "2026-10-30T15:37:07.641Z"
+      }
+    ]
+  },
+  {
+    "id": "kabum-459144",
+    "slug": "kabum-459144",
+    "category": "gpu",
+    "categoryName": "Placa de vídeo",
+    "brand": "ASRock",
+    "name": "RX 7600 Challenger ASRock AMD Radeon,  8GB GDDR6 - 90-GA41ZZ-00UANF",
+    "fullName": "Placa de Vídeo RX 7600 Challenger ASRock AMD Radeon,  8GB GDDR6 - 90-GA41ZZ-00UANF",
+    "model": "90-GA41ZZ-00UANF",
+    "image": "/hardware/expanded/kabum-459144-1.jpg",
+    "gallery": [
+      {
+        "src": "/hardware/expanded/kabum-459144-1.jpg",
+        "alt": "Placa de Vídeo RX 7600 Challenger ASRock AMD Radeon,  8GB GDDR6 - 90-GA41ZZ-00UANF — foto 1 publicada no cadastro da loja"
+      },
+      {
+        "src": "/hardware/expanded/kabum-459144-2.jpg",
+        "alt": "Placa de Vídeo RX 7600 Challenger ASRock AMD Radeon,  8GB GDDR6 - 90-GA41ZZ-00UANF — foto 2 publicada no cadastro da loja"
+      }
+    ],
+    "description": "RX 7600 Challenger ASRock AMD Radeon,  8GB GDDR6 - 90-GA41ZZ-00UANF. 8GB GDDR6. A variante anunciada é 90-GA41ZZ-00UANF. Confira os requisitos do seu conjunto e as informações detalhadas do fabricante antes de escolher.",
+    "highlights": [
+      "8GB GDDR6"
+    ],
+    "specifications": [
+      [
+        "Marca",
+        "ASRock"
+      ],
+      [
+        "Modelo anunciado",
+        "90-GA41ZZ-00UANF"
+      ],
+      [
+        "Código na loja",
+        "459144"
+      ],
+      [
+        "Memória de vídeo",
+        "8 GB"
+      ]
+    ],
+    "compatibilityNote": "Confira BIOS, dimensões, conexões e instalação para o conjunto escolhido. Dados técnicos não identificados nesta ficha precisam de conferência e não são presumidos pelo montador.",
+    "manufacturerUrl": "https://www.kabum.com.br/produto/459144/placa-de-video-rx-7600-challenger-asrock-amd-radeon-8gb-gddr6-90-ga41zz-00uanf",
+    "technicalSource": "https://www.kabum.com.br/produto/459144/placa-de-video-rx-7600-challenger-asrock-amd-radeon-8gb-gddr6-90-ga41zz-00uanf",
+    "sourceLabel": "Página do produto na KaBuM!",
+    "checkedAt": "2026-10-30",
+    "hardware": {
+      "vramGb": 8
+    },
+    "offers": [
+      {
+        "store": "kabum",
+        "paymentMethod": "pix",
+        "availability": "in_stock",
+        "priceCents": 191999,
+        "sourceUrl": "https://www.kabum.com.br/produto/459144/placa-de-video-rx-7600-challenger-asrock-amd-radeon-8gb-gddr6-90-ga41zz-00uanf",
+        "checkedAt": "2026-10-30T15:37:08.552Z"
+      }
+    ]
+  },
+  {
+    "id": "kabum-907814",
+    "slug": "kabum-907814",
+    "category": "gpu",
+    "categoryName": "Placa de vídeo",
+    "brand": "ASRock",
+    "name": "ASRock RX 7600 Challenger PRO OC AMD Radeon, 8GB",
+    "fullName": "Placa de Vídeo ASRock RX 7600 Challenger PRO OC AMD Radeon, 8GB, GDDR6, Triple Fan - 90-GA62ZZ-00UANF",
+    "model": "90-GA62ZZ-00UANF",
+    "image": "/hardware/expanded/kabum-907814-1.jpg",
+    "gallery": [
+      {
+        "src": "/hardware/expanded/kabum-907814-1.jpg",
+        "alt": "Placa de Vídeo ASRock RX 7600 Challenger PRO OC AMD Radeon, 8GB, GDDR6, Triple Fan - 90-GA62ZZ-00UANF — foto 1 publicada no cadastro da loja"
+      },
+      {
+        "src": "/hardware/expanded/kabum-907814-2.jpg",
+        "alt": "Placa de Vídeo ASRock RX 7600 Challenger PRO OC AMD Radeon, 8GB, GDDR6, Triple Fan - 90-GA62ZZ-00UANF — foto 2 publicada no cadastro da loja"
+      }
+    ],
+    "description": "ASRock RX 7600 Challenger PRO OC AMD Radeon, 8GB. 8GB. GDDR6. Triple Fan. A variante anunciada é 90-GA62ZZ-00UANF. Confira os requisitos do seu conjunto e as informações detalhadas do fabricante antes de escolher.",
+    "highlights": [
+      "8GB",
+      "GDDR6",
+      "Triple Fan"
+    ],
+    "specifications": [
+      [
+        "Marca",
+        "ASRock"
+      ],
+      [
+        "Modelo anunciado",
+        "90-GA62ZZ-00UANF"
+      ],
+      [
+        "Código na loja",
+        "907814"
+      ],
+      [
+        "Memória de vídeo",
+        "8 GB"
+      ]
+    ],
+    "compatibilityNote": "Confira BIOS, dimensões, conexões e instalação para o conjunto escolhido. Dados técnicos não identificados nesta ficha precisam de conferência e não são presumidos pelo montador.",
+    "manufacturerUrl": "https://www.kabum.com.br/produto/907814/placa-de-video-asrock-rx-7600-challenger-pro-oc-amd-radeon-8gb-gddr6-triple-fan-90-ga62zz-00uanf",
+    "technicalSource": "https://www.kabum.com.br/produto/907814/placa-de-video-asrock-rx-7600-challenger-pro-oc-amd-radeon-8gb-gddr6-triple-fan-90-ga62zz-00uanf",
+    "sourceLabel": "Página do produto na KaBuM!",
+    "checkedAt": "2026-10-30",
+    "hardware": {
+      "vramGb": 8
+    },
+    "offers": [
+      {
+        "store": "kabum",
+        "paymentMethod": "pix",
+        "availability": "in_stock",
+        "priceCents": 199999,
+        "sourceUrl": "https://www.kabum.com.br/produto/907814/placa-de-video-asrock-rx-7600-challenger-pro-oc-amd-radeon-8gb-gddr6-triple-fan-90-ga62zz-00uanf",
+        "checkedAt": "2026-10-30T15:37:10.353Z"
+      }
+    ]
+  },
+  {
+    "id": "kabum-761532",
+    "slug": "kabum-761532",
+    "category": "gpu",
+    "categoryName": "Placa de vídeo",
+    "brand": "ASUS",
+    "name": "ASUS RTX 5060 TI DUAL O8G NVIDIA GeForce, 8GB",
+    "fullName": "Placa de Vídeo ASUS RTX 5060 TI DUAL O8G NVIDIA GeForce, 8GB, GDDR7, DLSS, Ray Tracing - 90YV0MP2-M0NA00",
+    "model": "90YV0MP2-M0NA00",
+    "image": "/hardware/expanded/kabum-761532-1.jpg",
+    "gallery": [
+      {
+        "src": "/hardware/expanded/kabum-761532-1.jpg",
+        "alt": "Placa de Vídeo ASUS RTX 5060 TI DUAL O8G NVIDIA GeForce, 8GB, GDDR7, DLSS, Ray Tracing - 90YV0MP2-M0NA00 — foto 1 publicada no cadastro da loja"
+      },
+      {
+        "src": "/hardware/expanded/kabum-761532-2.jpg",
+        "alt": "Placa de Vídeo ASUS RTX 5060 TI DUAL O8G NVIDIA GeForce, 8GB, GDDR7, DLSS, Ray Tracing - 90YV0MP2-M0NA00 — foto 2 publicada no cadastro da loja"
+      }
+    ],
+    "description": "ASUS RTX 5060 TI DUAL O8G NVIDIA GeForce, 8GB. 8GB. GDDR7. DLSS. A variante anunciada é 90YV0MP2-M0NA00. Confira os requisitos do seu conjunto e as informações detalhadas do fabricante antes de escolher.",
+    "highlights": [
+      "8GB",
+      "GDDR7",
+      "DLSS"
+    ],
+    "specifications": [
+      [
+        "Marca",
+        "ASUS"
+      ],
+      [
+        "Modelo anunciado",
+        "90YV0MP2-M0NA00"
+      ],
+      [
+        "Código na loja",
+        "761532"
+      ],
+      [
+        "Memória de vídeo",
+        "8 GB"
+      ]
+    ],
+    "compatibilityNote": "Confira BIOS, dimensões, conexões e instalação para o conjunto escolhido. Dados técnicos não identificados nesta ficha precisam de conferência e não são presumidos pelo montador.",
+    "manufacturerUrl": "https://www.kabum.com.br/produto/761532/placa-de-video-asus-rtx-5060-ti-dual-o8g-nvidia-geforce-8gb-gddr7-dlss-ray-tracing-90yv0mp2-m0na00",
+    "technicalSource": "https://www.kabum.com.br/produto/761532/placa-de-video-asus-rtx-5060-ti-dual-o8g-nvidia-geforce-8gb-gddr7-dlss-ray-tracing-90yv0mp2-m0na00",
+    "sourceLabel": "Página do produto na KaBuM!",
+    "checkedAt": "2026-10-30",
+    "hardware": {
+      "vramGb": 8
+    },
+    "offers": [
+      {
+        "store": "kabum",
+        "paymentMethod": "pix",
+        "availability": "in_stock",
+        "priceCents": 339999,
+        "sourceUrl": "https://www.kabum.com.br/produto/761532/placa-de-video-asus-rtx-5060-ti-dual-o8g-nvidia-geforce-8gb-gddr7-dlss-ray-tracing-90yv0mp2-m0na00",
+        "checkedAt": "2026-10-30T15:37:11.607Z"
+      }
+    ]
+  },
+  {
+    "id": "kabum-714573",
+    "slug": "kabum-714573",
+    "category": "gpu",
+    "categoryName": "Placa de vídeo",
+    "brand": "Gigabyte",
+    "name": "Gigabyte RTX 5070 EAGLE OC SFF 12G NVIDIA GeForce, 12GB GDDR7",
+    "fullName": "Placa de Vídeo Gigabyte RTX 5070 EAGLE OC SFF 12G NVIDIA GeForce, 12GB GDDR7, 192bits, RGB, DLSS, Ray Tracing - GV-N5070EAGLE OC-12GD",
+    "model": "GV-N5070EAGLE OC-12GD",
+    "image": "/hardware/expanded/kabum-714573-1.jpg",
+    "gallery": [
+      {
+        "src": "/hardware/expanded/kabum-714573-1.jpg",
+        "alt": "Placa de Vídeo Gigabyte RTX 5070 EAGLE OC SFF 12G NVIDIA GeForce, 12GB GDDR7, 192bits, RGB, DLSS, Ray Tracing - GV-N5070EAGLE OC-12GD — foto 1 publicada no cadastro da loja"
+      },
+      {
+        "src": "/hardware/expanded/kabum-714573-2.jpg",
+        "alt": "Placa de Vídeo Gigabyte RTX 5070 EAGLE OC SFF 12G NVIDIA GeForce, 12GB GDDR7, 192bits, RGB, DLSS, Ray Tracing - GV-N5070EAGLE OC-12GD — foto 2 publicada no cadastro da loja"
+      }
+    ],
+    "description": "Gigabyte RTX 5070 EAGLE OC SFF 12G NVIDIA GeForce, 12GB GDDR7. 12GB GDDR7. 192bits. RGB. A variante anunciada é GV-N5070EAGLE OC-12GD. Confira os requisitos do seu conjunto e as informações detalhadas do fabricante antes de escolher.",
+    "highlights": [
+      "12GB GDDR7",
+      "192bits",
+      "RGB"
+    ],
+    "specifications": [
+      [
+        "Marca",
+        "Gigabyte"
+      ],
+      [
+        "Modelo anunciado",
+        "GV-N5070EAGLE OC-12GD"
+      ],
+      [
+        "Código na loja",
+        "714573"
+      ],
+      [
+        "Memória de vídeo",
+        "12 GB"
+      ]
+    ],
+    "compatibilityNote": "Confira BIOS, dimensões, conexões e instalação para o conjunto escolhido. Dados técnicos não identificados nesta ficha precisam de conferência e não são presumidos pelo montador.",
+    "manufacturerUrl": "https://www.kabum.com.br/produto/714573/placa-de-video-gigabyte-rtx-5070-eagle-oc-sff-12g-nvidia-geforce-12gb-gddr7-192bits-rgb-dlss-ray-tracing-9vn5070eo-00-g10",
+    "technicalSource": "https://www.kabum.com.br/produto/714573/placa-de-video-gigabyte-rtx-5070-eagle-oc-sff-12g-nvidia-geforce-12gb-gddr7-192bits-rgb-dlss-ray-tracing-9vn5070eo-00-g10",
+    "sourceLabel": "Página do produto na KaBuM!",
+    "checkedAt": "2026-10-30",
+    "hardware": {
+      "vramGb": 12
+    },
+    "offers": []
+  },
+  {
+    "id": "kabum-912220",
+    "slug": "kabum-912220",
+    "category": "gpu",
+    "categoryName": "Placa de vídeo",
+    "brand": "Gigabyte",
+    "name": "Gigabyte RTX 5060 EAGLE MAX OC 8GB NVIDIA GeForce, 8GB GDDR7",
+    "fullName": "Placa de Vídeo Gigabyte RTX 5060 EAGLE MAX OC 8GB NVIDIA GeForce, 8GB GDDR7, 128bit, Triple Fan, Ray Tracing - GV-N5060EAGLEMAX OC-8GD",
+    "model": "GV-N5060EAGLEMAX OC-8GD",
+    "image": "/hardware/expanded/kabum-912220-1.jpg",
+    "gallery": [
+      {
+        "src": "/hardware/expanded/kabum-912220-1.jpg",
+        "alt": "Placa de Vídeo Gigabyte RTX 5060 EAGLE MAX OC 8GB NVIDIA GeForce, 8GB GDDR7, 128bit, Triple Fan, Ray Tracing - GV-N5060EAGLEMAX OC-8GD — foto 1 publicada no cadastro da loja"
+      },
+      {
+        "src": "/hardware/expanded/kabum-912220-2.jpg",
+        "alt": "Placa de Vídeo Gigabyte RTX 5060 EAGLE MAX OC 8GB NVIDIA GeForce, 8GB GDDR7, 128bit, Triple Fan, Ray Tracing - GV-N5060EAGLEMAX OC-8GD — foto 2 publicada no cadastro da loja"
+      }
+    ],
+    "description": "Gigabyte RTX 5060 EAGLE MAX OC 8GB NVIDIA GeForce, 8GB GDDR7. 8GB GDDR7. 128bit. Triple Fan. A variante anunciada é GV-N5060EAGLEMAX OC-8GD. Confira os requisitos do seu conjunto e as informações detalhadas do fabricante antes de escolher.",
+    "highlights": [
+      "8GB GDDR7",
+      "128bit",
+      "Triple Fan"
+    ],
+    "specifications": [
+      [
+        "Marca",
+        "Gigabyte"
+      ],
+      [
+        "Modelo anunciado",
+        "GV-N5060EAGLEMAX OC-8GD"
+      ],
+      [
+        "Código na loja",
+        "912220"
+      ],
+      [
+        "Memória de vídeo",
+        "8 GB"
+      ]
+    ],
+    "compatibilityNote": "Confira BIOS, dimensões, conexões e instalação para o conjunto escolhido. Dados técnicos não identificados nesta ficha precisam de conferência e não são presumidos pelo montador.",
+    "manufacturerUrl": "https://www.kabum.com.br/produto/912220/placa-de-video-gigabyte-rtx-5060-eagle-max-oc-8gb-nvidia-geforce-8gb-gddr7-128bit-triple-fan-ray-tracing-gv-n5060eaglemax-oc-8gd",
+    "technicalSource": "https://www.kabum.com.br/produto/912220/placa-de-video-gigabyte-rtx-5060-eagle-max-oc-8gb-nvidia-geforce-8gb-gddr7-128bit-triple-fan-ray-tracing-gv-n5060eaglemax-oc-8gd",
+    "sourceLabel": "Página do produto na KaBuM!",
+    "checkedAt": "2026-10-30",
+    "hardware": {
+      "vramGb": 8
+    },
+    "offers": [
+      {
+        "store": "kabum",
+        "paymentMethod": "pix",
+        "availability": "in_stock",
+        "priceCents": 299999,
+        "sourceUrl": "https://www.kabum.com.br/produto/912220/placa-de-video-gigabyte-rtx-5060-eagle-max-oc-8gb-nvidia-geforce-8gb-gddr7-128bit-triple-fan-ray-tracing-gv-n5060eaglemax-oc-8gd",
+        "checkedAt": "2026-10-30T15:37:14.880Z"
+      }
+    ]
+  },
+  {
+    "id": "kabum-475651",
+    "slug": "kabum-475651",
+    "category": "gpu",
+    "categoryName": "Placa de vídeo",
+    "brand": "Gigabyte",
+    "name": "RTX 3060 Windforce OC 12G (rev. 2.0) Gigabyte NVIDIA GeForce, 12GB GDDR6",
+    "fullName": "Placa de Vídeo RTX 3060 Windforce OC 12G (rev. 2.0) Gigabyte NVIDIA GeForce, 12GB GDDR6, 192bits, Ray Tracing - GV-N3060WF2OC-12GD",
+    "model": "GV-N3060WF2OC-12GD",
+    "image": "/hardware/expanded/kabum-475651-1.jpg",
+    "gallery": [
+      {
+        "src": "/hardware/expanded/kabum-475651-1.jpg",
+        "alt": "Placa de Vídeo RTX 3060 Windforce OC 12G (rev. 2.0) Gigabyte NVIDIA GeForce, 12GB GDDR6, 192bits, Ray Tracing - GV-N3060WF2OC-12GD — foto 1 publicada no cadastro da loja"
+      },
+      {
+        "src": "/hardware/expanded/kabum-475651-2.jpg",
+        "alt": "Placa de Vídeo RTX 3060 Windforce OC 12G (rev. 2.0) Gigabyte NVIDIA GeForce, 12GB GDDR6, 192bits, Ray Tracing - GV-N3060WF2OC-12GD — foto 2 publicada no cadastro da loja"
+      }
+    ],
+    "description": "RTX 3060 Windforce OC 12G (rev. 2.0) Gigabyte NVIDIA GeForce, 12GB GDDR6. 12GB GDDR6. 192bits. Ray Tracing. A variante anunciada é GV-N3060WF2OC-12GD. Confira os requisitos do seu conjunto e as informações detalhadas do fabricante antes de escolher.",
+    "highlights": [
+      "12GB GDDR6",
+      "192bits",
+      "Ray Tracing"
+    ],
+    "specifications": [
+      [
+        "Marca",
+        "Gigabyte"
+      ],
+      [
+        "Modelo anunciado",
+        "GV-N3060WF2OC-12GD"
+      ],
+      [
+        "Código na loja",
+        "475651"
+      ],
+      [
+        "Memória de vídeo",
+        "12 GB"
+      ]
+    ],
+    "compatibilityNote": "Confira BIOS, dimensões, conexões e instalação para o conjunto escolhido. Dados técnicos não identificados nesta ficha precisam de conferência e não são presumidos pelo montador.",
+    "manufacturerUrl": "https://www.kabum.com.br/produto/475651/placa-de-video-rtx-3060-windforce-oc-12g-rev-2-0-gigabyte-nvidia-geforce-12gb-gddr6-192bits-ray-tracing-gv-n3060wf2oc-12gd",
+    "technicalSource": "https://www.kabum.com.br/produto/475651/placa-de-video-rtx-3060-windforce-oc-12g-rev-2-0-gigabyte-nvidia-geforce-12gb-gddr6-192bits-ray-tracing-gv-n3060wf2oc-12gd",
+    "sourceLabel": "Página do produto na KaBuM!",
+    "checkedAt": "2026-10-30",
+    "hardware": {
+      "vramGb": 12
+    },
+    "offers": [
+      {
+        "store": "kabum",
+        "paymentMethod": "pix",
+        "availability": "in_stock",
+        "priceCents": 229999,
+        "sourceUrl": "https://www.kabum.com.br/produto/475651/placa-de-video-rtx-3060-windforce-oc-12g-rev-2-0-gigabyte-nvidia-geforce-12gb-gddr6-192bits-ray-tracing-gv-n3060wf2oc-12gd",
+        "checkedAt": "2026-10-30T15:37:17.242Z"
+      }
+    ]
+  },
+  {
+    "id": "kabum-725948",
+    "slug": "kabum-725948",
+    "category": "gpu",
+    "categoryName": "Placa de vídeo",
+    "brand": "XFX",
+    "name": "XFX Swift RX 9070 XT WHITE TRIPLE FAN GAMING EDITION WITH AMD Radeon, 16GB",
+    "fullName": "Placa de Vídeo XFX Swift RX 9070 XT WHITE TRIPLE FAN GAMING EDITION WITH AMD Radeon, 16GB, GDDR6, HDMI 3xDP, RDNA 4 - RX-97TSWF3W9",
+    "model": "RX-97TSWF3W9",
+    "image": "/hardware/expanded/kabum-725948-1.jpg",
+    "gallery": [
+      {
+        "src": "/hardware/expanded/kabum-725948-1.jpg",
+        "alt": "Placa de Vídeo XFX Swift RX 9070 XT WHITE TRIPLE FAN GAMING EDITION WITH AMD Radeon, 16GB, GDDR6, HDMI 3xDP, RDNA 4 - RX-97TSWF3W9 — foto 1 publicada no cadastro da loja"
+      },
+      {
+        "src": "/hardware/expanded/kabum-725948-2.jpg",
+        "alt": "Placa de Vídeo XFX Swift RX 9070 XT WHITE TRIPLE FAN GAMING EDITION WITH AMD Radeon, 16GB, GDDR6, HDMI 3xDP, RDNA 4 - RX-97TSWF3W9 — foto 2 publicada no cadastro da loja"
+      }
+    ],
+    "description": "XFX Swift RX 9070 XT WHITE TRIPLE FAN GAMING EDITION WITH AMD Radeon, 16GB. 16GB. GDDR6. HDMI 3xDP. A variante anunciada é RX-97TSWF3W9. Confira os requisitos do seu conjunto e as informações detalhadas do fabricante antes de escolher.",
+    "highlights": [
+      "16GB",
+      "GDDR6",
+      "HDMI 3xDP"
+    ],
+    "specifications": [
+      [
+        "Marca",
+        "XFX"
+      ],
+      [
+        "Modelo anunciado",
+        "RX-97TSWF3W9"
+      ],
+      [
+        "Código na loja",
+        "725948"
+      ],
+      [
+        "Memória de vídeo",
+        "16 GB"
+      ]
+    ],
+    "compatibilityNote": "Confira BIOS, dimensões, conexões e instalação para o conjunto escolhido. Dados técnicos não identificados nesta ficha precisam de conferência e não são presumidos pelo montador.",
+    "manufacturerUrl": "https://www.kabum.com.br/produto/725948/placa-de-video-xfx-swift-rx-9070-xt-white-triple-fan-gaming-edition-with-amd-radeon-16gb-gddr6-hdmi-3xdp-rdna-4-rx-97tswf3w9",
+    "technicalSource": "https://www.kabum.com.br/produto/725948/placa-de-video-xfx-swift-rx-9070-xt-white-triple-fan-gaming-edition-with-amd-radeon-16gb-gddr6-hdmi-3xdp-rdna-4-rx-97tswf3w9",
+    "sourceLabel": "Página do produto na KaBuM!",
+    "checkedAt": "2026-10-30",
+    "hardware": {
+      "vramGb": 16
+    },
+    "offers": []
+  },
+  {
+    "id": "kabum-777072",
+    "slug": "kabum-777072",
+    "category": "gpu",
+    "categoryName": "Placa de vídeo",
+    "brand": "Gigabyte",
+    "name": "Gigabyte RTX 5060 AERO OC 8G NVIDIA GeForce, 8GB GDDR7",
+    "fullName": "Placa de Vídeo Gigabyte RTX 5060 AERO OC 8G NVIDIA GeForce, 8GB GDDR7, 128bits, DLSS, Triple Fan, Ray Tracing - GV-N5060AERO OC-8GD",
+    "model": "GV-N5060AERO OC-8GD",
+    "image": "/hardware/expanded/kabum-777072-1.jpg",
+    "gallery": [
+      {
+        "src": "/hardware/expanded/kabum-777072-1.jpg",
+        "alt": "Placa de Vídeo Gigabyte RTX 5060 AERO OC 8G NVIDIA GeForce, 8GB GDDR7, 128bits, DLSS, Triple Fan, Ray Tracing - GV-N5060AERO OC-8GD — foto 1 publicada no cadastro da loja"
+      },
+      {
+        "src": "/hardware/expanded/kabum-777072-2.jpg",
+        "alt": "Placa de Vídeo Gigabyte RTX 5060 AERO OC 8G NVIDIA GeForce, 8GB GDDR7, 128bits, DLSS, Triple Fan, Ray Tracing - GV-N5060AERO OC-8GD — foto 2 publicada no cadastro da loja"
+      }
+    ],
+    "description": "Gigabyte RTX 5060 AERO OC 8G NVIDIA GeForce, 8GB GDDR7. 8GB GDDR7. 128bits. DLSS. A variante anunciada é GV-N5060AERO OC-8GD. Confira os requisitos do seu conjunto e as informações detalhadas do fabricante antes de escolher.",
+    "highlights": [
+      "8GB GDDR7",
+      "128bits",
+      "DLSS"
+    ],
+    "specifications": [
+      [
+        "Marca",
+        "Gigabyte"
+      ],
+      [
+        "Modelo anunciado",
+        "GV-N5060AERO OC-8GD"
+      ],
+      [
+        "Código na loja",
+        "777072"
+      ],
+      [
+        "Memória de vídeo",
+        "8 GB"
+      ]
+    ],
+    "compatibilityNote": "Confira BIOS, dimensões, conexões e instalação para o conjunto escolhido. Dados técnicos não identificados nesta ficha precisam de conferência e não são presumidos pelo montador.",
+    "manufacturerUrl": "https://www.kabum.com.br/produto/777072/placa-de-video-gigabyte-rtx-5060-aero-oc-8g-nvidia-geforce-8gb-gddr7-128bits-dlss-triple-fan-ray-tracing-gv-n5060aero-oc-8gd",
+    "technicalSource": "https://www.kabum.com.br/produto/777072/placa-de-video-gigabyte-rtx-5060-aero-oc-8g-nvidia-geforce-8gb-gddr7-128bits-dlss-triple-fan-ray-tracing-gv-n5060aero-oc-8gd",
+    "sourceLabel": "Página do produto na KaBuM!",
+    "checkedAt": "2026-10-30",
+    "hardware": {
+      "vramGb": 8
+    },
+    "offers": [
+      {
+        "store": "kabum",
+        "paymentMethod": "pix",
+        "availability": "in_stock",
+        "priceCents": 309999,
+        "sourceUrl": "https://www.kabum.com.br/produto/777072/placa-de-video-gigabyte-rtx-5060-aero-oc-8g-nvidia-geforce-8gb-gddr7-128bits-dlss-triple-fan-ray-tracing-gv-n5060aero-oc-8gd",
+        "checkedAt": "2026-10-30T15:37:20.357Z"
+      }
+    ]
+  },
+  {
+    "id": "kabum-998334",
+    "slug": "kabum-998334",
+    "category": "gpu",
+    "categoryName": "Placa de vídeo",
+    "brand": "PCYES",
+    "name": "PcYes Nvidia Geforce Rtx 3050 6Gb Gddr6 96Bits - Pvpcr30506Gb2F",
+    "fullName": "Placa de Vídeo PcYes Nvidia Geforce Rtx 3050 6Gb Gddr6 96Bits - Pvpcr30506Gb2F",
+    "model": "Pvpcr30506Gb2F",
+    "image": "/hardware/expanded/kabum-998334-1.jpg",
+    "gallery": [
+      {
+        "src": "/hardware/expanded/kabum-998334-1.jpg",
+        "alt": "Placa de Vídeo PcYes Nvidia Geforce Rtx 3050 6Gb Gddr6 96Bits - Pvpcr30506Gb2F — foto 1 publicada no cadastro da loja"
+      },
+      {
+        "src": "/hardware/expanded/kabum-998334-2.jpg",
+        "alt": "Placa de Vídeo PcYes Nvidia Geforce Rtx 3050 6Gb Gddr6 96Bits - Pvpcr30506Gb2F — foto 2 publicada no cadastro da loja"
+      }
+    ],
+    "description": "PcYes Nvidia Geforce Rtx 3050 6Gb Gddr6 96Bits - Pvpcr30506Gb2F. Placa de vídeo. PCYES. A variante anunciada é Pvpcr30506Gb2F. Confira os requisitos do seu conjunto e as informações detalhadas do fabricante antes de escolher.",
+    "highlights": [
+      "Placa de vídeo",
+      "PCYES"
+    ],
+    "specifications": [
+      [
+        "Marca",
+        "PCYES"
+      ],
+      [
+        "Modelo anunciado",
+        "Pvpcr30506Gb2F"
+      ],
+      [
+        "Código na loja",
+        "998334"
+      ],
+      [
+        "Memória de vídeo",
+        "6 GB"
+      ]
+    ],
+    "compatibilityNote": "Confira BIOS, dimensões, conexões e instalação para o conjunto escolhido. Dados técnicos não identificados nesta ficha precisam de conferência e não são presumidos pelo montador.",
+    "manufacturerUrl": "https://www.kabum.com.br/produto/998334/placa-de-video-pcyes-nvidia-geforce-rtx-3050-6gb-gddr6-96bits-pvpcr30506gb2f",
+    "technicalSource": "https://www.kabum.com.br/produto/998334/placa-de-video-pcyes-nvidia-geforce-rtx-3050-6gb-gddr6-96bits-pvpcr30506gb2f",
+    "sourceLabel": "Página do produto na KaBuM!",
+    "checkedAt": "2026-10-30",
+    "hardware": {
+      "vramGb": 6
+    },
+    "offers": [
+      {
+        "store": "kabum",
+        "paymentMethod": "pix",
+        "availability": "in_stock",
+        "priceCents": 149999,
+        "sourceUrl": "https://www.kabum.com.br/produto/998334/placa-de-video-pcyes-nvidia-geforce-rtx-3050-6gb-gddr6-96bits-pvpcr30506gb2f",
+        "checkedAt": "2026-10-30T15:37:22.370Z"
+      }
+    ]
+  },
+  {
+    "id": "kabum-730378",
+    "slug": "kabum-730378",
+    "category": "gpu",
+    "categoryName": "Placa de vídeo",
+    "brand": "ASUS",
+    "name": "ASUS DUAL RTX 5060 TI O16G NVIDIA GeForce, 16GB GDDR7",
+    "fullName": "Placa de Vídeo ASUS DUAL RTX 5060 TI O16G NVIDIA GeForce, 16GB GDDR7, 2602MHz, 128 bits, OpenGL4.6, DLSS 4, Ray Tracing - 90YV0MH0-M0NA00",
+    "model": "90YV0MH0-M0NA00",
+    "image": "/hardware/expanded/kabum-730378-1.jpg",
+    "gallery": [
+      {
+        "src": "/hardware/expanded/kabum-730378-1.jpg",
+        "alt": "Placa de Vídeo ASUS DUAL RTX 5060 TI O16G NVIDIA GeForce, 16GB GDDR7, 2602MHz, 128 bits, OpenGL4.6, DLSS 4, Ray Tracing - 90YV0MH0-M0NA00 — foto 1 publicada no cadastro da loja"
+      },
+      {
+        "src": "/hardware/expanded/kabum-730378-2.jpg",
+        "alt": "Placa de Vídeo ASUS DUAL RTX 5060 TI O16G NVIDIA GeForce, 16GB GDDR7, 2602MHz, 128 bits, OpenGL4.6, DLSS 4, Ray Tracing - 90YV0MH0-M0NA00 — foto 2 publicada no cadastro da loja"
+      }
+    ],
+    "description": "ASUS DUAL RTX 5060 TI O16G NVIDIA GeForce, 16GB GDDR7. 16GB GDDR7. 2602MHz. 128 bits. A variante anunciada é 90YV0MH0-M0NA00. Confira os requisitos do seu conjunto e as informações detalhadas do fabricante antes de escolher.",
+    "highlights": [
+      "16GB GDDR7",
+      "2602MHz",
+      "128 bits"
+    ],
+    "specifications": [
+      [
+        "Marca",
+        "ASUS"
+      ],
+      [
+        "Modelo anunciado",
+        "90YV0MH0-M0NA00"
+      ],
+      [
+        "Código na loja",
+        "730378"
+      ],
+      [
+        "Memória de vídeo",
+        "16 GB"
+      ]
+    ],
+    "compatibilityNote": "Confira BIOS, dimensões, conexões e instalação para o conjunto escolhido. Dados técnicos não identificados nesta ficha precisam de conferência e não são presumidos pelo montador.",
+    "manufacturerUrl": "https://www.kabum.com.br/produto/730378/placa-de-video-asus-dual-rtx-5060-ti-o16g-nvidia-geforce-16gb-gddr7-2602mhz-128-bits-opengl4-6-dlss-4-ray-tracing-90yv0mh0-m0na00",
+    "technicalSource": "https://www.kabum.com.br/produto/730378/placa-de-video-asus-dual-rtx-5060-ti-o16g-nvidia-geforce-16gb-gddr7-2602mhz-128-bits-opengl4-6-dlss-4-ray-tracing-90yv0mh0-m0na00",
+    "sourceLabel": "Página do produto na KaBuM!",
+    "checkedAt": "2026-10-30",
+    "hardware": {
+      "vramGb": 16
+    },
+    "offers": [
+      {
+        "store": "kabum",
+        "paymentMethod": "pix",
+        "availability": "in_stock",
+        "priceCents": 499999,
+        "sourceUrl": "https://www.kabum.com.br/produto/730378/placa-de-video-asus-dual-rtx-5060-ti-o16g-nvidia-geforce-16gb-gddr7-2602mhz-128-bits-opengl4-6-dlss-4-ray-tracing-90yv0mh0-m0na00",
+        "checkedAt": "2026-10-30T15:37:24.043Z"
+      }
+    ]
+  },
+  {
+    "id": "kabum-1012613",
+    "slug": "kabum-1012613",
+    "category": "gpu",
+    "categoryName": "Placa de vídeo",
+    "brand": "MSI",
+    "name": "MSI RTX 3050 LP OC NVIDIA Geforce, 6GB",
+    "fullName": "Placa De Vídeo MSI RTX 3050 LP OC NVIDIA Geforce, 6GB, GDDR6, 96-Bit, Low Profile - G3050LP6C",
+    "model": "G3050LP6C",
+    "image": "/hardware/expanded/kabum-1012613-1.jpg",
+    "gallery": [
+      {
+        "src": "/hardware/expanded/kabum-1012613-1.jpg",
+        "alt": "Placa De Vídeo MSI RTX 3050 LP OC NVIDIA Geforce, 6GB, GDDR6, 96-Bit, Low Profile - G3050LP6C — foto 1 publicada no cadastro da loja"
+      },
+      {
+        "src": "/hardware/expanded/kabum-1012613-2.jpg",
+        "alt": "Placa De Vídeo MSI RTX 3050 LP OC NVIDIA Geforce, 6GB, GDDR6, 96-Bit, Low Profile - G3050LP6C — foto 2 publicada no cadastro da loja"
+      }
+    ],
+    "description": "MSI RTX 3050 LP OC NVIDIA Geforce, 6GB. 6GB. GDDR6. 96-Bit. A variante anunciada é G3050LP6C. Confira os requisitos do seu conjunto e as informações detalhadas do fabricante antes de escolher.",
+    "highlights": [
+      "6GB",
+      "GDDR6",
+      "96-Bit"
+    ],
+    "specifications": [
+      [
+        "Marca",
+        "MSI"
+      ],
+      [
+        "Modelo anunciado",
+        "G3050LP6C"
+      ],
+      [
+        "Código na loja",
+        "1012613"
+      ],
+      [
+        "Memória de vídeo",
+        "6 GB"
+      ]
+    ],
+    "compatibilityNote": "Confira BIOS, dimensões, conexões e instalação para o conjunto escolhido. Dados técnicos não identificados nesta ficha precisam de conferência e não são presumidos pelo montador.",
+    "manufacturerUrl": "https://www.kabum.com.br/produto/1012613/placa-de-video-msi-rtx-3050-lp-oc-nvidia-geforce-6gb-gddr6-96-bit-low-profile-g3050lp6c",
+    "technicalSource": "https://www.kabum.com.br/produto/1012613/placa-de-video-msi-rtx-3050-lp-oc-nvidia-geforce-6gb-gddr6-96-bit-low-profile-g3050lp6c",
+    "sourceLabel": "Página do produto na KaBuM!",
+    "checkedAt": "2026-10-30",
+    "hardware": {
+      "vramGb": 6
+    },
+    "offers": [
+      {
+        "store": "kabum",
+        "paymentMethod": "pix",
+        "availability": "in_stock",
+        "priceCents": 149999,
+        "sourceUrl": "https://www.kabum.com.br/produto/1012613/placa-de-video-msi-rtx-3050-lp-oc-nvidia-geforce-6gb-gddr6-96-bit-low-profile-g3050lp6c",
+        "checkedAt": "2026-10-30T15:37:26.362Z"
+      }
+    ]
+  },
+  {
+    "id": "kabum-921271",
+    "slug": "kabum-921271",
+    "category": "gpu",
+    "categoryName": "Placa de vídeo",
+    "brand": "ASRock",
+    "name": "ASRock Radeon RX 9070 XT Challenger, AMD",
+    "fullName": "Placa de Vídeo ASRock Radeon RX 9070 XT Challenger, AMD, 16GB - 90-GA61ZZ-00UANF",
+    "model": "90-GA61ZZ-00UANF",
+    "image": "/hardware/expanded/kabum-921271-1.jpg",
+    "gallery": [
+      {
+        "src": "/hardware/expanded/kabum-921271-1.jpg",
+        "alt": "Placa de Vídeo ASRock Radeon RX 9070 XT Challenger, AMD, 16GB - 90-GA61ZZ-00UANF — foto 1 publicada no cadastro da loja"
+      },
+      {
+        "src": "/hardware/expanded/kabum-921271-2.jpg",
+        "alt": "Placa de Vídeo ASRock Radeon RX 9070 XT Challenger, AMD, 16GB - 90-GA61ZZ-00UANF — foto 2 publicada no cadastro da loja"
+      }
+    ],
+    "description": "ASRock Radeon RX 9070 XT Challenger, AMD. AMD. 16GB. A variante anunciada é 90-GA61ZZ-00UANF. Confira os requisitos do seu conjunto e as informações detalhadas do fabricante antes de escolher.",
+    "highlights": [
+      "AMD",
+      "16GB"
+    ],
+    "specifications": [
+      [
+        "Marca",
+        "ASRock"
+      ],
+      [
+        "Modelo anunciado",
+        "90-GA61ZZ-00UANF"
+      ],
+      [
+        "Código na loja",
+        "921271"
+      ],
+      [
+        "Memória de vídeo",
+        "16 GB"
+      ]
+    ],
+    "compatibilityNote": "Confira BIOS, dimensões, conexões e instalação para o conjunto escolhido. Dados técnicos não identificados nesta ficha precisam de conferência e não são presumidos pelo montador.",
+    "manufacturerUrl": "https://www.kabum.com.br/produto/921271/placa-de-video-asrock-radeon-rx-9070-xt-challenger-amd-16gb-90-ga61zz-00uanf",
+    "technicalSource": "https://www.kabum.com.br/produto/921271/placa-de-video-asrock-radeon-rx-9070-xt-challenger-amd-16gb-90-ga61zz-00uanf",
+    "sourceLabel": "Página do produto na KaBuM!",
+    "checkedAt": "2026-10-30",
+    "hardware": {
+      "vramGb": 16
+    },
+    "offers": [
+      {
+        "store": "kabum",
+        "paymentMethod": "pix",
+        "availability": "in_stock",
+        "priceCents": 599999,
+        "sourceUrl": "https://www.kabum.com.br/produto/921271/placa-de-video-asrock-radeon-rx-9070-xt-challenger-amd-16gb-90-ga61zz-00uanf",
+        "checkedAt": "2026-10-30T15:37:27.339Z"
+      }
+    ]
+  },
+  {
+    "id": "kabum-1000741",
+    "slug": "kabum-1000741",
+    "category": "gpu",
+    "categoryName": "Placa de vídeo",
+    "brand": "MSI",
+    "name": "MSI RTX 5060 Shadow 2X OC NVIDIA GeForce, 8GB",
+    "fullName": "Placa de Vídeo MSI RTX 5060 Shadow 2X OC NVIDIA GeForce, 8GB, GDDR7, 128-bit - 912-V537-038",
+    "model": "912-V537-038",
+    "image": "/hardware/expanded/kabum-1000741-1.jpg",
+    "gallery": [
+      {
+        "src": "/hardware/expanded/kabum-1000741-1.jpg",
+        "alt": "Placa de Vídeo MSI RTX 5060 Shadow 2X OC NVIDIA GeForce, 8GB, GDDR7, 128-bit - 912-V537-038 — foto 1 publicada no cadastro da loja"
+      },
+      {
+        "src": "/hardware/expanded/kabum-1000741-2.jpg",
+        "alt": "Placa de Vídeo MSI RTX 5060 Shadow 2X OC NVIDIA GeForce, 8GB, GDDR7, 128-bit - 912-V537-038 — foto 2 publicada no cadastro da loja"
+      }
+    ],
+    "description": "MSI RTX 5060 Shadow 2X OC NVIDIA GeForce, 8GB. 8GB. GDDR7. 128-bit. A variante anunciada é 912-V537-038. Confira os requisitos do seu conjunto e as informações detalhadas do fabricante antes de escolher.",
+    "highlights": [
+      "8GB",
+      "GDDR7",
+      "128-bit"
+    ],
+    "specifications": [
+      [
+        "Marca",
+        "MSI"
+      ],
+      [
+        "Modelo anunciado",
+        "912-V537-038"
+      ],
+      [
+        "Código na loja",
+        "1000741"
+      ],
+      [
+        "Memória de vídeo",
+        "8 GB"
+      ]
+    ],
+    "compatibilityNote": "Confira BIOS, dimensões, conexões e instalação para o conjunto escolhido. Dados técnicos não identificados nesta ficha precisam de conferência e não são presumidos pelo montador.",
+    "manufacturerUrl": "https://www.kabum.com.br/produto/1000741/placa-de-video-msi-rtx-5060-shadow-2x-oc-nvidia-geforce-8gb-gddr7-128-bit-912-v537-038",
+    "technicalSource": "https://www.kabum.com.br/produto/1000741/placa-de-video-msi-rtx-5060-shadow-2x-oc-nvidia-geforce-8gb-gddr7-128-bit-912-v537-038",
+    "sourceLabel": "Página do produto na KaBuM!",
+    "checkedAt": "2026-10-30",
+    "hardware": {
+      "vramGb": 8
+    },
+    "offers": [
+      {
+        "store": "kabum",
+        "paymentMethod": "pix",
+        "availability": "in_stock",
+        "priceCents": 329999,
+        "sourceUrl": "https://www.kabum.com.br/produto/1000741/placa-de-video-msi-rtx-5060-shadow-2x-oc-nvidia-geforce-8gb-gddr7-128-bit-912-v537-038",
+        "checkedAt": "2026-10-30T15:37:29.269Z"
+      }
+    ]
+  },
+  {
+    "id": "kabum-877566",
+    "slug": "kabum-877566",
+    "category": "gpu",
+    "categoryName": "Placa de vídeo",
+    "brand": "MSI",
+    "name": "MSI RTX 5060 8G SHADOW 2X OC Geforce NVIDIA, 8GB GDDR7",
+    "fullName": "Placa de Vídeo MSI RTX 5060 8G SHADOW 2X OC Geforce NVIDIA, 8GB GDDR7, 128 bits, 2535 MHz, DLSS 4, Ray Tracing - G5060-8S2C",
+    "model": "G5060-8S2C",
+    "image": "/hardware/expanded/kabum-877566-1.jpg",
+    "gallery": [
+      {
+        "src": "/hardware/expanded/kabum-877566-1.jpg",
+        "alt": "Placa de Vídeo MSI RTX 5060 8G SHADOW 2X OC Geforce NVIDIA, 8GB GDDR7, 128 bits, 2535 MHz, DLSS 4, Ray Tracing - G5060-8S2C — foto 1 publicada no cadastro da loja"
+      },
+      {
+        "src": "/hardware/expanded/kabum-877566-2.jpg",
+        "alt": "Placa de Vídeo MSI RTX 5060 8G SHADOW 2X OC Geforce NVIDIA, 8GB GDDR7, 128 bits, 2535 MHz, DLSS 4, Ray Tracing - G5060-8S2C — foto 2 publicada no cadastro da loja"
+      }
+    ],
+    "description": "MSI RTX 5060 8G SHADOW 2X OC Geforce NVIDIA, 8GB GDDR7. 8GB GDDR7. 128 bits. 2535 MHz. A variante anunciada é G5060-8S2C. Confira os requisitos do seu conjunto e as informações detalhadas do fabricante antes de escolher.",
+    "highlights": [
+      "8GB GDDR7",
+      "128 bits",
+      "2535 MHz"
+    ],
+    "specifications": [
+      [
+        "Marca",
+        "MSI"
+      ],
+      [
+        "Modelo anunciado",
+        "G5060-8S2C"
+      ],
+      [
+        "Código na loja",
+        "877566"
+      ],
+      [
+        "Memória de vídeo",
+        "8 GB"
+      ]
+    ],
+    "compatibilityNote": "Confira BIOS, dimensões, conexões e instalação para o conjunto escolhido. Dados técnicos não identificados nesta ficha precisam de conferência e não são presumidos pelo montador.",
+    "manufacturerUrl": "https://www.kabum.com.br/produto/877566/placa-de-video-msi-rtx-5060-8g-shadow-2x-oc-geforce-nvidia-8gb-gddr7-128-bits-2535-mhz-dlss-4-ray-tracing-g5060-8s2c",
+    "technicalSource": "https://www.kabum.com.br/produto/877566/placa-de-video-msi-rtx-5060-8g-shadow-2x-oc-geforce-nvidia-8gb-gddr7-128-bits-2535-mhz-dlss-4-ray-tracing-g5060-8s2c",
+    "sourceLabel": "Página do produto na KaBuM!",
+    "checkedAt": "2026-10-30",
+    "hardware": {
+      "vramGb": 8
+    },
+    "offers": [
+      {
+        "store": "kabum",
+        "paymentMethod": "pix",
+        "availability": "in_stock",
+        "priceCents": 304999,
+        "sourceUrl": "https://www.kabum.com.br/produto/877566/placa-de-video-msi-rtx-5060-8g-shadow-2x-oc-geforce-nvidia-8gb-gddr7-128-bits-2535-mhz-dlss-4-ray-tracing-g5060-8s2c",
+        "checkedAt": "2026-10-30T15:37:31.090Z"
+      }
+    ]
+  },
+  {
+    "id": "kabum-988703",
+    "slug": "kabum-988703",
+    "category": "gpu",
+    "categoryName": "Placa de vídeo",
+    "brand": "PALIT",
+    "name": "Palit GeForce RTX 5070 Ti 16GB GamingPro-S GDDR7 256bits - NE7507T019T2-GB2031U",
+    "fullName": "Placa de Video Palit GeForce RTX 5070 Ti 16GB GamingPro-S GDDR7 256bits - NE7507T019T2-GB2031U",
+    "model": "NE7507T019T2-GB2031U",
+    "image": "/hardware/expanded/kabum-988703-1.jpg",
+    "gallery": [
+      {
+        "src": "/hardware/expanded/kabum-988703-1.jpg",
+        "alt": "Placa de Video Palit GeForce RTX 5070 Ti 16GB GamingPro-S GDDR7 256bits - NE7507T019T2-GB2031U — foto 1 publicada no cadastro da loja"
+      },
+      {
+        "src": "/hardware/expanded/kabum-988703-2.jpg",
+        "alt": "Placa de Video Palit GeForce RTX 5070 Ti 16GB GamingPro-S GDDR7 256bits - NE7507T019T2-GB2031U — foto 2 publicada no cadastro da loja"
+      }
+    ],
+    "description": "Palit GeForce RTX 5070 Ti 16GB GamingPro-S GDDR7 256bits - NE7507T019T2-GB2031U. Placa de vídeo. PALIT. A variante anunciada é NE7507T019T2-GB2031U. Confira os requisitos do seu conjunto e as informações detalhadas do fabricante antes de escolher.",
+    "highlights": [
+      "Placa de vídeo",
+      "PALIT"
+    ],
+    "specifications": [
+      [
+        "Marca",
+        "PALIT"
+      ],
+      [
+        "Modelo anunciado",
+        "NE7507T019T2-GB2031U"
+      ],
+      [
+        "Código na loja",
+        "988703"
+      ],
+      [
+        "Memória de vídeo",
+        "16 GB"
+      ]
+    ],
+    "compatibilityNote": "Confira BIOS, dimensões, conexões e instalação para o conjunto escolhido. Dados técnicos não identificados nesta ficha precisam de conferência e não são presumidos pelo montador.",
+    "manufacturerUrl": "https://www.kabum.com.br/produto/988703/placa-de-video-palit-geforce-rtx-5070-ti-16gb-gamingpro-s-gddr7-256bits-ne7507t019t2-gb2031u",
+    "technicalSource": "https://www.kabum.com.br/produto/988703/placa-de-video-palit-geforce-rtx-5070-ti-16gb-gamingpro-s-gddr7-256bits-ne7507t019t2-gb2031u",
+    "sourceLabel": "Página do produto na KaBuM!",
+    "checkedAt": "2026-10-30",
+    "hardware": {
+      "vramGb": 16
+    },
+    "offers": [
+      {
+        "store": "kabum",
+        "paymentMethod": "pix",
+        "availability": "in_stock",
+        "priceCents": 859999,
+        "sourceUrl": "https://www.kabum.com.br/produto/988703/placa-de-video-palit-geforce-rtx-5070-ti-16gb-gamingpro-s-gddr7-256bits-ne7507t019t2-gb2031u",
+        "checkedAt": "2026-10-30T15:37:32.750Z"
+      }
+    ]
+  },
+  {
+    "id": "kabum-907818",
+    "slug": "kabum-907818",
+    "category": "gpu",
+    "categoryName": "Placa de vídeo",
+    "brand": "Pny",
+    "name": "PNY RTX 5060 Ti OC NVIDIA Geforce, 8GB GDDR7",
+    "fullName": "Placa de Vídeo PNY RTX 5060 Ti OC NVIDIA Geforce, 8GB GDDR7, Dual-Fan, Ray Tracing, DLSS 4 - VCG5060T8DFXPB1-O-TF",
+    "model": "VCG5060T8DFXPB1-O-TF",
+    "image": "/hardware/expanded/kabum-907818-1.jpg",
+    "gallery": [
+      {
+        "src": "/hardware/expanded/kabum-907818-1.jpg",
+        "alt": "Placa de Vídeo PNY RTX 5060 Ti OC NVIDIA Geforce, 8GB GDDR7, Dual-Fan, Ray Tracing, DLSS 4 - VCG5060T8DFXPB1-O-TF — foto 1 publicada no cadastro da loja"
+      },
+      {
+        "src": "/hardware/expanded/kabum-907818-2.jpg",
+        "alt": "Placa de Vídeo PNY RTX 5060 Ti OC NVIDIA Geforce, 8GB GDDR7, Dual-Fan, Ray Tracing, DLSS 4 - VCG5060T8DFXPB1-O-TF — foto 2 publicada no cadastro da loja"
+      }
+    ],
+    "description": "PNY RTX 5060 Ti OC NVIDIA Geforce, 8GB GDDR7. 8GB GDDR7. Dual-Fan. Ray Tracing. A variante anunciada é VCG5060T8DFXPB1-O-TF. Confira os requisitos do seu conjunto e as informações detalhadas do fabricante antes de escolher.",
+    "highlights": [
+      "8GB GDDR7",
+      "Dual-Fan",
+      "Ray Tracing"
+    ],
+    "specifications": [
+      [
+        "Marca",
+        "Pny"
+      ],
+      [
+        "Modelo anunciado",
+        "VCG5060T8DFXPB1-O-TF"
+      ],
+      [
+        "Código na loja",
+        "907818"
+      ],
+      [
+        "Memória de vídeo",
+        "8 GB"
+      ]
+    ],
+    "compatibilityNote": "Confira BIOS, dimensões, conexões e instalação para o conjunto escolhido. Dados técnicos não identificados nesta ficha precisam de conferência e não são presumidos pelo montador.",
+    "manufacturerUrl": "https://www.kabum.com.br/produto/907818/placa-de-video-pny-rtx-5060-ti-oc-nvidia-geforce-8gb-gddr7-dual-fan-ray-tracing-dlss-4-vcg5060t8dfxpb1-o-tf",
+    "technicalSource": "https://www.kabum.com.br/produto/907818/placa-de-video-pny-rtx-5060-ti-oc-nvidia-geforce-8gb-gddr7-dual-fan-ray-tracing-dlss-4-vcg5060t8dfxpb1-o-tf",
+    "sourceLabel": "Página do produto na KaBuM!",
+    "checkedAt": "2026-10-30",
+    "hardware": {
+      "vramGb": 8
+    },
+    "offers": [
+      {
+        "store": "kabum",
+        "paymentMethod": "pix",
+        "availability": "in_stock",
+        "priceCents": 329999,
+        "sourceUrl": "https://www.kabum.com.br/produto/907818/placa-de-video-pny-rtx-5060-ti-oc-nvidia-geforce-8gb-gddr7-dual-fan-ray-tracing-dlss-4-vcg5060t8dfxpb1-o-tf",
+        "checkedAt": "2026-10-30T15:37:34.332Z"
+      }
+    ]
+  },
+  {
+    "id": "kabum-694714",
+    "slug": "kabum-694714",
+    "category": "gpu",
+    "categoryName": "Placa de vídeo",
+    "brand": "ASRock",
+    "name": "ASRock RX 9070 Challenger AMD Radeon, LED",
+    "fullName": "Placa de Vídeo ASRock RX 9070 Challenger AMD Radeon, LED, 16GB, GDDR6, FidelityFX, RDNA - 90-GA5NZZ-00UANF",
+    "model": "90-GA5NZZ-00UANF",
+    "image": "/hardware/expanded/kabum-694714-1.jpg",
+    "gallery": [
+      {
+        "src": "/hardware/expanded/kabum-694714-1.jpg",
+        "alt": "Placa de Vídeo ASRock RX 9070 Challenger AMD Radeon, LED, 16GB, GDDR6, FidelityFX, RDNA - 90-GA5NZZ-00UANF — foto 1 publicada no cadastro da loja"
+      },
+      {
+        "src": "/hardware/expanded/kabum-694714-2.jpg",
+        "alt": "Placa de Vídeo ASRock RX 9070 Challenger AMD Radeon, LED, 16GB, GDDR6, FidelityFX, RDNA - 90-GA5NZZ-00UANF — foto 2 publicada no cadastro da loja"
+      }
+    ],
+    "description": "ASRock RX 9070 Challenger AMD Radeon, LED. LED. 16GB. GDDR6. A variante anunciada é 90-GA5NZZ-00UANF. Confira os requisitos do seu conjunto e as informações detalhadas do fabricante antes de escolher.",
+    "highlights": [
+      "LED",
+      "16GB",
+      "GDDR6"
+    ],
+    "specifications": [
+      [
+        "Marca",
+        "ASRock"
+      ],
+      [
+        "Modelo anunciado",
+        "90-GA5NZZ-00UANF"
+      ],
+      [
+        "Código na loja",
+        "694714"
+      ],
+      [
+        "Memória de vídeo",
+        "16 GB"
+      ]
+    ],
+    "compatibilityNote": "Confira BIOS, dimensões, conexões e instalação para o conjunto escolhido. Dados técnicos não identificados nesta ficha precisam de conferência e não são presumidos pelo montador.",
+    "manufacturerUrl": "https://www.kabum.com.br/produto/694714/placa-de-video-asrock-rx-9070-challenger-amd-radeon-led-16gb-gddr6-fidelityfx-rdna-90-ga5nzz-00uanf",
+    "technicalSource": "https://www.kabum.com.br/produto/694714/placa-de-video-asrock-rx-9070-challenger-amd-radeon-led-16gb-gddr6-fidelityfx-rdna-90-ga5nzz-00uanf",
+    "sourceLabel": "Página do produto na KaBuM!",
+    "checkedAt": "2026-10-30",
+    "hardware": {
+      "vramGb": 16
+    },
+    "offers": [
+      {
+        "store": "kabum",
+        "paymentMethod": "pix",
+        "availability": "in_stock",
+        "priceCents": 569999,
+        "sourceUrl": "https://www.kabum.com.br/produto/694714/placa-de-video-asrock-rx-9070-challenger-amd-radeon-led-16gb-gddr6-fidelityfx-rdna-90-ga5nzz-00uanf",
+        "checkedAt": "2026-10-30T15:37:36.161Z"
+      }
+    ]
+  },
+  {
+    "id": "kabum-802427",
+    "slug": "kabum-802427",
+    "category": "gpu",
+    "categoryName": "Placa de vídeo",
+    "brand": "Gigabyte",
+    "name": "RTX 5060 Ti EAGLEOC ICE 8G Gigabyte NVIDIA GeForce, 8GB GDDR7",
+    "fullName": "Placa de Vídeo RTX 5060 Ti EAGLEOC ICE 8G Gigabyte NVIDIA GeForce, 8GB GDDR7, 128bits, DLSS, Ray Tracing - GV-N506TEAGLEOC ICE-8GD",
+    "model": "GV-N506TEAGLEOC ICE-8GD",
+    "image": "/hardware/expanded/kabum-802427-1.jpg",
+    "gallery": [
+      {
+        "src": "/hardware/expanded/kabum-802427-1.jpg",
+        "alt": "Placa de Vídeo RTX 5060 Ti EAGLEOC ICE 8G Gigabyte NVIDIA GeForce, 8GB GDDR7, 128bits, DLSS, Ray Tracing - GV-N506TEAGLEOC ICE-8GD — foto 1 publicada no cadastro da loja"
+      },
+      {
+        "src": "/hardware/expanded/kabum-802427-2.jpg",
+        "alt": "Placa de Vídeo RTX 5060 Ti EAGLEOC ICE 8G Gigabyte NVIDIA GeForce, 8GB GDDR7, 128bits, DLSS, Ray Tracing - GV-N506TEAGLEOC ICE-8GD — foto 2 publicada no cadastro da loja"
+      }
+    ],
+    "description": "RTX 5060 Ti EAGLEOC ICE 8G Gigabyte NVIDIA GeForce, 8GB GDDR7. 8GB GDDR7. 128bits. DLSS. A variante anunciada é GV-N506TEAGLEOC ICE-8GD. Confira os requisitos do seu conjunto e as informações detalhadas do fabricante antes de escolher.",
+    "highlights": [
+      "8GB GDDR7",
+      "128bits",
+      "DLSS"
+    ],
+    "specifications": [
+      [
+        "Marca",
+        "Gigabyte"
+      ],
+      [
+        "Modelo anunciado",
+        "GV-N506TEAGLEOC ICE-8GD"
+      ],
+      [
+        "Código na loja",
+        "802427"
+      ],
+      [
+        "Memória de vídeo",
+        "8 GB"
+      ]
+    ],
+    "compatibilityNote": "Confira BIOS, dimensões, conexões e instalação para o conjunto escolhido. Dados técnicos não identificados nesta ficha precisam de conferência e não são presumidos pelo montador.",
+    "manufacturerUrl": "https://www.kabum.com.br/produto/802427/placa-de-video-rtx-5060-ti-eagleoc-ice-8g-gigabyte-nvidia-geforce-8gb-gddr7-128bits-dlss-ray-tracing-gv-n506teagleoc-ice-8gd",
+    "technicalSource": "https://www.kabum.com.br/produto/802427/placa-de-video-rtx-5060-ti-eagleoc-ice-8g-gigabyte-nvidia-geforce-8gb-gddr7-128bits-dlss-ray-tracing-gv-n506teagleoc-ice-8gd",
+    "sourceLabel": "Página do produto na KaBuM!",
+    "checkedAt": "2026-10-30",
+    "hardware": {
+      "vramGb": 8
+    },
+    "offers": [
+      {
+        "store": "kabum",
+        "paymentMethod": "pix",
+        "availability": "in_stock",
+        "priceCents": 339999,
+        "sourceUrl": "https://www.kabum.com.br/produto/802427/placa-de-video-rtx-5060-ti-eagleoc-ice-8g-gigabyte-nvidia-geforce-8gb-gddr7-128bits-dlss-ray-tracing-gv-n506teagleoc-ice-8gd",
+        "checkedAt": "2026-10-30T15:37:38.123Z"
+      }
+    ]
+  },
+  {
+    "id": "kabum-1047423",
+    "slug": "kabum-1047423",
+    "category": "mobo",
+    "categoryName": "Placa-mãe",
+    "brand": "MSI",
+    "name": "MSI B550M Gaming Plus WiFi6E, AMD AM4",
+    "fullName": "Placa-Mãe MSI B550M Gaming Plus WiFi6E, AMD AM4, Micro ATX, DDR4, Wi-Fi 6E, Bluetooth 5.2, Preto e Prata - B550M GAMING PLUS WIFI6E",
+    "model": "B550M GAMING PLUS WIFI6E",
+    "image": "/hardware/expanded/kabum-1047423-1.jpg",
+    "gallery": [
+      {
+        "src": "/hardware/expanded/kabum-1047423-1.jpg",
+        "alt": "Placa-Mãe MSI B550M Gaming Plus WiFi6E, AMD AM4, Micro ATX, DDR4, Wi-Fi 6E, Bluetooth 5.2, Preto e Prata - B550M GAMING PLUS WIFI6E — foto 1 publicada no cadastro da loja"
+      },
+      {
+        "src": "/hardware/expanded/kabum-1047423-2.jpg",
+        "alt": "Placa-Mãe MSI B550M Gaming Plus WiFi6E, AMD AM4, Micro ATX, DDR4, Wi-Fi 6E, Bluetooth 5.2, Preto e Prata - B550M GAMING PLUS WIFI6E — foto 2 publicada no cadastro da loja"
+      }
+    ],
+    "description": "MSI B550M Gaming Plus WiFi6E, AMD AM4. AMD AM4. Micro ATX. DDR4. A variante anunciada é B550M GAMING PLUS WIFI6E. Confira os requisitos do seu conjunto e as informações detalhadas do fabricante antes de escolher.",
+    "highlights": [
+      "AMD AM4",
+      "Micro ATX",
+      "DDR4"
+    ],
+    "specifications": [
+      [
+        "Marca",
+        "MSI"
+      ],
+      [
+        "Modelo anunciado",
+        "B550M GAMING PLUS WIFI6E"
+      ],
+      [
+        "Código na loja",
+        "1047423"
+      ],
+      [
+        "Socket",
+        "AM4"
+      ],
+      [
+        "Padrão de memória",
+        "DDR4"
+      ],
+      [
+        "Formato",
+        "micro-ATX"
+      ]
+    ],
+    "compatibilityNote": "Confira BIOS, dimensões, conexões e instalação para o conjunto escolhido. Dados técnicos não identificados nesta ficha precisam de conferência e não são presumidos pelo montador.",
+    "manufacturerUrl": "https://www.kabum.com.br/produto/1047423/placa-mae-msi-b550m-gaming-plus-wifi6e-amd-am4-micro-atx-ddr4-wi-fi-6e-bluetooth-52-preto-e-prata-b550m-gaming-plus-wifi6e",
+    "technicalSource": "https://www.kabum.com.br/produto/1047423/placa-mae-msi-b550m-gaming-plus-wifi6e-amd-am4-micro-atx-ddr4-wi-fi-6e-bluetooth-52-preto-e-prata-b550m-gaming-plus-wifi6e",
+    "sourceLabel": "Página do produto na KaBuM!",
+    "checkedAt": "2026-10-30",
+    "hardware": {
+      "socket": "AM4",
+      "ramType": "DDR4",
+      "formFactor": "microATX"
+    },
+    "offers": []
+  },
+  {
+    "id": "kabum-280890",
+    "slug": "kabum-280890",
+    "category": "mobo",
+    "categoryName": "Placa-mãe",
+    "brand": "MSI",
+    "name": "MSI A520M-A PRO, AMD AM4",
+    "fullName": "Placa-Mãe MSI A520M-A PRO, AMD AM4, mATX, DDR4, Preto - A520M-A PRO",
+    "model": "A520M-A PRO",
+    "image": "/hardware/expanded/kabum-280890-1.jpg",
+    "gallery": [
+      {
+        "src": "/hardware/expanded/kabum-280890-1.jpg",
+        "alt": "Placa-Mãe MSI A520M-A PRO, AMD AM4, mATX, DDR4, Preto - A520M-A PRO — foto 1 publicada no cadastro da loja"
+      },
+      {
+        "src": "/hardware/expanded/kabum-280890-2.jpg",
+        "alt": "Placa-Mãe MSI A520M-A PRO, AMD AM4, mATX, DDR4, Preto - A520M-A PRO — foto 2 publicada no cadastro da loja"
+      }
+    ],
+    "description": "MSI A520M-A PRO, AMD AM4. AMD AM4. mATX. DDR4. A variante anunciada é A520M-A PRO. Confira os requisitos do seu conjunto e as informações detalhadas do fabricante antes de escolher.",
+    "highlights": [
+      "AMD AM4",
+      "mATX",
+      "DDR4"
+    ],
+    "specifications": [
+      [
+        "Marca",
+        "MSI"
+      ],
+      [
+        "Modelo anunciado",
+        "A520M-A PRO"
+      ],
+      [
+        "Código na loja",
+        "280890"
+      ],
+      [
+        "Socket",
+        "AM4"
+      ],
+      [
+        "Padrão de memória",
+        "DDR4"
+      ],
+      [
+        "Formato",
+        "micro-ATX"
+      ]
+    ],
+    "compatibilityNote": "Confira BIOS, dimensões, conexões e instalação para o conjunto escolhido. Dados técnicos não identificados nesta ficha precisam de conferência e não são presumidos pelo montador.",
+    "manufacturerUrl": "https://www.kabum.com.br/produto/280890/placa-mae-msi-a520m-a-pro-amd-am4-matx-ddr4-preto-a520m-a-pro",
+    "technicalSource": "https://www.kabum.com.br/produto/280890/placa-mae-msi-a520m-a-pro-amd-am4-matx-ddr4-preto-a520m-a-pro",
+    "sourceLabel": "Página do produto na KaBuM!",
+    "checkedAt": "2026-10-30",
+    "hardware": {
+      "socket": "AM4",
+      "ramType": "DDR4",
+      "formFactor": "microATX"
+    },
+    "offers": []
+  },
+  {
+    "id": "kabum-115216",
+    "slug": "kabum-115216",
+    "category": "mobo",
+    "categoryName": "Placa-mãe",
+    "brand": "ASUS",
+    "name": "ASUS TUF Gaming B550M-Plus, AMD AM4",
+    "fullName": "Placa-Mãe ASUS TUF Gaming B550M-Plus, AMD AM4, mATX, DDR4, Preto - 90MB14A0-C1BAY0",
+    "model": "90MB14A0-C1BAY0",
+    "image": "/hardware/expanded/kabum-115216-1.jpg",
+    "gallery": [
+      {
+        "src": "/hardware/expanded/kabum-115216-1.jpg",
+        "alt": "Placa-Mãe ASUS TUF Gaming B550M-Plus, AMD AM4, mATX, DDR4, Preto - 90MB14A0-C1BAY0 — foto 1 publicada no cadastro da loja"
+      },
+      {
+        "src": "/hardware/expanded/kabum-115216-2.jpg",
+        "alt": "Placa-Mãe ASUS TUF Gaming B550M-Plus, AMD AM4, mATX, DDR4, Preto - 90MB14A0-C1BAY0 — foto 2 publicada no cadastro da loja"
+      }
+    ],
+    "description": "ASUS TUF Gaming B550M-Plus, AMD AM4. AMD AM4. mATX. DDR4. A variante anunciada é 90MB14A0-C1BAY0. Confira os requisitos do seu conjunto e as informações detalhadas do fabricante antes de escolher.",
+    "highlights": [
+      "AMD AM4",
+      "mATX",
+      "DDR4"
+    ],
+    "specifications": [
+      [
+        "Marca",
+        "ASUS"
+      ],
+      [
+        "Modelo anunciado",
+        "90MB14A0-C1BAY0"
+      ],
+      [
+        "Código na loja",
+        "115216"
+      ],
+      [
+        "Socket",
+        "AM4"
+      ],
+      [
+        "Padrão de memória",
+        "DDR4"
+      ],
+      [
+        "Formato",
+        "micro-ATX"
+      ]
+    ],
+    "compatibilityNote": "Confira BIOS, dimensões, conexões e instalação para o conjunto escolhido. Dados técnicos não identificados nesta ficha precisam de conferência e não são presumidos pelo montador.",
+    "manufacturerUrl": "https://www.kabum.com.br/produto/115216/placa-mae-asus-tuf-gaming-b550m-plus-amd-am4-matx-ddr4-preto-90mb14a0-c1bay0",
+    "technicalSource": "https://www.kabum.com.br/produto/115216/placa-mae-asus-tuf-gaming-b550m-plus-amd-am4-matx-ddr4-preto-90mb14a0-c1bay0",
+    "sourceLabel": "Página do produto na KaBuM!",
+    "checkedAt": "2026-10-30",
+    "hardware": {
+      "socket": "AM4",
+      "ramType": "DDR4",
+      "formFactor": "microATX"
+    },
+    "offers": []
+  },
+  {
+    "id": "kabum-165133",
+    "slug": "kabum-165133",
+    "category": "mobo",
+    "categoryName": "Placa-mãe",
+    "brand": "ASUS",
+    "name": "ASUS TUF GAMING A520M-PLUS II, AMD AM4",
+    "fullName": "Placa-Mãe ASUS TUF GAMING A520M-PLUS II, AMD AM4, mATX, DDR4, Preto - 90MB17G0-M0EAY0",
+    "model": "90MB17G0-M0EAY0",
+    "image": "/hardware/expanded/kabum-165133-1.jpg",
+    "gallery": [
+      {
+        "src": "/hardware/expanded/kabum-165133-1.jpg",
+        "alt": "Placa-Mãe ASUS TUF GAMING A520M-PLUS II, AMD AM4, mATX, DDR4, Preto - 90MB17G0-M0EAY0 — foto 1 publicada no cadastro da loja"
+      },
+      {
+        "src": "/hardware/expanded/kabum-165133-2.jpg",
+        "alt": "Placa-Mãe ASUS TUF GAMING A520M-PLUS II, AMD AM4, mATX, DDR4, Preto - 90MB17G0-M0EAY0 — foto 2 publicada no cadastro da loja"
+      }
+    ],
+    "description": "ASUS TUF GAMING A520M-PLUS II, AMD AM4. AMD AM4. mATX. DDR4. A variante anunciada é 90MB17G0-M0EAY0. Confira os requisitos do seu conjunto e as informações detalhadas do fabricante antes de escolher.",
+    "highlights": [
+      "AMD AM4",
+      "mATX",
+      "DDR4"
+    ],
+    "specifications": [
+      [
+        "Marca",
+        "ASUS"
+      ],
+      [
+        "Modelo anunciado",
+        "90MB17G0-M0EAY0"
+      ],
+      [
+        "Código na loja",
+        "165133"
+      ],
+      [
+        "Socket",
+        "AM4"
+      ],
+      [
+        "Padrão de memória",
+        "DDR4"
+      ],
+      [
+        "Formato",
+        "micro-ATX"
+      ]
+    ],
+    "compatibilityNote": "Confira BIOS, dimensões, conexões e instalação para o conjunto escolhido. Dados técnicos não identificados nesta ficha precisam de conferência e não são presumidos pelo montador.",
+    "manufacturerUrl": "https://www.kabum.com.br/produto/165133/placa-mae-asus-tuf-gaming-a520m-plus-ii-amd-am4-matx-ddr4-preto-90mb17g0-m0eay0",
+    "technicalSource": "https://www.kabum.com.br/produto/165133/placa-mae-asus-tuf-gaming-a520m-plus-ii-amd-am4-matx-ddr4-preto-90mb17g0-m0eay0",
+    "sourceLabel": "Página do produto na KaBuM!",
+    "checkedAt": "2026-10-30",
+    "hardware": {
+      "socket": "AM4",
+      "ramType": "DDR4",
+      "formFactor": "microATX"
+    },
+    "offers": []
+  },
+  {
+    "id": "kabum-692456",
+    "slug": "kabum-692456",
+    "category": "mobo",
+    "categoryName": "Placa-mãe",
+    "brand": "Husky",
+    "name": "Husky Nexus A520, M.2 NVMe",
+    "fullName": "Placa-Mãe Husky Nexus A520, M.2 NVMe, DDR4 3200MHz, Ryzen 5000/4000/3000, Micro-ATX, 64GB Dual Channel - HPM520",
+    "model": "HPM520",
+    "image": "/hardware/expanded/kabum-692456-1.jpg",
+    "gallery": [
+      {
+        "src": "/hardware/expanded/kabum-692456-1.jpg",
+        "alt": "Placa-Mãe Husky Nexus A520, M.2 NVMe, DDR4 3200MHz, Ryzen 5000/4000/3000, Micro-ATX, 64GB Dual Channel - HPM520 — foto 1 publicada no cadastro da loja"
+      },
+      {
+        "src": "/hardware/expanded/kabum-692456-2.jpg",
+        "alt": "Placa-Mãe Husky Nexus A520, M.2 NVMe, DDR4 3200MHz, Ryzen 5000/4000/3000, Micro-ATX, 64GB Dual Channel - HPM520 — foto 2 publicada no cadastro da loja"
+      }
+    ],
+    "description": "Husky Nexus A520, M.2 NVMe. M.2 NVMe. DDR4 3200MHz. Ryzen 5000/4000/3000. A variante anunciada é HPM520. Confira os requisitos do seu conjunto e as informações detalhadas do fabricante antes de escolher.",
+    "highlights": [
+      "M.2 NVMe",
+      "DDR4 3200MHz",
+      "Ryzen 5000/4000/3000"
+    ],
+    "specifications": [
+      [
+        "Marca",
+        "Husky"
+      ],
+      [
+        "Modelo anunciado",
+        "HPM520"
+      ],
+      [
+        "Código na loja",
+        "692456"
+      ],
+      [
+        "Padrão de memória",
+        "DDR4"
+      ],
+      [
+        "Formato",
+        "micro-ATX"
+      ]
+    ],
+    "compatibilityNote": "Confira BIOS, dimensões, conexões e instalação para o conjunto escolhido. Dados técnicos não identificados nesta ficha precisam de conferência e não são presumidos pelo montador.",
+    "manufacturerUrl": "https://www.kabum.com.br/produto/692456/placa-mae-husky-nexus-a520-m-2-nvme-ddr4-3200mhz-ryzen-5000-4000-3000-micro-atx-64gb-dual-channel-hpm520",
+    "technicalSource": "https://www.kabum.com.br/produto/692456/placa-mae-husky-nexus-a520-m-2-nvme-ddr4-3200mhz-ryzen-5000-4000-3000-micro-atx-64gb-dual-channel-hpm520",
+    "sourceLabel": "Página do produto na KaBuM!",
+    "checkedAt": "2026-10-30",
+    "hardware": {
+      "ramType": "DDR4",
+      "formFactor": "microATX"
+    },
+    "offers": []
+  },
+  {
+    "id": "kabum-875852",
+    "slug": "kabum-875852",
+    "category": "mobo",
+    "categoryName": "Placa-mãe",
+    "brand": "Gigabyte",
+    "name": "Placa Mãe Gigabyte B550M DS3H AC R2, AMD AM4",
+    "fullName": "Placa Mãe Gigabyte B550M DS3H AC R2, AMD AM4, Micro ATX, DDR4, RGB, Wi-Fi, Bluetooth, Preto - B550M DS3H AC R2",
+    "model": "B550M DS3H AC R2",
+    "image": "/hardware/expanded/kabum-875852-1.jpg",
+    "gallery": [
+      {
+        "src": "/hardware/expanded/kabum-875852-1.jpg",
+        "alt": "Placa Mãe Gigabyte B550M DS3H AC R2, AMD AM4, Micro ATX, DDR4, RGB, Wi-Fi, Bluetooth, Preto - B550M DS3H AC R2 — foto 1 publicada no cadastro da loja"
+      },
+      {
+        "src": "/hardware/expanded/kabum-875852-2.jpg",
+        "alt": "Placa Mãe Gigabyte B550M DS3H AC R2, AMD AM4, Micro ATX, DDR4, RGB, Wi-Fi, Bluetooth, Preto - B550M DS3H AC R2 — foto 2 publicada no cadastro da loja"
+      }
+    ],
+    "description": "Placa Mãe Gigabyte B550M DS3H AC R2, AMD AM4. AMD AM4. Micro ATX. DDR4. A variante anunciada é B550M DS3H AC R2. Confira os requisitos do seu conjunto e as informações detalhadas do fabricante antes de escolher.",
+    "highlights": [
+      "AMD AM4",
+      "Micro ATX",
+      "DDR4"
+    ],
+    "specifications": [
+      [
+        "Marca",
+        "Gigabyte"
+      ],
+      [
+        "Modelo anunciado",
+        "B550M DS3H AC R2"
+      ],
+      [
+        "Código na loja",
+        "875852"
+      ],
+      [
+        "Socket",
+        "AM4"
+      ],
+      [
+        "Padrão de memória",
+        "DDR4"
+      ],
+      [
+        "Formato",
+        "micro-ATX"
+      ]
+    ],
+    "compatibilityNote": "Confira BIOS, dimensões, conexões e instalação para o conjunto escolhido. Dados técnicos não identificados nesta ficha precisam de conferência e não são presumidos pelo montador.",
+    "manufacturerUrl": "https://www.kabum.com.br/produto/875852/placa-mae-gigabyte-b550m-ds3h-ac-r2-amd-am4-micro-atx-ddr4-rgb-wi-fi-bluetooth-preto-b550m-ds3h-ac-r2",
+    "technicalSource": "https://www.kabum.com.br/produto/875852/placa-mae-gigabyte-b550m-ds3h-ac-r2-amd-am4-micro-atx-ddr4-rgb-wi-fi-bluetooth-preto-b550m-ds3h-ac-r2",
+    "sourceLabel": "Página do produto na KaBuM!",
+    "checkedAt": "2026-10-30",
+    "hardware": {
+      "socket": "AM4",
+      "ramType": "DDR4",
+      "formFactor": "microATX"
+    },
+    "offers": []
+  },
+  {
+    "id": "kabum-457818",
+    "slug": "kabum-457818",
+    "category": "mobo",
+    "categoryName": "Placa-mãe",
+    "brand": "Gigabyte",
+    "name": "Gigabyte A520M DS3H V2, AMD",
+    "fullName": "Placa-Mãe Gigabyte A520M DS3H V2, AMD, Micro ATX, DDR4, Preto - A520M DS3H V2",
+    "model": "A520M DS3H V2",
+    "image": "/hardware/expanded/kabum-457818-1.jpg",
+    "gallery": [
+      {
+        "src": "/hardware/expanded/kabum-457818-1.jpg",
+        "alt": "Placa-Mãe Gigabyte A520M DS3H V2, AMD, Micro ATX, DDR4, Preto - A520M DS3H V2 — foto 1 publicada no cadastro da loja"
+      },
+      {
+        "src": "/hardware/expanded/kabum-457818-2.jpg",
+        "alt": "Placa-Mãe Gigabyte A520M DS3H V2, AMD, Micro ATX, DDR4, Preto - A520M DS3H V2 — foto 2 publicada no cadastro da loja"
+      }
+    ],
+    "description": "Gigabyte A520M DS3H V2, AMD. AMD. Micro ATX. DDR4. A variante anunciada é A520M DS3H V2. Confira os requisitos do seu conjunto e as informações detalhadas do fabricante antes de escolher.",
+    "highlights": [
+      "AMD",
+      "Micro ATX",
+      "DDR4"
+    ],
+    "specifications": [
+      [
+        "Marca",
+        "Gigabyte"
+      ],
+      [
+        "Modelo anunciado",
+        "A520M DS3H V2"
+      ],
+      [
+        "Código na loja",
+        "457818"
+      ],
+      [
+        "Padrão de memória",
+        "DDR4"
+      ],
+      [
+        "Formato",
+        "micro-ATX"
+      ]
+    ],
+    "compatibilityNote": "Confira BIOS, dimensões, conexões e instalação para o conjunto escolhido. Dados técnicos não identificados nesta ficha precisam de conferência e não são presumidos pelo montador.",
+    "manufacturerUrl": "https://www.kabum.com.br/produto/457818/placa-mae-gigabyte-a520m-ds3h-v2-amd-micro-atx-ddr4-preto-a520m-ds3h-v2",
+    "technicalSource": "https://www.kabum.com.br/produto/457818/placa-mae-gigabyte-a520m-ds3h-v2-amd-micro-atx-ddr4-preto-a520m-ds3h-v2",
+    "sourceLabel": "Página do produto na KaBuM!",
+    "checkedAt": "2026-10-30",
+    "hardware": {
+      "ramType": "DDR4",
+      "formFactor": "microATX"
+    },
+    "offers": []
+  },
+  {
+    "id": "kabum-523145",
+    "slug": "kabum-523145",
+    "category": "mobo",
+    "categoryName": "Placa-mãe",
+    "brand": "ASUS",
+    "name": "ASUS TUF Gaming B650M-E, WIFI",
+    "fullName": "Placa-Mãe ASUS TUF Gaming B650M-E, WIFI, AMD AM5, B650, DDR5, Preto - 90MB1FV0-M0EAY0",
+    "model": "90MB1FV0-M0EAY0",
+    "image": "/hardware/expanded/kabum-523145-1.jpg",
+    "gallery": [
+      {
+        "src": "/hardware/expanded/kabum-523145-1.jpg",
+        "alt": "Placa-Mãe ASUS TUF Gaming B650M-E, WIFI, AMD AM5, B650, DDR5, Preto - 90MB1FV0-M0EAY0 — foto 1 publicada no cadastro da loja"
+      },
+      {
+        "src": "/hardware/expanded/kabum-523145-2.jpg",
+        "alt": "Placa-Mãe ASUS TUF Gaming B650M-E, WIFI, AMD AM5, B650, DDR5, Preto - 90MB1FV0-M0EAY0 — foto 2 publicada no cadastro da loja"
+      }
+    ],
+    "description": "ASUS TUF Gaming B650M-E, WIFI. WIFI. AMD AM5. B650. A variante anunciada é 90MB1FV0-M0EAY0. Confira os requisitos do seu conjunto e as informações detalhadas do fabricante antes de escolher.",
+    "highlights": [
+      "WIFI",
+      "AMD AM5",
+      "B650"
+    ],
+    "specifications": [
+      [
+        "Marca",
+        "ASUS"
+      ],
+      [
+        "Modelo anunciado",
+        "90MB1FV0-M0EAY0"
+      ],
+      [
+        "Código na loja",
+        "523145"
+      ],
+      [
+        "Socket",
+        "AM5"
+      ],
+      [
+        "Padrão de memória",
+        "DDR5"
+      ]
+    ],
+    "compatibilityNote": "Confira BIOS, dimensões, conexões e instalação para o conjunto escolhido. Dados técnicos não identificados nesta ficha precisam de conferência e não são presumidos pelo montador.",
+    "manufacturerUrl": "https://www.kabum.com.br/produto/523145/placa-mae-asus-tuf-gaming-b650m-e-wifi-amd-am5-b650-ddr5-preto-90mb1fv0-m0eay0",
+    "technicalSource": "https://www.kabum.com.br/produto/523145/placa-mae-asus-tuf-gaming-b650m-e-wifi-amd-am5-b650-ddr5-preto-90mb1fv0-m0eay0",
+    "sourceLabel": "Página do produto na KaBuM!",
+    "checkedAt": "2026-10-30",
+    "hardware": {
+      "socket": "AM5",
+      "ramType": "DDR5"
+    },
+    "offers": []
+  },
+  {
+    "id": "kabum-941257",
+    "slug": "kabum-941257",
+    "category": "mobo",
+    "categoryName": "Placa-mãe",
+    "brand": "MSI",
+    "name": "MSI B550M-A PRO, AMD",
+    "fullName": "Placa-Mãe MSI B550M-A PRO, AMD, AM4, Micro-ATX, DDR4 - B550MAPRO",
+    "model": "B550MAPRO",
+    "image": "/hardware/expanded/kabum-941257-1.jpg",
+    "gallery": [
+      {
+        "src": "/hardware/expanded/kabum-941257-1.jpg",
+        "alt": "Placa-Mãe MSI B550M-A PRO, AMD, AM4, Micro-ATX, DDR4 - B550MAPRO — foto 1 publicada no cadastro da loja"
+      },
+      {
+        "src": "/hardware/expanded/kabum-941257-2.jpg",
+        "alt": "Placa-Mãe MSI B550M-A PRO, AMD, AM4, Micro-ATX, DDR4 - B550MAPRO — foto 2 publicada no cadastro da loja"
+      }
+    ],
+    "description": "MSI B550M-A PRO, AMD. AMD. AM4. Micro-ATX. A variante anunciada é B550MAPRO. Confira os requisitos do seu conjunto e as informações detalhadas do fabricante antes de escolher.",
+    "highlights": [
+      "AMD",
+      "AM4",
+      "Micro-ATX"
+    ],
+    "specifications": [
+      [
+        "Marca",
+        "MSI"
+      ],
+      [
+        "Modelo anunciado",
+        "B550MAPRO"
+      ],
+      [
+        "Código na loja",
+        "941257"
+      ],
+      [
+        "Socket",
+        "AM4"
+      ],
+      [
+        "Padrão de memória",
+        "DDR4"
+      ],
+      [
+        "Formato",
+        "micro-ATX"
+      ]
+    ],
+    "compatibilityNote": "Confira BIOS, dimensões, conexões e instalação para o conjunto escolhido. Dados técnicos não identificados nesta ficha precisam de conferência e não são presumidos pelo montador.",
+    "manufacturerUrl": "https://www.kabum.com.br/produto/941257/placa-mae-msi-b550m-a-pro-amd-am4-micro-atx-ddr4-b550mapro",
+    "technicalSource": "https://www.kabum.com.br/produto/941257/placa-mae-msi-b550m-a-pro-amd-am4-micro-atx-ddr4-b550mapro",
+    "sourceLabel": "Página do produto na KaBuM!",
+    "checkedAt": "2026-10-30",
+    "hardware": {
+      "socket": "AM4",
+      "ramType": "DDR4",
+      "formFactor": "microATX"
+    },
+    "offers": []
+  },
+  {
+    "id": "kabum-1047422",
+    "slug": "kabum-1047422",
+    "category": "mobo",
+    "categoryName": "Placa-mãe",
+    "brand": "MSI",
+    "name": "MSI B550 Gaming WiFi6E, AMD AM4",
+    "fullName": "Placa-Mãe MSI B550 Gaming WiFi6E, AMD AM4, ATX, DDR4, Wi-Fi 6E, Bluetooth 5.3, Preto e Prata - B550 GAMING WIFI6E",
+    "model": "B550 GAMING WIFI6E",
+    "image": "/hardware/expanded/kabum-1047422-1.jpg",
+    "gallery": [
+      {
+        "src": "/hardware/expanded/kabum-1047422-1.jpg",
+        "alt": "Placa-Mãe MSI B550 Gaming WiFi6E, AMD AM4, ATX, DDR4, Wi-Fi 6E, Bluetooth 5.3, Preto e Prata - B550 GAMING WIFI6E — foto 1 publicada no cadastro da loja"
+      },
+      {
+        "src": "/hardware/expanded/kabum-1047422-2.jpg",
+        "alt": "Placa-Mãe MSI B550 Gaming WiFi6E, AMD AM4, ATX, DDR4, Wi-Fi 6E, Bluetooth 5.3, Preto e Prata - B550 GAMING WIFI6E — foto 2 publicada no cadastro da loja"
+      }
+    ],
+    "description": "MSI B550 Gaming WiFi6E, AMD AM4. AMD AM4. ATX. DDR4. A variante anunciada é B550 GAMING WIFI6E. Confira os requisitos do seu conjunto e as informações detalhadas do fabricante antes de escolher.",
+    "highlights": [
+      "AMD AM4",
+      "ATX",
+      "DDR4"
+    ],
+    "specifications": [
+      [
+        "Marca",
+        "MSI"
+      ],
+      [
+        "Modelo anunciado",
+        "B550 GAMING WIFI6E"
+      ],
+      [
+        "Código na loja",
+        "1047422"
+      ],
+      [
+        "Socket",
+        "AM4"
+      ],
+      [
+        "Padrão de memória",
+        "DDR4"
+      ],
+      [
+        "Formato",
+        "ATX"
+      ]
+    ],
+    "compatibilityNote": "Confira BIOS, dimensões, conexões e instalação para o conjunto escolhido. Dados técnicos não identificados nesta ficha precisam de conferência e não são presumidos pelo montador.",
+    "manufacturerUrl": "https://www.kabum.com.br/produto/1047422/placa-mae-msi-b550-gaming-wifi6e-amd-am4-atx-ddr4-wi-fi-6e-bluetooth-53-preto-e-prata-b550-gaming-wifi6e",
+    "technicalSource": "https://www.kabum.com.br/produto/1047422/placa-mae-msi-b550-gaming-wifi6e-amd-am4-atx-ddr4-wi-fi-6e-bluetooth-53-preto-e-prata-b550-gaming-wifi6e",
+    "sourceLabel": "Página do produto na KaBuM!",
+    "checkedAt": "2026-10-30",
+    "hardware": {
+      "socket": "AM4",
+      "ramType": "DDR4",
+      "formFactor": "ATX"
+    },
+    "offers": []
+  },
+  {
+    "id": "kabum-910136",
+    "slug": "kabum-910136",
+    "category": "mobo",
+    "categoryName": "Placa-mãe",
+    "brand": "ASUS",
+    "name": "Placa Mãe Asus Prime A520m-r Am4 2xDDR4 Amd A520 Matx",
+    "fullName": "Placa Mãe Asus Prime A520m-r Am4 2xDDR4 Amd A520 Matx",
+    "model": "Catálogo KaBuM! 910136",
+    "image": "/hardware/expanded/kabum-910136-1.webp",
+    "gallery": [
+      {
+        "src": "/hardware/expanded/kabum-910136-1.webp",
+        "alt": "Placa Mãe Asus Prime A520m-r Am4 2xDDR4 Amd A520 Matx — foto 1 publicada no cadastro da loja"
+      },
+      {
+        "src": "/hardware/expanded/kabum-910136-2.webp",
+        "alt": "Placa Mãe Asus Prime A520m-r Am4 2xDDR4 Amd A520 Matx — foto 2 publicada no cadastro da loja"
+      }
+    ],
+    "description": "Placa Mãe Asus Prime A520m-r Am4 2xDDR4 Amd A520 Matx. Placa-mãe. ASUS. A variante anunciada é Catálogo KaBuM! 910136. Confira os requisitos do seu conjunto e as informações detalhadas do fabricante antes de escolher.",
+    "highlights": [
+      "Placa-mãe",
+      "ASUS"
+    ],
+    "specifications": [
+      [
+        "Marca",
+        "ASUS"
+      ],
+      [
+        "Modelo anunciado",
+        "Catálogo KaBuM! 910136"
+      ],
+      [
+        "Código na loja",
+        "910136"
+      ],
+      [
+        "Socket",
+        "AM4"
+      ],
+      [
+        "Padrão de memória",
+        "DDR4"
+      ],
+      [
+        "Formato",
+        "micro-ATX"
+      ]
+    ],
+    "compatibilityNote": "Confira BIOS, dimensões, conexões e instalação para o conjunto escolhido. Dados técnicos não identificados nesta ficha precisam de conferência e não são presumidos pelo montador.",
+    "manufacturerUrl": "https://www.kabum.com.br/produto/910136/placa-mae-asus-prime-a520m-r-am4-ddr4-m-2-chipset-a520-pcie-hdmi-90mb1h60-m0eay0",
+    "technicalSource": "https://www.kabum.com.br/produto/910136/placa-mae-asus-prime-a520m-r-am4-ddr4-m-2-chipset-a520-pcie-hdmi-90mb1h60-m0eay0",
+    "sourceLabel": "Página do produto na KaBuM!",
+    "checkedAt": "2026-10-30",
+    "hardware": {
+      "socket": "AM4",
+      "ramType": "DDR4",
+      "formFactor": "microATX"
+    },
+    "offers": []
+  },
+  {
+    "id": "kabum-229919",
+    "slug": "kabum-229919",
+    "category": "mobo",
+    "categoryName": "Placa-mãe",
+    "brand": "Gigabyte",
+    "name": "Gigabyte B550M Aorus Elite, AMD AM4",
+    "fullName": "Placa-Mãe Gigabyte B550M Aorus Elite, AMD AM4, Micro ATX, DDR4",
+    "model": "Catálogo KaBuM! 229919",
+    "image": "/hardware/expanded/kabum-229919-1.webp",
+    "gallery": [
+      {
+        "src": "/hardware/expanded/kabum-229919-1.webp",
+        "alt": "Placa-Mãe Gigabyte B550M Aorus Elite, AMD AM4, Micro ATX, DDR4 — foto 1 publicada no cadastro da loja"
+      },
+      {
+        "src": "/hardware/expanded/kabum-229919-2.webp",
+        "alt": "Placa-Mãe Gigabyte B550M Aorus Elite, AMD AM4, Micro ATX, DDR4 — foto 2 publicada no cadastro da loja"
+      }
+    ],
+    "description": "Gigabyte B550M Aorus Elite, AMD AM4. AMD AM4. Micro ATX. DDR4. A variante anunciada é Catálogo KaBuM! 229919. Confira os requisitos do seu conjunto e as informações detalhadas do fabricante antes de escolher.",
+    "highlights": [
+      "AMD AM4",
+      "Micro ATX",
+      "DDR4"
+    ],
+    "specifications": [
+      [
+        "Marca",
+        "Gigabyte"
+      ],
+      [
+        "Modelo anunciado",
+        "Catálogo KaBuM! 229919"
+      ],
+      [
+        "Código na loja",
+        "229919"
+      ],
+      [
+        "Socket",
+        "AM4"
+      ],
+      [
+        "Padrão de memória",
+        "DDR4"
+      ],
+      [
+        "Formato",
+        "micro-ATX"
+      ]
+    ],
+    "compatibilityNote": "Confira BIOS, dimensões, conexões e instalação para o conjunto escolhido. Dados técnicos não identificados nesta ficha precisam de conferência e não são presumidos pelo montador.",
+    "manufacturerUrl": "https://www.kabum.com.br/produto/229919/placa-mae-gigabyte-b550m-aorus-elite-amd-am4-micro-atx-ddr4",
+    "technicalSource": "https://www.kabum.com.br/produto/229919/placa-mae-gigabyte-b550m-aorus-elite-amd-am4-micro-atx-ddr4",
+    "sourceLabel": "Página do produto na KaBuM!",
+    "checkedAt": "2026-10-30",
+    "hardware": {
+      "socket": "AM4",
+      "ramType": "DDR4",
+      "formFactor": "microATX"
+    },
+    "offers": []
+  },
+  {
+    "id": "kabum-165124",
+    "slug": "kabum-165124",
+    "category": "mobo",
+    "categoryName": "Placa-mãe",
+    "brand": "ASUS",
+    "name": "ASUS TUF GAMING A520M-PLUS WIFI, AMD AM4",
+    "fullName": "Placa-Mãe ASUS TUF GAMING A520M-PLUS WIFI, AMD AM4, RGB, mATX, DDR4, Preto - 90MB17F0-M0EAY0",
+    "model": "90MB17F0-M0EAY0",
+    "image": "/hardware/expanded/kabum-165124-1.jpg",
+    "gallery": [
+      {
+        "src": "/hardware/expanded/kabum-165124-1.jpg",
+        "alt": "Placa-Mãe ASUS TUF GAMING A520M-PLUS WIFI, AMD AM4, RGB, mATX, DDR4, Preto - 90MB17F0-M0EAY0 — foto 1 publicada no cadastro da loja"
+      },
+      {
+        "src": "/hardware/expanded/kabum-165124-2.jpg",
+        "alt": "Placa-Mãe ASUS TUF GAMING A520M-PLUS WIFI, AMD AM4, RGB, mATX, DDR4, Preto - 90MB17F0-M0EAY0 — foto 2 publicada no cadastro da loja"
+      }
+    ],
+    "description": "ASUS TUF GAMING A520M-PLUS WIFI, AMD AM4. AMD AM4. RGB. mATX. A variante anunciada é 90MB17F0-M0EAY0. Confira os requisitos do seu conjunto e as informações detalhadas do fabricante antes de escolher.",
+    "highlights": [
+      "AMD AM4",
+      "RGB",
+      "mATX"
+    ],
+    "specifications": [
+      [
+        "Marca",
+        "ASUS"
+      ],
+      [
+        "Modelo anunciado",
+        "90MB17F0-M0EAY0"
+      ],
+      [
+        "Código na loja",
+        "165124"
+      ],
+      [
+        "Socket",
+        "AM4"
+      ],
+      [
+        "Padrão de memória",
+        "DDR4"
+      ],
+      [
+        "Formato",
+        "micro-ATX"
+      ]
+    ],
+    "compatibilityNote": "Confira BIOS, dimensões, conexões e instalação para o conjunto escolhido. Dados técnicos não identificados nesta ficha precisam de conferência e não são presumidos pelo montador.",
+    "manufacturerUrl": "https://www.kabum.com.br/produto/165124/placa-mae-asus-tuf-gaming-a520m-plus-wifi-amd-am4-rgb-matx-ddr4-preto-90mb17f0-m0eay0",
+    "technicalSource": "https://www.kabum.com.br/produto/165124/placa-mae-asus-tuf-gaming-a520m-plus-wifi-amd-am4-rgb-matx-ddr4-preto-90mb17f0-m0eay0",
+    "sourceLabel": "Página do produto na KaBuM!",
+    "checkedAt": "2026-10-30",
+    "hardware": {
+      "socket": "AM4",
+      "ramType": "DDR4",
+      "formFactor": "microATX"
+    },
+    "offers": []
+  },
+  {
+    "id": "kabum-685202",
+    "slug": "kabum-685202",
+    "category": "mobo",
+    "categoryName": "Placa-mãe",
+    "brand": "MSI",
+    "name": "Placa Mãe MSI PRO B650M-B, AMD AM5",
+    "fullName": "Placa Mãe MSI PRO B650M-B, AMD AM5, mATX, DDR5, Preto - PRO B650M-B",
+    "model": "PRO B650M-B",
+    "image": "/hardware/expanded/kabum-685202-1.jpg",
+    "gallery": [
+      {
+        "src": "/hardware/expanded/kabum-685202-1.jpg",
+        "alt": "Placa Mãe MSI PRO B650M-B, AMD AM5, mATX, DDR5, Preto - PRO B650M-B — foto 1 publicada no cadastro da loja"
+      },
+      {
+        "src": "/hardware/expanded/kabum-685202-2.jpg",
+        "alt": "Placa Mãe MSI PRO B650M-B, AMD AM5, mATX, DDR5, Preto - PRO B650M-B — foto 2 publicada no cadastro da loja"
+      }
+    ],
+    "description": "Placa Mãe MSI PRO B650M-B, AMD AM5. AMD AM5. mATX. DDR5. A variante anunciada é PRO B650M-B. Confira os requisitos do seu conjunto e as informações detalhadas do fabricante antes de escolher.",
+    "highlights": [
+      "AMD AM5",
+      "mATX",
+      "DDR5"
+    ],
+    "specifications": [
+      [
+        "Marca",
+        "MSI"
+      ],
+      [
+        "Modelo anunciado",
+        "PRO B650M-B"
+      ],
+      [
+        "Código na loja",
+        "685202"
+      ],
+      [
+        "Socket",
+        "AM5"
+      ],
+      [
+        "Padrão de memória",
+        "DDR5"
+      ],
+      [
+        "Formato",
+        "micro-ATX"
+      ]
+    ],
+    "compatibilityNote": "Confira BIOS, dimensões, conexões e instalação para o conjunto escolhido. Dados técnicos não identificados nesta ficha precisam de conferência e não são presumidos pelo montador.",
+    "manufacturerUrl": "https://www.kabum.com.br/produto/685202/placa-mae-msi-pro-b650m-b-amd-am5-matx-ddr5-preto-pro-b650m-b",
+    "technicalSource": "https://www.kabum.com.br/produto/685202/placa-mae-msi-pro-b650m-b-amd-am5-matx-ddr5-preto-pro-b650m-b",
+    "sourceLabel": "Página do produto na KaBuM!",
+    "checkedAt": "2026-10-30",
+    "hardware": {
+      "socket": "AM5",
+      "ramType": "DDR5",
+      "formFactor": "microATX"
+    },
+    "offers": []
+  },
+  {
+    "id": "kabum-474499",
+    "slug": "kabum-474499",
+    "category": "mobo",
+    "categoryName": "Placa-mãe",
+    "brand": "Gigabyte",
+    "name": "Gigabyte A520m K V2, Socket Amd Am4",
+    "fullName": "Placa-Mãe Gigabyte A520m K V2, Socket Amd Am4, M-Atx, Ddr4, Chipset Amd A520 - A520m-K-V2",
+    "model": "A520m-K-V2",
+    "image": "/hardware/expanded/kabum-474499-1.webp",
+    "gallery": [
+      {
+        "src": "/hardware/expanded/kabum-474499-1.webp",
+        "alt": "Placa-Mãe Gigabyte A520m K V2, Socket Amd Am4, M-Atx, Ddr4, Chipset Amd A520 - A520m-K-V2 — foto 1 publicada no cadastro da loja"
+      },
+      {
+        "src": "/hardware/expanded/kabum-474499-2.webp",
+        "alt": "Placa-Mãe Gigabyte A520m K V2, Socket Amd Am4, M-Atx, Ddr4, Chipset Amd A520 - A520m-K-V2 — foto 2 publicada no cadastro da loja"
+      }
+    ],
+    "description": "Gigabyte A520m K V2, Socket Amd Am4. Socket Amd Am4. M-Atx. Ddr4. A variante anunciada é A520m-K-V2. Confira os requisitos do seu conjunto e as informações detalhadas do fabricante antes de escolher.",
+    "highlights": [
+      "Socket Amd Am4",
+      "M-Atx",
+      "Ddr4"
+    ],
+    "specifications": [
+      [
+        "Marca",
+        "Gigabyte"
+      ],
+      [
+        "Modelo anunciado",
+        "A520m-K-V2"
+      ],
+      [
+        "Código na loja",
+        "474499"
+      ],
+      [
+        "Socket",
+        "AM4"
+      ],
+      [
+        "Padrão de memória",
+        "DDR4"
+      ],
+      [
+        "Formato",
+        "ATX"
+      ]
+    ],
+    "compatibilityNote": "Confira BIOS, dimensões, conexões e instalação para o conjunto escolhido. Dados técnicos não identificados nesta ficha precisam de conferência e não são presumidos pelo montador.",
+    "manufacturerUrl": "https://www.kabum.com.br/produto/474499/placa-mae-gigabyte-a520m-k-v2-socket-amd-am4-m-atx-ddr4-chipset-amd-a520-a520m-k-v2",
+    "technicalSource": "https://www.kabum.com.br/produto/474499/placa-mae-gigabyte-a520m-k-v2-socket-amd-am4-m-atx-ddr4-chipset-amd-a520-a520m-k-v2",
+    "sourceLabel": "Página do produto na KaBuM!",
+    "checkedAt": "2026-10-30",
+    "hardware": {
+      "socket": "AM4",
+      "ramType": "DDR4",
+      "formFactor": "ATX"
+    },
+    "offers": []
+  },
+  {
+    "id": "kabum-133767",
+    "slug": "kabum-133767",
+    "category": "mobo",
+    "categoryName": "Placa-mãe",
+    "brand": "ASRock",
+    "name": "AsRock B450M Steel Legend, AMD AM4",
+    "fullName": "Placa-Mãe AsRock B450M Steel Legend, AMD AM4, mATX, DDR4",
+    "model": "Catálogo KaBuM! 133767",
+    "image": "/hardware/expanded/kabum-133767-1.webp",
+    "gallery": [
+      {
+        "src": "/hardware/expanded/kabum-133767-1.webp",
+        "alt": "Placa-Mãe AsRock B450M Steel Legend, AMD AM4, mATX, DDR4 — foto 1 publicada no cadastro da loja"
+      },
+      {
+        "src": "/hardware/expanded/kabum-133767-2.webp",
+        "alt": "Placa-Mãe AsRock B450M Steel Legend, AMD AM4, mATX, DDR4 — foto 2 publicada no cadastro da loja"
+      }
+    ],
+    "description": "AsRock B450M Steel Legend, AMD AM4. AMD AM4. mATX. DDR4. A variante anunciada é Catálogo KaBuM! 133767. Confira os requisitos do seu conjunto e as informações detalhadas do fabricante antes de escolher.",
+    "highlights": [
+      "AMD AM4",
+      "mATX",
+      "DDR4"
+    ],
+    "specifications": [
+      [
+        "Marca",
+        "ASRock"
+      ],
+      [
+        "Modelo anunciado",
+        "Catálogo KaBuM! 133767"
+      ],
+      [
+        "Código na loja",
+        "133767"
+      ],
+      [
+        "Socket",
+        "AM4"
+      ],
+      [
+        "Padrão de memória",
+        "DDR4"
+      ],
+      [
+        "Formato",
+        "micro-ATX"
+      ]
+    ],
+    "compatibilityNote": "Confira BIOS, dimensões, conexões e instalação para o conjunto escolhido. Dados técnicos não identificados nesta ficha precisam de conferência e não são presumidos pelo montador.",
+    "manufacturerUrl": "https://www.kabum.com.br/produto/133767/placa-mae-asrock-b450m-steel-legend-amd-am4-matx-ddr4",
+    "technicalSource": "https://www.kabum.com.br/produto/133767/placa-mae-asrock-b450m-steel-legend-amd-am4-matx-ddr4",
+    "sourceLabel": "Página do produto na KaBuM!",
+    "checkedAt": "2026-10-30",
+    "hardware": {
+      "socket": "AM4",
+      "ramType": "DDR4",
+      "formFactor": "microATX"
+    },
+    "offers": []
+  },
+  {
+    "id": "kabum-1051918",
+    "slug": "kabum-1051918",
+    "category": "psu",
+    "categoryName": "Fonte",
+    "brand": "MSI",
+    "name": "MSI MAG BN65A, 650W",
+    "fullName": "Fonte MSI MAG BN65A, 650W, 80 Plus Bronze, PFC Ativo, Com Cabo, Preto - MAG BN65A",
+    "model": "MAG BN65A",
+    "image": "/hardware/expanded/kabum-1051918-1.jpg",
+    "gallery": [
+      {
+        "src": "/hardware/expanded/kabum-1051918-1.jpg",
+        "alt": "Fonte MSI MAG BN65A, 650W, 80 Plus Bronze, PFC Ativo, Com Cabo, Preto - MAG BN65A — foto 1 publicada no cadastro da loja"
+      },
+      {
+        "src": "/hardware/expanded/kabum-1051918-2.jpg",
+        "alt": "Fonte MSI MAG BN65A, 650W, 80 Plus Bronze, PFC Ativo, Com Cabo, Preto - MAG BN65A — foto 2 publicada no cadastro da loja"
+      }
+    ],
+    "description": "MSI MAG BN65A, 650W. 650W. 80 Plus Bronze. PFC Ativo. A variante anunciada é MAG BN65A. Confira os requisitos do seu conjunto e as informações detalhadas do fabricante antes de escolher.",
+    "highlights": [
+      "650W",
+      "80 Plus Bronze",
+      "PFC Ativo"
+    ],
+    "specifications": [
+      [
+        "Marca",
+        "MSI"
+      ],
+      [
+        "Modelo anunciado",
+        "MAG BN65A"
+      ],
+      [
+        "Código na loja",
+        "1051918"
+      ],
+      [
+        "Potência nominal",
+        "650 W"
+      ]
+    ],
+    "compatibilityNote": "Confira BIOS, dimensões, conexões e instalação para o conjunto escolhido. Dados técnicos não identificados nesta ficha precisam de conferência e não são presumidos pelo montador.",
+    "manufacturerUrl": "https://www.kabum.com.br/produto/1051918/fonte-msi-mag-bn65a-650w-80-plus-bronze-pfc-ativo-com-cabo-preto-mag-bn65a",
+    "technicalSource": "https://www.kabum.com.br/produto/1051918/fonte-msi-mag-bn65a-650w-80-plus-bronze-pfc-ativo-com-cabo-preto-mag-bn65a",
+    "sourceLabel": "Página do produto na KaBuM!",
+    "checkedAt": "2026-10-30",
+    "hardware": {
+      "wattage": 650
+    },
+    "offers": []
+  },
+  {
+    "id": "kabum-369658",
+    "slug": "kabum-369658",
+    "category": "psu",
+    "categoryName": "Fonte",
+    "brand": "MSI",
+    "name": "MSI MAG A650BN, 650W",
+    "fullName": "Fonte MSI MAG A650BN, 650W, 80 Plus Bronze, PFC Ativo, Com Cabo, Preto - 306-7ZP2B22-CE0",
+    "model": "306-7ZP2B22-CE0",
+    "image": "/hardware/expanded/kabum-369658-1.jpg",
+    "gallery": [
+      {
+        "src": "/hardware/expanded/kabum-369658-1.jpg",
+        "alt": "Fonte MSI MAG A650BN, 650W, 80 Plus Bronze, PFC Ativo, Com Cabo, Preto - 306-7ZP2B22-CE0 — foto 1 publicada no cadastro da loja"
+      },
+      {
+        "src": "/hardware/expanded/kabum-369658-2.jpg",
+        "alt": "Fonte MSI MAG A650BN, 650W, 80 Plus Bronze, PFC Ativo, Com Cabo, Preto - 306-7ZP2B22-CE0 — foto 2 publicada no cadastro da loja"
+      }
+    ],
+    "description": "MSI MAG A650BN, 650W. 650W. 80 Plus Bronze. PFC Ativo. A variante anunciada é 306-7ZP2B22-CE0. Confira os requisitos do seu conjunto e as informações detalhadas do fabricante antes de escolher.",
+    "highlights": [
+      "650W",
+      "80 Plus Bronze",
+      "PFC Ativo"
+    ],
+    "specifications": [
+      [
+        "Marca",
+        "MSI"
+      ],
+      [
+        "Modelo anunciado",
+        "306-7ZP2B22-CE0"
+      ],
+      [
+        "Código na loja",
+        "369658"
+      ],
+      [
+        "Potência nominal",
+        "650 W"
+      ]
+    ],
+    "compatibilityNote": "Confira BIOS, dimensões, conexões e instalação para o conjunto escolhido. Dados técnicos não identificados nesta ficha precisam de conferência e não são presumidos pelo montador.",
+    "manufacturerUrl": "https://www.kabum.com.br/produto/369658/fonte-msi-mag-a650bn-650w-80-plus-bronze-pfc-ativo-com-cabo-preto-306-7zp2b22-ce0",
+    "technicalSource": "https://www.kabum.com.br/produto/369658/fonte-msi-mag-a650bn-650w-80-plus-bronze-pfc-ativo-com-cabo-preto-306-7zp2b22-ce0",
+    "sourceLabel": "Página do produto na KaBuM!",
+    "checkedAt": "2026-10-30",
+    "hardware": {
+      "wattage": 650
+    },
+    "offers": []
+  },
+  {
+    "id": "kabum-907600",
+    "slug": "kabum-907600",
+    "category": "psu",
+    "categoryName": "Fonte",
+    "brand": "Gigabyte",
+    "name": "Gigabyte P650G PG5, 650W",
+    "fullName": "Fonte Gigabyte P650G PG5, 650W, 80 PLUS Gold, PFC Ativo, Preto - 28200-P65G5-1CBRR",
+    "model": "28200-P65G5-1CBRR",
+    "image": "/hardware/expanded/kabum-907600-1.jpg",
+    "gallery": [
+      {
+        "src": "/hardware/expanded/kabum-907600-1.jpg",
+        "alt": "Fonte Gigabyte P650G PG5, 650W, 80 PLUS Gold, PFC Ativo, Preto - 28200-P65G5-1CBRR — foto 1 publicada no cadastro da loja"
+      },
+      {
+        "src": "/hardware/expanded/kabum-907600-2.jpg",
+        "alt": "Fonte Gigabyte P650G PG5, 650W, 80 PLUS Gold, PFC Ativo, Preto - 28200-P65G5-1CBRR — foto 2 publicada no cadastro da loja"
+      }
+    ],
+    "description": "Gigabyte P650G PG5, 650W. 650W. 80 PLUS Gold. PFC Ativo. A variante anunciada é 28200-P65G5-1CBRR. Confira os requisitos do seu conjunto e as informações detalhadas do fabricante antes de escolher.",
+    "highlights": [
+      "650W",
+      "80 PLUS Gold",
+      "PFC Ativo"
+    ],
+    "specifications": [
+      [
+        "Marca",
+        "Gigabyte"
+      ],
+      [
+        "Modelo anunciado",
+        "28200-P65G5-1CBRR"
+      ],
+      [
+        "Código na loja",
+        "907600"
+      ],
+      [
+        "Potência nominal",
+        "650 W"
+      ]
+    ],
+    "compatibilityNote": "Confira BIOS, dimensões, conexões e instalação para o conjunto escolhido. Dados técnicos não identificados nesta ficha precisam de conferência e não são presumidos pelo montador.",
+    "manufacturerUrl": "https://www.kabum.com.br/produto/907600/fonte-gigabyte-p650g-pg5-650w-80-plus-gold-pfc-ativo-preto-28200-p65g5-1cbrr",
+    "technicalSource": "https://www.kabum.com.br/produto/907600/fonte-gigabyte-p650g-pg5-650w-80-plus-gold-pfc-ativo-preto-28200-p65g5-1cbrr",
+    "sourceLabel": "Página do produto na KaBuM!",
+    "checkedAt": "2026-10-30",
+    "hardware": {
+      "wattage": 650
+    },
+    "offers": []
+  },
+  {
+    "id": "kabum-514896",
+    "slug": "kabum-514896",
+    "category": "psu",
+    "categoryName": "Fonte",
+    "brand": "XPG",
+    "name": "XPG Core Reactor II VE, 850W",
+    "fullName": "Fonte XPG Core Reactor II VE, 850W, 80 Plus Gold, Modular, PFC Ativo, Preto - 75261436",
+    "model": "75261436",
+    "image": "/hardware/expanded/kabum-514896-1.jpg",
+    "gallery": [
+      {
+        "src": "/hardware/expanded/kabum-514896-1.jpg",
+        "alt": "Fonte XPG Core Reactor II VE, 850W, 80 Plus Gold, Modular, PFC Ativo, Preto - 75261436 — foto 1 publicada no cadastro da loja"
+      },
+      {
+        "src": "/hardware/expanded/kabum-514896-2.jpg",
+        "alt": "Fonte XPG Core Reactor II VE, 850W, 80 Plus Gold, Modular, PFC Ativo, Preto - 75261436 — foto 2 publicada no cadastro da loja"
+      }
+    ],
+    "description": "XPG Core Reactor II VE, 850W. 850W. 80 Plus Gold. Modular. A variante anunciada é 75261436. Confira os requisitos do seu conjunto e as informações detalhadas do fabricante antes de escolher.",
+    "highlights": [
+      "850W",
+      "80 Plus Gold",
+      "Modular"
+    ],
+    "specifications": [
+      [
+        "Marca",
+        "XPG"
+      ],
+      [
+        "Modelo anunciado",
+        "75261436"
+      ],
+      [
+        "Código na loja",
+        "514896"
+      ],
+      [
+        "Potência nominal",
+        "850 W"
+      ]
+    ],
+    "compatibilityNote": "Confira BIOS, dimensões, conexões e instalação para o conjunto escolhido. Dados técnicos não identificados nesta ficha precisam de conferência e não são presumidos pelo montador.",
+    "manufacturerUrl": "https://www.kabum.com.br/produto/514896/fonte-xpg-core-reactor-ii-ve-850w-80-plus-gold-modular-pfc-ativo-preto-75261436",
+    "technicalSource": "https://www.kabum.com.br/produto/514896/fonte-xpg-core-reactor-ii-ve-850w-80-plus-gold-modular-pfc-ativo-preto-75261436",
+    "sourceLabel": "Página do produto na KaBuM!",
+    "checkedAt": "2026-10-30",
+    "hardware": {
+      "wattage": 850
+    },
+    "offers": []
+  },
+  {
+    "id": "kabum-725571",
+    "slug": "kabum-725571",
+    "category": "psu",
+    "categoryName": "Fonte",
+    "brand": "Rise Mode",
+    "name": "Gamer Rise Mode Elektra, 650W",
+    "fullName": "Fonte Gamer Rise Mode Elektra, 650W, Bronze, Full Modular, PFC Ativo, Preto - RM-PSU-ELKM-650-B",
+    "model": "RM-PSU-ELKM-650-B",
+    "image": "/hardware/expanded/kabum-725571-1.jpg",
+    "gallery": [
+      {
+        "src": "/hardware/expanded/kabum-725571-1.jpg",
+        "alt": "Fonte Gamer Rise Mode Elektra, 650W, Bronze, Full Modular, PFC Ativo, Preto - RM-PSU-ELKM-650-B — foto 1 publicada no cadastro da loja"
+      },
+      {
+        "src": "/hardware/expanded/kabum-725571-2.jpg",
+        "alt": "Fonte Gamer Rise Mode Elektra, 650W, Bronze, Full Modular, PFC Ativo, Preto - RM-PSU-ELKM-650-B — foto 2 publicada no cadastro da loja"
+      }
+    ],
+    "description": "Gamer Rise Mode Elektra, 650W. 650W. Bronze. Full Modular. A variante anunciada é RM-PSU-ELKM-650-B. Confira os requisitos do seu conjunto e as informações detalhadas do fabricante antes de escolher.",
+    "highlights": [
+      "650W",
+      "Bronze",
+      "Full Modular"
+    ],
+    "specifications": [
+      [
+        "Marca",
+        "Rise Mode"
+      ],
+      [
+        "Modelo anunciado",
+        "RM-PSU-ELKM-650-B"
+      ],
+      [
+        "Código na loja",
+        "725571"
+      ],
+      [
+        "Potência nominal",
+        "650 W"
+      ]
+    ],
+    "compatibilityNote": "Confira BIOS, dimensões, conexões e instalação para o conjunto escolhido. Dados técnicos não identificados nesta ficha precisam de conferência e não são presumidos pelo montador.",
+    "manufacturerUrl": "https://www.kabum.com.br/produto/725571/fonte-gamer-rise-mode-elektra-650w-bronze-full-modular-pfc-ativo-preto-rm-psu-elkm-650-b",
+    "technicalSource": "https://www.kabum.com.br/produto/725571/fonte-gamer-rise-mode-elektra-650w-bronze-full-modular-pfc-ativo-preto-rm-psu-elkm-650-b",
+    "sourceLabel": "Página do produto na KaBuM!",
+    "checkedAt": "2026-10-30",
+    "hardware": {
+      "wattage": 650
+    },
+    "offers": []
+  },
+  {
+    "id": "kabum-516056",
+    "slug": "kabum-516056",
+    "category": "psu",
+    "categoryName": "Fonte",
+    "brand": "Corsair",
+    "name": "Corsair CX Series CX650, 650W",
+    "fullName": "Fonte Corsair CX Series CX650, 650W, 80 Plus Bronze, Com Cabo, Preto - CP-9020278-BR",
+    "model": "CP-9020278-BR",
+    "image": "/hardware/expanded/kabum-516056-1.jpg",
+    "gallery": [
+      {
+        "src": "/hardware/expanded/kabum-516056-1.jpg",
+        "alt": "Fonte Corsair CX Series CX650, 650W, 80 Plus Bronze, Com Cabo, Preto - CP-9020278-BR — foto 1 publicada no cadastro da loja"
+      },
+      {
+        "src": "/hardware/expanded/kabum-516056-2.jpg",
+        "alt": "Fonte Corsair CX Series CX650, 650W, 80 Plus Bronze, Com Cabo, Preto - CP-9020278-BR — foto 2 publicada no cadastro da loja"
+      }
+    ],
+    "description": "Corsair CX Series CX650, 650W. 650W. 80 Plus Bronze. Com Cabo. A variante anunciada é CP-9020278-BR. Confira os requisitos do seu conjunto e as informações detalhadas do fabricante antes de escolher.",
+    "highlights": [
+      "650W",
+      "80 Plus Bronze",
+      "Com Cabo"
+    ],
+    "specifications": [
+      [
+        "Marca",
+        "Corsair"
+      ],
+      [
+        "Modelo anunciado",
+        "CP-9020278-BR"
+      ],
+      [
+        "Código na loja",
+        "516056"
+      ],
+      [
+        "Potência nominal",
+        "650 W"
+      ]
+    ],
+    "compatibilityNote": "Confira BIOS, dimensões, conexões e instalação para o conjunto escolhido. Dados técnicos não identificados nesta ficha precisam de conferência e não são presumidos pelo montador.",
+    "manufacturerUrl": "https://www.kabum.com.br/produto/516056/fonte-corsair-cx-series-cx650-650w-80-plus-bronze-com-cabo-preto-cp-9020278-br",
+    "technicalSource": "https://www.kabum.com.br/produto/516056/fonte-corsair-cx-series-cx650-650w-80-plus-bronze-com-cabo-preto-cp-9020278-br",
+    "sourceLabel": "Página do produto na KaBuM!",
+    "checkedAt": "2026-10-30",
+    "hardware": {
+      "wattage": 650
+    },
+    "offers": []
+  },
+  {
+    "id": "kabum-461382",
+    "slug": "kabum-461382",
+    "category": "psu",
+    "categoryName": "Fonte",
+    "brand": "Rise Mode",
+    "name": "Gamer Rise Mode Zeus, 500W",
+    "fullName": "Fonte Gamer Rise Mode Zeus, 500W, PFC Ativo, Preto - RM-PSU-01-WT-500",
+    "model": "RM-PSU-01-WT-500",
+    "image": "/hardware/expanded/kabum-461382-1.jpg",
+    "gallery": [
+      {
+        "src": "/hardware/expanded/kabum-461382-1.jpg",
+        "alt": "Fonte Gamer Rise Mode Zeus, 500W, PFC Ativo, Preto - RM-PSU-01-WT-500 — foto 1 publicada no cadastro da loja"
+      },
+      {
+        "src": "/hardware/expanded/kabum-461382-2.jpg",
+        "alt": "Fonte Gamer Rise Mode Zeus, 500W, PFC Ativo, Preto - RM-PSU-01-WT-500 — foto 2 publicada no cadastro da loja"
+      }
+    ],
+    "description": "Gamer Rise Mode Zeus, 500W. 500W. PFC Ativo. Preto. A variante anunciada é RM-PSU-01-WT-500. Confira os requisitos do seu conjunto e as informações detalhadas do fabricante antes de escolher.",
+    "highlights": [
+      "500W",
+      "PFC Ativo",
+      "Preto"
+    ],
+    "specifications": [
+      [
+        "Marca",
+        "Rise Mode"
+      ],
+      [
+        "Modelo anunciado",
+        "RM-PSU-01-WT-500"
+      ],
+      [
+        "Código na loja",
+        "461382"
+      ],
+      [
+        "Potência nominal",
+        "500 W"
+      ]
+    ],
+    "compatibilityNote": "Confira BIOS, dimensões, conexões e instalação para o conjunto escolhido. Dados técnicos não identificados nesta ficha precisam de conferência e não são presumidos pelo montador.",
+    "manufacturerUrl": "https://www.kabum.com.br/produto/461382/fonte-gamer-rise-mode-zeus-500w-pfc-ativo-preto-rm-psu-01-wt-500",
+    "technicalSource": "https://www.kabum.com.br/produto/461382/fonte-gamer-rise-mode-zeus-500w-pfc-ativo-preto-rm-psu-01-wt-500",
+    "sourceLabel": "Página do produto na KaBuM!",
+    "checkedAt": "2026-10-30",
+    "hardware": {
+      "wattage": 500
+    },
+    "offers": []
+  },
+  {
+    "id": "kabum-912176",
+    "slug": "kabum-912176",
+    "category": "psu",
+    "categoryName": "Fonte",
+    "brand": "MACH1",
+    "name": "MACH1 Steady, 750W",
+    "fullName": "Fonte MACH1 Steady, 750W, 80 Plus Bronze, PFC Ativo, Preto - 750Steady",
+    "model": "750Steady",
+    "image": "/hardware/expanded/kabum-912176-1.jpg",
+    "gallery": [
+      {
+        "src": "/hardware/expanded/kabum-912176-1.jpg",
+        "alt": "Fonte MACH1 Steady, 750W, 80 Plus Bronze, PFC Ativo, Preto - 750Steady — foto 1 publicada no cadastro da loja"
+      },
+      {
+        "src": "/hardware/expanded/kabum-912176-2.jpg",
+        "alt": "Fonte MACH1 Steady, 750W, 80 Plus Bronze, PFC Ativo, Preto - 750Steady — foto 2 publicada no cadastro da loja"
+      }
+    ],
+    "description": "MACH1 Steady, 750W. 750W. 80 Plus Bronze. PFC Ativo. A variante anunciada é 750Steady. Confira os requisitos do seu conjunto e as informações detalhadas do fabricante antes de escolher.",
+    "highlights": [
+      "750W",
+      "80 Plus Bronze",
+      "PFC Ativo"
+    ],
+    "specifications": [
+      [
+        "Marca",
+        "MACH1"
+      ],
+      [
+        "Modelo anunciado",
+        "750Steady"
+      ],
+      [
+        "Código na loja",
+        "912176"
+      ],
+      [
+        "Potência nominal",
+        "750 W"
+      ]
+    ],
+    "compatibilityNote": "Confira BIOS, dimensões, conexões e instalação para o conjunto escolhido. Dados técnicos não identificados nesta ficha precisam de conferência e não são presumidos pelo montador.",
+    "manufacturerUrl": "https://www.kabum.com.br/produto/912176/fonte-mach1-steady-750w-80-plus-bronze-pfc-ativo-preto-750steady",
+    "technicalSource": "https://www.kabum.com.br/produto/912176/fonte-mach1-steady-750w-80-plus-bronze-pfc-ativo-preto-750steady",
+    "sourceLabel": "Página do produto na KaBuM!",
+    "checkedAt": "2026-10-30",
+    "hardware": {
+      "wattage": 750
+    },
+    "offers": []
+  },
+  {
+    "id": "kabum-902913",
+    "slug": "kabum-902913",
+    "category": "psu",
+    "categoryName": "Fonte",
+    "brand": "Husky",
+    "name": "Husky Sledger 550W, 80 Plus White",
+    "fullName": "Fonte Husky Sledger 550W, 80 Plus White, PFC ativo, Bivolt - HFN550PT",
+    "model": "HFN550PT",
+    "image": "/hardware/expanded/kabum-902913-1.jpg",
+    "gallery": [
+      {
+        "src": "/hardware/expanded/kabum-902913-1.jpg",
+        "alt": "Fonte Husky Sledger 550W, 80 Plus White, PFC ativo, Bivolt - HFN550PT — foto 1 publicada no cadastro da loja"
+      },
+      {
+        "src": "/hardware/expanded/kabum-902913-2.jpg",
+        "alt": "Fonte Husky Sledger 550W, 80 Plus White, PFC ativo, Bivolt - HFN550PT — foto 2 publicada no cadastro da loja"
+      }
+    ],
+    "description": "Husky Sledger 550W, 80 Plus White. 80 Plus White. PFC ativo. Bivolt. A variante anunciada é HFN550PT. Confira os requisitos do seu conjunto e as informações detalhadas do fabricante antes de escolher.",
+    "highlights": [
+      "80 Plus White",
+      "PFC ativo",
+      "Bivolt"
+    ],
+    "specifications": [
+      [
+        "Marca",
+        "Husky"
+      ],
+      [
+        "Modelo anunciado",
+        "HFN550PT"
+      ],
+      [
+        "Código na loja",
+        "902913"
+      ],
+      [
+        "Potência nominal",
+        "550 W"
+      ]
+    ],
+    "compatibilityNote": "Confira BIOS, dimensões, conexões e instalação para o conjunto escolhido. Dados técnicos não identificados nesta ficha precisam de conferência e não são presumidos pelo montador.",
+    "manufacturerUrl": "https://www.kabum.com.br/produto/902913/fonte-husky-sledger-550w-80-plus-white-pfc-ativo-bivolt-hfn550pt",
+    "technicalSource": "https://www.kabum.com.br/produto/902913/fonte-husky-sledger-550w-80-plus-white-pfc-ativo-bivolt-hfn550pt",
+    "sourceLabel": "Página do produto na KaBuM!",
+    "checkedAt": "2026-10-30",
+    "hardware": {
+      "wattage": 550
+    },
+    "offers": []
+  },
+  {
+    "id": "kabum-603223",
+    "slug": "kabum-603223",
+    "category": "psu",
+    "categoryName": "Fonte",
+    "brand": "Husky",
+    "name": "Husky Sledger 650W, 80 Plus Bronze",
+    "fullName": "Fonte Husky Sledger 650W, 80 Plus Bronze, Cybenetics Bronze, PFC ativo, Bivolt - HFN650PT",
+    "model": "HFN650PT",
+    "image": "/hardware/expanded/kabum-603223-1.jpg",
+    "gallery": [
+      {
+        "src": "/hardware/expanded/kabum-603223-1.jpg",
+        "alt": "Fonte Husky Sledger 650W, 80 Plus Bronze, Cybenetics Bronze, PFC ativo, Bivolt - HFN650PT — foto 1 publicada no cadastro da loja"
+      },
+      {
+        "src": "/hardware/expanded/kabum-603223-2.jpg",
+        "alt": "Fonte Husky Sledger 650W, 80 Plus Bronze, Cybenetics Bronze, PFC ativo, Bivolt - HFN650PT — foto 2 publicada no cadastro da loja"
+      }
+    ],
+    "description": "Husky Sledger 650W, 80 Plus Bronze. 80 Plus Bronze. Cybenetics Bronze. PFC ativo. A variante anunciada é HFN650PT. Confira os requisitos do seu conjunto e as informações detalhadas do fabricante antes de escolher.",
+    "highlights": [
+      "80 Plus Bronze",
+      "Cybenetics Bronze",
+      "PFC ativo"
+    ],
+    "specifications": [
+      [
+        "Marca",
+        "Husky"
+      ],
+      [
+        "Modelo anunciado",
+        "HFN650PT"
+      ],
+      [
+        "Código na loja",
+        "603223"
+      ],
+      [
+        "Potência nominal",
+        "650 W"
+      ]
+    ],
+    "compatibilityNote": "Confira BIOS, dimensões, conexões e instalação para o conjunto escolhido. Dados técnicos não identificados nesta ficha precisam de conferência e não são presumidos pelo montador.",
+    "manufacturerUrl": "https://www.kabum.com.br/produto/603223/fonte-husky-sledger-650w-80-plus-bronze-cybenetics-bronze-pfc-ativo-bivolt-hfn650pt",
+    "technicalSource": "https://www.kabum.com.br/produto/603223/fonte-husky-sledger-650w-80-plus-bronze-cybenetics-bronze-pfc-ativo-bivolt-hfn650pt",
+    "sourceLabel": "Página do produto na KaBuM!",
+    "checkedAt": "2026-10-30",
+    "hardware": {
+      "wattage": 650
+    },
+    "offers": []
+  },
+  {
+    "id": "kabum-723223",
+    "slug": "kabum-723223",
+    "category": "psu",
+    "categoryName": "Fonte",
+    "brand": "Rise Mode",
+    "name": "Gamer Rise Mode Elektra, 650W",
+    "fullName": "Fonte Gamer Rise Mode Elektra, 650W, Bronze, PFC Ativo, Preto - RM-PSU-ELK-650-B",
+    "model": "RM-PSU-ELK-650-B",
+    "image": "/hardware/expanded/kabum-723223-1.jpg",
+    "gallery": [
+      {
+        "src": "/hardware/expanded/kabum-723223-1.jpg",
+        "alt": "Fonte Gamer Rise Mode Elektra, 650W, Bronze, PFC Ativo, Preto - RM-PSU-ELK-650-B — foto 1 publicada no cadastro da loja"
+      },
+      {
+        "src": "/hardware/expanded/kabum-723223-2.jpg",
+        "alt": "Fonte Gamer Rise Mode Elektra, 650W, Bronze, PFC Ativo, Preto - RM-PSU-ELK-650-B — foto 2 publicada no cadastro da loja"
+      }
+    ],
+    "description": "Gamer Rise Mode Elektra, 650W. 650W. Bronze. PFC Ativo. A variante anunciada é RM-PSU-ELK-650-B. Confira os requisitos do seu conjunto e as informações detalhadas do fabricante antes de escolher.",
+    "highlights": [
+      "650W",
+      "Bronze",
+      "PFC Ativo"
+    ],
+    "specifications": [
+      [
+        "Marca",
+        "Rise Mode"
+      ],
+      [
+        "Modelo anunciado",
+        "RM-PSU-ELK-650-B"
+      ],
+      [
+        "Código na loja",
+        "723223"
+      ],
+      [
+        "Potência nominal",
+        "650 W"
+      ]
+    ],
+    "compatibilityNote": "Confira BIOS, dimensões, conexões e instalação para o conjunto escolhido. Dados técnicos não identificados nesta ficha precisam de conferência e não são presumidos pelo montador.",
+    "manufacturerUrl": "https://www.kabum.com.br/produto/723223/fonte-gamer-rise-mode-elektra-650w-bronze-pfc-ativo-preto-rm-psu-elk-650-b",
+    "technicalSource": "https://www.kabum.com.br/produto/723223/fonte-gamer-rise-mode-elektra-650w-bronze-pfc-ativo-preto-rm-psu-elk-650-b",
+    "sourceLabel": "Página do produto na KaBuM!",
+    "checkedAt": "2026-10-30",
+    "hardware": {
+      "wattage": 650
+    },
+    "offers": []
+  },
+  {
+    "id": "kabum-514895",
+    "slug": "kabum-514895",
+    "category": "psu",
+    "categoryName": "Fonte",
+    "brand": "XPG",
+    "name": "XPG Core Reactor II VE, 750W",
+    "fullName": "Fonte XPG Core Reactor II VE, 750W, 80 Plus Gold, Modular, PFC Ativo, Preto - 75261425",
+    "model": "75261425",
+    "image": "/hardware/expanded/kabum-514895-1.jpg",
+    "gallery": [
+      {
+        "src": "/hardware/expanded/kabum-514895-1.jpg",
+        "alt": "Fonte XPG Core Reactor II VE, 750W, 80 Plus Gold, Modular, PFC Ativo, Preto - 75261425 — foto 1 publicada no cadastro da loja"
+      },
+      {
+        "src": "/hardware/expanded/kabum-514895-2.jpg",
+        "alt": "Fonte XPG Core Reactor II VE, 750W, 80 Plus Gold, Modular, PFC Ativo, Preto - 75261425 — foto 2 publicada no cadastro da loja"
+      }
+    ],
+    "description": "XPG Core Reactor II VE, 750W. 750W. 80 Plus Gold. Modular. A variante anunciada é 75261425. Confira os requisitos do seu conjunto e as informações detalhadas do fabricante antes de escolher.",
+    "highlights": [
+      "750W",
+      "80 Plus Gold",
+      "Modular"
+    ],
+    "specifications": [
+      [
+        "Marca",
+        "XPG"
+      ],
+      [
+        "Modelo anunciado",
+        "75261425"
+      ],
+      [
+        "Código na loja",
+        "514895"
+      ],
+      [
+        "Potência nominal",
+        "750 W"
+      ]
+    ],
+    "compatibilityNote": "Confira BIOS, dimensões, conexões e instalação para o conjunto escolhido. Dados técnicos não identificados nesta ficha precisam de conferência e não são presumidos pelo montador.",
+    "manufacturerUrl": "https://www.kabum.com.br/produto/514895/fonte-xpg-core-reactor-ii-ve-750w-80-plus-gold-modular-pfc-ativo-preto-75261425",
+    "technicalSource": "https://www.kabum.com.br/produto/514895/fonte-xpg-core-reactor-ii-ve-750w-80-plus-gold-modular-pfc-ativo-preto-75261425",
+    "sourceLabel": "Página do produto na KaBuM!",
+    "checkedAt": "2026-10-30",
+    "hardware": {
+      "wattage": 750
+    },
+    "offers": []
+  },
+  {
+    "id": "kabum-921290",
+    "slug": "kabum-921290",
+    "category": "cooler",
+    "categoryName": "Cooler",
+    "brand": "MACH1",
+    "name": "Water Cooler MACH1 Logic, RGB",
+    "fullName": "Water Cooler MACH1 Logic, RGB, 240mm, AMD e Intel, Preto - GK240",
+    "model": "GK240",
+    "image": "/hardware/expanded/kabum-921290-1.jpg",
+    "gallery": [
+      {
+        "src": "/hardware/expanded/kabum-921290-1.jpg",
+        "alt": "Water Cooler MACH1 Logic, RGB, 240mm, AMD e Intel, Preto - GK240 — foto 1 publicada no cadastro da loja"
+      },
+      {
+        "src": "/hardware/expanded/kabum-921290-2.jpg",
+        "alt": "Water Cooler MACH1 Logic, RGB, 240mm, AMD e Intel, Preto - GK240 — foto 2 publicada no cadastro da loja"
+      }
+    ],
+    "description": "Water Cooler MACH1 Logic, RGB. RGB. 240mm. AMD e Intel. A variante anunciada é GK240. Confira os requisitos do seu conjunto e as informações detalhadas do fabricante antes de escolher.",
+    "highlights": [
+      "RGB",
+      "240mm",
+      "AMD e Intel"
+    ],
+    "specifications": [
+      [
+        "Marca",
+        "MACH1"
+      ],
+      [
+        "Modelo anunciado",
+        "GK240"
+      ],
+      [
+        "Código na loja",
+        "921290"
+      ]
+    ],
+    "compatibilityNote": "Confira BIOS, dimensões, conexões e instalação para o conjunto escolhido. Dados técnicos não identificados nesta ficha precisam de conferência e não são presumidos pelo montador.",
+    "manufacturerUrl": "https://www.kabum.com.br/produto/921290/water-cooler-mach1-logic-rgb-240mm-amd-e-intel-preto-gk240",
+    "technicalSource": "https://www.kabum.com.br/produto/921290/water-cooler-mach1-logic-rgb-240mm-amd-e-intel-preto-gk240",
+    "sourceLabel": "Página do produto na KaBuM!",
+    "checkedAt": "2026-10-30",
+    "hardware": {},
+    "offers": []
+  },
+  {
+    "id": "kabum-912540",
+    "slug": "kabum-912540",
+    "category": "cooler",
+    "categoryName": "Cooler",
+    "brand": "MACH1",
+    "name": "Air Cooler MACH1 ARTIC, ARGB",
+    "fullName": "Air Cooler MACH1 ARTIC, ARGB, AMD e Intel, 120mm, Preto - A40",
+    "model": "A40",
+    "image": "/hardware/expanded/kabum-912540-1.jpg",
+    "gallery": [
+      {
+        "src": "/hardware/expanded/kabum-912540-1.jpg",
+        "alt": "Air Cooler MACH1 ARTIC, ARGB, AMD e Intel, 120mm, Preto - A40 — foto 1 publicada no cadastro da loja"
+      },
+      {
+        "src": "/hardware/expanded/kabum-912540-2.jpg",
+        "alt": "Air Cooler MACH1 ARTIC, ARGB, AMD e Intel, 120mm, Preto - A40 — foto 2 publicada no cadastro da loja"
+      }
+    ],
+    "description": "Air Cooler MACH1 ARTIC, ARGB. ARGB. AMD e Intel. 120mm. A variante anunciada é A40. Confira os requisitos do seu conjunto e as informações detalhadas do fabricante antes de escolher.",
+    "highlights": [
+      "ARGB",
+      "AMD e Intel",
+      "120mm"
+    ],
+    "specifications": [
+      [
+        "Marca",
+        "MACH1"
+      ],
+      [
+        "Modelo anunciado",
+        "A40"
+      ],
+      [
+        "Código na loja",
+        "912540"
+      ]
+    ],
+    "compatibilityNote": "Confira BIOS, dimensões, conexões e instalação para o conjunto escolhido. Dados técnicos não identificados nesta ficha precisam de conferência e não são presumidos pelo montador.",
+    "manufacturerUrl": "https://www.kabum.com.br/produto/912540/air-cooler-mach1-artic-argb-amd-e-intel-120mm-preto-a40",
+    "technicalSource": "https://www.kabum.com.br/produto/912540/air-cooler-mach1-artic-argb-amd-e-intel-120mm-preto-a40",
+    "sourceLabel": "Página do produto na KaBuM!",
+    "checkedAt": "2026-10-30",
+    "hardware": {},
+    "offers": []
+  },
+  {
+    "id": "kabum-593863",
+    "slug": "kabum-593863",
+    "category": "cooler",
+    "categoryName": "Cooler",
+    "brand": "Husky",
+    "name": "Water Cooler Husky Glacier, Iluminação ARGB",
+    "fullName": "Water Cooler Husky Glacier, Iluminação ARGB, 240mm, AMD e Intel, Preto - HWT600PT",
+    "model": "HWT600PT",
+    "image": "/hardware/expanded/kabum-593863-1.jpg",
+    "gallery": [
+      {
+        "src": "/hardware/expanded/kabum-593863-1.jpg",
+        "alt": "Water Cooler Husky Glacier, Iluminação ARGB, 240mm, AMD e Intel, Preto - HWT600PT — foto 1 publicada no cadastro da loja"
+      },
+      {
+        "src": "/hardware/expanded/kabum-593863-2.jpg",
+        "alt": "Water Cooler Husky Glacier, Iluminação ARGB, 240mm, AMD e Intel, Preto - HWT600PT — foto 2 publicada no cadastro da loja"
+      }
+    ],
+    "description": "Water Cooler Husky Glacier, Iluminação ARGB. Iluminação ARGB. 240mm. AMD e Intel. A variante anunciada é HWT600PT. Confira os requisitos do seu conjunto e as informações detalhadas do fabricante antes de escolher.",
+    "highlights": [
+      "Iluminação ARGB",
+      "240mm",
+      "AMD e Intel"
+    ],
+    "specifications": [
+      [
+        "Marca",
+        "Husky"
+      ],
+      [
+        "Modelo anunciado",
+        "HWT600PT"
+      ],
+      [
+        "Código na loja",
+        "593863"
+      ]
+    ],
+    "compatibilityNote": "Confira BIOS, dimensões, conexões e instalação para o conjunto escolhido. Dados técnicos não identificados nesta ficha precisam de conferência e não são presumidos pelo montador.",
+    "manufacturerUrl": "https://www.kabum.com.br/produto/593863/water-cooler-husky-glacier-iluminacao-argb-240mm-amd-e-intel-preto-hwt600pt",
+    "technicalSource": "https://www.kabum.com.br/produto/593863/water-cooler-husky-glacier-iluminacao-argb-240mm-amd-e-intel-preto-hwt600pt",
+    "sourceLabel": "Página do produto na KaBuM!",
+    "checkedAt": "2026-10-30",
+    "hardware": {},
+    "offers": []
+  },
+  {
+    "id": "kabum-716000",
+    "slug": "kabum-716000",
+    "category": "cooler",
+    "categoryName": "Cooler",
+    "brand": "MSI",
+    "name": "Water Cooler MSI MAG Coreliquid A12, ARGB",
+    "fullName": "Water Cooler MSI MAG Coreliquid A12, ARGB, 360mm, Intel e AMD, Preto - CLA12360",
+    "model": "CLA12360",
+    "image": "/hardware/expanded/kabum-716000-1.jpg",
+    "gallery": [
+      {
+        "src": "/hardware/expanded/kabum-716000-1.jpg",
+        "alt": "Water Cooler MSI MAG Coreliquid A12, ARGB, 360mm, Intel e AMD, Preto - CLA12360 — foto 1 publicada no cadastro da loja"
+      },
+      {
+        "src": "/hardware/expanded/kabum-716000-2.jpg",
+        "alt": "Water Cooler MSI MAG Coreliquid A12, ARGB, 360mm, Intel e AMD, Preto - CLA12360 — foto 2 publicada no cadastro da loja"
+      }
+    ],
+    "description": "Water Cooler MSI MAG Coreliquid A12, ARGB. ARGB. 360mm. Intel e AMD. A variante anunciada é CLA12360. Confira os requisitos do seu conjunto e as informações detalhadas do fabricante antes de escolher.",
+    "highlights": [
+      "ARGB",
+      "360mm",
+      "Intel e AMD"
+    ],
+    "specifications": [
+      [
+        "Marca",
+        "MSI"
+      ],
+      [
+        "Modelo anunciado",
+        "CLA12360"
+      ],
+      [
+        "Código na loja",
+        "716000"
+      ]
+    ],
+    "compatibilityNote": "Confira BIOS, dimensões, conexões e instalação para o conjunto escolhido. Dados técnicos não identificados nesta ficha precisam de conferência e não são presumidos pelo montador.",
+    "manufacturerUrl": "https://www.kabum.com.br/produto/716000/water-cooler-msi-mag-coreliquid-a12-argb-360mm-intel-e-amd-preto-cla12360",
+    "technicalSource": "https://www.kabum.com.br/produto/716000/water-cooler-msi-mag-coreliquid-a12-argb-360mm-intel-e-amd-preto-cla12360",
+    "sourceLabel": "Página do produto na KaBuM!",
+    "checkedAt": "2026-10-30",
+    "hardware": {},
+    "offers": []
+  },
+  {
+    "id": "kabum-593860",
+    "slug": "kabum-593860",
+    "category": "cooler",
+    "categoryName": "Cooler",
+    "brand": "Husky",
+    "name": "Water Cooler Husky Freezy, Iluminação ARGB",
+    "fullName": "Water Cooler Husky Freezy, Iluminação ARGB, 360mm, AMD e Intel, Preto - HWT300PT",
+    "model": "HWT300PT",
+    "image": "/hardware/expanded/kabum-593860-1.jpg",
+    "gallery": [
+      {
+        "src": "/hardware/expanded/kabum-593860-1.jpg",
+        "alt": "Water Cooler Husky Freezy, Iluminação ARGB, 360mm, AMD e Intel, Preto - HWT300PT — foto 1 publicada no cadastro da loja"
+      },
+      {
+        "src": "/hardware/expanded/kabum-593860-2.jpg",
+        "alt": "Water Cooler Husky Freezy, Iluminação ARGB, 360mm, AMD e Intel, Preto - HWT300PT — foto 2 publicada no cadastro da loja"
+      }
+    ],
+    "description": "Water Cooler Husky Freezy, Iluminação ARGB. Iluminação ARGB. 360mm. AMD e Intel. A variante anunciada é HWT300PT. Confira os requisitos do seu conjunto e as informações detalhadas do fabricante antes de escolher.",
+    "highlights": [
+      "Iluminação ARGB",
+      "360mm",
+      "AMD e Intel"
+    ],
+    "specifications": [
+      [
+        "Marca",
+        "Husky"
+      ],
+      [
+        "Modelo anunciado",
+        "HWT300PT"
+      ],
+      [
+        "Código na loja",
+        "593860"
+      ]
+    ],
+    "compatibilityNote": "Confira BIOS, dimensões, conexões e instalação para o conjunto escolhido. Dados técnicos não identificados nesta ficha precisam de conferência e não são presumidos pelo montador.",
+    "manufacturerUrl": "https://www.kabum.com.br/produto/593860/water-cooler-husky-freezy-iluminacao-argb-360mm-amd-e-intel-preto-hwt300pt",
+    "technicalSource": "https://www.kabum.com.br/produto/593860/water-cooler-husky-freezy-iluminacao-argb-360mm-amd-e-intel-preto-hwt300pt",
+    "sourceLabel": "Página do produto na KaBuM!",
+    "checkedAt": "2026-10-30",
+    "hardware": {},
+    "offers": []
+  },
+  {
+    "id": "kabum-912559",
+    "slug": "kabum-912559",
+    "category": "cooler",
+    "categoryName": "Cooler",
+    "brand": "MACH1",
+    "name": "Air Cooler MACH1 WIND, ARGB",
+    "fullName": "Air Cooler MACH1 WIND, ARGB, AMD e Intel, 120mm, Preto - A60 ARGB",
+    "model": "A60 ARGB",
+    "image": "/hardware/expanded/kabum-912559-1.jpg",
+    "gallery": [
+      {
+        "src": "/hardware/expanded/kabum-912559-1.jpg",
+        "alt": "Air Cooler MACH1 WIND, ARGB, AMD e Intel, 120mm, Preto - A60 ARGB — foto 1 publicada no cadastro da loja"
+      },
+      {
+        "src": "/hardware/expanded/kabum-912559-2.jpg",
+        "alt": "Air Cooler MACH1 WIND, ARGB, AMD e Intel, 120mm, Preto - A60 ARGB — foto 2 publicada no cadastro da loja"
+      }
+    ],
+    "description": "Air Cooler MACH1 WIND, ARGB. ARGB. AMD e Intel. 120mm. A variante anunciada é A60 ARGB. Confira os requisitos do seu conjunto e as informações detalhadas do fabricante antes de escolher.",
+    "highlights": [
+      "ARGB",
+      "AMD e Intel",
+      "120mm"
+    ],
+    "specifications": [
+      [
+        "Marca",
+        "MACH1"
+      ],
+      [
+        "Modelo anunciado",
+        "A60 ARGB"
+      ],
+      [
+        "Código na loja",
+        "912559"
+      ]
+    ],
+    "compatibilityNote": "Confira BIOS, dimensões, conexões e instalação para o conjunto escolhido. Dados técnicos não identificados nesta ficha precisam de conferência e não são presumidos pelo montador.",
+    "manufacturerUrl": "https://www.kabum.com.br/produto/912559/air-cooler-mach1-wind-argb-amd-e-intel-120mm-preto-a60-argb",
+    "technicalSource": "https://www.kabum.com.br/produto/912559/air-cooler-mach1-wind-argb-amd-e-intel-120mm-preto-a60-argb",
+    "sourceLabel": "Página do produto na KaBuM!",
+    "checkedAt": "2026-10-30",
+    "hardware": {},
+    "offers": []
+  },
+  {
+    "id": "kabum-532493",
+    "slug": "kabum-532493",
+    "category": "cooler",
+    "categoryName": "Cooler",
+    "brand": "Cooler Master",
+    "name": "Air Cooler Cooler Master Hyper 212 Spectrum V3, ARGB",
+    "fullName": "Air Cooler Cooler Master Hyper 212 Spectrum V3, ARGB, Intel e AMD, 120mm, Preto - RR-S4NA-17PA-R1",
+    "model": "RR-S4NA-17PA-R1",
+    "image": "/hardware/expanded/kabum-532493-1.jpg",
+    "gallery": [
+      {
+        "src": "/hardware/expanded/kabum-532493-1.jpg",
+        "alt": "Air Cooler Cooler Master Hyper 212 Spectrum V3, ARGB, Intel e AMD, 120mm, Preto - RR-S4NA-17PA-R1 — foto 1 publicada no cadastro da loja"
+      },
+      {
+        "src": "/hardware/expanded/kabum-532493-2.jpg",
+        "alt": "Air Cooler Cooler Master Hyper 212 Spectrum V3, ARGB, Intel e AMD, 120mm, Preto - RR-S4NA-17PA-R1 — foto 2 publicada no cadastro da loja"
+      }
+    ],
+    "description": "Air Cooler Cooler Master Hyper 212 Spectrum V3, ARGB. ARGB. Intel e AMD. 120mm. A variante anunciada é RR-S4NA-17PA-R1. Confira os requisitos do seu conjunto e as informações detalhadas do fabricante antes de escolher.",
+    "highlights": [
+      "ARGB",
+      "Intel e AMD",
+      "120mm"
+    ],
+    "specifications": [
+      [
+        "Marca",
+        "Cooler Master"
+      ],
+      [
+        "Modelo anunciado",
+        "RR-S4NA-17PA-R1"
+      ],
+      [
+        "Código na loja",
+        "532493"
+      ]
+    ],
+    "compatibilityNote": "Confira BIOS, dimensões, conexões e instalação para o conjunto escolhido. Dados técnicos não identificados nesta ficha precisam de conferência e não são presumidos pelo montador.",
+    "manufacturerUrl": "https://www.kabum.com.br/produto/532493/air-cooler-cooler-master-hyper-212-spectrum-v3-argb-intel-e-amd-120mm-preto-rr-s4na-17pa-r1",
+    "technicalSource": "https://www.kabum.com.br/produto/532493/air-cooler-cooler-master-hyper-212-spectrum-v3-argb-intel-e-amd-120mm-preto-rr-s4na-17pa-r1",
+    "sourceLabel": "Página do produto na KaBuM!",
+    "checkedAt": "2026-10-30",
+    "hardware": {},
+    "offers": []
+  },
+  {
+    "id": "kabum-912556",
+    "slug": "kabum-912556",
+    "category": "cooler",
+    "categoryName": "Cooler",
+    "brand": "MACH1",
+    "name": "Air Cooler MACH1 BOREAL, Digital",
+    "fullName": "Air Cooler MACH1 BOREAL, Digital, AMD e Intel, 120mm, Preto - B40 DIG V2",
+    "model": "B40 DIG V2",
+    "image": "/hardware/expanded/kabum-912556-1.jpg",
+    "gallery": [
+      {
+        "src": "/hardware/expanded/kabum-912556-1.jpg",
+        "alt": "Air Cooler MACH1 BOREAL, Digital, AMD e Intel, 120mm, Preto - B40 DIG V2 — foto 1 publicada no cadastro da loja"
+      },
+      {
+        "src": "/hardware/expanded/kabum-912556-2.jpg",
+        "alt": "Air Cooler MACH1 BOREAL, Digital, AMD e Intel, 120mm, Preto - B40 DIG V2 — foto 2 publicada no cadastro da loja"
+      }
+    ],
+    "description": "Air Cooler MACH1 BOREAL, Digital. Digital. AMD e Intel. 120mm. A variante anunciada é B40 DIG V2. Confira os requisitos do seu conjunto e as informações detalhadas do fabricante antes de escolher.",
+    "highlights": [
+      "Digital",
+      "AMD e Intel",
+      "120mm"
+    ],
+    "specifications": [
+      [
+        "Marca",
+        "MACH1"
+      ],
+      [
+        "Modelo anunciado",
+        "B40 DIG V2"
+      ],
+      [
+        "Código na loja",
+        "912556"
+      ]
+    ],
+    "compatibilityNote": "Confira BIOS, dimensões, conexões e instalação para o conjunto escolhido. Dados técnicos não identificados nesta ficha precisam de conferência e não são presumidos pelo montador.",
+    "manufacturerUrl": "https://www.kabum.com.br/produto/912556/air-cooler-mach1-boreal-digital-amd-e-intel-120mm-preto-b40-dig-v2",
+    "technicalSource": "https://www.kabum.com.br/produto/912556/air-cooler-mach1-boreal-digital-amd-e-intel-120mm-preto-b40-dig-v2",
+    "sourceLabel": "Página do produto na KaBuM!",
+    "checkedAt": "2026-10-30",
+    "hardware": {},
+    "offers": []
+  },
+  {
+    "id": "kabum-593859",
+    "slug": "kabum-593859",
+    "category": "cooler",
+    "categoryName": "Cooler",
+    "brand": "Husky",
+    "name": "Water Cooler Husky Freezy, ARGB",
+    "fullName": "Water Cooler Husky Freezy, ARGB, 240mm, AMD e Intel, Branco - HWT200BR",
+    "model": "HWT200BR",
+    "image": "/hardware/expanded/kabum-593859-1.jpg",
+    "gallery": [
+      {
+        "src": "/hardware/expanded/kabum-593859-1.jpg",
+        "alt": "Water Cooler Husky Freezy, ARGB, 240mm, AMD e Intel, Branco - HWT200BR — foto 1 publicada no cadastro da loja"
+      },
+      {
+        "src": "/hardware/expanded/kabum-593859-2.jpg",
+        "alt": "Water Cooler Husky Freezy, ARGB, 240mm, AMD e Intel, Branco - HWT200BR — foto 2 publicada no cadastro da loja"
+      }
+    ],
+    "description": "Water Cooler Husky Freezy, ARGB. ARGB. 240mm. AMD e Intel. A variante anunciada é HWT200BR. Confira os requisitos do seu conjunto e as informações detalhadas do fabricante antes de escolher.",
+    "highlights": [
+      "ARGB",
+      "240mm",
+      "AMD e Intel"
+    ],
+    "specifications": [
+      [
+        "Marca",
+        "Husky"
+      ],
+      [
+        "Modelo anunciado",
+        "HWT200BR"
+      ],
+      [
+        "Código na loja",
+        "593859"
+      ]
+    ],
+    "compatibilityNote": "Confira BIOS, dimensões, conexões e instalação para o conjunto escolhido. Dados técnicos não identificados nesta ficha precisam de conferência e não são presumidos pelo montador.",
+    "manufacturerUrl": "https://www.kabum.com.br/produto/593859/water-cooler-husky-freezy-argb-240mm-amd-e-intel-branco-hwt200br",
+    "technicalSource": "https://www.kabum.com.br/produto/593859/water-cooler-husky-freezy-argb-240mm-amd-e-intel-branco-hwt200br",
+    "sourceLabel": "Página do produto na KaBuM!",
+    "checkedAt": "2026-10-30",
+    "hardware": {},
+    "offers": []
+  },
+  {
+    "id": "kabum-593858",
+    "slug": "kabum-593858",
+    "category": "cooler",
+    "categoryName": "Cooler",
+    "brand": "Husky",
+    "name": "Water Cooler Husky Freezy, Iluminação ARGB",
+    "fullName": "Water Cooler Husky Freezy, Iluminação ARGB, 240mm, AMD e Intel, Preto - HWT200PT",
+    "model": "HWT200PT",
+    "image": "/hardware/expanded/kabum-593858-1.jpg",
+    "gallery": [
+      {
+        "src": "/hardware/expanded/kabum-593858-1.jpg",
+        "alt": "Water Cooler Husky Freezy, Iluminação ARGB, 240mm, AMD e Intel, Preto - HWT200PT — foto 1 publicada no cadastro da loja"
+      },
+      {
+        "src": "/hardware/expanded/kabum-593858-2.jpg",
+        "alt": "Water Cooler Husky Freezy, Iluminação ARGB, 240mm, AMD e Intel, Preto - HWT200PT — foto 2 publicada no cadastro da loja"
+      }
+    ],
+    "description": "Water Cooler Husky Freezy, Iluminação ARGB. Iluminação ARGB. 240mm. AMD e Intel. A variante anunciada é HWT200PT. Confira os requisitos do seu conjunto e as informações detalhadas do fabricante antes de escolher.",
+    "highlights": [
+      "Iluminação ARGB",
+      "240mm",
+      "AMD e Intel"
+    ],
+    "specifications": [
+      [
+        "Marca",
+        "Husky"
+      ],
+      [
+        "Modelo anunciado",
+        "HWT200PT"
+      ],
+      [
+        "Código na loja",
+        "593858"
+      ]
+    ],
+    "compatibilityNote": "Confira BIOS, dimensões, conexões e instalação para o conjunto escolhido. Dados técnicos não identificados nesta ficha precisam de conferência e não são presumidos pelo montador.",
+    "manufacturerUrl": "https://www.kabum.com.br/produto/593858/water-cooler-husky-freezy-iluminacao-argb-240mm-amd-e-intel-preto-hwt200pt",
+    "technicalSource": "https://www.kabum.com.br/produto/593858/water-cooler-husky-freezy-iluminacao-argb-240mm-amd-e-intel-preto-hwt200pt",
+    "sourceLabel": "Página do produto na KaBuM!",
+    "checkedAt": "2026-10-30",
+    "hardware": {},
+    "offers": []
+  }
+]

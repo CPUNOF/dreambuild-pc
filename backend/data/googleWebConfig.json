@@ -1,0 +1,9 @@
+{
+  "enabled": true,
+  "config": {
+    "apiKey": "AIzaSyBVWYfP9UP2yrgY3RbTH3Xl6UaYcWWKnzw",
+    "authDomain": "dreambuild-pc.firebaseapp.com",
+    "projectId": "dreambuild-pc",
+    "appId": "1:644015985117:web:07b0757edaf29282006634"
+  }
+}

@@ -1,0 +1,1290 @@
+{
+  "version": "reference-2026-10-30-v2",
+  "checkedAt": "2026-10-30",
+  "source": "https://www.tomshardware.com/pc-components/gpus/nvidia-geforce-rtx-5080-review/4",
+  "testSetup": {
+    "cpu": "Ryzen 7 9800X3D",
+    "ram": "32 GB G.Skill DDR5-6000 CL28",
+    "mobo": "ASRock X670E Taichi",
+    "storage": "Crucial T700 4 TB",
+    "psu": "Corsair HX1500i",
+    "cooler": "Cooler Master MasterLiquid ML280 Mirror",
+    "source": "https://www.tomshardware.com/pc-components/gpus/nvidia-geforce-rtx-5080-review/3"
+  },
+  "cpuScores": {
+    "Ryzen 7 9850X3D": 100,
+    "Ryzen 7 9800X3D": 97,
+    "Ryzen 9 9950X3D": 95.7,
+    "Ryzen 9 9900X3D": 86.9,
+    "Ryzen 7 7800X3D": 85.6,
+    "Ryzen 9 7950X3D": 83.9,
+    "Ryzen 5 7600X3D": 80.6,
+    "Core i9-14900K": 78.2,
+    "Core Ultra 7 270K Plus": 77.5,
+    "Ryzen 7 7900X3D": 77.1,
+    "Ryzen 9 9950X": 76.9,
+    "Core i9-13900K": 76.8,
+    "Core i7-14700K": 76.4,
+    "Core i7-13700K": 75.8,
+    "Ryzen 9 9900X": 73.9,
+    "Core Ultra 5 250K Plus": 73.3,
+    "Core i5-14600K": 72.8,
+    "Ryzen 5 9600X": 72.6,
+    "Core Ultra 9 285K": 71.8,
+    "Ryzen 9 7950X": 71,
+    "Core i5-13600K": 70.9,
+    "Ryzen 7 7700X": 70.6,
+    "Core Ultra 7 265K": 70.3,
+    "Ryzen 9 7900X": 69.2,
+    "Ryzen 5 7600X": 67.3,
+    "Core Ultra 5 245K": 67.1,
+    "Core i7-12700K": 65.8,
+    "Core Ultra 5 225": 62.5,
+    "Core i5-12600K": 60.8,
+    "Core i5-14400": 58
+  },
+  "cpuSource": "https://www.tomshardware.com/reviews/cpu-hierarchy,4312.html",
+  "games": [
+    {
+      "id": "mirage",
+      "name": "Assassin’s Creed Mirage",
+      "preset": "Ultra — FPS Target Off",
+      "steamId": 3035570,
+      "source": "https://www.tomshardware.com/pc-components/gpus/nvidia-geforce-rtx-5080-review/4",
+      "results": {
+        "RTX 4090": {
+          "1440p": 192.3,
+          "1080p": 217.6
+        },
+        "RTX 5080": {
+          "1440p": 166.1,
+          "1080p": 194.6
+        },
+        "RX 9070": {
+          "1440p": 153.8,
+          "1080p": 178
+        },
+        "RTX 5070": {
+          "1440p": 127.6,
+          "1080p": 164.6
+        },
+        "RX 7800 XT": {
+          "1440p": 130.3,
+          "1080p": 152.3
+        },
+        "RTX 4070": {
+          "1440p": 123.3,
+          "1080p": 155.7
+        },
+        "RTX 5060 Ti 16GB": {
+          "1440p": 109.6,
+          "1080p": 140.7
+        },
+        "RTX 5060 Ti 8GB": {
+          "1440p": 95.2,
+          "1080p": 128.9
+        },
+        "RX 9060 XT 16GB": {
+          "1440p": 110.1,
+          "1080p": 138.6
+        },
+        "RX 7700 XT": {
+          "1440p": 114.5,
+          "1080p": 141.1
+        },
+        "RTX 4060 Ti 8GB": {
+          "1440p": 90.7,
+          "1080p": 117.6
+        },
+        "RTX 4060 Ti 16GB": {
+          "1440p": 97.3,
+          "1080p": 127.7
+        },
+        "RTX 5060": {
+          "1440p": 89.9,
+          "1080p": 115.3
+        },
+        "RX 7600 XT": {
+          "1440p": 81.1,
+          "1080p": 106.5
+        },
+        "RTX 4060": {
+          "1440p": 79.4,
+          "1080p": 107
+        },
+        "RX 7600": {
+          "1440p": 63.1,
+          "1080p": 99.2
+        },
+        "RTX 3060 12GB": {
+          "1440p": 67.1,
+          "1080p": 85.7
+        },
+        "RTX 5070 Ti": {
+          "1440p": 156.7,
+          "1080p": 188.7
+        },
+        "RX 9070 XT": {
+          "1440p": 169.8,
+          "1080p": 199.9
+        }
+      },
+      "preview": {
+        "poster": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3035570/header.jpg?t=1792777978",
+        "video": "https://video.akamai.steamstatic.com/store_trailers/3035570/765019/929fdbfbb946a6ac54ced94844a708f7bcb0cdd6/1750823088/hls_264_master.m3u8?t=1763405438",
+        "source": "https://store.steampowered.com/app/3035570/",
+        "title": "Assassin's Creed Mirage"
+      }
+    },
+    {
+      "id": "baldurs-gate-3",
+      "name": "Baldur’s Gate 3",
+      "preset": "Ultra",
+      "steamId": 1086940,
+      "source": "https://www.tomshardware.com/pc-components/gpus/nvidia-geforce-rtx-5080-review/4",
+      "results": {
+        "RTX 4090": {
+          "1440p": 175.3,
+          "1080p": 179.2
+        },
+        "RTX 5080": {
+          "1440p": 173.5,
+          "1080p": 177.2
+        },
+        "RX 9070": {
+          "1440p": 146.4,
+          "1080p": 186.8
+        },
+        "RTX 5070": {
+          "1440p": 154.3,
+          "1080p": 196.8
+        },
+        "RX 7800 XT": {
+          "1440p": 119.9,
+          "1080p": 159
+        },
+        "RTX 4070": {
+          "1440p": 127.9,
+          "1080p": 173.1
+        },
+        "RTX 5060 Ti 16GB": {
+          "1440p": 109,
+          "1080p": 151.5
+        },
+        "RTX 5060 Ti 8GB": {
+          "1440p": 108.3,
+          "1080p": 151.1
+        },
+        "RX 9060 XT 16GB": {
+          "1440p": 103.6,
+          "1080p": 146.6
+        },
+        "RX 7700 XT": {
+          "1440p": 110.9,
+          "1080p": 143.1
+        },
+        "RTX 4060 Ti 8GB": {
+          "1440p": 94.8,
+          "1080p": 136.5
+        },
+        "RTX 4060 Ti 16GB": {
+          "1440p": 95.4,
+          "1080p": 134.1
+        },
+        "RTX 5060": {
+          "1440p": 92.6,
+          "1080p": 131.8
+        },
+        "RX 7600 XT": {
+          "1440p": 71.1,
+          "1080p": 95.7
+        },
+        "RTX 4060": {
+          "1440p": 74.6,
+          "1080p": 106.7
+        },
+        "RX 7600": {
+          "1440p": 68.9,
+          "1080p": 94.3
+        },
+        "RTX 3060 12GB": {
+          "1440p": 64.5,
+          "1080p": 91
+        },
+        "RTX 5070 Ti": {
+          "1440p": 170.8,
+          "1080p": 175.1
+        },
+        "RX 9070 XT": {
+          "1440p": 166.3,
+          "1080p": 170.9
+        }
+      },
+      "preview": {
+        "poster": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1086940/48a2fcbda8565bb45025e98fd8ebde8a7203f6a0/header.jpg?t=1777363040",
+        "video": "https://video.akamai.steamstatic.com/store_trailers/1086940/637951/59ca25b847b0e471638d1e2474acf71b068d57f0/1750615003/hls_264_master.m3u8?t=1702007645",
+        "source": "https://store.steampowered.com/app/1086940/",
+        "title": "Baldur's Gate 3"
+      }
+    },
+    {
+      "id": "wukong",
+      "name": "Black Myth: Wukong",
+      "preset": "Very High — sem RT",
+      "steamId": 2358720,
+      "source": "https://www.tomshardware.com/pc-components/gpus/nvidia-geforce-rtx-5080-review/4",
+      "results": {
+        "RTX 4090": {
+          "1440p": 76.9,
+          "1080p": 96.3
+        },
+        "RTX 5080": {
+          "1440p": 67,
+          "1080p": 86.7
+        },
+        "RX 9070": {
+          "1440p": 48.2,
+          "1080p": 64.7
+        },
+        "RTX 5070": {
+          "1440p": 47.5,
+          "1080p": 64.6
+        },
+        "RX 7800 XT": {
+          "1440p": 37.2,
+          "1080p": 49.3
+        },
+        "RTX 4070": {
+          "1440p": 37.3,
+          "1080p": 50.8
+        },
+        "RTX 5060 Ti 16GB": {
+          "1440p": 36.1,
+          "1080p": 49.2
+        },
+        "RTX 5060 Ti 8GB": {
+          "1440p": 34.3,
+          "1080p": 47.1
+        },
+        "RX 9060 XT 16GB": {
+          "1440p": 30.7,
+          "1080p": 42.2
+        },
+        "RX 7700 XT": {
+          "1440p": 33.3,
+          "1080p": 44.4
+        },
+        "RTX 4060 Ti 8GB": {
+          "1440p": 28.9,
+          "1080p": 40.2
+        },
+        "RTX 4060 Ti 16GB": {
+          "1440p": 28.8,
+          "1080p": 39.9
+        },
+        "RTX 5060": {
+          "1440p": 29.2,
+          "1080p": 40.1
+        },
+        "RX 7600 XT": {
+          "1440p": 21.5,
+          "1080p": 29.8
+        },
+        "RTX 4060": {
+          "1440p": 22.7,
+          "1080p": 32.3
+        },
+        "RX 7600": {
+          "1440p": 20.9,
+          "1080p": 29
+        },
+        "RTX 3060 12GB": {
+          "1440p": 18.7,
+          "1080p": 25.8
+        },
+        "RTX 5070 Ti": {
+          "1440p": 59.1,
+          "1080p": 77.9
+        },
+        "RX 9070 XT": {
+          "1440p": 55.5,
+          "1080p": 73.4
+        }
+      },
+      "preview": {
+        "poster": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2358720/header.jpg?t=1760601605",
+        "video": "https://video.akamai.steamstatic.com/store_trailers/2358720/743632/6acf4311bb6a59d300b902ab6a3f445215089d9c/1750812851/hls_264_master.m3u8?t=1729236218",
+        "source": "https://store.steampowered.com/app/2358720/",
+        "title": "Black Myth: Wukong"
+      }
+    },
+    {
+      "id": "veilguard",
+      "name": "Dragon Age: The Veilguard",
+      "preset": "Ultra",
+      "steamId": 1845910,
+      "source": "https://www.tomshardware.com/pc-components/gpus/nvidia-geforce-rtx-5080-review/4",
+      "results": {
+        "RTX 4090": {
+          "1440p": 142.1,
+          "1080p": 175.3
+        },
+        "RTX 5080": {
+          "1440p": 125.8,
+          "1080p": 152.6
+        },
+        "RX 9070": {
+          "1440p": 85.4,
+          "1080p": 107
+        },
+        "RTX 5070": {
+          "1440p": 87.8,
+          "1080p": 113.2
+        },
+        "RX 7800 XT": {
+          "1440p": 65.6,
+          "1080p": 80.7
+        },
+        "RTX 4070": {
+          "1440p": 69.8,
+          "1080p": 93.4
+        },
+        "RTX 5060 Ti 16GB": {
+          "1440p": 62.9,
+          "1080p": 82.9
+        },
+        "RTX 5060 Ti 8GB": {
+          "1440p": 50.8,
+          "1080p": 78.1
+        },
+        "RX 9060 XT 16GB": {
+          "1440p": 57.3,
+          "1080p": 74.1
+        },
+        "RX 7700 XT": {
+          "1440p": 56.3,
+          "1080p": 71.9
+        },
+        "RTX 4060 Ti 8GB": {
+          "1440p": 46.6,
+          "1080p": 71
+        },
+        "RTX 4060 Ti 16GB": {
+          "1440p": 51.7,
+          "1080p": 73.2
+        },
+        "RTX 5060": {
+          "1440p": 45.8,
+          "1080p": 66
+        },
+        "RX 7600 XT": {
+          "1440p": 40.9,
+          "1080p": 53.8
+        },
+        "RTX 4060": {
+          "1440p": 39,
+          "1080p": 57.1
+        },
+        "RX 7600": {
+          "1440p": 30,
+          "1080p": 37.7
+        },
+        "RTX 3060 12GB": {
+          "1440p": 36.7,
+          "1080p": 49.7
+        },
+        "RTX 5070 Ti": {
+          "1440p": 110,
+          "1080p": 139.8
+        },
+        "RX 9070 XT": {
+          "1440p": 97.3,
+          "1080p": 121.5
+        }
+      },
+      "preview": {
+        "poster": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1845910/header.jpg?t=1777414790",
+        "video": "https://video.akamai.steamstatic.com/store_trailers/1845910/786133/a7a8f94c068d120ee2be81a3e3bb6e867fe1a6d6/1750738374/hls_264_master.m3u8?t=1737678877",
+        "source": "https://store.steampowered.com/app/1845910/",
+        "title": "Dragon Age™: The Veilguard"
+      }
+    },
+    {
+      "id": "ff16",
+      "name": "Final Fantasy XVI",
+      "preset": "Ultra",
+      "steamId": 2515020,
+      "source": "https://www.tomshardware.com/pc-components/gpus/nvidia-geforce-rtx-5080-review/4",
+      "results": {
+        "RTX 4090": {
+          "1440p": 74.1,
+          "1080p": 95.3
+        },
+        "RTX 5080": {
+          "1440p": 63.7,
+          "1080p": 84.4
+        },
+        "RX 9070": {
+          "1080p": 69.4,
+          "1440p": 52.6
+        },
+        "RTX 5070": {
+          "1080p": 59.6,
+          "1440p": 42.8
+        },
+        "RX 7800 XT": {
+          "1080p": 57.1,
+          "1440p": 43.6
+        },
+        "RTX 4070": {
+          "1080p": 52.3,
+          "1440p": 37.5
+        },
+        "RTX 5060 Ti 16GB": {
+          "1080p": 49,
+          "1440p": 35.2
+        },
+        "RTX 5060 Ti 8GB": {
+          "1080p": 47.3,
+          "1440p": 33.6
+        },
+        "RX 9060 XT 16GB": {
+          "1080p": 51.3,
+          "1440p": 36.3
+        },
+        "RX 7700 XT": {
+          "1080p": 46.4,
+          "1440p": 36.8
+        },
+        "RTX 4060 Ti 8GB": {
+          "1080p": 41.6,
+          "1440p": 29.3
+        },
+        "RTX 4060 Ti 16GB": {
+          "1080p": 42,
+          "1440p": 29.9
+        },
+        "RTX 5060": {
+          "1080p": 41.7,
+          "1440p": 29.3
+        },
+        "RX 7600 XT": {
+          "1080p": 35.9,
+          "1440p": 25.5
+        },
+        "RTX 4060": {
+          "1080p": 34.9,
+          "1440p": 23.5
+        },
+        "RX 7600": {
+          "1080p": 23.5,
+          "1440p": 20.1
+        },
+        "RTX 3060 12GB": {
+          "1080p": 27.9,
+          "1440p": 19
+        },
+        "RTX 5070 Ti": {
+          "1440p": 56.7,
+          "1080p": 75.6
+        },
+        "RX 9070 XT": {
+          "1440p": 57.9,
+          "1080p": 74.5
+        }
+      },
+      "preview": {
+        "poster": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2515020/header.jpg?t=1773294537",
+        "video": "https://video.akamai.steamstatic.com/store_trailers/2515020/741490/93de12947124472b3783d5807698142b57d62189/1750816165/hls_264_master.m3u8?t=1724082993",
+        "source": "https://store.steampowered.com/app/2515020/",
+        "title": "FINAL FANTASY XVI"
+      }
+    },
+    {
+      "id": "flight-2020",
+      "name": "Microsoft Flight Simulator 2020",
+      "preset": "Ultra",
+      "steamId": 1250410,
+      "source": "https://www.tomshardware.com/pc-components/gpus/nvidia-geforce-rtx-5080-review/4",
+      "results": {
+        "RTX 4090": {
+          "1440p": 108.1,
+          "1080p": 108.3
+        },
+        "RTX 5080": {
+          "1440p": 107.6,
+          "1080p": 107.8
+        },
+        "RX 9070": {
+          "1440p": 90.7,
+          "1080p": 114.7
+        },
+        "RTX 5070": {
+          "1440p": 86.1,
+          "1080p": 107.2
+        },
+        "RX 7800 XT": {
+          "1440p": 75.7,
+          "1080p": 105.6
+        },
+        "RTX 4070": {
+          "1440p": 72.6,
+          "1080p": 100.3
+        },
+        "RTX 5060 Ti 16GB": {
+          "1440p": 66.2,
+          "1080p": 92.6
+        },
+        "RTX 5060 Ti 8GB": {
+          "1440p": 65.2,
+          "1080p": 91.6
+        },
+        "RX 9060 XT 16GB": {
+          "1440p": 61,
+          "1080p": 86.4
+        },
+        "RX 7700 XT": {
+          "1440p": 69.7,
+          "1080p": 96.2
+        },
+        "RTX 4060 Ti 8GB": {
+          "1440p": 57.3,
+          "1080p": 80.9
+        },
+        "RTX 4060 Ti 16GB": {
+          "1440p": 56.6,
+          "1080p": 79.7
+        },
+        "RTX 5060": {
+          "1440p": 54.1,
+          "1080p": 77.7
+        },
+        "RX 7600 XT": {
+          "1440p": 46,
+          "1080p": 65.7
+        },
+        "RTX 4060": {
+          "1440p": 43.3,
+          "1080p": 62.2
+        },
+        "RX 7600": {
+          "1440p": 44.4,
+          "1080p": 63.5
+        },
+        "RTX 3060 12GB": {
+          "1440p": 38.7,
+          "1080p": 55.2
+        },
+        "RTX 5070 Ti": {
+          "1440p": 106.5,
+          "1080p": 107.9
+        },
+        "RX 9070 XT": {
+          "1440p": 107,
+          "1080p": 114.7
+        }
+      },
+      "preview": {
+        "poster": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1250410/header.jpg?t=1787671433",
+        "video": "https://video.akamai.steamstatic.com/store_trailers/1250410/513209/00254739b742d4548e5727ecb713f685ec39e659/1750651547/hls_264_master.m3u8?t=1684358207",
+        "source": "https://store.steampowered.com/app/1250410/",
+        "title": "Microsoft Flight Simulator (2020) 40th Anniversary Edition"
+      }
+    },
+    {
+      "id": "flight-2024",
+      "name": "Microsoft Flight Simulator 2024",
+      "preset": "Ultra",
+      "steamId": 2537590,
+      "source": "https://www.tomshardware.com/pc-components/gpus/nvidia-geforce-rtx-5080-review/4",
+      "results": {
+        "RTX 4090": {
+          "1440p": 96.7,
+          "1080p": 112.4
+        },
+        "RTX 5080": {
+          "1440p": 84.8,
+          "1080p": 99.9
+        },
+        "RX 9070": {
+          "1080p": 102.9,
+          "1440p": 80.8
+        },
+        "RTX 5070": {
+          "1080p": 78.4,
+          "1440p": 60.4
+        },
+        "RX 7800 XT": {
+          "1080p": 77.5,
+          "1440p": 60.1
+        },
+        "RTX 4070": {
+          "1080p": 68,
+          "1440p": 52.2
+        },
+        "RTX 5060 Ti 16GB": {
+          "1080p": 64.3,
+          "1440p": 48.8
+        },
+        "RTX 5060 Ti 8GB": {
+          "1080p": 59.1,
+          "1440p": 43.3
+        },
+        "RX 9060 XT 16GB": {
+          "1080p": 72,
+          "1440p": 53.6
+        },
+        "RX 7700 XT": {
+          "1080p": 71.7,
+          "1440p": 56.2
+        },
+        "RTX 4060 Ti 8GB": {
+          "1080p": 54.9,
+          "1440p": 32.6
+        },
+        "RTX 4060 Ti 16GB": {
+          "1080p": 54.8,
+          "1440p": 41.5
+        },
+        "RTX 5060": {
+          "1080p": 57.8,
+          "1440p": 42.6
+        },
+        "RX 7600 XT": {
+          "1080p": 48.9,
+          "1440p": 36.3
+        },
+        "RTX 4060": {
+          "1080p": 42.9,
+          "1440p": 27.8
+        },
+        "RX 7600": {
+          "1080p": 21.9,
+          "1440p": 15.1
+        },
+        "RTX 3060 12GB": {
+          "1080p": 36.6,
+          "1440p": 27
+        },
+        "RTX 5070 Ti": {
+          "1440p": 78.3,
+          "1080p": 96.6
+        },
+        "RX 9070 XT": {
+          "1440p": 90.9,
+          "1080p": 110.5
+        }
+      },
+      "preview": {
+        "poster": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2537590/header.jpg?t=1791557822",
+        "video": "https://video.akamai.steamstatic.com/store_trailers/2537590/827511385/d26d8722335317080ea548c0006fe57f9f86e582/1780852466/hls_264_master.m3u8?t=1787591448",
+        "source": "https://store.steampowered.com/app/2537590/",
+        "title": "Microsoft Flight Simulator 2024"
+      }
+    },
+    {
+      "id": "ragnarok",
+      "name": "God of War Ragnarök",
+      "preset": "Ultra",
+      "steamId": 2322010,
+      "source": "https://www.tomshardware.com/pc-components/gpus/nvidia-geforce-rtx-5080-review/4",
+      "results": {
+        "RTX 4090": {
+          "1440p": 176.8,
+          "1080p": 212.3
+        },
+        "RTX 5080": {
+          "1440p": 151,
+          "1080p": 181
+        },
+        "RX 9070": {
+          "1440p": 109.4,
+          "1080p": 134.6
+        },
+        "RTX 5070": {
+          "1440p": 106,
+          "1080p": 130.5
+        },
+        "RX 7800 XT": {
+          "1440p": 79.3,
+          "1080p": 94.3
+        },
+        "RTX 4070": {
+          "1440p": 86.6,
+          "1080p": 110.2
+        },
+        "RTX 5060 Ti 16GB": {
+          "1440p": 76.4,
+          "1080p": 97.5
+        },
+        "RTX 5060 Ti 8GB": {
+          "1440p": 72.6,
+          "1080p": 96.1
+        },
+        "RX 9060 XT 16GB": {
+          "1440p": 69.6,
+          "1080p": 87.4
+        },
+        "RX 7700 XT": {
+          "1440p": 70.7,
+          "1080p": 83.6
+        },
+        "RTX 4060 Ti 8GB": {
+          "1440p": 64.8,
+          "1080p": 84.7
+        },
+        "RTX 4060 Ti 16GB": {
+          "1440p": 65.2,
+          "1080p": 84.3
+        },
+        "RTX 5060": {
+          "1440p": 64.2,
+          "1080p": 82.6
+        },
+        "RX 7600 XT": {
+          "1440p": 47.1,
+          "1080p": 58.5
+        },
+        "RTX 4060": {
+          "1440p": 51.9,
+          "1080p": 68
+        },
+        "RX 7600": {
+          "1440p": 8.4,
+          "1080p": 29.5
+        },
+        "RTX 3060 12GB": {
+          "1440p": 43.2,
+          "1080p": 56.3
+        },
+        "RTX 5070 Ti": {
+          "1440p": 134.4,
+          "1080p": 161.5
+        },
+        "RX 9070 XT": {
+          "1440p": 123.4,
+          "1080p": 150
+        }
+      },
+      "preview": {
+        "poster": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2322010/header.jpg?t=1776465233",
+        "video": "https://video.akamai.steamstatic.com/store_trailers/2322010/754785/cd4512509a851f1f5e98b3ddffdda87de8bac9f1/1750811709/hls_264_master.m3u8?t=1726759092",
+        "source": "https://store.steampowered.com/app/2322010/",
+        "title": "God of War Ragnarök"
+      }
+    },
+    {
+      "id": "horizon",
+      "name": "Horizon Forbidden West",
+      "preset": "Very High",
+      "steamId": 2420110,
+      "source": "https://www.tomshardware.com/pc-components/gpus/nvidia-geforce-rtx-5080-review/4",
+      "results": {
+        "RTX 4090": {
+          "1440p": 170.3,
+          "1080p": 202.8
+        },
+        "RTX 5080": {
+          "1440p": 141.8,
+          "1080p": 174.9
+        },
+        "RX 9070": {
+          "1440p": 111.2,
+          "1080p": 134.9
+        },
+        "RTX 5070": {
+          "1440p": 100.6,
+          "1080p": 130.2
+        },
+        "RX 7800 XT": {
+          "1440p": 81,
+          "1080p": 100.9
+        },
+        "RTX 4070": {
+          "1440p": 88,
+          "1080p": 112.7
+        },
+        "RTX 5060 Ti 16GB": {
+          "1440p": 76.3,
+          "1080p": 97.7
+        },
+        "RTX 5060 Ti 8GB": {
+          "1440p": 55.4,
+          "1080p": 88.7
+        },
+        "RX 9060 XT 16GB": {
+          "1440p": 74.2,
+          "1080p": 92.8
+        },
+        "RX 7700 XT": {
+          "1440p": 71.2,
+          "1080p": 87.6
+        },
+        "RTX 4060 Ti 8GB": {
+          "1440p": 51.1,
+          "1080p": 83.2
+        },
+        "RTX 4060 Ti 16GB": {
+          "1440p": 66.9,
+          "1080p": 86.7
+        },
+        "RTX 5060": {
+          "1440p": 50.9,
+          "1080p": 78.4
+        },
+        "RX 7600 XT": {
+          "1440p": 48.8,
+          "1080p": 64.9
+        },
+        "RTX 4060": {
+          "1440p": 42.3,
+          "1080p": 65.1
+        },
+        "RX 7600": {
+          "1440p": 33.5,
+          "1080p": 47.2
+        },
+        "RTX 3060 12GB": {
+          "1440p": 42,
+          "1080p": 55.1
+        },
+        "RTX 5070 Ti": {
+          "1440p": 124.8,
+          "1080p": 156.5
+        },
+        "RX 9070 XT": {
+          "1440p": 124.6,
+          "1080p": 149.8
+        }
+      },
+      "preview": {
+        "poster": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2420110/header.jpg?t=1789585745",
+        "video": "https://video.akamai.steamstatic.com/store_trailers/2420110/673729/da330af842f0deee5a8b1b84a79c0f1cd24f68df/1750814445/hls_264_master.m3u8?t=1711032973",
+        "source": "https://store.steampowered.com/app/2420110/",
+        "title": " Horizon Forbidden West™ Edição Completa"
+      }
+    },
+    {
+      "id": "last-of-us",
+      "name": "The Last of Us Part I",
+      "preset": "Ultra",
+      "steamId": 1888930,
+      "source": "https://www.tomshardware.com/pc-components/gpus/nvidia-geforce-rtx-5080-review/4",
+      "results": {
+        "RTX 4090": {
+          "1440p": 126.6,
+          "1080p": 169
+        },
+        "RTX 5080": {
+          "1440p": 109.1,
+          "1080p": 145
+        },
+        "RX 9070": {
+          "1440p": 83,
+          "1080p": 107.2
+        },
+        "RTX 5070": {
+          "1440p": 77.4,
+          "1080p": 108.1
+        },
+        "RX 7800 XT": {
+          "1440p": 74.4,
+          "1080p": 106.9
+        },
+        "RTX 4070": {
+          "1440p": 64.7,
+          "1080p": 94
+        },
+        "RTX 5060 Ti 16GB": {
+          "1440p": 57.3,
+          "1080p": 82.1
+        },
+        "RTX 5060 Ti 8GB": {
+          "1440p": 52.7,
+          "1080p": 79.5
+        },
+        "RX 9060 XT 16GB": {
+          "1440p": 58.9,
+          "1080p": 85.6
+        },
+        "RX 7700 XT": {
+          "1440p": 56.4,
+          "1080p": 77.5
+        },
+        "RTX 4060 Ti 8GB": {
+          "1440p": 47.5,
+          "1080p": 71.6
+        },
+        "RTX 4060 Ti 16GB": {
+          "1440p": 47.5,
+          "1080p": 71.7
+        },
+        "RTX 5060": {
+          "1440p": 42.6,
+          "1080p": 70
+        },
+        "RX 7600 XT": {
+          "1440p": 41.8,
+          "1080p": 62.9
+        },
+        "RTX 4060": {
+          "1440p": 37.9,
+          "1080p": 59.8
+        },
+        "RX 7600": {
+          "1440p": 33,
+          "1080p": 39.2
+        },
+        "RTX 3060 12GB": {
+          "1440p": 33.7,
+          "1080p": 49.8
+        },
+        "RTX 5070 Ti": {
+          "1440p": 99.7,
+          "1080p": 133.2
+        },
+        "RX 9070 XT": {
+          "1440p": 94.4,
+          "1080p": 121.1
+        }
+      },
+      "preview": {
+        "poster": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1888930/header.jpg?t=1750959031",
+        "video": "https://video.akamai.steamstatic.com/store_trailers/1888930/550396/09468ce88d62c431fbbbbbc89c3a0c1b84e50ca8/1750740074/hls_264_master.m3u8?t=1680015399",
+        "source": "https://store.steampowered.com/app/1888930/",
+        "title": "The Last of Us™ Parte I"
+      }
+    },
+    {
+      "id": "plague",
+      "name": "A Plague Tale: Requiem",
+      "preset": "Ultra",
+      "steamId": 1182900,
+      "source": "https://www.tomshardware.com/pc-components/gpus/nvidia-geforce-rtx-5080-review/4",
+      "results": {
+        "RTX 4090": {
+          "1440p": 135.6,
+          "1080p": 176.2
+        },
+        "RTX 5080": {
+          "1440p": 120.1,
+          "1080p": 158
+        },
+        "RX 9070": {
+          "1440p": 87,
+          "1080p": 116.9
+        },
+        "RTX 5070": {
+          "1440p": 82.2,
+          "1080p": 113.5
+        },
+        "RX 7800 XT": {
+          "1440p": 63.6,
+          "1080p": 85.1
+        },
+        "RTX 4070": {
+          "1440p": 62.6,
+          "1080p": 87.8
+        },
+        "RTX 5060 Ti 16GB": {
+          "1440p": 60.1,
+          "1080p": 85.3
+        },
+        "RTX 5060 Ti 8GB": {
+          "1440p": 59.5,
+          "1080p": 83.9
+        },
+        "RX 9060 XT 16GB": {
+          "1440p": 55.3,
+          "1080p": 77.3
+        },
+        "RX 7700 XT": {
+          "1440p": 58.5,
+          "1080p": 79.8
+        },
+        "RTX 4060 Ti 8GB": {
+          "1440p": 47.2,
+          "1080p": 68.2
+        },
+        "RTX 4060 Ti 16GB": {
+          "1440p": 46.7,
+          "1080p": 67.6
+        },
+        "RTX 5060": {
+          "1440p": 48.3,
+          "1080p": 67.9
+        },
+        "RX 7600 XT": {
+          "1440p": 39.6,
+          "1080p": 55.5
+        },
+        "RTX 4060": {
+          "1440p": 37.2,
+          "1080p": 52.8
+        },
+        "RX 7600": {
+          "1440p": 38.6,
+          "1080p": 53.9
+        },
+        "RTX 3060 12GB": {
+          "1440p": 31.9,
+          "1080p": 45.3
+        },
+        "RTX 5070 Ti": {
+          "1440p": 101.2,
+          "1080p": 137.7
+        },
+        "RX 9070 XT": {
+          "1440p": 100.2,
+          "1080p": 133.1
+        }
+      },
+      "preview": {
+        "poster": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1182900/header.jpg?t=1784712272",
+        "video": "https://video.akamai.steamstatic.com/store_trailers/1182900/511732/2f9fb439ffce76b95396f9902ebcfb2c7bd7e1c6/1750635289/hls_264_master.m3u8?t=1667820594",
+        "source": "https://store.steampowered.com/app/1182900/",
+        "title": "A Plague Tale: Requiem"
+      }
+    },
+    {
+      "id": "stalker",
+      "name": "S.T.A.L.K.E.R. 2",
+      "preset": "Epic",
+      "steamId": 1643320,
+      "source": "https://www.tomshardware.com/pc-components/gpus/nvidia-geforce-rtx-5080-review/4",
+      "results": {
+        "RTX 4090": {
+          "1440p": 87.8,
+          "1080p": 95.9
+        },
+        "RTX 5080": {
+          "1440p": 81.7,
+          "1080p": 93.7
+        },
+        "RX 9070": {
+          "1440p": 63.8,
+          "1080p": 80.1
+        },
+        "RTX 5070": {
+          "1440p": 61.5,
+          "1080p": 78.6
+        },
+        "RX 7800 XT": {
+          "1440p": 44.9,
+          "1080p": 57.7
+        },
+        "RTX 4070": {
+          "1440p": 53.6,
+          "1080p": 70.1
+        },
+        "RTX 5060 Ti 16GB": {
+          "1440p": 47.1,
+          "1080p": 62.5
+        },
+        "RTX 5060 Ti 8GB": {
+          "1440p": 35.5,
+          "1080p": 60.4
+        },
+        "RX 9060 XT 16GB": {
+          "1440p": 43.8,
+          "1080p": 59.1
+        },
+        "RX 7700 XT": {
+          "1440p": 43.1,
+          "1080p": 55.5
+        },
+        "RTX 4060 Ti 8GB": {
+          "1440p": 30.8,
+          "1080p": 53.6
+        },
+        "RTX 4060 Ti 16GB": {
+          "1440p": 40.3,
+          "1080p": 55
+        },
+        "RTX 5060": {
+          "1440p": 11.4,
+          "1080p": 52.6
+        },
+        "RX 7600 XT": {
+          "1440p": 31.1,
+          "1080p": 42.1
+        },
+        "RTX 4060": {
+          "1440p": 24.6,
+          "1080p": 46.4
+        },
+        "RX 7600": {
+          "1440p": 7.9,
+          "1080p": 17.8
+        },
+        "RTX 3060 12GB": {
+          "1440p": 27.7,
+          "1080p": 37.9
+        },
+        "RTX 5070 Ti": {
+          "1440p": 74.2,
+          "1080p": 86.6
+        },
+        "RX 9070 XT": {
+          "1440p": 69.5,
+          "1080p": 84.1
+        }
+      },
+      "preview": {
+        "poster": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1643320/b22b59aeed7ff6305f91e6198cea1df6e9a489d3/header_alt_assets_8_portuguese.jpg?t=1793009305",
+        "video": "https://video.akamai.steamstatic.com/store_trailers/1643320/660577322/19dcb9b32cdb9cf62d51cd34e0b79e8cc43bb987/1790240404/hls_264_master.m3u8?t=1790259591",
+        "source": "https://store.steampowered.com/app/1643320/",
+        "title": "S.T.A.L.K.E.R. 2: Heart of Chornobyl"
+      }
+    }
+  ],
+  "rankingGameIds": [
+    "mirage",
+    "wukong",
+    "veilguard",
+    "ff16",
+    "flight-2020",
+    "ragnarok",
+    "horizon",
+    "last-of-us",
+    "plague",
+    "stalker"
+  ],
+  "gpuProfiles": {
+    "RTX 4090": {
+      "chip": "RTX 4090",
+      "vramGb": 24,
+      "source": "https://www.tomshardware.com/pc-components/gpus/nvidia-geforce-rtx-5080-review/4",
+      "setupSource": "https://www.tomshardware.com/pc-components/gpus/nvidia-geforce-rtx-5080-review/3"
+    },
+    "RTX 5080": {
+      "chip": "RTX 5080",
+      "vramGb": 16,
+      "source": "https://www.tomshardware.com/pc-components/gpus/nvidia-geforce-rtx-5080-review/4",
+      "setupSource": "https://www.tomshardware.com/pc-components/gpus/nvidia-geforce-rtx-5080-review/3"
+    },
+    "RX 9070": {
+      "chip": "RX 9070",
+      "vramGb": 16,
+      "source": "https://www.tomshardware.com/pc-components/gpus/amd-radeon-rx-9060-xt-16gb-review/4",
+      "setupSource": "https://www.tomshardware.com/pc-components/gpus/amd-radeon-rx-9060-xt-16gb-review/3",
+      "testNotes": "Ryzen 7 9800X3D; 32 GB DDR5-6000. A fonte informa CL28 na lista e CL30 no texto; versões de jogos e drivers variam entre análises."
+    },
+    "RTX 5070": {
+      "chip": "RTX 5070",
+      "vramGb": 12,
+      "source": "https://www.tomshardware.com/pc-components/gpus/amd-radeon-rx-9060-xt-16gb-review/4",
+      "setupSource": "https://www.tomshardware.com/pc-components/gpus/amd-radeon-rx-9060-xt-16gb-review/3",
+      "testNotes": "Ryzen 7 9800X3D; 32 GB DDR5-6000. A fonte informa CL28 na lista e CL30 no texto; versões de jogos e drivers variam entre análises."
+    },
+    "RX 7800 XT": {
+      "chip": "RX 7800 XT",
+      "vramGb": 16,
+      "source": "https://www.tomshardware.com/pc-components/gpus/amd-radeon-rx-9060-xt-16gb-review/4",
+      "setupSource": "https://www.tomshardware.com/pc-components/gpus/amd-radeon-rx-9060-xt-16gb-review/3",
+      "testNotes": "Ryzen 7 9800X3D; 32 GB DDR5-6000. A fonte informa CL28 na lista e CL30 no texto; versões de jogos e drivers variam entre análises."
+    },
+    "RTX 4070": {
+      "chip": "RTX 4070",
+      "vramGb": 12,
+      "source": "https://www.tomshardware.com/pc-components/gpus/amd-radeon-rx-9060-xt-16gb-review/4",
+      "setupSource": "https://www.tomshardware.com/pc-components/gpus/amd-radeon-rx-9060-xt-16gb-review/3",
+      "testNotes": "Ryzen 7 9800X3D; 32 GB DDR5-6000. A fonte informa CL28 na lista e CL30 no texto; versões de jogos e drivers variam entre análises."
+    },
+    "RTX 5060 Ti 16GB": {
+      "chip": "RTX 5060 Ti",
+      "vramGb": 16,
+      "source": "https://www.tomshardware.com/pc-components/gpus/amd-radeon-rx-9060-xt-16gb-review/4",
+      "setupSource": "https://www.tomshardware.com/pc-components/gpus/amd-radeon-rx-9060-xt-16gb-review/3",
+      "testNotes": "Ryzen 7 9800X3D; 32 GB DDR5-6000. A fonte informa CL28 na lista e CL30 no texto; versões de jogos e drivers variam entre análises."
+    },
+    "RTX 5060 Ti 8GB": {
+      "chip": "RTX 5060 Ti",
+      "vramGb": 8,
+      "source": "https://www.tomshardware.com/pc-components/gpus/amd-radeon-rx-9060-xt-16gb-review/4",
+      "setupSource": "https://www.tomshardware.com/pc-components/gpus/amd-radeon-rx-9060-xt-16gb-review/3",
+      "testNotes": "Ryzen 7 9800X3D; 32 GB DDR5-6000. A fonte informa CL28 na lista e CL30 no texto; versões de jogos e drivers variam entre análises."
+    },
+    "RX 9060 XT 16GB": {
+      "chip": "RX 9060 XT",
+      "vramGb": 16,
+      "source": "https://www.tomshardware.com/pc-components/gpus/amd-radeon-rx-9060-xt-16gb-review/4",
+      "setupSource": "https://www.tomshardware.com/pc-components/gpus/amd-radeon-rx-9060-xt-16gb-review/3",
+      "testNotes": "Ryzen 7 9800X3D; 32 GB DDR5-6000. A fonte informa CL28 na lista e CL30 no texto; versões de jogos e drivers variam entre análises."
+    },
+    "RX 7700 XT": {
+      "chip": "RX 7700 XT",
+      "vramGb": 12,
+      "source": "https://www.tomshardware.com/pc-components/gpus/amd-radeon-rx-9060-xt-16gb-review/4",
+      "setupSource": "https://www.tomshardware.com/pc-components/gpus/amd-radeon-rx-9060-xt-16gb-review/3",
+      "testNotes": "Ryzen 7 9800X3D; 32 GB DDR5-6000. A fonte informa CL28 na lista e CL30 no texto; versões de jogos e drivers variam entre análises."
+    },
+    "RTX 4060 Ti 8GB": {
+      "chip": "RTX 4060 Ti",
+      "vramGb": 8,
+      "source": "https://www.tomshardware.com/pc-components/gpus/amd-radeon-rx-9060-xt-16gb-review/4",
+      "setupSource": "https://www.tomshardware.com/pc-components/gpus/amd-radeon-rx-9060-xt-16gb-review/3",
+      "testNotes": "Ryzen 7 9800X3D; 32 GB DDR5-6000. A fonte informa CL28 na lista e CL30 no texto; versões de jogos e drivers variam entre análises."
+    },
+    "RTX 4060 Ti 16GB": {
+      "chip": "RTX 4060 Ti",
+      "vramGb": 16,
+      "source": "https://www.tomshardware.com/pc-components/gpus/amd-radeon-rx-9060-xt-16gb-review/4",
+      "setupSource": "https://www.tomshardware.com/pc-components/gpus/amd-radeon-rx-9060-xt-16gb-review/3",
+      "testNotes": "Ryzen 7 9800X3D; 32 GB DDR5-6000. A fonte informa CL28 na lista e CL30 no texto; versões de jogos e drivers variam entre análises."
+    },
+    "RTX 5060": {
+      "chip": "RTX 5060",
+      "vramGb": 8,
+      "source": "https://www.tomshardware.com/pc-components/gpus/amd-radeon-rx-9060-xt-16gb-review/4",
+      "setupSource": "https://www.tomshardware.com/pc-components/gpus/amd-radeon-rx-9060-xt-16gb-review/3",
+      "testNotes": "Ryzen 7 9800X3D; 32 GB DDR5-6000. A fonte informa CL28 na lista e CL30 no texto; versões de jogos e drivers variam entre análises."
+    },
+    "RX 7600 XT": {
+      "chip": "RX 7600 XT",
+      "vramGb": 16,
+      "source": "https://www.tomshardware.com/pc-components/gpus/amd-radeon-rx-9060-xt-16gb-review/4",
+      "setupSource": "https://www.tomshardware.com/pc-components/gpus/amd-radeon-rx-9060-xt-16gb-review/3",
+      "testNotes": "Ryzen 7 9800X3D; 32 GB DDR5-6000. A fonte informa CL28 na lista e CL30 no texto; versões de jogos e drivers variam entre análises."
+    },
+    "RTX 4060": {
+      "chip": "RTX 4060",
+      "vramGb": 8,
+      "source": "https://www.tomshardware.com/pc-components/gpus/amd-radeon-rx-9060-xt-16gb-review/4",
+      "setupSource": "https://www.tomshardware.com/pc-components/gpus/amd-radeon-rx-9060-xt-16gb-review/3",
+      "testNotes": "Ryzen 7 9800X3D; 32 GB DDR5-6000. A fonte informa CL28 na lista e CL30 no texto; versões de jogos e drivers variam entre análises."
+    },
+    "RX 7600": {
+      "chip": "RX 7600",
+      "vramGb": 8,
+      "source": "https://www.tomshardware.com/pc-components/gpus/amd-radeon-rx-9060-xt-16gb-review/4",
+      "setupSource": "https://www.tomshardware.com/pc-components/gpus/amd-radeon-rx-9060-xt-16gb-review/3",
+      "testNotes": "Ryzen 7 9800X3D; 32 GB DDR5-6000. A fonte informa CL28 na lista e CL30 no texto; versões de jogos e drivers variam entre análises."
+    },
+    "RTX 3060 12GB": {
+      "chip": "RTX 3060",
+      "vramGb": 12,
+      "source": "https://www.tomshardware.com/pc-components/gpus/amd-radeon-rx-9060-xt-16gb-review/4",
+      "setupSource": "https://www.tomshardware.com/pc-components/gpus/amd-radeon-rx-9060-xt-16gb-review/3",
+      "testNotes": "Ryzen 7 9800X3D; 32 GB DDR5-6000. A fonte informa CL28 na lista e CL30 no texto; versões de jogos e drivers variam entre análises."
+    },
+    "RTX 5070 Ti": {
+      "chip": "RTX 5070 Ti",
+      "vramGb": 16,
+      "source": "https://www.tomshardware.com/pc-components/gpus/amd-radeon-rx-9070-xt-review/4",
+      "setupSource": "https://www.tomshardware.com/pc-components/gpus/amd-radeon-rx-9070-xt-review/3"
+    },
+    "RX 9070 XT": {
+      "chip": "RX 9070 XT",
+      "vramGb": 16,
+      "source": "https://www.tomshardware.com/pc-components/gpus/amd-radeon-rx-9070-xt-review/4",
+      "setupSource": "https://www.tomshardware.com/pc-components/gpus/amd-radeon-rx-9070-xt-review/3"
+    }
+  },
+  "sources": [
+    "https://www.tomshardware.com/pc-components/gpus/nvidia-geforce-rtx-5080-review/4",
+    "https://www.tomshardware.com/pc-components/gpus/amd-radeon-rx-9060-xt-16gb-review/4",
+    "https://www.tomshardware.com/pc-components/gpus/amd-radeon-rx-9070-xt-review/4"
+  ],
+  "methodology": "Referências rasterizadas em resolução nativa, sem geração de quadros. Cada GPU tem fonte própria. Estimativas do conjunto usam índice médio da CPU, sem calibração por jogo. O ranking usa os mesmos 10 jogos, resolução e versão; não é um teste controlado entre os computadores reais. Baldur’s Gate 3 (patches divergentes) e Flight Simulator 2024 ficam fora da média do ranking."
+}

@@ -1,0 +1,90 @@
+html[data-theme="dark"] {
+  color-scheme: dark;
+  --theme-page: #0c131d;
+  --theme-surface: #141f2d;
+  --theme-soft: #1c2939;
+  --theme-ink: #e5edf6;
+  --theme-muted: #a1b1c3;
+  --theme-border: #304154;
+  --theme-accent: #ff9b6b;
+  --theme-positive: #73d5a6;
+  --muted: #a1b1c3;
+  --border: #304154;
+}
+html {
+  background: var(--theme-page, #f2f3f5);
+}
+/* A área fotográfica mantém fundo branco para preservar as imagens dos fabricantes. */
+.product-image,
+.department-photo,
+.invite-parts img,
+.bench-slot-photo,
+.product-hero-image,
+.gallery-image {
+  background: #fff;
+}
+[data-theme="dark"] .slide-light img {
+  mix-blend-mode: normal;
+  background: #fff;
+  border-radius: 8px;
+  padding: 10px;
+}
+[data-theme="dark"] .slide-light {
+  background: #141f2d;
+}
+[data-theme="dark"] .slide-light .featured-copy {
+  color: #e5edf6;
+}
+[data-theme="dark"] .slide-light h2 {
+  color: #e5edf6;
+}
+[data-theme="dark"] .cart-add-compact:disabled,
+[data-theme="dark"] .cart-add-button:disabled {
+  background: #243245;
+  color: #b3bfcc;
+}
+[data-theme="dark"] .stock-status.in-stock {
+  color: #73d5a6;
+}
+[data-theme="dark"] .stock-status.out-stock {
+  color: #d9ac99;
+}
+[data-theme="dark"] .delivery-steps .is-done > span {
+  background: #1f4a3b;
+}
+[data-theme="dark"] .delivery-journey {
+  color: #b7cbdc;
+}
+[data-theme="dark"] .bench-slot {
+  color: #d3dfe9;
+}
+[data-theme="dark"] .bench-slot strong {
+  color: #d3dfe9;
+}
+[data-theme="dark"] .bench-slot small {
+  color: #92a6b7;
+}
+[data-theme="dark"] .workbench-invite {
+  color: #f0f4f8;
+  background: #152334;
+}
+[data-theme="dark"] .workbench-invite h2 {
+  color: #f0f4f8;
+}
+[data-theme="dark"] .form-error {
+  background: #342329;
+  color: #ffc2ba;
+  border-color: #70434a;
+}
+[data-theme="dark"] .form-success {
+  background: #17362b;
+  color: #9de1be;
+  border-color: #315b49;
+}
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+  }
+}
