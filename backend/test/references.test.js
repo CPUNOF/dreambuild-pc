@@ -5,7 +5,10 @@ import { createHash } from "node:crypto";
 import { selectionIssues } from "../../shared/selectionCompatibility.js";
 import { performanceReport } from "../src/models/ReferencePerformance.js";
 import { UserDAO } from "../src/dao/UserDAO.js";
-import { verifyGoogleToken } from "../src/config/googleAuth.js";
+import {
+  verifyGoogleToken,
+  identityFromVerifiedGoogleClaims,
+} from "../src/config/googleAuth.js";
 import { User } from "../src/models/User.js";
 import { ComponentDAO } from "../src/dao/ComponentDAO.js";
 import { localCatalog } from "../src/dao/PublicCatalogSnapshot.js";
@@ -161,6 +164,114 @@ test("tokens Google ausentes ou excessivos são rejeitados antes de consultar Fi
       () => verifyGoogleToken(value),
       (e) => e.statusCode === 400,
     );
+});
+
+test("somente Gmail verificado pelo provedor Google recebe indicação de vínculo automático", () => {
+  const claims = {
+    uid: "uid-verificado",
+    email: "Pessoa@Gmail.com",
+    email_verified: true,
+    firebase: { sign_in_provider: "google.com" },
+  };
+  assert.equal(
+    identityFromVerifiedGoogleClaims(claims).email,
+    "pessoa@gmail.com",
+  );
+  assert.equal(
+    identityFromVerifiedGoogleClaims(claims).authoritativeEmail,
+    true,
+  );
+  for (const email of ["pessoa@outlook.com", "pessoa@gmail.com.exemplo.com"])
+    assert.equal(
+      identityFromVerifiedGoogleClaims({ ...claims, email }).authoritativeEmail,
+      false,
+    );
+  for (const changed of [
+    { email_verified: false },
+    { firebase: { sign_in_provider: "password" } },
+  ])
+    assert.throws(
+      () => identityFromVerifiedGoogleClaims({ ...claims, ...changed }),
+      (e) => e.statusCode === 401,
+    );
+});
+
+function localGoogleUser(changes = {}) {
+  const store = memoryUsers();
+  const email = "cliente@gmail.com";
+  const saved = {
+    id: "local-client",
+    email,
+    name: "Cliente existente",
+    role: "CLIENT",
+    passwordHash: "hash-preservado",
+    preferences: { defaultResolution: "1440p" },
+    ...changes,
+  };
+  store.docs.set(
+    `user_emails/${createHash("sha256").update(email).digest("hex")}`,
+    { userId: saved.id },
+  );
+  store.docs.set(`users/${saved.id}`, saved);
+  return {
+    ...store,
+    saved,
+    identity: {
+      uid: "google-uid-verificado",
+      email,
+      name: "Nome Google",
+      authoritativeEmail: true,
+    },
+  };
+}
+
+test("Gmail verificado vincula cliente existente sem duplicar conta nem alterar senha, preferências ou papel", async () => {
+  const { dao, docs, saved, identity } = localGoogleUser();
+  const linked = await dao.googleIdentity(identity);
+  assert.equal(linked.id, saved.id);
+  assert.equal(linked.role, "CLIENT");
+  assert.equal(linked.passwordHash, saved.passwordHash);
+  assert.deepEqual(linked.preferences, saved.preferences);
+  assert.equal((await dao.googleIdentity(identity)).id, saved.id);
+  assert.equal(
+    [...docs.keys()].filter((k) => k.startsWith("users/")).length,
+    1,
+  );
+});
+
+test("Gmail sem indicação verificada e conta administrativa continuam exigindo vínculo autenticado", async () => {
+  for (const changes of [{}, { role: "ADMIN" }]) {
+    const { dao, docs, saved, identity } = localGoogleUser(changes);
+    const input = changes.role
+      ? identity
+      : { ...identity, authoritativeEmail: false };
+    await assert.rejects(
+      () => dao.googleIdentity(input),
+      (e) => e.statusCode === 409,
+    );
+    assert.equal(docs.get(`users/${saved.id}`).googleUid, undefined);
+    const linked = await dao.googleIdentity(input, saved.id);
+    assert.equal(linked.role, saved.role);
+  }
+});
+
+test("vínculo automático rejeita conta desabilitada, outro UID ou índice de e-mail divergente sem gravar", async () => {
+  for (const [changes, status] of [
+    [{ disabled: true }, 403],
+    [{ googleUid: "outra-identidade" }, 409],
+    [{ email: "outra@gmail.com" }, 409],
+  ]) {
+    const { dao, docs, identity, saved } = localGoogleUser(changes);
+    await assert.rejects(
+      () => dao.googleIdentity(identity),
+      (e) => e.statusCode === status,
+    );
+    assert.equal(
+      [...docs.keys()].filter((k) => k.startsWith("google_identities/")).length,
+      0,
+    );
+    assert.equal(docs.get(`users/${saved.id}`).googleUid, saved.googleUid);
+  }
 });
 test("catálogo compartilha consulta em andamento, descarta falha e limita o cache público", async () => {
   const dao = new ComponentDAO(() => {});

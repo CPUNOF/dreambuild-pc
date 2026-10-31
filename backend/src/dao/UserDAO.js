@@ -65,22 +65,39 @@ export class UserDAO {
         return { ...user.data(), id: user.id };
       }
       if (email.exists) {
-        if (!linkUserId || email.data().userId !== linkUserId)
+        const userId = email.data().userId;
+        if (linkUserId && userId !== linkUserId)
           throw new AppError(
             409,
             "Este e-mail já tem cadastro. Entre com sua senha e use Vincular Google em Minha conta.",
           );
-        const ref = database.collection("users").doc(linkUserId),
+        const ref = database.collection("users").doc(userId),
           snap = await tx.get(ref);
         if (!snap.exists || snap.data().disabled)
           throw new AppError(403, "Conta indisponível.");
+        const saved = snap.data();
+        const automaticClientLink =
+          identity.authoritativeEmail === true &&
+          /^[^@\s]+@gmail\.com$/.test(identity.email) &&
+          saved.email === identity.email &&
+          saved.role === "CLIENT";
+        if (!linkUserId && !automaticClientLink)
+          throw new AppError(
+            409,
+            "Este e-mail já tem cadastro. Entre com sua senha e use Vincular Google em Minha conta.",
+          );
+        if (saved.googleUid && saved.googleUid !== identity.uid)
+          throw new AppError(
+            409,
+            "Este cadastro já está vinculado a outra conta Google.",
+          );
         const user = {
-          ...snap.data(),
-          id: linkUserId,
+          ...saved,
+          id: userId,
           googleUid: identity.uid,
         };
         tx.update(ref, { googleUid: identity.uid });
-        tx.create(index, { userId: linkUserId });
+        tx.create(index, { userId });
         return user;
       }
       if (linkUserId)

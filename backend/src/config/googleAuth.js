@@ -44,6 +44,11 @@ export async function verifyGoogleToken(idToken) {
       "O login Google expirou ou não pôde ser validado. Tente novamente.",
     );
   }
+  return identityFromVerifiedGoogleClaims(claims);
+}
+
+// Recebe somente claims já verificados pelo Firebase Admin, nunca o corpo do POST.
+export function identityFromVerifiedGoogleClaims(claims) {
   if (
     claims.firebase?.sign_in_provider !== "google.com" ||
     claims.email_verified !== true ||
@@ -51,9 +56,11 @@ export async function verifyGoogleToken(idToken) {
     typeof claims.email !== "string"
   )
     throw new AppError(401, "Use uma conta Google com e-mail verificado.");
+  const email = claims.email.trim().toLowerCase();
   return {
     uid: claims.uid,
-    email: claims.email.trim().toLowerCase(),
+    email,
+    authoritativeEmail: /^[^@\s]+@gmail\.com$/.test(email),
     name:
       typeof claims.name === "string"
         ? claims.name.slice(0, 80)
