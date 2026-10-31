@@ -1,7 +1,7 @@
 import { Cart } from "../models/Cart.js";
 import { ApiResponseView } from "../views/ApiResponseView.js";
 import { AppError } from "../errors/AppError.js";
-import { Offer } from "../models/Offer.js";
+import { inventoryState } from "../../../shared/inventory.js";
 export class CartController {
   constructor(components) {
     this.components = components;
@@ -25,10 +25,11 @@ export class CartController {
       throw new AppError(400, "Escolha de 1 a 10 unidades.");
     const component = await this.components.getById(req.params.id);
     if (!component) throw new AppError(404, "Produto não encontrado.");
-    if (!(component.offers || []).some((offer) => Offer.eligible(offer, "pix")))
+    const stock = inventoryState(component.inventory);
+    if (!stock.configured || stock.quantity < quantity)
       throw new AppError(
         409,
-        "Este produto está sem oferta PIX disponível. Ele pode ser consultado, mas não pode ser comprado agora.",
+        "Quantidade indisponível no estoque simulado da DreamBuild. Atualize o produto ou escolha outra quantidade.",
       );
     const lines = Cart.lines(req.session.cart || []).filter(
       (line) => line.componentId !== req.params.id,

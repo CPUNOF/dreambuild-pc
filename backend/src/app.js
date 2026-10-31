@@ -32,6 +32,8 @@ import { ReferenceDAO } from "./dao/ReferenceDAO.js";
 import { ReferenceController } from "./controllers/ReferenceController.js";
 import { CommunityDAO } from "./dao/CommunityDAO.js";
 import { CommunityController } from "./controllers/CommunityController.js";
+import { InventoryDAO } from "./dao/InventoryDAO.js";
+import { InventoryController } from "./controllers/InventoryController.js";
 
 export function createApp({
   origins = process.env.FRONTEND_ORIGINS ||
@@ -44,6 +46,7 @@ export function createApp({
   metricsDAO = new MetricsDAO(),
   referenceDAO = new ReferenceDAO(),
   communityDAO = new CommunityDAO(),
+  inventoryDAO = new InventoryDAO(),
   sessionStore,
   sessionSecret,
   authLimit = 10,
@@ -118,6 +121,13 @@ export function createApp({
     });
   }
   app.get("/api/health", HealthController.show);
+  const inventory = new InventoryController(inventoryDAO, (id) =>
+    app.locals.events.emit("catalog-update", {
+      componentId: id,
+      updatedAt: new Date().toISOString(),
+    }),
+  );
+  app.get("/api/inventory", (req, res) => inventory.list(req, res));
   const components = new ComponentController(componentDAO);
   app.get("/api/components", (req, res) => components.list(req, res));
   app.get("/api/components/:id", (req, res) => components.show(req, res));
@@ -246,6 +256,11 @@ export function createApp({
       : next(new AppError(400, "Identificador inválido.")),
   );
   app.use("/api/admin", requireAuth(userDAO), adminOnly, csrfProtection);
+  app.get("/api/admin/inventory", (req, res) => inventory.list(req, res, true));
+  app.get("/api/admin/inventory/:id", (req, res) => inventory.detail(req, res));
+  app.post("/api/admin/inventory/:id/movements", (req, res) =>
+    inventory.adjust(req, res),
+  );
   app.post("/api/admin/components", (req, res) => admin.create(req, res));
   app.put("/api/admin/components/:id", (req, res) => admin.update(req, res));
   app.patch("/api/admin/components/:id", (req, res) => admin.update(req, res));

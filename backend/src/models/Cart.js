@@ -1,6 +1,7 @@
 import { AppError } from "../errors/AppError.js";
 import { Comparison } from "./Comparison.js";
 import { createHash } from "node:crypto";
+import { inventoryQuote } from "../../../shared/inventory.js";
 export class Cart {
   static lines(input) {
     if (!Array.isArray(input) || input.length > 30)
@@ -32,19 +33,8 @@ export class Cart {
     );
     const available = parts.filter(Boolean);
     const comparison = Comparison.calculate(available, "pix", quantities);
-    const items = lines.map((line) => {
-      const component = available.find((part) => part.id === line.componentId);
-      const offer = comparison.optimized.choices.find(
-        (choice) => choice.componentId === line.componentId,
-      )?.offer;
-      return {
-        ...line,
-        component: component || null,
-        unavailable: !component || !offer,
-        unitPriceCents: offer?.unitPriceCents ?? null,
-        lineTotalCents: offer?.priceCents ?? null,
-      };
-    });
+    const quote = inventoryQuote(lines, parts);
+    const items = quote.items;
     return {
       items,
       quoteVersion: createHash("sha256")
@@ -63,10 +53,8 @@ export class Cart {
         .digest("hex"),
       itemCount: lines.reduce((sum, line) => sum + line.quantity, 0),
       comparison,
-      totalCents: items.some((item) => item.unavailable)
-        ? null
-        : comparison.optimized.totalCents,
-      knownSubtotalCents: comparison.optimized.knownSubtotalCents,
+      totalCents: quote.totalCents,
+      knownSubtotalCents: quote.knownSubtotalCents,
       hasMissingProducts: items.some((item) => !item.component),
       hasUnavailableProducts: items.some((item) => item.unavailable),
     };

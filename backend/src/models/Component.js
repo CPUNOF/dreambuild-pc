@@ -1,3 +1,4 @@
+import { inventoryState } from "../../../shared/inventory.js";
 const publicFields = [
   "slug",
   "category",
@@ -69,6 +70,7 @@ export class Component {
       throw new Error("Documento de componente incompleto.");
     }
     this.id = id;
+    this.inventory = inventoryState(document.inventory);
     // A resposta pública não replica automaticamente campos internos do banco.
     for (const field of publicFields) {
       if (document[field] !== undefined) this[field] = document[field];

@@ -5,6 +5,7 @@ import { AppError } from "../errors/AppError.js";
 import { ApiResponseView } from "../views/ApiResponseView.js";
 import { cookieOptions } from "../config/sessionConfig.js";
 import { Upgrade } from "../models/Upgrade.js";
+import { Cart } from "../models/Cart.js";
 export class BuildController {
   constructor(components, builds) {
     this.components = components;
@@ -15,12 +16,24 @@ export class BuildController {
     const components = await this.components.getMany(
       Build.componentIds(config),
     );
-    return Build.analyze(
+    const analysis = Build.analyze(
       config.partIds,
       components,
       input.paymentMethod || "pix",
       config,
     );
+    const { comparison, ...quote } = Cart.summarize(
+      analysis.parts.map((p) => ({
+        componentId: p.id,
+        quantity: analysis.quantities[p.id] ?? 1,
+      })),
+      analysis.parts,
+    );
+    analysis.storeQuote = {
+      ...quote,
+      items: quote.items.map(({ component, ...item }) => item),
+    };
+    return analysis;
   }
   async analyze(req, res) {
     const analysis = await this.analyzeInput(req.body);

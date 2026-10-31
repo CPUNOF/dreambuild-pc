@@ -21,6 +21,7 @@ test("carrinho valida limites e multiplica preços sem alterar a oferta original
     assert.throws(() => Cart.lines(lines));
   const part = {
     ...products[1],
+    inventory: { quantity: 10, unitPriceCents: 12345 },
     offers: [
       {
         store: "kabum",
@@ -58,6 +59,7 @@ test("peça avulsa mantém carrinho no login, exige cotação atual e checkout �
   }));
   const parts = products.map((part) => ({
     ...part,
+    inventory: { quantity: 10, unitPriceCents: 10000 },
     offers: [
       {
         store: "kabum",
@@ -167,14 +169,14 @@ test("peça avulsa mantém carrinho no login, exige cotação atual e checkout �
       card,
       idempotencyKey: randomUUID(),
     };
-    parts.find((part) => part.id === "ryzen").offers[0].priceCents = 12000;
+    parts.find((part) => part.id === "ryzen").inventory.unitPriceCents = 12000;
     assert.equal(
       (await a("/api/orders/checkout-cart", "POST", input)).status,
       409,
     );
     assert.equal(orders.size, 0);
     const cpu = parts.find((part) => part.id === "ryzen");
-    cpu.offers[0].availability = "out_of_stock";
+    cpu.inventory.quantity = 0;
     cart = (await a("/api/cart")).data;
     assert.equal(cart.hasUnavailableProducts, true);
     input.quoteVersion = cart.quoteVersion;
@@ -187,15 +189,15 @@ test("peça avulsa mantém carrinho no login, exige cotação atual e checkout �
       409,
     );
     assert.equal(orders.size, 0);
-    cpu.offers[0].availability = "in_stock";
+    cpu.inventory.quantity = 10;
     const gpu = parts.find((part) => part.id === "rtx4090"),
-      gpuOffers = gpu.offers;
-    gpu.offers = [];
+      gpuStock = gpu.inventory;
+    gpu.inventory = null;
     assert.equal(
       (await a("/api/cart/items/rtx4090", "PUT", { quantity: 1 })).status,
       409,
     );
-    gpu.offers = gpuOffers;
+    gpu.inventory = gpuStock;
     cart = (await a("/api/cart")).data;
     input.quoteVersion = cart.quoteVersion;
     const first = await a("/api/orders/checkout-cart", "POST", input);

@@ -53,6 +53,7 @@ test("montagens e pedidos respeitam proprietário, checkout repete sem duplicar 
   ];
   const components = products.map((part) => ({
     ...part,
+    inventory: { quantity: 20, unitPriceCents: 10000 },
     hardware: hardwareFacts[part.id],
     offers: [
       {
@@ -233,16 +234,19 @@ test("montagens e pedidos respeitam proprietário, checkout repete sem duplicar 
       ).status,
       404,
     );
-    const input = { buildId, idempotencyKey: randomUUID(), card };
-    components.find((part) => part.id === "rtx4090").offers[0].availability =
-      "out_of_stock";
+    const input = {
+      buildId,
+      idempotencyKey: randomUUID(),
+      card,
+      quoteVersion: builds.get(buildId).storeQuote.quoteVersion,
+    };
+    components.find((part) => part.id === "rtx4090").inventory.quantity = 0;
     assert.equal(
       (await a("/api/orders/checkout-dream", "POST", input)).status,
       409,
     );
     assert.equal(orders.size, 0);
-    components.find((part) => part.id === "rtx4090").offers[0].availability =
-      "in_stock";
+    components.find((part) => part.id === "rtx4090").inventory.quantity = 20;
     const purchased = await a("/api/orders/checkout-dream", "POST", input);
     assert.equal(purchased.status, 201);
     const order = purchased.body.data;

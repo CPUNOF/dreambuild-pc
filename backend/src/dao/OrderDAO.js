@@ -2,6 +2,7 @@ import { createHash } from "node:crypto";
 import { FieldPath } from "firebase-admin/firestore";
 import { getDatabase } from "../config/firebaseConfig.js";
 import { AppError } from "../errors/AppError.js";
+import { inventoryState } from "../../../shared/inventory.js";
 const keyId = (userId, key) =>
   createHash("sha256")
     .update(userId + ":" + key)
@@ -58,7 +59,87 @@ export class OrderDAO {
           );
         return { id: order.id, ...order.data() };
       }
-      const data = { ...document, userId, createdAt: new Date().toISOString() };
+      const lines = document.lines;
+      if (
+        !Array.isArray(lines) ||
+        !lines.length ||
+        lines.length > 40 ||
+        new Set(lines.map((l) => l.componentId)).size !== lines.length ||
+        lines.some(
+          (l) =>
+            !Number.isSafeInteger(l.quantity) ||
+            l.quantity < 1 ||
+            l.quantity > 1000 ||
+            !Number.isSafeInteger(l.unitPriceCents) ||
+            l.unitPriceCents < 1,
+        ) ||
+        !Number.isSafeInteger(document.totalCents) ||
+        document.totalCents !==
+          lines.reduce((sum, l) => sum + l.unitPriceCents * l.quantity, 0)
+      )
+        throw new AppError(400, "Itens ou total do pedido inválidos.");
+      const stockRefs = lines.map((l) =>
+        database.collection("inventory").doc(l.componentId),
+      );
+      const stocks = await Promise.all(
+        stockRefs.map((ref) => transaction.get(ref)),
+      );
+      const components = await Promise.all(
+        lines.map((l) =>
+          transaction.get(database.collection("components").doc(l.componentId)),
+        ),
+      );
+      for (let i = 0; i < lines.length; i++) {
+        const stock = inventoryState(
+            stocks[i].exists ? stocks[i].data() : null,
+          ),
+          line = lines[i];
+        if (
+          !components[i].exists ||
+          !stock.configured ||
+          stock.quantity < line.quantity
+        )
+          throw new AppError(
+            409,
+            "O estoque mudou e não há saldo suficiente para concluir o pedido. Revise o carrinho ou a montagem.",
+          );
+        if (stock.unitPriceCents !== line.unitPriceCents)
+          throw new AppError(
+            409,
+            "O preço da DreamBuild mudou durante a confirmação. Revise o pedido.",
+          );
+      }
+      const data = {
+        ...document,
+        userId,
+        stockCommitted: true,
+        createdAt: new Date().toISOString(),
+      };
+      for (let i = 0; i < lines.length; i++) {
+        const current = stocks[i].data(),
+          line = lines[i],
+          quantity = current.quantity - line.quantity;
+        transaction.update(stockRefs[i], {
+          quantity,
+          version: (current.version || 0) + 1,
+          updatedAt: data.createdAt,
+        });
+        transaction.create(
+          stockRefs[i].collection("movements").doc("order_" + reference.id),
+          {
+            type: "sale",
+            quantity: line.quantity,
+            delta: -line.quantity,
+            before: current.quantity,
+            after: quantity,
+            unitPriceCents: current.unitPriceCents,
+            orderId: reference.id,
+            actorId: userId,
+            reason: "Compra acadêmica simulada aprovada",
+            createdAt: data.createdAt,
+          },
+        );
+      }
       transaction.create(reference, data);
       transaction.create(index, {
         userId,

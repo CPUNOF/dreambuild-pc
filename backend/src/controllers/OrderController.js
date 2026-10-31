@@ -39,7 +39,7 @@ export class OrderController {
     };
   }
   async checkout(req, res) {
-    const { buildId, idempotencyKey, card } = req.body || {};
+    const { buildId, idempotencyKey, card, quoteVersion } = req.body || {};
     if (
       typeof buildId !== "string" ||
       !/^[a-zA-Z0-9_-]{1,128}$/.test(buildId) ||
@@ -53,6 +53,7 @@ export class OrderController {
       .update(
         JSON.stringify({
           buildId,
+          quoteVersion,
           card: {
             number: card.number,
             cvv: card.cvv,
@@ -87,17 +88,30 @@ export class OrderController {
         400,
         "A montagem precisa estar completa e sem incompatibilidades. Reabra o montador para revisar.",
       );
-    if (!analysis.comparison.optimized.complete)
+    if (analysis.storeQuote.quoteVersion !== quoteVersion)
       throw new AppError(
         409,
-        "Há peças sem oferta disponível nesta modalidade. Revise a montagem antes de comprar.",
+        "O preço ou estoque da DreamBuild mudou. Reabra a revisão da montagem.",
+      );
+    if (analysis.storeQuote.hasUnavailableProducts)
+      throw new AppError(
+        409,
+        "Há peças sem saldo no estoque simulado da DreamBuild. Revise a montagem antes de comprar.",
       );
     const document = {
       buildId,
       buildName: build.name,
       simulated: true,
       approvalCode: randomBytes(5).toString("hex").toUpperCase(),
-      totalCents: analysis.comparison.optimized.totalCents,
+      totalCents: analysis.storeQuote.totalCents,
+      lines: analysis.storeQuote.items.map(
+        ({ componentId, quantity, unitPriceCents, lineTotalCents }) => ({
+          componentId,
+          quantity,
+          unitPriceCents,
+          lineTotalCents,
+        }),
+      ),
       buildSnapshot: Build.snapshot(analysis),
       fakeCardDetails: {
         maskedNumber: DemoCard.masked(card.number),
@@ -185,7 +199,7 @@ export class OrderController {
     if (summary.hasUnavailableProducts)
       throw new AppError(
         409,
-        "Há produtos sem oferta disponível. Remova ou substitua os itens indisponíveis antes de comprar.",
+        "Há produtos sem saldo suficiente no estoque simulado da DreamBuild. Revise o carrinho antes de comprar.",
       );
     const document = {
       kind: "cart",

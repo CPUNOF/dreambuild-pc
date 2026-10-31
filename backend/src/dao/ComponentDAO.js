@@ -68,20 +68,26 @@ export class ComponentDAO {
     }
   }
   async getById(id) {
-    const snapshot = await this.database()
-      .collection("components")
-      .doc(id)
-      .get();
-    return snapshot.exists ? new Component(snapshot.id, snapshot.data()) : null;
+    return (await this.getMany([id]))[0];
   }
   async getMany(ids) {
     if (!ids.length) return [];
     const database = this.database();
-    const snapshots = await database.getAll(
-      ...ids.map((id) => database.collection("components").doc(id)),
-    );
-    return snapshots.map((snapshot) =>
-      snapshot.exists ? new Component(snapshot.id, snapshot.data()) : null,
+    const [snapshots, stocks] = await Promise.all([
+      database.getAll(
+        ...ids.map((id) => database.collection("components").doc(id)),
+      ),
+      database.getAll(
+        ...ids.map((id) => database.collection("inventory").doc(id)),
+      ),
+    ]);
+    return snapshots.map((snapshot, i) =>
+      snapshot.exists
+        ? new Component(snapshot.id, {
+            ...snapshot.data(),
+            inventory: stocks[i].exists ? stocks[i].data() : null,
+          })
+        : null,
     );
   }
   async create(document) {
@@ -115,7 +121,16 @@ export class ComponentDAO {
   }
   async delete(id) {
     this.invalidateCatalog();
-    await this.database().collection("components").doc(id).delete();
+    const database = this.database();
+    await database.runTransaction(async (tx) => {
+      const stock = await tx.get(database.collection("inventory").doc(id));
+      if (stock.exists && stock.data().quantity > 0)
+        throw new AppError(
+          409,
+          "Registre a baixa do saldo com um motivo antes de remover este produto.",
+        );
+      tx.delete(database.collection("components").doc(id));
+    });
     this.invalidateCatalog();
   }
 
