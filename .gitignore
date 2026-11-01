@@ -13,6 +13,7 @@ Thumbs.db
 .secrets/
 *-firebase-adminsdk-*.json
 firebase-service-account.json
+/docs/
 
 # Ferramentas locais e arquivos de trabalho
 .agents/
