@@ -1,0 +1,76 @@
+
+Warning: The allowCypressEnv configuration option is enabled. This allows any browser code to read values from Cypress.env(). This is insecure and will be removed in a future major version.
+
+1. Replace Cypress.env() calls with cy.env() (for sensitive values) or Cypress.expose() (for public configuration)
+2. Set allowCypressEnv: false in your Cypress configuration to disable Cypress.env()
+
+Learn more: https://on.cypress.io/cypress-env-migration
+
+
+====================================================================================================
+
+  (Run Starting)
+
+  ┌────────────────────────────────────────────────────────────────────────────────────────────────┐
+  │ Cypress:        15.21.1                                                                        │
+  │ Browser:        Electron 138 (headless)                                                        │
+  │ Node Version:   v24.19.0 (C:\Program Files\nodejs\node.exe)                                    │
+  │ Specs:          1 found (conta.cy.js)                                                          │
+  │ Searched:       C:\Users\Kaio\Documents\GitHub\dreambuild-pc\frontend\cypress\e2e\conta.cy.js  │
+  └────────────────────────────────────────────────────────────────────────────────────────────────┘
+
+
+────────────────────────────────────────────────────────────────────────────────────────────────────
+                                                                                                    
+  Running:  conta.cy.js                                                                     (1 of 1)
+
+
+  Conta e autenticação
+    √ faz login com e-mail e senha e abre a conta (2291ms)
+    √ mostra erro com credenciais inválidas (1380ms)
+    (Attempt 1 of 2) DEF-03 carregar o catálogo não rouba o foco do formulário
+    √ DEF-03 carregar o catálogo não rouba o foco do formulário (2445ms)
+    √ valida campos obrigatórios no navegador (528ms)
+    √ cria uma conta nova (1916ms)
+    √ redireciona rota protegida para o login e volta após entrar (1532ms)
+    √ sai da conta (550ms)
+    √ bloqueia a administração para clientes (400ms)
+    √ mostra atalhos de administrador apenas para ADMIN (451ms)
+
+
+  9 passing (22s)
+
+
+  (Results)
+
+  ┌────────────────────────────────────────────────────────────────────────────────────────────────┐
+  │ Tests:        9                                                                                │
+  │ Passing:      9                                                                                │
+  │ Failing:      0                                                                                │
+  │ Pending:      0                                                                                │
+  │ Skipped:      0                                                                                │
+  │ Screenshots:  1                                                                                │
+  │ Video:        false                                                                            │
+  │ Duration:     22 seconds                                                                       │
+  │ Spec Ran:     conta.cy.js                                                                      │
+  └────────────────────────────────────────────────────────────────────────────────────────────────┘
+
+
+  (Screenshots)
+
+  -  C:\Users\Kaio\Documents\GitHub\dreambuild-pc\reports\evidencias\DEF-03-antes\con     (1280x720)
+     ta.cy.js\Conta e autenticação -- DEF-03 carregar o catálogo não rouba o foco do                
+     formulário (failed).png                                                                        
+
+
+====================================================================================================
+
+  (Run Finished)
+
+
+       Spec                                              Tests  Passing  Failing  Pending  Skipped  
+  ┌────────────────────────────────────────────────────────────────────────────────────────────────┐
+  │ ✔  conta.cy.js                              00:22        9        9        -        -        - │
+  └────────────────────────────────────────────────────────────────────────────────────────────────┘
+    ✔  All specs passed!                        00:22        9        9        -        -        -  
+

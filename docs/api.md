@@ -23,6 +23,34 @@ O catálogo público tem cache compartilhado/persistente de 30 minutos e cópia 
 
 Documentação executável: `http://127.0.0.1:5173/api-docs/`. Documento OpenAPI: `/openapi.json`. Fonte: `backend/src/config/openapi.js`. API Express: `http://127.0.0.1:3001`; no React, use o prefixo relativo `/api` para preservar cookies na mesma origem.
 
+## Documentação Swagger (OpenAPI 3.0.3)
+
+| Onde | Endereço |
+| --- | --- |
+| Interface interativa (local) | `http://localhost:5173/api-docs/` com `npm run dev`, ou com `npm run e2e:server --workspace backend` + `npm run dev:frontend` (dados em memória, sem Firebase) |
+| Interface interativa (publicada) | `https://dreambuild-pc.vercel.app/api-docs/` |
+| Especificação JSON (servida) | `/openapi.json` |
+| Especificação JSON (arquivo) | [`docs/api/openapi.json`](api/openapi.json): abra em https://editor.swagger.io (*File → Import file*) sem iniciar o servidor |
+| Fonte | `backend/src/config/openapi.js` |
+
+O que cada uma das 45 operações informa:
+
+- **Acesso** (público, autenticado ou ADMIN) e se exige CSRF.
+- **Corpo da requisição** com schema e exemplo, e **parâmetros** com limites (`limit` 1..100, `category`, `resolution`).
+- **Resposta de sucesso** com o formato do `data` (sessão, carrinho, pedido, cartão, produto, paginação) e exemplo com dados reais do catálogo.
+- **Somente os erros que a rota pode devolver**, cada um com exemplo do envelope `{status:"error", message, data:null, errors, meta}`. 401/403 aparecem só em rotas autenticadas ou que alteram dados, 400/413 só onde há corpo e 503 só onde há consulta ao banco.
+
+Para testar pela interface: *Conta → GET /api/auth/session → Try it out → Execute*, depois `POST /api/auth/login`. A interface busca o token CSRF sozinha antes de cada alteração.
+
+Manutenção:
+
+```bash
+npm run docs:api --workspace backend   # regenera docs/api/openapi.json depois de alterar openapi.js
+node --test backend/test/api/openapi.contract.test.js
+```
+
+O teste de contrato (CT-API-13 a CT-API-16) falha se a especificação deixar de ser válida, se uma rota do Express ficar sem documentação (ou vice-versa), se o arquivo exportado ficar desatualizado ou se uma resposta real usar um código de status não documentado.
+
 ## Convenções
 
 Respostas de negócio usam `{status,message,data,errors,meta}`. `status` é `success` ou `error`; o status HTTP mantém seu significado. O documento OpenAPI e os arquivos estáticos são exceções próprias de documentação/assets.

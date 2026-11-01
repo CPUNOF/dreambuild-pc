@@ -22,3 +22,10 @@ skills-lock.json
 AGENTS.md
 tasks/
 blender_scripts/
+**/cypress/screenshots/
+**/cypress/videos/
+**/cypress/downloads/
+
+# Saídas geradas pelos testes (a CI guarda como artefato)
+reports/junit/
+reports/coverage/

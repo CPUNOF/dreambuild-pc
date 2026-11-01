@@ -21,13 +21,18 @@ export default function ProductCatalog({
   const [shown, setShown] = useState(24);
   const [availableOnly, setAvailableOnly] = useState(false);
   useEffect(() => setShown(24), [category, query, sort]);
+  const term = normalize(query.trim());
+  // Busca só com símbolos (ex.: "!!!") vira termo vazio após normalizar e não
+  // deve listar o catálogo inteiro como se todos os produtos combinassem.
+  const unsearchable = query.trim() !== "" && term === "";
   const filtered = products.filter(
     (product) =>
+      !unsearchable &&
       (category === "all" || product.category === category) &&
       (!availableOnly || Boolean(bestOffer(product))) &&
       normalize(
         `${product.brand} ${product.name} ${product.fullName} ${product.categoryName} ${product.model} ${product.category === "gpu" ? (/geforce|rtx|gtx/i.test(product.fullName) ? "NVIDIA" : /radeon/i.test(product.fullName) ? "AMD" : "") : ""}`,
-      ).includes(normalize(query.trim())),
+      ).includes(term),
   );
   if (sort === "name")
     filtered.sort((a, b) => a.name.localeCompare(b.name, "pt-BR"));

@@ -1,0 +1,72 @@
+name: Testes (VV&TS)
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  checks: write # publicar o relatório JUnit na aba Checks
+  pull-requests: write
+
+jobs:
+  regressao:
+    name: Regressão completa
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+
+      - name: Instalar dependências
+        run: npm ci
+
+      # O .npmrc usa ignore-scripts=true, então o binário do Cypress é
+      # instalado explicitamente (e reaproveitado entre execuções).
+      - name: Cache do Cypress
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/Cypress
+          key: cypress-${{ runner.os }}-${{ hashFiles('package-lock.json') }}
+
+      - name: Instalar binário do Cypress
+        run: npx --workspace frontend cypress install
+
+      - name: Build do front-end
+        run: npm run build
+
+      - name: Unitários, API, integração, E2E e fluxo completo
+        run: node scripts/regressao.mjs
+
+      - name: Resumo da execução
+        if: always()
+        run: |
+          if [ -f reports/relatorio-regressao.md ]; then
+            head -n 25 reports/relatorio-regressao.md >> "$GITHUB_STEP_SUMMARY"
+          fi
+
+      - name: Publicar resultados JUnit
+        if: always()
+        uses: dorny/test-reporter@v2
+        with:
+          name: Resultados dos testes
+          path: reports/junit/*.xml
+          reporter: java-junit
+          fail-on-error: false
+
+      - name: Guardar relatórios e cobertura
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: relatorios-de-teste
+          path: |
+            reports/
+            frontend/cypress/screenshots/
+          if-no-files-found: ignore
+          retention-days: 30

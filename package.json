@@ -14,7 +14,11 @@
     "dev": "concurrently --kill-others --names API,SITE --prefix-colors cyan,green \"npm run dev --workspace backend\" \"npm run dev --workspace frontend\"",
     "dev:backend": "npm run dev --workspace backend",
     "dev:frontend": "npm run dev --workspace frontend",
-    "test": "npm test --workspace backend",
+    "test": "npm test --workspace backend && npm test --workspace frontend",
+    "test:coverage": "npm run test:coverage --workspace backend && npm run test:coverage --workspace frontend",
+    "test:e2e": "npm run test:e2e --workspace frontend",
+    "test:e2e:full": "npm run test:e2e:full --workspace frontend",
+    "test:regressao": "node scripts/regressao.mjs",
     "build": "npm run build --workspace frontend",
     "preview:local": "node --env-file-if-exists=backend/.env scripts/previewLocal.js",
     "format": "prettier --write \"backend/{src,scripts,data,test}/**/*.js\" \"frontend/src/**/*.{js,jsx,css}\" frontend/vite.config.js"

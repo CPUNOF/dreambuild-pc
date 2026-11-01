@@ -1,0 +1,47 @@
+
+ RUN  v5.0.5 C:/Users/Kaio/Documents/GitHub/dreambuild-pc/frontend
+
+ ❯ test/ProductCatalog.test.jsx (12 tests | 3 failed) 720ms
+   ❯ CT-INT-05 catálogo renderizado (12)
+     ✓ mostra todos os produtos com contagem e preço 106ms
+     ✓ busca ignora acentos e caixa; texto da busca aparece na contagem 12ms
+     ✓ busca por fabricante da GPU inferido (NVIDIA) 14ms
+     ✓ categoria filtra e o botão fica pressionado 22ms
+     × DEF-01 busca só com símbolos ("!!!") não retorna todos os produtos 31ms
+     × DEF-01 busca só com símbolos ("-") não retorna todos os produtos 17ms
+     × DEF-01 busca só com símbolos ("  ?  ") não retorna todos os produtos 15ms
+     ✓ estado vazio chama onClear 38ms
+     ✓ ordenação por nome e por preço; sem oferta vai para o fim 130ms
+     ✓ somente disponíveis remove o produto sem oferta 78ms
+     ✓ botão do carrinho: habilitado chama add, indisponível fica desabilitado 80ms
+     ✓ mais de 24 produtos mostra paginação incremental 176ms
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 3 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  test/ProductCatalog.test.jsx > CT-INT-05 catálogo renderizado > DEF-01 busca só com símbolos ("!!!") não retorna todos os produtos
+ FAIL  test/ProductCatalog.test.jsx > CT-INT-05 catálogo renderizado > DEF-01 busca só com símbolos ("-") não retorna todos os produtos
+ FAIL  test/ProductCatalog.test.jsx > CT-INT-05 catálogo renderizado > DEF-01 busca só com símbolos ("  ?  ") não retorna todos os produtos
+AssertionError: expected [ <article …(1)>…(2)</article>, …(4) ] to have a length of +0 but got 5
+
+- Expected
++ Received
+
+- 0
++ 5
+
+ ❯ test/ProductCatalog.test.jsx:59:48
+     57|     (query) => {
+     58|       renderCatalog({ query });
+     59|       expect(screen.queryAllByRole("article")).toHaveLength(0);
+       |                                                ^
+     60|       expect(screen.getByText("Nenhum modelo encontrado")).toBeInTheDo…
+     61|     },
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/3]⎯
+
+
+ Test Files  1 failed (1)
+      Tests  3 failed | 9 passed (12)
+   Start at  19:28:56
+   Duration  2.23s (environment 35%, tests 35%, import 14%, setup 12%, transform 4%)
+

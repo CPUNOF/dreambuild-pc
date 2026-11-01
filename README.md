@@ -11,7 +11,8 @@ Loja de hardware com catálogo, carrinho, montagem de computadores, verificaçã
 - Firebase Firestore para persistência e Firebase Authentication para login Google.
 - Sessões com cookie HttpOnly, proteção CSRF e autorização CLIENT/ADMIN no servidor.
 - Socket.IO para a simulação didática em tempo real.
-- OpenAPI/Swagger e testes com o executor nativo do Node.js.
+- OpenAPI/Swagger.
+- Testes: `node:test` (back-end), Vitest + Testing Library (front-end), Cypress (interface e fluxo completo) e GitHub Actions.
 
 ## Recursos
 
@@ -24,6 +25,17 @@ Loja de hardware com catálogo, carrinho, montagem de computadores, verificaçã
 - Referências de FPS, comparação de PCs/notebooks e publicação voluntária de montagens com ranking por resolução/desempenho/custo.
 
 As validações automatizadas usam dados isolados; não comprovam por si só os fluxos na hospedagem ou em um Firestore sem cota disponível. A configuração de CORS, cookies, HTTPS, login Google e WebSocket precisa ser validada nos domínios publicados.
+
+## Testes (VV&TS)
+
+```bash
+npm test                # unitários, API e integração (back-end + front-end)
+npm run test:e2e        # interface com Cypress (API simulada)
+npm run test:e2e:full   # fluxo completo navegador → API real com dados em memória
+npm run test:regressao  # tudo + JUnit + cobertura + relatório
+```
+
+Na primeira vez, rode `npx --workspace frontend cypress install` (o `.npmrc` desativa scripts de instalação). Plano, casos de teste, rastreabilidade, defeitos e relatório: [`docs/testes/`](docs/testes/README.md).
 
 ## Dados e limites
 

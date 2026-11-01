@@ -4,6 +4,7 @@ Publicação: [guia da Vercel](publicacao-vercel.md), incluindo API, credenciais
 
 | Documento | Conteúdo |
 | --- | --- |
+| [Testes (VV&TS)](testes/README.md) | Plano, casos de teste, rastreabilidade, defeitos e relatório de execução |
 | [API](api.md) | Rotas, entradas, permissões, respostas e WebSocket |
 | [Limites e validação](limites-e-validacao.md) | Estado de verificação, dados externos e dependência do banco |
 | [Firebase](aula-02-firebase.md) | Configuração do projeto e credenciais locais |
