@@ -38,6 +38,8 @@ export default function AssemblyWorkspace({
   onActiveCategory,
   children,
   resources,
+  onFinish,
+  completionError,
 }) {
   const category = activeCategory || "cpu",
     step = assemblySteps.indexOf(category);
@@ -48,6 +50,12 @@ export default function AssemblyWorkspace({
   const count = required.filter((c) => partIds[c]).length;
   const stock = inventoryState(product?.inventory);
   const navigation = useRef(null);
+  useEffect(() => {
+    if (completionError)
+      document
+        .querySelector(".assembly-completion .form-error")
+        ?.scrollIntoView?.({ block: "nearest" });
+  }, [completionError]);
   useEffect(() => {
     const element = navigation.current;
     const reveal = () => {
@@ -176,10 +184,15 @@ export default function AssemblyWorkspace({
             <button
               type="button"
               className="primary-button"
-              disabled={disabled || step === 7}
-              onClick={() => select(assemblySteps[step + 1])}
+              disabled={disabled}
+              onClick={() =>
+                step === 7
+                  ? onFinish?.("cart")
+                  : select(assemblySteps[step + 1])
+              }
             >
-              Próxima peça <ArrowRight size={16} />
+              {step === 7 ? "Finalizar e ir ao carrinho" : "Próxima peça"}{" "}
+              <ArrowRight size={16} />
             </button>
           </footer>
           <p className="assembly-guidance">{guidance[category]}</p>
@@ -251,6 +264,41 @@ export default function AssemblyWorkspace({
             </div>
           )}
           {children}
+          {step === 7 && (
+            <section
+              className="assembly-completion"
+              aria-label="Finalizar montagem"
+            >
+              <h3>Qual é o próximo passo do seu PC?</h3>
+              <p>
+                Confira as peças no carrinho ou abra o benchmark da montagem. A
+                compatibilidade é verificada antes de continuar.
+              </p>
+              {completionError && (
+                <p className="form-error" role="alert">
+                  {completionError}
+                </p>
+              )}
+              <div>
+                <button
+                  type="button"
+                  className="primary-button"
+                  disabled={disabled}
+                  onClick={() => onFinish?.("cart")}
+                >
+                  Adicionar PC ao carrinho
+                </button>
+                <button
+                  type="button"
+                  className="secondary-button"
+                  disabled={disabled}
+                  onClick={() => onFinish?.("benchmark")}
+                >
+                  Testar desempenho
+                </button>
+              </div>
+            </section>
+          )}
           {product && !["ram", "storage"].includes(category) && (
             <p className="assembly-compatibility-note">
               {product.compatibilityNote}

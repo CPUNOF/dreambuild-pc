@@ -2473,6 +2473,239 @@
         ]
       }
     },
+    "/api/cart/build": {
+      "post": {
+        "tags": [
+          "Carrinho"
+        ],
+        "summary": "Adicionar uma montagem completa e compatível ao carrinho",
+        "description": "**Acesso:** público, mas exige o token CSRF da sessão.\n\nAcrescenta as quantidades aos itens existentes e valida todo o carrinho antes de salvá-lo. Repetir a mesma chave/configuração não duplica a adição. Não reserva nem desconta estoque.",
+        "operationId": "postCartBuild",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Sucesso",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/Envelope"
+                    },
+                    {
+                      "type": "object",
+                      "properties": {
+                        "status": {
+                          "type": "string",
+                          "enum": [
+                            "success"
+                          ]
+                        },
+                        "data": {
+                          "$ref": "#/components/schemas/CartSummary"
+                        }
+                      }
+                    }
+                  ]
+                },
+                "example": {
+                  "status": "success",
+                  "message": "Adicionar uma montagem completa e compatível ao carrinho.",
+                  "data": {
+                    "items": [
+                      {
+                        "componentId": "kabum-105015",
+                        "quantity": 2,
+                        "component": {
+                          "id": "kabum-105015",
+                          "slug": "kabum-105015",
+                          "category": "storage",
+                          "categoryName": "Armazenamento",
+                          "brand": "Adata",
+                          "name": "SSD Adata SU650, 240GB",
+                          "fullName": "SSD Adata SU650, 240GB, 2.5\", SATA III, Leitura: 520 MB/s, Gravação: 450 MB/s, Preto - ASU650SS-240GT-R",
+                          "model": "ASU650SS-240GT-R",
+                          "image": "/hardware/expanded/kabum-105015-availability-1.jpg",
+                          "gallery": [
+                            {
+                              "src": "/hardware/expanded/kabum-105015-availability-1.jpg",
+                              "alt": "SSD Adata SU650, 240GB, 2.5\", SATA III, Leitura: 520 MB/s, Gravação: 450 MB/s, Preto - ASU650SS-240GT-R — foto publicada pela loja"
+                            }
+                          ],
+                          "description": "SSD Adata SU650, 240GB. Variante anunciada: ASU650SS-240GT-R. Consulte a ficha, os requisitos e as condições da oferta para o seu conjunto.",
+                          "highlights": [
+                            "Armazenamento",
+                            "Adata"
+                          ],
+                          "specifications": [
+                            [
+                              "Marca",
+                              "Adata"
+                            ],
+                            [
+                              "Modelo anunciado",
+                              "ASU650SS-240GT-R"
+                            ],
+                            [
+                              "Código na loja",
+                              "105015"
+                            ]
+                          ],
+                          "compatibilityNote": "Dados não publicados nesta ficha precisam de conferência no manual. Disponibilidade para compra não certifica compatibilidade com o conjunto.",
+                          "manufacturerUrl": "https://www.kabum.com.br/produto/105015/ssd-adata-su650-240gb-2-5-sata-iii-leitura-520-mb-s-gravacao-450-mb-s-preto-asu650ss-240gt-r",
+                          "offers": [
+                            {
+                              "store": "kabum",
+                              "paymentMethod": "pix",
+                              "availability": "in_stock",
+                              "priceCents": 35999,
+                              "sourceUrl": "https://www.kabum.com.br/produto/105015/ssd-adata-su650-240gb-2-5-sata-iii-leitura-520-mb-s-gravacao-450-mb-s-preto-asu650ss-240gt-r",
+                              "checkedAt": "2026-10-30T21:07:23.165Z"
+                            }
+                          ]
+                        },
+                        "unavailable": false,
+                        "unitPriceCents": 35999,
+                        "lineTotalCents": 71998
+                      }
+                    ],
+                    "quoteVersion": "3f9a1c0e7b2d4a6f8e1c3b5d7f9a2c4e6b8d0f1a3c5e7b9d1f3a5c7e9b1d3f5a",
+                    "itemCount": 2,
+                    "totalCents": 71998,
+                    "knownSubtotalCents": 71998,
+                    "hasMissingProducts": false,
+                    "hasUnavailableProducts": false
+                  },
+                  "errors": [],
+                  "meta": {}
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Dados inválidos ou JSON malformado; Montagem incompleta, incompatível ou limite de quantidades excedido",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                },
+                "example": {
+                  "status": "error",
+                  "message": "Montagem incompleta, incompatível ou limite de quantidades excedido.",
+                  "data": null,
+                  "errors": [],
+                  "meta": {}
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Token CSRF ausente ou inválido (errors[0].code = CSRF_INVALID)",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                },
+                "example": {
+                  "status": "error",
+                  "message": "Atualize a sessão e tente novamente.",
+                  "data": null,
+                  "errors": [
+                    {
+                      "code": "CSRF_INVALID"
+                    }
+                  ],
+                  "meta": {}
+                }
+              }
+            }
+          },
+          "409": {
+            "description": "Saldo insuficiente ou chave repetida com outra configuração",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                },
+                "example": {
+                  "status": "error",
+                  "message": "Saldo insuficiente ou chave repetida com outra configuração.",
+                  "data": null,
+                  "errors": [],
+                  "meta": {}
+                }
+              }
+            }
+          },
+          "413": {
+            "description": "Corpo maior que 100 kB",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                },
+                "example": {
+                  "status": "error",
+                  "message": "Corpo da requisição muito grande.",
+                  "data": null,
+                  "errors": [],
+                  "meta": {}
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Erro interno",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                },
+                "example": {
+                  "status": "error",
+                  "message": "Erro interno do servidor.",
+                  "data": null,
+                  "errors": [],
+                  "meta": {}
+                }
+              }
+            }
+          },
+          "503": {
+            "description": "Banco indisponível ou cota temporariamente excedida",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                },
+                "example": {
+                  "status": "error",
+                  "message": "O banco atingiu um limite temporário de consultas. Tente novamente quando a cota for renovada.",
+                  "data": null,
+                  "errors": [],
+                  "meta": {}
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "csrfToken": []
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AddBuildToCart"
+              }
+            }
+          }
+        }
+      }
+    },
     "/api/cart": {
       "get": {
         "tags": [
@@ -8951,6 +9184,51 @@
         },
         "required": [
           "idToken"
+        ]
+      },
+      "AddBuildToCart": {
+        "type": "object",
+        "properties": {
+          "partIds": {
+            "$ref": "#/components/schemas/PartIds"
+          },
+          "paymentMethod": {
+            "type": "string",
+            "enum": [
+              "pix",
+              "cash",
+              "card"
+            ],
+            "default": "pix"
+          },
+          "quantities": {
+            "type": "object",
+            "additionalProperties": {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 16
+            },
+            "description": "Unidades de compra por ID da RAM/armazenamento. Cada kit ocupa hardware.modules × quantidade; omitir significa 1."
+          },
+          "storageIds": {
+            "type": "array",
+            "maxItems": 15,
+            "uniqueItems": true,
+            "items": {
+              "type": "string",
+              "pattern": "^[a-zA-Z0-9_-]{1,128}$",
+              "example": "kabum-105015"
+            },
+            "description": "Outros modelos de armazenamento, além de partIds.storage. Até 16 unidades totais."
+          },
+          "idempotencyKey": {
+            "type": "string",
+            "pattern": "^[a-zA-Z0-9_-]{16,128}$"
+          }
+        },
+        "required": [
+          "partIds",
+          "idempotencyKey"
         ]
       },
       "CommunityPublication": {

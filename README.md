@@ -24,6 +24,8 @@ Loja de hardware com catálogo, carrinho, montagem de computadores, verificaçã
 - Montador por etapas, com quantidades e slots junto de cada peça, modelos incompatíveis ocultos e resumo recolhível no celular.
 - Vitrines por finalidade, carrinho lateral, zoom na galeria e comparação de vantagens entre setups.
 - Cartão PNG da montagem pública, com peças, preço, data e indicação de referências/estimativas de FPS.
+- Última etapa do montador com envio do PC ao carrinho e acesso ao benchmark, preservando o rascunho durante o login.
+- Combate com seleção dos dois lados, gráficos por jogo, prioridade de comparação e link compartilhável; pesquisa da loja com sugestões locais e navegação por teclado.
 - Montagens privadas, pedido simulado, recibo, histórico e perfis de administração.
 - Estoque próprio simulado com preço por unidade, entradas, saídas, inventário, alertas e histórico; a compra aprovada dá baixa em uma transação no Firestore.
 - Referências de FPS, comparação de PCs/notebooks e publicação voluntária de montagens com ranking por resolução/desempenho/custo.

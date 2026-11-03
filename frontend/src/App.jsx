@@ -29,6 +29,7 @@ import { useCart } from "./context/CartContext.jsx";
 import CartPage from "./pages/CartPage.jsx";
 import CartCheckoutPage from "./pages/CartCheckoutPage.jsx";
 import ThemeToggle from "./components/ThemeToggle.jsx";
+import StoreSearch from "./components/StoreSearch.jsx";
 import "./shopping-experience.css";
 import AmbientBackground from "./components/AmbientBackground.jsx";
 import BattlePage from "./pages/BattlePage.jsx";
@@ -187,28 +188,13 @@ export default function App() {
               <small>Hardware & montagem de PCs</small>
             </span>
           </Link>
-          <form
-            className="store-search"
-            role="search"
-            onSubmit={(event) => {
-              event.preventDefault();
-              browse("all");
-            }}
-          >
-            <label className="sr-only" htmlFor="hardware-search">
-              Buscar produtos
-            </label>
-            <input
-              id="hardware-search"
-              type="search"
-              value={query}
-              onChange={(event) => setQuery(event.target.value)}
-              placeholder="Busque por peça, modelo ou marca"
-            />
-            <button type="submit" aria-label="Buscar produtos">
-              <Search size={22} aria-hidden="true" />
-            </button>
-          </form>
+          <StoreSearch
+            products={products}
+            value={query}
+            onChange={setQuery}
+            onSubmit={() => browse("all")}
+            loading={loading}
+          />
           <Link className="header-guide-link" to="/#guia">
             <BookOpen size={24} aria-hidden="true" />
             <span>

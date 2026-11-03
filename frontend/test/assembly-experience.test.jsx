@@ -59,6 +59,32 @@ afterAll(() => {
 });
 
 describe("Bancada: seleção contextual e compatibilidade", () => {
+  test("última etapa oferece carrinho e benchmark e não mostra próxima peça", async () => {
+    const finish = vi.fn();
+    render(
+      <AssemblyWorkspace
+        products={[cpu]}
+        partIds={{ cpu: cpu.id }}
+        activeCategory="cooler"
+        onActiveCategory={vi.fn()}
+        onPick={vi.fn()}
+        onRemove={vi.fn()}
+        resources={buildResources([cpu], {})}
+        onFinish={finish}
+      />,
+    );
+    expect(
+      screen.queryByRole("button", { name: /Próxima peça/ }),
+    ).not.toBeInTheDocument();
+    await userEvent.click(
+      screen.getByRole("button", { name: "Adicionar PC ao carrinho" }),
+    );
+    expect(finish).toHaveBeenLastCalledWith("cart");
+    await userEvent.click(
+      screen.getByRole("button", { name: "Testar desempenho" }),
+    );
+    expect(finish).toHaveBeenLastCalledWith("benchmark");
+  });
   test("RAM incompatível não aparece na lista da plataforma AM4", () => {
     render(
       <ComponentPicker

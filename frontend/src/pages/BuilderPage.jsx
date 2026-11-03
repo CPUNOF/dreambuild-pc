@@ -1,9 +1,10 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Link, useSearchParams, useNavigate } from "react-router";
 import { Info, TriangleAlert } from "lucide-react";
 import { categoryNames } from "../data/hardwareFields.js";
 import { apiRequest } from "../api/client.js";
 import { useAuth } from "../context/AuthContext.jsx";
+import { useCart } from "../context/CartContext.jsx";
 import { money } from "../data/offers.js";
 import StoreComparison from "../components/StoreComparison.jsx";
 import AssemblyWorkspace from "../components/AssemblyWorkspace.jsx";
@@ -31,6 +32,7 @@ const categories = [
 
 export default function BuilderPage({ products, onCatalogRefresh }) {
   const auth = useAuth();
+  const cart = useCart();
   const [params] = useSearchParams();
   const navigate = useNavigate();
   const sourceId = params.get("build");
@@ -38,7 +40,11 @@ export default function BuilderPage({ products, onCatalogRefresh }) {
   const publicId = params.get("publicacao");
   const resumeDraft = params.get("retomar") === "1";
   const [partIds, setPartIds] = useState({});
-  const [activeCategory, setActiveCategory] = useState("cpu");
+  const [activeCategory, setActiveCategory] = useState(() =>
+    categories.includes(params.get("etapa")) ? params.get("etapa") : "cpu",
+  );
+  const [completionError, setCompletionError] = useState(null);
+  const cartAttempt = useRef(null);
   const [summaryExpanded, setSummaryExpanded] = useState(false);
   const [options, setOptions] = useState({ quantities: {}, storageIds: [] }),
     [addingStorage, setAddingStorage] = useState(false);
@@ -63,6 +69,7 @@ export default function BuilderPage({ products, onCatalogRefresh }) {
   const [savedId, setSavedId] = useState(null);
   const [pickerCategory, setPickerCategory] = useState(null),
     [powerPreview, setPowerPreview] = useState(null);
+  useEffect(() => setCompletionError(null), [partIds, options]);
   useEffect(() => {
     if (pickerCategory !== "psu") return;
     const controller = new AbortController();
@@ -333,6 +340,59 @@ export default function BuilderPage({ products, onCatalogRefresh }) {
       setBusy(false);
     }
   }
+  async function finish(destination) {
+    if (busy || initializing) return;
+    setBusy(true);
+    setCompletionError(null);
+    try {
+      const input = { partIds, ...options, paymentMethod: payment };
+      const result = await apiRequest("/builds/analyze", {
+        method: "POST",
+        body: input,
+      });
+      setAnalysis(result);
+      if (!result.complete || !result.compatible) {
+        const missing = result.missingCategories || [];
+        setCompletionError(
+          missing.length
+            ? `Antes de finalizar, escolha: ${missing.map((c) => categoryNames[c]).join(", ")}.`
+            : result.notes.find((n) => n.level === "error")?.message ||
+                "Revise os critérios de compatibilidade antes de finalizar.",
+        );
+        return;
+      }
+      if (destination === "cart") {
+        const signature = JSON.stringify(input);
+        if (cartAttempt.current?.signature !== signature)
+          cartAttempt.current = { signature, key: crypto.randomUUID() };
+        await apiRequest("/cart/build", {
+          method: "POST",
+          body: { ...input, idempotencyKey: cartAttempt.current.key },
+        });
+        await cart.refresh();
+        navigate("/carrinho");
+      } else {
+        if (!auth.user) {
+          navigate("/entrar", {
+            state: { from: "/montar?retomar=1&etapa=cooler" },
+          });
+          return;
+        }
+        const saved = savedId
+          ? { id: savedId }
+          : await apiRequest("/builds", {
+              method: "POST",
+              body: { ...input, name },
+            });
+        setSavedId(saved.id);
+        navigate(`/bancada/${saved.id}`);
+      }
+    } catch (failure) {
+      setCompletionError(failure.message);
+    } finally {
+      setBusy(false);
+    }
+  }
   function fill() {
     setOptions({ quantities: {}, storageIds: [] });
     const next = {};
@@ -421,6 +481,8 @@ export default function BuilderPage({ products, onCatalogRefresh }) {
             activeCategory={activeCategory}
             onActiveCategory={setActiveCategory}
             resources={resources}
+            onFinish={finish}
+            completionError={completionError}
           >
             <BuildResourcesPanel
               category={activeCategory}

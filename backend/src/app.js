@@ -170,6 +170,9 @@ export function createApp({
   app.locals.sessionMiddleware = sessionMiddleware;
   app.locals.sessionStore = sessionConfig.store;
   const cart = new CartController(componentDAO);
+  app.post("/api/cart/build", csrfProtection, (req, res) =>
+    cart.addBuild(req, res),
+  );
   app.get("/api/cart", (req, res) => cart.show(req, res));
   app.put("/api/cart/items/:id", csrfProtection, (req, res) =>
     cart.update(req, res),

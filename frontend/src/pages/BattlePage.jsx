@@ -13,6 +13,9 @@ import { useAuth } from "../context/AuthContext.jsx";
 import { money, consultationDate } from "../data/offers.js";
 import FpsStage from "../components/FpsStage.jsx";
 import BattleAdvantages from "../components/BattleAdvantages.jsx";
+import BattleSetupPicker from "../components/BattleSetupPicker.jsx";
+import BattleGamesChart from "../components/BattleGamesChart.jsx";
+import "../combat.css";
 const fpsLabel = (n) =>
   Number.isFinite(n)
     ? `${n.toLocaleString("pt-BR", { maximumFractionDigits: 1 })} FPS`
@@ -187,6 +190,16 @@ export default function BattlePage({ showQuotaNotice = true }) {
         common.reduce((n, p) => n + p.b.results[resolution], 0) / common.length,
       ]
     : null;
+  const swap = () =>
+    setParams(
+      (old) => {
+        const next = new URLSearchParams(old);
+        next.set("a", b.id);
+        next.set("b", a.id);
+        return next;
+      },
+      { replace: true },
+    );
   return (
     <section className="battle-page">
       <header className="battle-hero">
@@ -234,7 +247,17 @@ export default function BattlePage({ showQuotaNotice = true }) {
         <p role="status">Carregando configurações e cotações verificadas...</p>
       ) : (
         <>
-          <section id="escolher-setup" className="battle-selection">
+          {a && b && (
+            <BattleSetupPicker
+              systems={available}
+              a={a}
+              b={b}
+              onChoose={choose}
+              onSwap={swap}
+              params={params}
+            />
+          )}
+          <section id="catalogo-setups" className="battle-selection">
             <div className="battle-section-heading">
               <div>
                 <p className="section-kicker">ESCOLHA SEU LADO</p>
@@ -244,106 +267,112 @@ export default function BattlePage({ showQuotaNotice = true }) {
                 Prefere montar o seu? <ArrowRight size={15} />
               </Link>
             </div>
-            <div className="ready-system-grid">
-              {available.map((s) => (
-                <article
-                  className="ready-system-card"
-                  key={s.id}
-                  data-selected={
-                    a?.id === s.id ? "a" : b?.id === s.id ? "b" : undefined
-                  }
-                >
-                  <div className="system-card-photo">
-                    <span>
-                      {s.type === "laptop" ? (
-                        <Laptop size={15} />
-                      ) : (
-                        <Monitor size={15} />
-                      )}{" "}
-                      {s.type === "laptop"
-                        ? "NOTEBOOK GAMER"
-                        : s.type === "custom"
-                          ? s.publicCommunity
-                            ? "PC PÚBLICO"
-                            : "MEU PC"
-                          : "PC MONTADO"}
-                    </span>
-                    <img
-                      src={s.image}
-                      alt={s.name}
-                      loading="lazy"
-                      referrerPolicy="no-referrer"
-                      onError={(e) => {
-                        e.currentTarget.style.visibility = "hidden";
-                      }}
-                    />
-                  </div>
-                  <div className="system-card-body">
-                    <h3>{s.name}</h3>
-                    <p className="system-sku">{s.subtitle}</p>
-                    <dl>
-                      <div>
-                        <dt>CPU</dt>
-                        <dd>{s.cpu}</dd>
-                      </div>
-                      <div>
-                        <dt>GPU</dt>
-                        <dd>{s.gpu}</dd>
-                      </div>
-                      <div>
-                        <dt>RAM</dt>
-                        <dd>{s.ram}</dd>
-                      </div>
-                      <div>
-                        <dt>SSD</dt>
-                        <dd>{s.storage || "Conforme montagem"}</dd>
-                      </div>
-                    </dl>
-                    <SystemPrice system={s} />
-                    <span
-                      className={
-                        s.available === false
-                          ? "system-stock unavailable"
-                          : "system-stock"
-                      }
-                    >
-                      {s.available === false
-                        ? "Sem estoque na consulta"
-                        : s.type === "custom"
-                          ? "Cotação das peças selecionadas"
-                          : "Disponível na consulta"}
-                    </span>
-                    {s.offerUrl && (
-                      <a
-                        className="system-source-link"
-                        href={s.offerUrl}
-                        target="_blank"
-                        rel="noreferrer"
-                      >
-                        {s.storeName} · {s.sellerName}{" "}
-                        <ExternalLink size={12} />
-                      </a>
-                    )}
-                    <div className="system-team-buttons">
-                      {["a", "b"].map((side) => (
-                        <button
-                          key={side}
-                          aria-pressed={(side === "a" ? a : b)?.id === s.id}
-                          onClick={() => choose(side, s.id)}
-                        >
-                          {(side === "a" ? a : b)?.id === s.id ? (
-                            <Check size={14} />
-                          ) : (
-                            <Swords size={14} />
-                          )}{" "}
-                          Lado {side.toUpperCase()}
-                        </button>
-                      ))}
+            <details className="battle-catalog-details">
+              <summary>
+                Ver as fichas completas dos {available.length} setups
+                disponíveis
+              </summary>
+              <div className="ready-system-grid">
+                {available.map((s) => (
+                  <article
+                    className="ready-system-card"
+                    key={s.id}
+                    data-selected={
+                      a?.id === s.id ? "a" : b?.id === s.id ? "b" : undefined
+                    }
+                  >
+                    <div className="system-card-photo">
+                      <span>
+                        {s.type === "laptop" ? (
+                          <Laptop size={15} />
+                        ) : (
+                          <Monitor size={15} />
+                        )}{" "}
+                        {s.type === "laptop"
+                          ? "NOTEBOOK GAMER"
+                          : s.type === "custom"
+                            ? s.publicCommunity
+                              ? "PC PÚBLICO"
+                              : "MEU PC"
+                            : "PC MONTADO"}
+                      </span>
+                      <img
+                        src={s.image}
+                        alt={s.name}
+                        loading="lazy"
+                        referrerPolicy="no-referrer"
+                        onError={(e) => {
+                          e.currentTarget.style.visibility = "hidden";
+                        }}
+                      />
                     </div>
-                  </div>
-                </article>
-              ))}
-            </div>
+                    <div className="system-card-body">
+                      <h3>{s.name}</h3>
+                      <p className="system-sku">{s.subtitle}</p>
+                      <dl>
+                        <div>
+                          <dt>CPU</dt>
+                          <dd>{s.cpu}</dd>
+                        </div>
+                        <div>
+                          <dt>GPU</dt>
+                          <dd>{s.gpu}</dd>
+                        </div>
+                        <div>
+                          <dt>RAM</dt>
+                          <dd>{s.ram}</dd>
+                        </div>
+                        <div>
+                          <dt>SSD</dt>
+                          <dd>{s.storage || "Conforme montagem"}</dd>
+                        </div>
+                      </dl>
+                      <SystemPrice system={s} />
+                      <span
+                        className={
+                          s.available === false
+                            ? "system-stock unavailable"
+                            : "system-stock"
+                        }
+                      >
+                        {s.available === false
+                          ? "Sem estoque na consulta"
+                          : s.type === "custom"
+                            ? "Cotação das peças selecionadas"
+                            : "Disponível na consulta"}
+                      </span>
+                      {s.offerUrl && (
+                        <a
+                          className="system-source-link"
+                          href={s.offerUrl}
+                          target="_blank"
+                          rel="noreferrer"
+                        >
+                          {s.storeName} · {s.sellerName}{" "}
+                          <ExternalLink size={12} />
+                        </a>
+                      )}
+                      <div className="system-team-buttons">
+                        {["a", "b"].map((side) => (
+                          <button
+                            key={side}
+                            aria-pressed={(side === "a" ? a : b)?.id === s.id}
+                            onClick={() => choose(side, s.id)}
+                          >
+                            {(side === "a" ? a : b)?.id === s.id ? (
+                              <Check size={14} />
+                            ) : (
+                              <Swords size={14} />
+                            )}{" "}
+                            Lado {side.toUpperCase()}
+                          </button>
+                        ))}
+                      </div>
+                    </div>
+                  </article>
+                ))}
+              </div>
+            </details>
             {auth.user && myBuilds.length > 0 && (
               <div className="custom-battle-picker">
                 <label>
@@ -387,7 +416,28 @@ export default function BattlePage({ showQuotaNotice = true }) {
           </section>
           {a && b && (
             <section className="battle-arena" id="arena">
+              <div className="battle-test-conditions">
+                <span>
+                  <strong>Resolução</strong> {resolution}
+                </span>
+                <span>
+                  <strong>Preset A</strong> {game?.preset || "Não informado"}
+                </span>
+                <span>
+                  <strong>Preset B</strong>{" "}
+                  {other?.preset || "Sem teste equivalente"}
+                </span>
+                <span>
+                  <strong>Origem</strong> Referências / estimativas
+                </span>
+              </div>
               <BattleAdvantages
+                priority={
+                  ["fps", "price", "cost"].includes(params.get("prioridade"))
+                    ? params.get("prioridade")
+                    : "fps"
+                }
+                onPriority={(value) => choose("prioridade", value)}
                 a={a}
                 b={b}
                 averages={averages}
@@ -454,30 +504,39 @@ export default function BattlePage({ showQuotaNotice = true }) {
                   outro competidor nos cartões acima.
                 </p>
               )}
-              <div
-                className="battle-game-nav"
-                role="group"
-                aria-label="Escolher jogo"
-              >
-                {a.games.map((g) => (
-                  <button
-                    key={g.id}
-                    aria-pressed={game?.id === g.id}
-                    onClick={() =>
-                      setParams(
-                        (old) => {
-                          const n = new URLSearchParams(old);
-                          n.set("jogo", g.id);
-                          return n;
-                        },
-                        { replace: true },
-                      )
-                    }
-                  >
-                    {g.name}
-                  </button>
-                ))}
-              </div>
+              <BattleGamesChart
+                common={common}
+                resolution={resolution}
+                selected={game?.id}
+                onSelect={(id) => choose("jogo", id)}
+              />
+              <details className="battle-unmatched-games">
+                <summary>Consultar outros jogos e condições das fontes</summary>
+                <div
+                  className="battle-game-nav"
+                  role="group"
+                  aria-label="Escolher jogo"
+                >
+                  {a.games.map((g) => (
+                    <button
+                      key={g.id}
+                      aria-pressed={game?.id === g.id}
+                      onClick={() =>
+                        setParams(
+                          (old) => {
+                            const n = new URLSearchParams(old);
+                            n.set("jogo", g.id);
+                            return n;
+                          },
+                          { replace: true },
+                        )
+                      }
+                    >
+                      {g.name}
+                    </button>
+                  ))}
+                </div>
+              </details>
               {game && (
                 <>
                   <h3 className="battle-game-title">{game.name}</h3>

@@ -1,4 +1,22 @@
 describe("Experiência de compra e montagem", () => {
+  it("sugere produtos ao digitar e abre a opção escolhida pelo teclado", () => {
+    cy.visitStore("/");
+    cy.get("#hardware-search").type("3200G");
+    cy.get('[role="listbox"]').should("be.visible");
+    cy.get('[role="option"]')
+      .should("have.length", 1)
+      .and("contain", "Ryzen 3 3200G");
+    cy.get("#hardware-search").type("{downarrow}{enter}");
+    cy.location("pathname").should("eq", "/produto/kabum-102248");
+    cy.get("h1").should("contain", "Ryzen 3 3200G");
+  });
+  it("fecha sugestões com Escape e mantém a busca para ver todos os resultados", () => {
+    cy.visitStore("/");
+    cy.get("#hardware-search").type("ssd{esc}").should("have.value", "ssd");
+    cy.get('[role="listbox"]').should("not.exist");
+    cy.get("#hardware-search").type("{enter}");
+    cy.get("#produtos .product-card").should("have.length", 1);
+  });
   it("permite revisar quantidade e remover a peça no carrinho lateral", () => {
     cy.visitStore("/produto/kabum-102248");
     cy.get(

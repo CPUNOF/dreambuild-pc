@@ -1,5 +1,6 @@
 import { ArrowLeftRight, BadgeDollarSign, Gauge, Scale } from "lucide-react";
 import { money } from "../data/offers.js";
+import { useState } from "react";
 
 export default function BattleAdvantages({
   a,
@@ -8,7 +9,13 @@ export default function BattleAdvantages({
   gameCount,
   resolution,
   onSwap,
+  priority: chosenPriority,
+  onPriority,
 }) {
+  const [localPriority, setLocalPriority] = useState("fps");
+  const priority = chosenPriority || localPriority;
+  const setPriority = (id) =>
+    onPriority ? onPriority(id) : setLocalPriority(id);
   if (a.id === b.id)
     return (
       <p className="form-error" role="status">
@@ -38,6 +45,19 @@ export default function BattleAdvantages({
       : null;
   const costWinner =
     costs && costs[0] !== costs[1] ? (costs[0] < costs[1] ? 0 : 1) : null;
+  const winner =
+    priority === "price"
+      ? priceWinner
+      : priority === "cost"
+        ? costWinner
+        : fpsWinner;
+  const hasData =
+    priority === "price"
+      ? priced
+      : priority === "cost"
+        ? Boolean(costs)
+        : Boolean(averages);
+  const winningSystem = winner === 0 ? a : winner === 1 ? b : null;
   return (
     <section className="battle-advantages" aria-label="Vantagens dos setups">
       <header>
@@ -49,6 +69,42 @@ export default function BattleAdvantages({
           <ArrowLeftRight size={16} /> Trocar lados
         </button>
       </header>
+      <div
+        className="battle-priorities"
+        role="group"
+        aria-label="Sua prioridade na comparação"
+      >
+        {[
+          ["fps", "Mais FPS"],
+          ["price", "Menor preço"],
+          ["cost", "Custo por FPS"],
+        ].map(([id, label]) => (
+          <button
+            type="button"
+            key={id}
+            aria-pressed={priority === id}
+            onClick={() => setPriority(id)}
+          >
+            {label}
+          </button>
+        ))}
+      </div>
+      <div className="battle-priority-result" role="status">
+        <strong>
+          {winningSystem
+            ? `Lado ${side(winner)} · ${winningSystem.name}`
+            : hasData
+              ? "Os setups empatam neste critério."
+              : "Ainda faltam dados para este critério."}
+        </strong>
+        <p>
+          {priority === "price"
+            ? "Resultado pela cotação cadastrada, sem frete. Verifique data e disponibilidade na fonte."
+            : priority === "cost"
+              ? `Preço dividido pela média de ${gameCount} jogos comparáveis em ${resolution}.`
+              : `Média das referências/estimativas de ${gameCount} jogos em ${resolution}, nas condições indicadas.`}
+        </p>
+      </div>
       <div className="battle-advantage-grid">
         <article>
           <BadgeDollarSign size={22} />

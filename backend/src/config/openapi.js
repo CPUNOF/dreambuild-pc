@@ -996,6 +996,29 @@ endpoint(
 );
 
 // ---- Carrinho -------------------------------------------------------------
+schemas.AddBuildToCart = object(
+  {
+    ...schemas.BuildInput.properties,
+    idempotencyKey: { type: "string", pattern: "^[a-zA-Z0-9_-]{16,128}$" },
+  },
+  ["partIds", "idempotencyKey"],
+);
+endpoint(
+  "/api/cart/build",
+  "post",
+  "Carrinho",
+  "Adicionar uma montagem completa e compatível ao carrinho",
+  {
+    body: "AddBuildToCart",
+    data: ref("CartSummary"),
+    errors: {
+      400: "Montagem incompleta, incompatível ou limite de quantidades excedido",
+      409: "Saldo insuficiente ou chave repetida com outra configuração",
+    },
+    description:
+      "Acrescenta as quantidades aos itens existentes e valida todo o carrinho antes de salvá-lo. Repetir a mesma chave/configuração não duplica a adição. Não reserva nem desconta estoque.",
+  },
+);
 endpoint(
   "/api/cart",
   "get",
