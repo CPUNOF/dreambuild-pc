@@ -2,10 +2,9 @@ import { Cpu, BookOpen, Monitor, MemoryStick, HardDrive } from "lucide-react";
 import ComponentGuide from "../components/ComponentGuide.jsx";
 import ProductCatalog from "../components/ProductCatalog.jsx";
 import FeaturedCarousel from "../components/FeaturedCarousel.jsx";
-import StoreSelections from "../components/StoreSelections.jsx";
 import { useEffect } from "react";
-import ReadySystemsTeaser from "../components/ReadySystemsTeaser.jsx";
-import ShopByNeed from "../components/ShopByNeed.jsx";
+import HomeSystems from "../components/HomeSystems.jsx";
+import HomeUpgrades from "../components/HomeUpgrades.jsx";
 
 export default function HomePage({
   products,
@@ -40,14 +39,6 @@ export default function HomePage({
       </div>
       <section className="store-highlights" aria-label="Destaques de hardware">
         <FeaturedCarousel products={products} />
-        <aside className="hardware-guide-promo">
-          <BookOpen size={28} strokeWidth={1.6} aria-hidden="true" />
-          <h2>Escolher a peça certa começa por entender o hardware.</h2>
-          <p>
-            Processador, memória, fonte e tudo o que vai dentro do gabinete.
-          </p>
-          <a href="#guia">Consultar guia de componentes</a>
-        </aside>
       </section>
       <div className="hardware-shortcuts" aria-label="Atalhos de hardware">
         {[
@@ -66,13 +57,10 @@ export default function HomePage({
         ))}
       </div>
       {category === "all" && !query.trim() && (
-        <ShopByNeed products={products} />
-      )}
-      {category === "all" && !query.trim() && (
-        <StoreSelections
-          products={products}
-          onCategoryChange={onCategoryChange}
-        />
+        <>
+          <HomeUpgrades products={products} />
+          <HomeSystems />
+        </>
       )}
       <ProductCatalog
         products={products}
@@ -81,7 +69,6 @@ export default function HomePage({
         query={query}
         onClear={onClear}
       />
-      <ReadySystemsTeaser />
       <section id="guia" className="store-guide" aria-labelledby="guide-title">
         <div className="store-section-heading">
           <BookOpen size={23} aria-hidden="true" />

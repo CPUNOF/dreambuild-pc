@@ -7753,6 +7753,796 @@
           }
         }
       }
+    },
+    "/api/account/addresses": {
+      "get": {
+        "tags": [
+          "Conta"
+        ],
+        "summary": "Listar os próprios endereços de demonstração",
+        "description": "**Acesso:** usuário autenticado; só enxerga os próprios registros.",
+        "operationId": "getAccountAddresses",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Sucesso",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/Envelope"
+                    },
+                    {
+                      "type": "object",
+                      "properties": {
+                        "status": {
+                          "type": "string",
+                          "enum": [
+                            "success"
+                          ]
+                        },
+                        "data": {
+                          "type": "array",
+                          "items": {
+                            "$ref": "#/components/schemas/SavedAddress"
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Sem sessão, sessão expirada ou conta desativada",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                },
+                "example": {
+                  "status": "error",
+                  "message": "Entre na sua conta para continuar.",
+                  "data": null,
+                  "errors": [],
+                  "meta": {}
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Erro interno",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                },
+                "example": {
+                  "status": "error",
+                  "message": "Erro interno do servidor.",
+                  "data": null,
+                  "errors": [],
+                  "meta": {}
+                }
+              }
+            }
+          },
+          "503": {
+            "description": "Banco indisponível ou cota temporariamente excedida",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                },
+                "example": {
+                  "status": "error",
+                  "message": "O banco atingiu um limite temporário de consultas. Tente novamente quando a cota for renovada.",
+                  "data": null,
+                  "errors": [],
+                  "meta": {}
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "cookieAuth": []
+          }
+        ]
+      },
+      "post": {
+        "tags": [
+          "Conta"
+        ],
+        "summary": "Salvar endereço de demonstração (até cinco)",
+        "description": "**Acesso:** usuário autenticado; só enxerga os próprios registros.",
+        "operationId": "postAccountAddresses",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Sucesso",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/Envelope"
+                    },
+                    {
+                      "type": "object",
+                      "properties": {
+                        "status": {
+                          "type": "string",
+                          "enum": [
+                            "success"
+                          ]
+                        },
+                        "data": {
+                          "type": "array",
+                          "items": {
+                            "$ref": "#/components/schemas/SavedAddress"
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Dados inválidos ou JSON malformado",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                },
+                "example": {
+                  "status": "error",
+                  "message": "Informe um e-mail válido.",
+                  "data": null,
+                  "errors": [],
+                  "meta": {}
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Sem sessão, sessão expirada ou conta desativada",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                },
+                "example": {
+                  "status": "error",
+                  "message": "Entre na sua conta para continuar.",
+                  "data": null,
+                  "errors": [],
+                  "meta": {}
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Token CSRF ausente ou inválido (errors[0].code = CSRF_INVALID)",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                },
+                "example": {
+                  "status": "error",
+                  "message": "Atualize a sessão e tente novamente.",
+                  "data": null,
+                  "errors": [
+                    {
+                      "code": "CSRF_INVALID"
+                    }
+                  ],
+                  "meta": {}
+                }
+              }
+            }
+          },
+          "413": {
+            "description": "Corpo maior que 100 kB",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                },
+                "example": {
+                  "status": "error",
+                  "message": "Corpo da requisição muito grande.",
+                  "data": null,
+                  "errors": [],
+                  "meta": {}
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Erro interno",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                },
+                "example": {
+                  "status": "error",
+                  "message": "Erro interno do servidor.",
+                  "data": null,
+                  "errors": [],
+                  "meta": {}
+                }
+              }
+            }
+          },
+          "503": {
+            "description": "Banco indisponível ou cota temporariamente excedida",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                },
+                "example": {
+                  "status": "error",
+                  "message": "O banco atingiu um limite temporário de consultas. Tente novamente quando a cota for renovada.",
+                  "data": null,
+                  "errors": [],
+                  "meta": {}
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "cookieAuth": [],
+            "csrfToken": []
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Address"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/account/addresses/{id}": {
+      "put": {
+        "tags": [
+          "Conta"
+        ],
+        "summary": "Editar o próprio endereço",
+        "description": "**Acesso:** usuário autenticado; só enxerga os próprios registros.",
+        "operationId": "putAccountAddressesBy_id",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "pattern": "^[a-zA-Z0-9_-]{1,128}$",
+              "example": "kabum-105015"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Sucesso",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/Envelope"
+                    },
+                    {
+                      "type": "object",
+                      "properties": {
+                        "status": {
+                          "type": "string",
+                          "enum": [
+                            "success"
+                          ]
+                        },
+                        "data": {
+                          "type": "array",
+                          "items": {
+                            "$ref": "#/components/schemas/SavedAddress"
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Dados inválidos ou JSON malformado; Identificador inválido (use letras, números, - ou _)",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                },
+                "example": {
+                  "status": "error",
+                  "message": "Informe um e-mail válido.",
+                  "data": null,
+                  "errors": [],
+                  "meta": {}
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Sem sessão, sessão expirada ou conta desativada",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                },
+                "example": {
+                  "status": "error",
+                  "message": "Entre na sua conta para continuar.",
+                  "data": null,
+                  "errors": [],
+                  "meta": {}
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Token CSRF ausente ou inválido (errors[0].code = CSRF_INVALID)",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                },
+                "example": {
+                  "status": "error",
+                  "message": "Atualize a sessão e tente novamente.",
+                  "data": null,
+                  "errors": [
+                    {
+                      "code": "CSRF_INVALID"
+                    }
+                  ],
+                  "meta": {}
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Endereço não pertence à conta",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                },
+                "example": {
+                  "status": "error",
+                  "message": "Endereço não pertence à conta.",
+                  "data": null,
+                  "errors": [],
+                  "meta": {}
+                }
+              }
+            }
+          },
+          "413": {
+            "description": "Corpo maior que 100 kB",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                },
+                "example": {
+                  "status": "error",
+                  "message": "Corpo da requisição muito grande.",
+                  "data": null,
+                  "errors": [],
+                  "meta": {}
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Erro interno",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                },
+                "example": {
+                  "status": "error",
+                  "message": "Erro interno do servidor.",
+                  "data": null,
+                  "errors": [],
+                  "meta": {}
+                }
+              }
+            }
+          },
+          "503": {
+            "description": "Banco indisponível ou cota temporariamente excedida",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                },
+                "example": {
+                  "status": "error",
+                  "message": "O banco atingiu um limite temporário de consultas. Tente novamente quando a cota for renovada.",
+                  "data": null,
+                  "errors": [],
+                  "meta": {}
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "cookieAuth": [],
+            "csrfToken": []
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Address"
+              }
+            }
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Conta"
+        ],
+        "summary": "Excluir o próprio endereço salvo",
+        "description": "**Acesso:** usuário autenticado; só enxerga os próprios registros.",
+        "operationId": "deleteAccountAddressesBy_id",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "pattern": "^[a-zA-Z0-9_-]{1,128}$",
+              "example": "kabum-105015"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Sucesso",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/Envelope"
+                    },
+                    {
+                      "type": "object",
+                      "properties": {
+                        "status": {
+                          "type": "string",
+                          "enum": [
+                            "success"
+                          ]
+                        },
+                        "data": {
+                          "type": "array",
+                          "items": {
+                            "$ref": "#/components/schemas/SavedAddress"
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Identificador inválido (use letras, números, - ou _)",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                },
+                "example": {
+                  "status": "error",
+                  "message": "Informe um e-mail válido.",
+                  "data": null,
+                  "errors": [],
+                  "meta": {}
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Sem sessão, sessão expirada ou conta desativada",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                },
+                "example": {
+                  "status": "error",
+                  "message": "Entre na sua conta para continuar.",
+                  "data": null,
+                  "errors": [],
+                  "meta": {}
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Token CSRF ausente ou inválido (errors[0].code = CSRF_INVALID)",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                },
+                "example": {
+                  "status": "error",
+                  "message": "Atualize a sessão e tente novamente.",
+                  "data": null,
+                  "errors": [
+                    {
+                      "code": "CSRF_INVALID"
+                    }
+                  ],
+                  "meta": {}
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Endereço não pertence à conta",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                },
+                "example": {
+                  "status": "error",
+                  "message": "Endereço não pertence à conta.",
+                  "data": null,
+                  "errors": [],
+                  "meta": {}
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Erro interno",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                },
+                "example": {
+                  "status": "error",
+                  "message": "Erro interno do servidor.",
+                  "data": null,
+                  "errors": [],
+                  "meta": {}
+                }
+              }
+            }
+          },
+          "503": {
+            "description": "Banco indisponível ou cota temporariamente excedida",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                },
+                "example": {
+                  "status": "error",
+                  "message": "O banco atingiu um limite temporário de consultas. Tente novamente quando a cota for renovada.",
+                  "data": null,
+                  "errors": [],
+                  "meta": {}
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "cookieAuth": [],
+            "csrfToken": []
+          }
+        ]
+      }
+    },
+    "/api/account/addresses/{id}/default": {
+      "put": {
+        "tags": [
+          "Conta"
+        ],
+        "summary": "Definir endereço padrão",
+        "description": "**Acesso:** usuário autenticado; só enxerga os próprios registros.",
+        "operationId": "putAccountAddressesBy_idDefault",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "pattern": "^[a-zA-Z0-9_-]{1,128}$",
+              "example": "kabum-105015"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Sucesso",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/Envelope"
+                    },
+                    {
+                      "type": "object",
+                      "properties": {
+                        "status": {
+                          "type": "string",
+                          "enum": [
+                            "success"
+                          ]
+                        },
+                        "data": {
+                          "type": "array",
+                          "items": {
+                            "$ref": "#/components/schemas/SavedAddress"
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Identificador inválido (use letras, números, - ou _)",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                },
+                "example": {
+                  "status": "error",
+                  "message": "Informe um e-mail válido.",
+                  "data": null,
+                  "errors": [],
+                  "meta": {}
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Sem sessão, sessão expirada ou conta desativada",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                },
+                "example": {
+                  "status": "error",
+                  "message": "Entre na sua conta para continuar.",
+                  "data": null,
+                  "errors": [],
+                  "meta": {}
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Token CSRF ausente ou inválido (errors[0].code = CSRF_INVALID)",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                },
+                "example": {
+                  "status": "error",
+                  "message": "Atualize a sessão e tente novamente.",
+                  "data": null,
+                  "errors": [
+                    {
+                      "code": "CSRF_INVALID"
+                    }
+                  ],
+                  "meta": {}
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Endereço não pertence à conta",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                },
+                "example": {
+                  "status": "error",
+                  "message": "Endereço não pertence à conta.",
+                  "data": null,
+                  "errors": [],
+                  "meta": {}
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Erro interno",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                },
+                "example": {
+                  "status": "error",
+                  "message": "Erro interno do servidor.",
+                  "data": null,
+                  "errors": [],
+                  "meta": {}
+                }
+              }
+            }
+          },
+          "503": {
+            "description": "Banco indisponível ou cota temporariamente excedida",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                },
+                "example": {
+                  "status": "error",
+                  "message": "O banco atingiu um limite temporário de consultas. Tente novamente quando a cota for renovada.",
+                  "data": null,
+                  "errors": [],
+                  "meta": {}
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "cookieAuth": [],
+            "csrfToken": []
+          }
+        ]
+      }
     }
   },
   "components": {
@@ -8018,6 +8808,10 @@
           },
           "token": {
             "type": "string"
+          },
+          "expiry": {
+            "type": "string",
+            "pattern": "^[0-9]{2}/[0-9]{2}$"
           }
         },
         "required": [
@@ -8046,6 +8840,9 @@
           "quoteVersion": {
             "type": "string",
             "pattern": "^[a-f0-9]{64}$"
+          },
+          "delivery": {
+            "$ref": "#/components/schemas/Delivery"
           }
         },
         "required": [
@@ -8396,6 +9193,9 @@
           },
           "card": {
             "$ref": "#/components/schemas/DemoCard"
+          },
+          "delivery": {
+            "$ref": "#/components/schemas/Delivery"
           }
         },
         "required": [
@@ -9071,6 +9871,19 @@
           "createdAt": {
             "type": "string",
             "format": "date-time"
+          },
+          "delivery": {
+            "nullable": true,
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/Delivery"
+              }
+            ],
+            "description": "Snapshot privado do endereço e entrega simulada; preço calculado pelo servidor."
+          },
+          "subtotalCents": {
+            "type": "integer",
+            "minimum": 0
           }
         },
         "required": [
@@ -9268,6 +10081,125 @@
           "previewHash"
         ],
         "additionalProperties": false
+      },
+      "Address": {
+        "type": "object",
+        "properties": {
+          "label": {
+            "type": "string",
+            "maxLength": 100
+          },
+          "recipient": {
+            "type": "string",
+            "maxLength": 100
+          },
+          "postalCode": {
+            "type": "string",
+            "maxLength": 100
+          },
+          "street": {
+            "type": "string",
+            "maxLength": 100
+          },
+          "number": {
+            "type": "string",
+            "maxLength": 100
+          },
+          "complement": {
+            "type": "string",
+            "maxLength": 100
+          },
+          "district": {
+            "type": "string",
+            "maxLength": 100
+          },
+          "city": {
+            "type": "string",
+            "maxLength": 100
+          },
+          "state": {
+            "type": "string",
+            "maxLength": 100
+          }
+        },
+        "required": [
+          "label",
+          "recipient",
+          "postalCode",
+          "street",
+          "number",
+          "district",
+          "city",
+          "state"
+        ]
+      },
+      "SavedAddress": {
+        "type": "object",
+        "properties": {
+          "label": {
+            "type": "string",
+            "maxLength": 100
+          },
+          "recipient": {
+            "type": "string",
+            "maxLength": 100
+          },
+          "postalCode": {
+            "type": "string",
+            "maxLength": 100
+          },
+          "street": {
+            "type": "string",
+            "maxLength": 100
+          },
+          "number": {
+            "type": "string",
+            "maxLength": 100
+          },
+          "complement": {
+            "type": "string",
+            "maxLength": 100
+          },
+          "district": {
+            "type": "string",
+            "maxLength": 100
+          },
+          "city": {
+            "type": "string",
+            "maxLength": 100
+          },
+          "state": {
+            "type": "string",
+            "maxLength": 100
+          },
+          "id": {
+            "type": "string",
+            "pattern": "^[a-zA-Z0-9_-]{1,128}$",
+            "example": "kabum-105015"
+          },
+          "isDefault": {
+            "type": "boolean"
+          }
+        }
+      },
+      "Delivery": {
+        "type": "object",
+        "properties": {
+          "address": {
+            "$ref": "#/components/schemas/Address"
+          },
+          "method": {
+            "type": "string",
+            "enum": [
+              "economy",
+              "express"
+            ]
+          }
+        },
+        "required": [
+          "address",
+          "method"
+        ]
       }
     }
   },

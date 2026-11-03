@@ -10,6 +10,7 @@ export function requireAuth(userDAO) {
       if (!user || user.disabled)
         throw new AppError(401, "Sua sessão expirou. Entre novamente.");
       req.user = User.public(user);
+      req.addressBook = user.addressBook || [];
       req.session.role = req.user.role;
       next();
     } catch (error) {

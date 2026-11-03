@@ -1,5 +1,6 @@
 import { randomInt, createHmac, timingSafeEqual } from "node:crypto";
 import { AppError } from "../errors/AppError.js";
+import { demoExpiry } from "../../../shared/delivery.js";
 export class DemoCard {
   static luhn(number) {
     if (typeof number !== "string" || !/^\d{16}$/.test(number)) return false;
@@ -57,7 +58,8 @@ export class DemoCard {
       card.validUntil < Date.now() ||
       card.validUntil > Date.now() + 10 * 60 * 1000 + 5000 ||
       typeof card.token !== "string" ||
-      !/^[a-f0-9]{64}$/.test(card.token)
+      !/^[a-f0-9]{64}$/.test(card.token) ||
+      (card.expiry !== undefined && card.expiry !== demoExpiry(card))
     )
       throw new AppError(
         400,

@@ -3,6 +3,7 @@ import { FieldPath } from "firebase-admin/firestore";
 import { getDatabase } from "../config/firebaseConfig.js";
 import { AppError } from "../errors/AppError.js";
 import { inventoryState } from "../../../shared/inventory.js";
+import { deliveryOptions } from "../../../shared/delivery.js";
 const keyId = (userId, key) =>
   createHash("sha256")
     .update(userId + ":" + key)
@@ -74,8 +75,15 @@ export class OrderDAO {
             l.unitPriceCents < 1,
         ) ||
         !Number.isSafeInteger(document.totalCents) ||
+        (document.delivery &&
+          !deliveryOptions.some(
+            (option) =>
+              option.id === document.delivery.method &&
+              option.priceCents === document.delivery.priceCents,
+          )) ||
         document.totalCents !==
-          lines.reduce((sum, l) => sum + l.unitPriceCents * l.quantity, 0)
+          lines.reduce((sum, l) => sum + l.unitPriceCents * l.quantity, 0) +
+            (document.delivery?.priceCents || 0)
       )
         throw new AppError(400, "Itens ou total do pedido inválidos.");
       const stockRefs = lines.map((l) =>

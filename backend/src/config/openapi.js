@@ -1408,6 +1408,109 @@ endpoint(
   },
 );
 
+schemas.Address = object(
+  Object.fromEntries(
+    [
+      "label",
+      "recipient",
+      "postalCode",
+      "street",
+      "number",
+      "complement",
+      "district",
+      "city",
+      "state",
+    ].map((key) => [key, { type: "string", maxLength: 100 }]),
+  ),
+  [
+    "label",
+    "recipient",
+    "postalCode",
+    "street",
+    "number",
+    "district",
+    "city",
+    "state",
+  ],
+);
+schemas.SavedAddress = object({
+  ...schemas.Address.properties,
+  id,
+  isDefault: { type: "boolean" },
+});
+schemas.Delivery = object(
+  {
+    address: ref("Address"),
+    method: { type: "string", enum: ["economy", "express"] },
+  },
+  ["address", "method"],
+);
+schemas.Checkout.properties.delivery = ref("Delivery");
+schemas.CartCheckout.properties.delivery = ref("Delivery");
+schemas.DemoCard.properties.expiry = {
+  type: "string",
+  pattern: "^[0-9]{2}/[0-9]{2}$",
+};
+schemas.Order.properties.delivery = {
+  nullable: true,
+  allOf: [ref("Delivery")],
+  description:
+    "Snapshot privado do endereço e entrega simulada; preço calculado pelo servidor.",
+};
+schemas.Order.properties.subtotalCents = { type: "integer", minimum: 0 };
+const addressList = { type: "array", items: ref("SavedAddress") };
+endpoint(
+  "/api/account/addresses",
+  "get",
+  "Conta",
+  "Listar os próprios endereços de demonstração",
+  { auth: true, data: addressList },
+);
+endpoint(
+  "/api/account/addresses",
+  "post",
+  "Conta",
+  "Salvar endereço de demonstração (até cinco)",
+  { auth: true, body: "Address", data: addressList },
+);
+endpoint(
+  "/api/account/addresses/{id}",
+  "put",
+  "Conta",
+  "Editar o próprio endereço",
+  {
+    auth: true,
+    body: "Address",
+    parameters: [parameter],
+    data: addressList,
+    errors: { 404: "Endereço não pertence à conta" },
+  },
+);
+endpoint(
+  "/api/account/addresses/{id}",
+  "delete",
+  "Conta",
+  "Excluir o próprio endereço salvo",
+  {
+    auth: true,
+    parameters: [parameter],
+    data: addressList,
+    errors: { 404: "Endereço não pertence à conta" },
+  },
+);
+endpoint(
+  "/api/account/addresses/{id}/default",
+  "put",
+  "Conta",
+  "Definir endereço padrão",
+  {
+    auth: true,
+    parameters: [parameter],
+    data: addressList,
+    errors: { 404: "Endereço não pertence à conta" },
+  },
+);
+
 const guide = `Projeto acadêmico de Breno Dantas e Kaio Marques. React → Controller/Model → DAO → Firestore. **Compras e telemetria são simuladas; use apenas dados de demonstração.**
 
 ### Como testar por esta página

@@ -1,9 +1,24 @@
 import { createHash, randomUUID } from "node:crypto";
 import { getDatabase } from "../config/firebaseConfig.js";
 import { AppError } from "../errors/AppError.js";
+import { Delivery } from "../models/Delivery.js";
 const emailKey = (email) => createHash("sha256").update(email).digest("hex");
 
 export class UserDAO {
+  async updateAddressBook(id, operation) {
+    const database = this.database(),
+      ref = database.collection("users").doc(id);
+    return database.runTransaction(async (tx) => {
+      const snapshot = await tx.get(ref);
+      if (!snapshot.exists) throw new AppError(404, "Conta não encontrada.");
+      const addressBook = Delivery.updateBook(
+        snapshot.data().addressBook,
+        operation,
+      );
+      tx.update(ref, { addressBook });
+      return addressBook;
+    });
+  }
   constructor(database = getDatabase) {
     this.database = database;
   }

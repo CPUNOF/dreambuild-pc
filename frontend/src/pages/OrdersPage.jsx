@@ -5,6 +5,9 @@ import { apiRequest, listRecords } from "../api/client.js";
 import { consultationDate, money } from "../data/offers.js";
 import StoreComparison from "../components/StoreComparison.jsx";
 import SetupCard from "../components/SetupCard.jsx";
+import DeliveryJourney from "../components/DeliveryJourney.jsx";
+import { AddressText } from "../components/AddressBook.jsx";
+import "../checkout.css";
 
 export function OrdersPage() {
   const [orders, setOrders] = useState([]);
@@ -173,7 +176,10 @@ export function OrderPage() {
               </div>
               <dl className="receipt-facts">
                 <div>
-                  <dt>Total do pedido simulado, sem frete</dt>
+                  <dt>
+                    Total do pedido simulado
+                    {order.delivery ? ", com frete" : ", sem frete"}
+                  </dt>
                   <dd>
                     {order.totalCents === null
                       ? "Sem cotação integral — preços ausentes não foram inventados"
@@ -223,6 +229,25 @@ export function OrderPage() {
                 solicitado ou armazenado.
               </p>
             </article>
+            {order.delivery && (
+              <section className="order-delivery">
+                <h2>Sua entrega simulada</h2>
+                <div className="address-copy">
+                  <div>
+                    <AddressText address={order.delivery.address} />
+                  </div>
+                </div>
+                <p>
+                  {order.delivery.name} · {order.delivery.days} · frete{" "}
+                  {money(order.delivery.priceCents)}
+                </p>
+                <p className="field-help">
+                  Prévia ilustrativa. Não representa rastreamento nem envio
+                  real.
+                </p>
+                <DeliveryJourney />
+              </section>
+            )}
             <StoreComparison comparison={order.buildSnapshot.comparison} />
             <SetupCard
               build={{ ...order.buildSnapshot, name: order.buildName }}

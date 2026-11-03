@@ -51,8 +51,23 @@ export default function StoreSearch({
             Number(inventoryState(a.inventory).quantity > 0),
       );
   }, [products, term]);
-  const suggestions = matches.slice(0, 6),
-    expanded = open && Boolean(value.trim());
+  const discovery = !value.trim();
+  const recommended = useMemo(
+    () =>
+      ["gpu", "cpu", "ram", "storage"]
+        .map((category) =>
+          products.find(
+            (p) =>
+              p.category === category &&
+              inventoryState(p.inventory).configured &&
+              inventoryState(p.inventory).quantity > 0,
+          ),
+        )
+        .filter(Boolean),
+    [products],
+  );
+  const suggestions = discovery ? recommended : matches.slice(0, 6),
+    expanded = open;
   useEffect(() => {
     setActive(-1);
   }, [value, products]);
@@ -108,13 +123,15 @@ export default function StoreSearch({
       event.preventDefault();
       choose(suggestions[active]);
     }
-    if (event.key === "Tab") setOpen(false);
   }
   return (
     <form
       ref={root}
       className="store-search"
       role="search"
+      onBlurCapture={(event) => {
+        if (!event.currentTarget.contains(event.relatedTarget)) setOpen(false);
+      }}
       onSubmit={(event) => {
         event.preventDefault();
         submit();
@@ -148,15 +165,48 @@ export default function StoreSearch({
         <Search size={22} aria-hidden="true" />
       </button>
       {expanded && (
-        <div className="search-suggestions">
+        <div
+          className={`search-suggestions ${discovery ? "search-discovery" : ""}`}
+        >
           <header>
             <span>
               {loading
                 ? "Carregando catálogo…"
-                : `${matches.length} ${matches.length === 1 ? "produto encontrado" : "produtos encontrados"}`}
+                : discovery
+                  ? "Encontre seu próximo upgrade"
+                  : `${matches.length} ${matches.length === 1 ? "produto encontrado" : "produtos encontrados"}`}
             </span>
             <small>Produtos e modelos</small>
           </header>
+          {discovery && (
+            <div className="search-category-shortcuts">
+              <strong>Explore por categoria</strong>
+              {[
+                "Processador AMD",
+                "Processador Intel",
+                "Placa de vídeo",
+                "Memória DDR4",
+                "Memória DDR5",
+                "SSD",
+                "Water cooler",
+              ].map((label) => (
+                <button
+                  key={label}
+                  type="button"
+                  onMouseDown={(e) => e.preventDefault()}
+                  onClick={() => {
+                    onChange(label);
+                    setActive(-1);
+                    input.current?.focus();
+                    setOpen(true);
+                  }}
+                >
+                  <Search size={14} />
+                  {label}
+                </button>
+              ))}
+            </div>
+          )}
           <ul id={listId} role="listbox" aria-label="Sugestões de produtos">
             {suggestions.map((product, index) => {
               const stock = inventoryState(product.inventory);
@@ -208,7 +258,8 @@ export default function StoreSearch({
               submit();
             }}
           >
-            Ver todos os resultados <ArrowUpRight size={15} />
+            {discovery ? "Explorar todo o catálogo" : "Ver todos os resultados"}{" "}
+            <ArrowUpRight size={15} />
           </a>
         </div>
       )}

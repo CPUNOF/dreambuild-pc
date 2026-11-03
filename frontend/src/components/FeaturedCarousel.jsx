@@ -1,7 +1,8 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import { Link } from "react-router";
 import { ChevronLeft, ChevronRight, Pause, Play } from "lucide-react";
-import { bestOffer } from "../data/offers.js";
+import { money } from "../data/offers.js";
+import { saleOffer } from "../../../shared/inventory.js";
 export default function FeaturedCarousel({ products }) {
   const slides = useMemo(() => {
     const groups = [
@@ -19,8 +20,8 @@ export default function FeaturedCarousel({ products }) {
         .filter((p) => p.category === category)
         .sort(
           (a, b) =>
-            Number(Boolean(bestOffer(b))) - Number(Boolean(bestOffer(a))) ||
-            (bestOffer(b)?.priceCents || 0) - (bestOffer(a)?.priceCents || 0),
+            Number(Boolean(saleOffer(b))) - Number(Boolean(saleOffer(a))) ||
+            (saleOffer(b)?.priceCents || 0) - (saleOffer(a)?.priceCents || 0),
         )
         .slice(0, 2),
     );
@@ -151,11 +152,23 @@ export default function FeaturedCarousel({ products }) {
                     : product.highlights.find((item) => /\d/.test(item)) ||
                       product.highlights[0]}
                 </p>
+                {saleOffer(product) && (
+                  <div className="featured-own-price">
+                    <strong>{money(saleOffer(product).priceCents)}</strong>
+                    <small>Preço acadêmico · compra simulada</small>
+                  </div>
+                )}
                 <Link
                   className="primary-button"
                   to={`/produto/${product.slug}`}
                 >
                   Conhecer produto
+                </Link>
+                <Link
+                  className="text-button featured-builder-link"
+                  to="/montar"
+                >
+                  Montar meu PC
                 </Link>
               </div>
               <img

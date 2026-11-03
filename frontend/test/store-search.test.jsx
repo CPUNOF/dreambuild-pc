@@ -54,6 +54,19 @@ function mount(submit = vi.fn()) {
   return submit;
 }
 describe("Busca com sugestões locais", () => {
+  test("campo vazio mostra sugestões e atalhos sem consultar a rede", async () => {
+    const request = vi.spyOn(globalThis, "fetch");
+    mount();
+    await userEvent.click(screen.getByRole("combobox"));
+    expect(screen.getAllByRole("option")).toHaveLength(2);
+    await userEvent.click(
+      screen.getByRole("button", { name: "Memória DDR5", exact: true }),
+    );
+    expect(screen.getByRole("combobox")).toHaveValue("Memória DDR5");
+    expect(screen.getAllByRole("option")).toHaveLength(1);
+    expect(request).not.toHaveBeenCalled();
+    request.mockRestore();
+  });
   test("mostra preço sem diferenciar acentos e Enter abre a opção ativa", async () => {
     mount();
     const input = screen.getByRole("combobox", { name: "Buscar produtos" });

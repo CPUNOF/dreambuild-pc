@@ -9,6 +9,7 @@ import { User } from "../../src/models/User.js";
 import { Component } from "../../src/models/Component.js";
 import { Inventory } from "../../src/models/Inventory.js";
 import { AppError } from "../../src/errors/AppError.js";
+import { Delivery } from "../../src/models/Delivery.js";
 
 export const PASSWORD = "senha-de-teste-123";
 
@@ -76,6 +77,12 @@ export function memoryUsers(seed = []) {
   const data = new Map(seed.map((u) => [u.id, u]));
   return {
     data,
+    async updateAddressBook(id, operation) {
+      const user = data.get(id);
+      if (!user) throw new AppError(404, "Conta não encontrada.");
+      user.addressBook = Delivery.updateBook(user.addressBook, operation);
+      return structuredClone(user.addressBook);
+    },
     async getById(id) {
       return data.get(id) || null;
     },

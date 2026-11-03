@@ -30,6 +30,9 @@ import CartPage from "./pages/CartPage.jsx";
 import CartCheckoutPage from "./pages/CartCheckoutPage.jsx";
 import ThemeToggle from "./components/ThemeToggle.jsx";
 import StoreSearch from "./components/StoreSearch.jsx";
+import DepartmentMenu from "./components/DepartmentMenu.jsx";
+import useSmartHeader from "./hooks/useSmartHeader.js";
+import "./home.css";
 import "./shopping-experience.css";
 import AmbientBackground from "./components/AmbientBackground.jsx";
 import BattlePage from "./pages/BattlePage.jsx";
@@ -41,6 +44,7 @@ import "./community.css";
 import "./battle.css";
 
 export default function App() {
+  const header = useSmartHeader();
   const auth = useAuth();
   const shopping = useCart();
   const realtime = useRealtime();
@@ -179,7 +183,14 @@ export default function App() {
           <a href="#sobre">Sobre o DreamBuild</a>
         </div>
       </div>
-      <header className="store-header">
+      <header
+        ref={header.ref}
+        className={`store-header smart-header ${header.hidden ? "is-hidden" : ""} ${header.scrolled ? "is-scrolled" : ""}`}
+        onFocusCapture={header.reveal}
+        onPointerDown={() => {
+          header.ref.current.dataset.instant = "false";
+        }}
+      >
         <div className="page-shell header-main">
           <Link className="brand" to="/" aria-label="DreamBuild PC, início">
             <Cpu size={35} strokeWidth={1.7} aria-hidden="true" />
@@ -231,28 +242,7 @@ export default function App() {
             <Link className="builder-nav-link" to="/montar">
               Monte seu PC
             </Link>
-            <details className="department-menu">
-              <summary>
-                <Menu size={18} aria-hidden="true" />
-                Departamentos
-                <ChevronDown size={14} aria-hidden="true" />
-              </summary>
-              <div>
-                {departments.map((item) => (
-                  <button
-                    key={item.id}
-                    type="button"
-                    onClick={(event) => {
-                      browse(item.id);
-                      event.currentTarget.closest("details").open = false;
-                    }}
-                  >
-                    {item.name}
-                  </button>
-                ))}
-                <Link to="/#guia">Guia das oito categorias</Link>
-              </div>
-            </details>
+            <DepartmentMenu departments={departments} onChoose={browse} />
             <button type="button" onClick={() => browse("cpu")}>
               Processadores
             </button>

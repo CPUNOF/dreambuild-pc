@@ -6,6 +6,7 @@ import { pagination } from "../models/Pagination.js";
 import { ApiResponseView } from "../views/ApiResponseView.js";
 import { AppError } from "../errors/AppError.js";
 import { Cart } from "../models/Cart.js";
+import { Delivery } from "../models/Delivery.js";
 export class OrderController {
   constructor(builds, buildController, orders, secret) {
     this.builds = builds;
@@ -39,6 +40,7 @@ export class OrderController {
     };
   }
   async checkout(req, res) {
+    const delivery = Delivery.checkout(req.body?.delivery);
     const { buildId, idempotencyKey, card, quoteVersion } = req.body || {};
     if (
       typeof buildId !== "string" ||
@@ -54,6 +56,7 @@ export class OrderController {
         JSON.stringify({
           buildId,
           quoteVersion,
+          delivery,
           card: {
             number: card.number,
             cvv: card.cvv,
@@ -111,7 +114,9 @@ export class OrderController {
       buildName: build.name,
       simulated: true,
       approvalCode: randomBytes(5).toString("hex").toUpperCase(),
-      totalCents: analysis.storeQuote.totalCents,
+      subtotalCents: analysis.storeQuote.totalCents,
+      delivery,
+      totalCents: analysis.storeQuote.totalCents + (delivery?.priceCents || 0),
       lines: analysis.storeQuote.items.map(
         ({ componentId, quantity, unitPriceCents, lineTotalCents }) => ({
           componentId,
@@ -149,6 +154,7 @@ export class OrderController {
     });
   }
   async checkoutCart(req, res) {
+    const delivery = Delivery.checkout(req.body?.delivery);
     const { idempotencyKey, card, items, quoteVersion } = req.body || {};
     if (
       typeof idempotencyKey !== "string" ||
@@ -164,6 +170,7 @@ export class OrderController {
         JSON.stringify({
           kind: "cart",
           quoteVersion,
+          delivery,
           lines,
           card: {
             number: card.number,
@@ -218,7 +225,9 @@ export class OrderController {
           : `Pedido com ${summary.itemCount} peças`,
       simulated: true,
       approvalCode: randomBytes(5).toString("hex").toUpperCase(),
-      totalCents: summary.totalCents,
+      subtotalCents: summary.totalCents,
+      delivery,
+      totalCents: summary.totalCents + (delivery?.priceCents || 0),
       lines: summary.items.map(
         ({ componentId, quantity, unitPriceCents, lineTotalCents }) => ({
           componentId,

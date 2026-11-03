@@ -45,8 +45,14 @@ describe("Fluxo completo front-end + back-end (sem mocks)", () => {
 
     cy.contains("a", "Continuar para revisão").click();
     cy.location("pathname").should("eq", "/checkout");
+    cy.contains("button", "Adicionar endereço").click();
+    cy.contains("button", "Preencher exemplo fictício").click();
+    cy.contains("button", "Usar este endereço").click();
+    cy.contains("button", "Continuar para pagamento").click();
     cy.contains("button", "Gerar cartão fictício").click();
-    cy.contains("label", "Entendi que esta compra é uma simulação")
+    cy.contains("button", "Preencher com meu DreamCard").click();
+    cy.contains("button", "Revisar pedido").click();
+    cy.contains("label", "Entendi que este pedido, o frete e o pagamento são simulados")
       .find("input")
       .check();
     cy.contains("button", "Confirmar compra simulada")

@@ -9,6 +9,7 @@ import { inventoryQuote } from "../../shared/inventory.js";
 import session from "express-session";
 import { createApp } from "../src/app.js";
 import { User } from "../src/models/User.js";
+import { UserDAO } from "../src/dao/UserDAO.js";
 
 function store() {
   const docs = new Map(),
@@ -99,6 +100,58 @@ const order = (
   lines,
   totalCents: lines.reduce((s, l) => s + l.quantity * l.unitPriceCents, 0),
   simulated: true,
+});
+
+test("pedido com frete mantém baixa atômica e rejeita frete adulterado", async () => {
+  const { docs, seed, orders } = store();
+  seed("a", 5);
+  const document = {
+    ...order(),
+    delivery: { method: "express", priceCents: 2490 },
+    totalCents: 3490,
+  };
+  const result = await orders.createIdempotent(
+    "u",
+    "shipping-1",
+    "h1",
+    document,
+  );
+  assert.equal(result.totalCents, 3490);
+  assert.equal(docs.get("inventory/a").quantity, 4);
+  await assert.rejects(() =>
+    orders.createIdempotent("u", "shipping-2", "h2", {
+      ...document,
+      delivery: { method: "express", priceCents: -100 },
+      totalCents: 900,
+    }),
+  );
+  assert.equal(docs.get("inventory/a").quantity, 4);
+});
+test("endereços são salvos no documento da conta sem substituir senha ou perfil", async () => {
+  const { docs, db } = store();
+  docs.set("users/u", {
+    name: "Cliente",
+    role: "CLIENT",
+    passwordHash: "test-hash",
+  });
+  const users = new UserDAO(() => db),
+    address = {
+      label: "Casa",
+      recipient: "Cliente",
+      postalCode: "01001000",
+      street: "Rua teste",
+      number: "10",
+      complement: "",
+      district: "Centro",
+      city: "São Paulo",
+      state: "SP",
+    };
+  const book = await users.updateAddressBook("u", { type: "create", address });
+  assert.equal(book.length, 1);
+  assert.equal(docs.get("users/u").passwordHash, "test-hash");
+  await users.updateAddressBook("u", { type: "delete", id: book[0].id });
+  assert.equal(docs.get("users/u").addressBook.length, 0);
+  assert.equal(docs.get("users/u").role, "CLIENT");
 });
 
 test("estoque próprio usa preço DreamBuild e não presume saldo a partir de ofertas externas", () => {

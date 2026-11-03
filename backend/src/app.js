@@ -34,6 +34,7 @@ import { CommunityDAO } from "./dao/CommunityDAO.js";
 import { CommunityController } from "./controllers/CommunityController.js";
 import { InventoryDAO } from "./dao/InventoryDAO.js";
 import { InventoryController } from "./controllers/InventoryController.js";
+import { AddressController } from "./controllers/AddressController.js";
 
 export function createApp({
   origins = process.env.FRONTEND_ORIGINS ||
@@ -182,6 +183,34 @@ export function createApp({
   );
   app.delete("/api/cart", csrfProtection, (req, res) => cart.clear(req, res));
   app.get("/api/auth/session", (req, res) => auth.session(req, res));
+  const addresses = new AddressController(userDAO);
+  app.get("/api/account/addresses", requireAuth(userDAO), (req, res) =>
+    addresses.list(req, res),
+  );
+  app.post(
+    "/api/account/addresses",
+    requireAuth(userDAO),
+    csrfProtection,
+    (req, res) => addresses.change(req, res, "create"),
+  );
+  app.put(
+    "/api/account/addresses/:id",
+    requireAuth(userDAO),
+    csrfProtection,
+    (req, res) => addresses.change(req, res, "edit"),
+  );
+  app.put(
+    "/api/account/addresses/:id/default",
+    requireAuth(userDAO),
+    csrfProtection,
+    (req, res) => addresses.change(req, res, "default"),
+  );
+  app.delete(
+    "/api/account/addresses/:id",
+    requireAuth(userDAO),
+    csrfProtection,
+    (req, res) => addresses.change(req, res, "delete"),
+  );
   const communityLimit = rateLimit({
     windowMs: 15 * 60 * 1000,
     limit: 12,

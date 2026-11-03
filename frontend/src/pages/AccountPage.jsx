@@ -3,6 +3,8 @@ import { Link, Navigate, useLocation, useNavigate } from "react-router";
 import { LockKeyhole, UserRound } from "lucide-react";
 import { useAuth } from "../context/AuthContext.jsx";
 import GoogleLoginButton from "../components/GoogleLoginButton.jsx";
+import AddressBook from "../components/AddressBook.jsx";
+import "../checkout.css";
 
 export function AuthPage({ register = false }) {
   const auth = useAuth();
@@ -157,6 +159,10 @@ export function AccountPage() {
           : "Perfil de cliente"}
       </p>
       <p>Montagens e compras simuladas vinculadas a esta conta.</p>
+      <section className="account-address-panel">
+        <h2>Meus endereços</h2>
+        <AddressBook manage />
+      </section>
       {auth.user.googleLinked ? (
         <p className="google-linked">Google vinculado à sua conta.</p>
       ) : (
