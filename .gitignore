@@ -13,12 +13,4 @@ Thumbs.db
 .secrets/
 *-firebase-adminsdk-*.json
 firebase-service-account.json
-
-# Ferramentas locais e arquivos de trabalho
-.agents/
-.codex/
-.claude/
-skills-lock.json
-AGENTS.md
-tasks/
-blender_scripts/
+/docs/

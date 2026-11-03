@@ -21,15 +21,24 @@ Loja de hardware com catálogo, carrinho, montagem de computadores, verificaçã
 - Verificação de socket, geração de RAM, slots DIMM, M.2 NVMe/SATA, portas compartilhadas, refrigeração e requisitos da fonte.
 - Cooler separado opcional quando a versão da CPU tem cooler incluído confirmado.
 - Montagens privadas, pedido simulado, recibo, histórico e perfis de administração.
+- Estoque próprio simulado com preço por unidade, entradas, saídas, inventário, alertas e histórico; a compra aprovada dá baixa em uma transação no Firestore.
 - Referências de FPS, comparação de PCs/notebooks e publicação voluntária de montagens com ranking por resolução/desempenho/custo.
 
-As validações automatizadas usam dados isolados; não comprovam por si só os fluxos na hospedagem ou em um Firestore sem cota disponível. A configuração de CORS, cookies, HTTPS, login Google e WebSocket precisa ser validada nos domínios publicados.
+## Acesso e estoque
+
+Aplicação: https://dreambuild-pc.vercel.app/ · Código: https://github.com/CPUNOF/dreambuild-pc
+
+Entre com uma conta ADMIN e abra **Administração → Estoque de produtos**. Use **Gerenciar** para receber unidades, cadastrar o preço simulado, ajustar o limite de alerta ou registrar uma contagem. É obrigatório informar o motivo. Produtos sem cadastro começam com saldo zero; preços e disponibilidade das outras lojas não criam estoque na DreamBuild.
+
+A compra avulsa e a compra de uma montagem exigem saldo para todas as unidades. Pedido, baixas e histórico são gravados juntos; uma repetição da mesma confirmação não desconta duas vezes. A documentação da API está em `/api-docs/`, com link no rodapé para administradores; suas operações protegidas exigem sessão e autorização no servidor.
+
+Os testes automatizados usam dados isolados. Os fluxos de estoque também foram conferidos no navegador com Firestore, incluindo disputa pela última unidade e compra de montagem com quantidades de RAM e armazenamento.
 
 ## Dados e limites
 
-Os FPS publicados são referências de testes externos com fontes e condições identificadas. A estimativa de uma montagem e a simulação animada não são medições feitas no computador do visitante. Preços e estoque são consultas datadas; não há atualização automática em tempo real das lojas.
+Os FPS publicados são referências de testes externos com fontes e condições identificadas. A estimativa de uma montagem e a simulação animada não são medições feitas no computador do visitante. Ofertas e estoques externos são consultas datadas; não há atualização automática em tempo real das lojas. O saldo próprio da DreamBuild muda pelas movimentações administrativas e pelas compras acadêmicas aprovadas.
 
-O catálogo público tem uma cópia local identificada para consulta durante indisponibilidade do banco. Salvar montagens, administrar, publicar no ranking e finalizar compras continuam exigindo validação no backend e persistência real. Na preparação desta versão, a sincronização de novas fichas técnicas e a conferência final do ranking no Firestore estavam pendentes por cota excedida.
+O catálogo público tem uma cópia local identificada para consulta durante indisponibilidade do banco. Salvar montagens, administrar, publicar no ranking e finalizar compras exigem validação no backend e persistência real. O banco e a hospedagem estão sujeitos às cotas dos respectivos planos. A verificação final de saldo e preço acontece na confirmação da compra. Cancelamento e devolução com estorno de estoque ainda não estão implementados.
 
 Fotos, nomes e marcas pertencem aos respectivos titulares. As fontes das ofertas, especificações e benchmarks estão preservadas nos dados e na documentação. O projeto tem finalidade acadêmica e não representa as lojas ou fabricantes consultados.
 

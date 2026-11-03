@@ -5,6 +5,7 @@ export default function AdminNav() {
       <NavLink to="/admin" end>
         Catálogo e ofertas
       </NavLink>
+      <NavLink to="/admin/estoque">Estoque de produtos</NavLink>
       <NavLink to="/admin/jogos">Cenários de simulação</NavLink>
     </nav>
   );

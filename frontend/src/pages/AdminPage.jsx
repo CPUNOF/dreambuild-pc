@@ -3,6 +3,7 @@ import { Plus, Pencil, Trash2 } from "lucide-react";
 import AdminProductForm from "../components/AdminProductForm.jsx";
 import { apiRequest } from "../api/client.js";
 import AdminNav from "../components/AdminNav.jsx";
+import { Link } from "react-router";
 export default function AdminPage({ products, refreshCatalog }) {
   const [editing, setEditing] = useState(undefined);
   const [message, setMessage] = useState(null);
@@ -54,6 +55,9 @@ export default function AdminPage({ products, refreshCatalog }) {
           <h1>Catálogo e ofertas</h1>
           <p>Gerencie os produtos e registre consultas às lojas.</p>
         </div>
+        <Link className="secondary-button" to="/admin/estoque">
+          Gerenciar estoque DreamBuild
+        </Link>
         {editing === undefined && (
           <button
             type="button"

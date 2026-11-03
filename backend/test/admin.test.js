@@ -30,6 +30,20 @@ test("metadados 3D aceitam somente GLB local com legenda e sinalização explíc
     );
 });
 
+test("tamanhos de radiador aceitam números ou texto numérico e rejeitam valores inválidos", () => {
+  assert.deepEqual(
+    parseComponent({
+      ...products[0],
+      hardware: { radiatorSizes: [240, "360"] },
+    }).hardware.radiatorSizes,
+    ["240", "360"],
+  );
+  for (const value of [null, false, {}, "360mm", 0, -1, 360.5, 1500])
+    assert.throws(() =>
+      parseComponent({ ...products[0], hardware: { radiatorSizes: [value] } }),
+    );
+});
+
 test("admin CRUD exige sessão e papel, valida dados e preserva URL; cliente recebe 403", async () => {
   const hash = await User.hash("senha-teste-admin-123");
   const users = [

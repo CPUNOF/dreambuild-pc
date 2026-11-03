@@ -272,7 +272,9 @@ export class Build {
           "Faltam tamanho do radiador ou posições suportadas pelo gabinete para verificar o water cooler.",
         );
       else if (
-        !h("case").radiatorSizes.includes(String(h("cooler").radiatorSizeMm))
+        !h("case")
+          .radiatorSizes.map(Number)
+          .includes(Number(h("cooler").radiatorSizeMm))
       )
         add(
           "error",

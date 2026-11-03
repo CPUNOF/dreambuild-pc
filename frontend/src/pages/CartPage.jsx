@@ -81,6 +81,22 @@ export default function CartPage() {
                       Indisponível para compra. Remova este item para continuar.
                     </span>
                   )}
+                  {item.unavailableReason === "insufficient" &&
+                    item.stockQuantity > 0 && (
+                      <button
+                        className="text-button"
+                        disabled={busy}
+                        onClick={() =>
+                          update(
+                            item.componentId,
+                            Math.min(10, item.stockQuantity),
+                          ).catch(() => {})
+                        }
+                      >
+                        Ajustar para {Math.min(10, item.stockQuantity)}{" "}
+                        unidade(s) disponíveis
+                      </button>
+                    )}
                   <button
                     className="cart-remove"
                     disabled={busy}
@@ -97,7 +113,9 @@ export default function CartPage() {
                       : money(item.lineTotalCents)}
                   </strong>
                   {item.unitPriceCents !== null && (
-                    <small>{money(item.unitPriceCents)} / unidade no PIX</small>
+                    <small>
+                      {money(item.unitPriceCents)} / unidade · DreamBuild
+                    </small>
                   )}
                   <div
                     className="quantity-control"
@@ -117,7 +135,10 @@ export default function CartPage() {
                     <output aria-label="Quantidade">{item.quantity}</output>
                     <button
                       disabled={
-                        busy || item.unavailable || item.quantity === 10
+                        busy ||
+                        item.unavailable ||
+                        item.quantity === 10 ||
+                        item.quantity >= item.stockQuantity
                       }
                       aria-label={`Aumentar quantidade de ${item.component?.name}`}
                       onClick={() =>
@@ -150,13 +171,13 @@ export default function CartPage() {
               </div>
             </dl>
             <div className="cart-total">
-              <span>Total de referência</span>
+              <span>Total DreamBuild simulado</span>
               <strong>
                 {cart.totalCents === null
                   ? "Cotação parcial"
                   : money(cart.totalCents)}
               </strong>
-              <small>PIX · sem frete</small>
+              <small>Estoque próprio · nenhuma cobrança real</small>
             </div>
             {cart.totalCents === null && (
               <p className="cart-price-note">

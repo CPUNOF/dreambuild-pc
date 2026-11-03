@@ -485,6 +485,19 @@ export default function BuilderPage({ products, onCatalogRefresh }) {
                 : "Faça a análise para consultar o conjunto."}
             </small>
           </div>
+          {analysis?.storeQuote && (
+            <div className="build-summary-price">
+              <span>Compra simulada na DreamBuild</span>
+              <strong>
+                {analysis.storeQuote.totalCents === null
+                  ? "Sem estoque integral"
+                  : money(analysis.storeQuote.totalCents)}
+              </strong>
+              <small>
+                Saldo e preço próprios, separados das referências das lojas.
+              </small>
+            </div>
+          )}
           <button
             className="primary-button"
             type="button"
@@ -503,7 +516,8 @@ export default function BuilderPage({ products, onCatalogRefresh }) {
           </button>
           {savedId &&
             analysis?.compatible &&
-            analysis?.comparison.optimized.complete && (
+            analysis?.storeQuote &&
+            !analysis.storeQuote.hasUnavailableProducts && (
               <Link className="primary-button" to={`/finalizar/${savedId}`}>
                 Continuar para compra simulada
               </Link>

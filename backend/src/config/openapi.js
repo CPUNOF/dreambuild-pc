@@ -226,6 +226,31 @@ schemas.Component.properties.model3d = object(
   },
   ["url", "caption", "hasRgb"],
 );
+schemas.Checkout.properties.quoteVersion = {
+  type: "string",
+  pattern: "^[a-f0-9]{64}$",
+};
+schemas.Checkout.required.push("quoteVersion");
+schemas.StockMovement = object(
+  {
+    type: { type: "string", enum: ["entry", "exit", "count", "settings"] },
+    quantity: { type: "integer", minimum: 0, maximum: 1000000 },
+    unitPriceCents: { type: "integer", minimum: 1, maximum: 1000000000 },
+    reorderPoint: { type: "integer", minimum: 0, maximum: 1000000 },
+    expectedVersion: { type: "integer", minimum: 0 },
+    reason: { type: "string", minLength: 3, maxLength: 200 },
+    idempotencyKey: { type: "string", pattern: "^[a-zA-Z0-9_-]{16,128}$" },
+  },
+  [
+    "type",
+    "quantity",
+    "unitPriceCents",
+    "reorderPoint",
+    "expectedVersion",
+    "reason",
+    "idempotencyKey",
+  ],
+);
 function endpoint(
   path,
   method,
@@ -671,6 +696,44 @@ endpoint(
       "Transação atômica; preserva montagem privada. Outro usuário recebe 404.",
   },
 );
+endpoint(
+  "/api/inventory",
+  "get",
+  "Estoque",
+  "Consultar saldo e preço público da DreamBuild",
+  {
+    parameters: page,
+    description:
+      "Estoque acadêmico próprio, separado das ofertas externas. Não expõe histórico ou responsáveis.",
+  },
+);
+endpoint(
+  "/api/admin/inventory",
+  "get",
+  "Estoque",
+  "Listar estoque com versões e limites de alerta",
+  { admin: true, parameters: page },
+);
+endpoint(
+  "/api/admin/inventory/{id}",
+  "get",
+  "Estoque",
+  "Consultar saldo e últimas 20 movimentações",
+  { admin: true, parameters: [parameter] },
+);
+endpoint(
+  "/api/admin/inventory/{id}/movements",
+  "post",
+  "Estoque",
+  "Receber, dar baixa, contar ou configurar produto",
+  {
+    admin: true,
+    parameters: [parameter],
+    body: "StockMovement",
+    description:
+      "Quantidade positiva para entry/exit; count define saldo final; settings usa quantidade zero. A versão impede sobrescrever movimentação concorrente. A chave permite repetir sem duplicação.",
+  },
+);
 export const openapi = {
   // O carrinho não exige uma montagem completa nem executa regras de combinação.
   openapi: "3.0.3",
@@ -691,6 +754,7 @@ export const openapi = {
     "Simulação",
     "Comunidade",
     "Administração",
+    "Estoque",
   ].map((name) => ({ name })),
   paths,
   components: {

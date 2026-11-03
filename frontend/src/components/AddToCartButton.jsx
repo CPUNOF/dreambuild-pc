@@ -1,13 +1,16 @@
 import { ShoppingCart, PackageX } from "lucide-react";
-import { bestOffer, availabilityLabel } from "../data/offers.js";
+import { inventoryState, saleOffer } from "../../../shared/inventory.js";
 import { useCart } from "../context/CartContext.jsx";
 export default function AddToCartButton({ product, compact = false }) {
   const cart = useCart();
-  const available = Boolean(bestOffer(product));
+  const available = Boolean(saleOffer(product));
+  const stock = inventoryState(product.inventory);
   return (
     <>
       <span className={`stock-status ${available ? "in-stock" : "out-stock"}`}>
-        {availabilityLabel(product)}
+        {available
+          ? `Estoque DreamBuild · ${stock.quantity} un.`
+          : "Sem estoque na DreamBuild"}
       </span>
       <button
         type="button"

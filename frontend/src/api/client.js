@@ -65,6 +65,10 @@ export async function apiRequest(
   }
   if (result.data && Object.hasOwn(result.data, "csrfToken"))
     csrfToken = result.data.csrfToken;
+  if (mutation && path.startsWith("/orders/checkout-")) {
+    clearCatalogCache();
+    window.dispatchEvent(new Event("dreambuild:inventory"));
+  }
   return result.data;
 }
 
@@ -75,6 +79,22 @@ export function clearCatalogCache() {
   } catch {
     /* Armazenamento opcional. */
   }
+}
+async function attachInventory(items, signal) {
+  let records = [];
+  try {
+    records = await listRecords("/inventory", signal);
+  } catch {
+    items.inventoryUnavailable = true;
+  }
+  const stock = new Map(records.map((item) => [item.componentId, item]));
+  for (const item of items)
+    item.inventory = stock.get(item.id) || {
+      configured: false,
+      quantity: 0,
+      unitPriceCents: null,
+    };
+  return items;
 }
 export async function getCatalog(signal, { force = false } = {}) {
   if (!force)
@@ -89,7 +109,7 @@ export async function getCatalog(signal, { force = false } = {}) {
       ) {
         const items = saved.items;
         items.localSnapshot = saved.localSnapshot === true;
-        return items;
+        return attachInventory(items, signal);
       }
     } catch {
       /* Consultar API se o cache não estiver disponível. */
@@ -141,7 +161,7 @@ export async function getCatalog(signal, { force = false } = {}) {
   } catch {
     /* A vitrine não depende do armazenamento local. */
   }
-  return products;
+  return attachInventory(products, signal);
 }
 
 export async function listRecords(path, signal) {

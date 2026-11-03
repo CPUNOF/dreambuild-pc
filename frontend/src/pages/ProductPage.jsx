@@ -5,6 +5,7 @@ import AddToCartButton from "../components/AddToCartButton.jsx";
 import {
   ProductPriceSummary,
   StoreOffers,
+  CardPrice,
 } from "../components/ProductPrice.jsx";
 
 export function NotFoundPage({ product = false }) {
@@ -69,8 +70,9 @@ export default function ProductPage({ products, onBrowseCategory }) {
             Adicionar ao montador
           </Link>
           <div className="product-price-panel">
+            <CardPrice product={product} />
             <AddToCartButton product={product} />
-            <p className="product-price-title">Ofertas deste produto</p>
+            <p className="product-price-title">Referências de outras lojas</p>
             <ProductPriceSummary product={product} />
             <a className="primary-button" href="#ficha-tecnica">
               <FileText size={17} aria-hidden="true" />

@@ -73,6 +73,14 @@ export class OrderController {
         message: "Compra simulada já registrada.",
         data: this.public(replay),
       });
+    if (
+      typeof quoteVersion !== "string" ||
+      !/^[a-f0-9]{64}$/.test(quoteVersion)
+    )
+      throw new AppError(
+        400,
+        "Reabra a revisão para confirmar a cotação atual da DreamBuild.",
+      );
     DemoCard.verify(card, req.user.id, this.secret);
     const build = await this.builds.getById(buildId);
     if (!build || build.userId !== req.user.id)

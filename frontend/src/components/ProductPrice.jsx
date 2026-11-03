@@ -5,11 +5,21 @@ import {
   consultationDate,
   paymentNames,
 } from "../data/offers.js";
+import { inventoryState } from "../../../shared/inventory.js";
 export function CardPrice({ product }) {
+  const stock = inventoryState(product.inventory);
+  if (stock.configured)
+    return (
+      <div className="card-price">
+        <small>DreamBuild · compra simulada</small>
+        <strong>{money(stock.unitPriceCents)}</strong>
+        <span>Preço próprio · sem cobrança real</span>
+      </div>
+    );
   const offer = bestOffer(product);
   return offer ? (
     <div className="card-price">
-      <small>A partir de</small>
+      <small>Referência externa a partir de</small>
       <strong>{money(offer.priceCents)}</strong>
       <span>no PIX · {storeNames[offer.store]}</span>
     </div>

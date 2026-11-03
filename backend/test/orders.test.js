@@ -230,6 +230,7 @@ test("montagens e pedidos respeitam proprietário, checkout repete sem duplicar 
           buildId,
           idempotencyKey: randomUUID(),
           card: wrongCard,
+          quoteVersion: builds.get(buildId).storeQuote.quoteVersion,
         })
       ).status,
       404,

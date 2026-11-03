@@ -17,6 +17,7 @@ import { getCatalog } from "./api/client.js";
 import { AuthPage, AccountPage } from "./pages/AccountPage.jsx";
 import { useAuth, RequireUser } from "./context/AuthContext.jsx";
 import AdminPage from "./pages/AdminPage.jsx";
+import AdminInventoryPage from "./pages/AdminInventoryPage.jsx";
 import BuilderPage from "./pages/BuilderPage.jsx";
 import MyBuildsPage from "./pages/MyBuildsPage.jsx";
 import CheckoutPage from "./pages/CheckoutPage.jsx";
@@ -87,6 +88,7 @@ export default function App() {
       "/minhas-montagens": "Minhas montagens",
       "/pedidos": "Meus pedidos",
       "/admin": "Administração",
+      "/admin/estoque": "Estoque de produtos",
       "/admin/jogos": "Cenários didáticos",
       "/combate": "Combate de PCs e notebooks",
     };
@@ -132,6 +134,11 @@ export default function App() {
       await getCatalog(new AbortController().signal, { force: true }),
     );
   }
+  useEffect(() => {
+    const refresh = () => refreshCatalog().catch(() => {});
+    window.addEventListener("dreambuild:inventory", refresh);
+    return () => window.removeEventListener("dreambuild:inventory", refresh);
+  }, []);
   const catalogState = loading ? (
     <section className="catalog-load-state" role="status">
       <h1>Carregando produtos...</h1>
@@ -379,6 +386,17 @@ export default function App() {
             element={
               <RequireUser role="ADMIN">
                 <AdminGamesPage />
+              </RequireUser>
+            }
+          />
+          <Route
+            path="/admin/estoque"
+            element={
+              <RequireUser role="ADMIN">
+                <AdminInventoryPage
+                  products={products}
+                  refreshCatalog={refreshCatalog}
+                />
               </RequireUser>
             }
           />

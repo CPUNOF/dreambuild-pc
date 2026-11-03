@@ -65,7 +65,6 @@ const arrayFields = [
   "formFactors",
   "connectors",
   "storageFormats",
-  "radiatorSizes",
 ];
 
 export function parseComponent(input) {
@@ -215,6 +214,25 @@ export function parseComponent(input) {
         throw new AppError(400, `Lista técnica inválida: ${field}.`);
       document.hardware[field] = hardware[field];
     }
+  if (hardware.radiatorSizes !== undefined) {
+    const sizes = hardware.radiatorSizes;
+    if (
+      !Array.isArray(sizes) ||
+      sizes.length > 30 ||
+      sizes.some(
+        (value) =>
+          (typeof value !== "number" &&
+            !(typeof value === "string" && /^\d{2,4}$/.test(value))) ||
+          !Number.isInteger(Number(value)) ||
+          Number(value) < 40 ||
+          Number(value) > 1000,
+      )
+    )
+      throw new AppError(400, "Tamanhos de radiador inválidos.");
+    document.hardware.radiatorSizes = sizes.map((value) =>
+      String(Number(value)),
+    );
+  }
   if (
     hardware.coolerPackage !== undefined &&
     !["included", "not_included", "unknown"].includes(hardware.coolerPackage)

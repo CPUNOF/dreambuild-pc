@@ -65,7 +65,12 @@ export default function CheckoutPage() {
       await journey.run(() =>
         apiRequest("/orders/checkout-dream", {
           method: "POST",
-          body: { buildId, idempotencyKey: key, card },
+          body: {
+            buildId,
+            idempotencyKey: key,
+            card,
+            quoteVersion: analysis.storeQuote.quoteVersion,
+          },
         }),
       );
     } catch (failure) {
@@ -123,16 +128,16 @@ export default function CheckoutPage() {
                 ))}
               </div>
               <div className="checkout-total">
-                <span>Menor total combinado, sem frete</span>
+                <span>Total DreamBuild — compra simulada</span>
                 <strong>
-                  {analysis.comparison.optimized.complete
-                    ? money(analysis.comparison.optimized.totalCents)
+                  {!analysis.storeQuote.hasUnavailableProducts
+                    ? money(analysis.storeQuote.totalCents)
                     : "Cotação integral indisponível"}
                 </strong>
                 <p>
-                  {analysis.comparison.optimized.complete
-                    ? "Valor de referência registrado nas consultas. Nenhuma cobrança será feita."
-                    : "Há peças sem oferta disponível. Revise a seleção no montador antes de comprar."}
+                  {!analysis.storeQuote.hasUnavailableProducts
+                    ? "Preço e estoque próprios da DreamBuild. Nenhuma cobrança será feita."
+                    : "Há peças sem estoque DreamBuild suficiente. Revise a montagem antes de comprar."}
                 </p>
               </div>
               {!analysis.compatible && (
@@ -155,7 +160,7 @@ export default function CheckoutPage() {
                   busy ||
                   submitted ||
                   !analysis.compatible ||
-                  !analysis.comparison.optimized.complete
+                  analysis.storeQuote.hasUnavailableProducts
                 }
                 onClick={generate}
               >
@@ -195,7 +200,7 @@ export default function CheckoutPage() {
                   !card ||
                   !accepted ||
                   !analysis.compatible ||
-                  !analysis.comparison.optimized.complete
+                  analysis.storeQuote.hasUnavailableProducts
                 }
                 onClick={checkout}
               >

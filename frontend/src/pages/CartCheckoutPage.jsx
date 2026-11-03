@@ -188,7 +188,7 @@ export default function CartCheckoutPage() {
               </button>
             )}
             <div className="cart-total">
-              <span>Total de referência no PIX</span>
+              <span>Total simulado DreamBuild</span>
               <strong>
                 {summary.totalCents === null
                   ? "Cotação parcial"

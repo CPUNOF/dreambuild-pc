@@ -173,7 +173,7 @@ export function OrderPage() {
               </div>
               <dl className="receipt-facts">
                 <div>
-                  <dt>Valor de referência, sem frete</dt>
+                  <dt>Total do pedido simulado, sem frete</dt>
                   <dd>
                     {order.totalCents === null
                       ? "Sem cotação integral — preços ausentes não foram inventados"
