@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "node --watch --env-file-if-exists=.env src/server.js",
     "start": "node --env-file-if-exists=.env src/server.js",
-    "test": "node --test",
+    "test": "node --test \"test/**/*.test.js\"",
     "check:firebase": "node --env-file-if-exists=.env scripts/checkFirebase.js",
     "seed:catalog": "node --env-file-if-exists=.env scripts/seedCatalog.js",
     "create:demo": "node --env-file-if-exists=.env scripts/createDemoAccounts.js",
@@ -16,7 +16,12 @@
     "seed:models": "node --env-file-if-exists=.env scripts/seedModels.js",
     "prepare:demo": "node --env-file-if-exists=.env scripts/prepareDemoTour.js",
     "seed:expanded": "node --env-file-if-exists=.env scripts/seedExpandedCatalog.js",
-    "seed:availability": "node --env-file-if-exists=.env scripts/importAvailability.js && node --env-file-if-exists=.env scripts/verifyAvailabilityHardware.js"
+    "seed:availability": "node --env-file-if-exists=.env scripts/importAvailability.js && node --env-file-if-exists=.env scripts/verifyAvailabilityHardware.js",
+    "test:unit": "node --test \"test/unit/*.test.js\"",
+    "test:api": "node --test \"test/api/*.test.js\" \"test/integration/*.test.js\"",
+    "test:coverage": "node --test --experimental-test-coverage --test-coverage-exclude=\"test/**\" --test-coverage-exclude=\"../frontend/**\" \"test/**/*.test.js\"",
+    "e2e:server": "node scripts/e2eServer.js",
+    "docs:api": "node scripts/exportOpenapi.js"
   },
   "dependencies": {
     "cookie-parser": "^1.4.7",
@@ -30,6 +35,7 @@
     "swagger-ui-express": "^5.0.1"
   },
   "devDependencies": {
+    "@apidevtools/swagger-parser": "^12.1.0",
     "socket.io-client": "^4.8.4"
   }
 }

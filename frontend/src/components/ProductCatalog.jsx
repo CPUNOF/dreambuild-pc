@@ -3,6 +3,10 @@ import { SlidersHorizontal } from "lucide-react";
 import { departments } from "../data/products.js";
 import ProductTile from "./ProductTile.jsx";
 import { bestOffer } from "../data/offers.js";
+import { inventoryState, saleOffer } from "../../../shared/inventory.js";
+const displayedPrice = (product) =>
+  inventoryState(product.inventory).unitPriceCents ??
+  bestOffer(product)?.priceCents;
 const normalize = (value) =>
   value
     .normalize("NFD")
@@ -21,24 +25,29 @@ export default function ProductCatalog({
   const [shown, setShown] = useState(24);
   const [availableOnly, setAvailableOnly] = useState(false);
   useEffect(() => setShown(24), [category, query, sort]);
+  const term = normalize(query.trim());
+  // Busca só com símbolos (ex.: "!!!") vira termo vazio após normalizar e não
+  // deve listar o catálogo inteiro como se todos os produtos combinassem.
+  const unsearchable = query.trim() !== "" && term === "";
   const filtered = products.filter(
     (product) =>
+      !unsearchable &&
       (category === "all" || product.category === category) &&
-      (!availableOnly || Boolean(bestOffer(product))) &&
+      (!availableOnly || Boolean(saleOffer(product))) &&
       normalize(
         `${product.brand} ${product.name} ${product.fullName} ${product.categoryName} ${product.model} ${product.category === "gpu" ? (/geforce|rtx|gtx/i.test(product.fullName) ? "NVIDIA" : /radeon/i.test(product.fullName) ? "AMD" : "") : ""}`,
-      ).includes(normalize(query.trim())),
+      ).includes(term),
   );
   if (sort === "name")
     filtered.sort((a, b) => a.name.localeCompare(b.name, "pt-BR"));
   else if (sort === "featured")
     filtered.sort(
-      (a, b) => Number(Boolean(bestOffer(b))) - Number(Boolean(bestOffer(a))),
+      (a, b) => Number(Boolean(saleOffer(b))) - Number(Boolean(saleOffer(a))),
     );
   else
     filtered.sort((a, b) => {
-      const x = bestOffer(a)?.priceCents,
-        y = bestOffer(b)?.priceCents;
+      const x = displayedPrice(a),
+        y = displayedPrice(b);
       if (x === undefined) return y === undefined ? 0 : 1;
       if (y === undefined) return -1;
       return (sort === "price-desc" ? -1 : 1) * (x - y);

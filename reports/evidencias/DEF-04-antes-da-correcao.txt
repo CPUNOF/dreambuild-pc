@@ -1,0 +1,50 @@
+▶ CT-UNI-13 Game.parse
+  ✔ título com 1 caractere (VL - 1) (1.6557ms)
+  ✔ título com 2 caracteres (VL) (0.3122ms)
+  ✔ título com 120 caracteres (VL) (0.1097ms)
+  ✔ título com 121 caracteres (VL + 1) (0.1ms)
+  ✖ título de 120 caracteres + espaço no fim (DEF-04) (0.2316ms)
+  ✔ peso 0.09 (VL - 1) (0.1463ms)
+  ✔ peso 0.1 (VL) (0.1201ms)
+  ✔ peso 10 (VL) (0.1046ms)
+  ✔ peso 10.01 (VL + 1) (0.1466ms)
+  ✔ peso NaN (0.1908ms)
+  ✔ peso em texto (0.1038ms)
+  ✔ id com maiúscula (0.0867ms)
+  ✔ id com 100 caracteres (VL) (0.1195ms)
+  ✔ id com 101 caracteres (VL + 1) (0.0865ms)
+  ✔ imagem local com travessia (0.1055ms)
+  ✔ imagem HTTP sem TLS (0.085ms)
+  ✔ fonte sem HTTPS (0.0838ms)
+  ✔ resultado é normalizado e sempre marcado como não calibrado (0.1296ms)
+✖ CT-UNI-13 Game.parse (5.5419ms)
+▶ CT-API-12 CRUD /api/admin/games
+  ✔ admin cadastra, lista, altera e remove um cenário (229.3465ms)
+  ✔ cliente recebe 403 e visitante 401 (94.5535ms)
+  ✔ listagem pública valida paginação (400) (14.5422ms)
+✔ CT-API-12 CRUD /api/admin/games (387.1901ms)
+ℹ tests 21
+ℹ suites 2
+ℹ pass 20
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1514.1791
+
+✖ failing tests:
+
+test at test\api\games.api.test.js:52:5
+✖ título de 120 caracteres + espaço no fim (DEF-04) (0.2316ms)
+  Error: Informe nome e identificador válidos para o cenário.
+      at Game.parse (file:///C:/Users/Kaio/Documents/GitHub/dreambuild-pc/backend/src/models/Game.js:12:13)
+      at TestContext.<anonymous> (file:///C:/Users/Kaio/Documents/GitHub/dreambuild-pc/backend/test/api/games.api.test.js:53:30)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1382:25)
+      at Suite.processPendingSubtests (node:internal/test_runner/test:960:18)
+      at Test.postRun (node:internal/test_runner/test:1522:19)
+      at Test.run (node:internal/test_runner/test:1447:12)
+      at async Suite.processPendingSubtests (node:internal/test_runner/test:960:7) {
+    statusCode: 400,
+    errors: []
+  }

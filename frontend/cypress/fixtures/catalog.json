@@ -1,0 +1,331 @@
+[
+  {
+    "id": "kabum-102248",
+    "slug": "kabum-102248",
+    "category": "cpu",
+    "categoryName": "Processador",
+    "brand": "AMD",
+    "name": "AMD Ryzen 3 3200G, 3.6GHz (4GHz Max Turbo)",
+    "fullName": "Processador AMD Ryzen 3 3200G, 3.6GHz (4GHz Max Turbo), Cache 4MB, 4 Núcleos, 4 Threads, AM4, Com video Integrado - YD3200C5FHBOX",
+    "model": "YD3200C5FHBOX",
+    "image": "/hardware/expanded/kabum-102248-1.jpg",
+    "gallery": [
+      {
+        "src": "/hardware/expanded/kabum-102248-1.jpg",
+        "alt": "Processador AMD Ryzen 3 3200G, 3.6GHz (4GHz Max Turbo), Cache 4MB, 4 Núcleos, 4 Threads, AM4, Com video Integrado - YD3200C5FHBOX — foto 1 publicada no cadastro da loja"
+      },
+      {
+        "src": "/hardware/expanded/kabum-102248-2.jpg",
+        "alt": "Processador AMD Ryzen 3 3200G, 3.6GHz (4GHz Max Turbo), Cache 4MB, 4 Núcleos, 4 Threads, AM4, Com video Integrado - YD3200C5FHBOX — foto 2 publicada no cadastro da loja"
+      }
+    ],
+    "description": "AMD Ryzen 3 3200G, 3.6GHz (4GHz Max Turbo). 3.6GHz (4GHz Max Turbo). Cache 4MB. 4 Núcleos. A variante anunciada é YD3200C5FHBOX. Confira os requisitos do seu conjunto e as informações detalhadas do fabricante antes de escolher.",
+    "highlights": [
+      "3.6GHz (4GHz Max Turbo)",
+      "Cache 4MB",
+      "4 Núcleos"
+    ],
+    "specifications": [
+      [
+        "Marca",
+        "AMD"
+      ],
+      [
+        "Modelo anunciado",
+        "YD3200C5FHBOX"
+      ],
+      [
+        "Código na loja",
+        "102248"
+      ],
+      [
+        "Socket",
+        "AM4"
+      ]
+    ],
+    "compatibilityNote": "Confira BIOS, dimensões, conexões e instalação para o conjunto escolhido. Dados técnicos não identificados nesta ficha precisam de conferência e não são presumidos pelo montador.",
+    "manufacturerUrl": "https://www.kabum.com.br/produto/102248/processador-amd-ryzen-3-3200g-36ghz-4ghz-max-turbo-cache-4mb-4-nucleos-4-threads-am4-com-video-integrado-yd3200c5fhbox",
+    "technicalSource": "https://www.amd.com/en/support/downloads/drivers.html/processors/ryzen/ryzen-3000-series/amd-ryzen-3-3200g.html",
+    "checkedAt": "2026-10-30",
+    "displayOrder": 1,
+    "hardware": {
+      "socket": "AM4",
+      "coolerPackage": "included",
+      "boxedCoolerName": "AMD Wraith Stealth",
+      "tdpWatts": 65,
+      "ramType": "DDR4"
+    },
+    "offers": [
+      {
+        "store": "kabum",
+        "paymentMethod": "pix",
+        "availability": "in_stock",
+        "priceCents": 39999,
+        "sourceUrl": "https://www.kabum.com.br/produto/102248/processador-amd-ryzen-3-3200g-36ghz-4ghz-max-turbo-cache-4mb-4-nucleos-4-threads-am4-com-video-integrado-yd3200c5fhbox",
+        "checkedAt": "2026-10-30T15:36:45.188Z"
+      }
+    ],
+    "sourceLabel": "Página do produto na KaBuM!",
+    "inventory": {
+      "quantity": 100,
+      "unitPriceCents": 39999,
+      "updatedAt": "2026-11-03T12:00:00.000Z"
+    }
+  },
+  {
+    "id": "kabum-662405",
+    "slug": "kabum-662405",
+    "category": "cpu",
+    "categoryName": "Processador",
+    "brand": "AMD",
+    "name": "AMD Ryzen 7 9800X3D, 4.7GHz (5.2GHz Max Turbo)",
+    "fullName": "Processador AMD Ryzen 7 9800X3D, 4.7GHz (5.2GHz Max Turbo), Cache 104MB, 8 Núcleos, 16 Threads, AM5, Com Vídeo Integrado - 100-100001084WOF",
+    "model": "100-100001084WOF",
+    "image": "/hardware/expanded/kabum-662405-1.jpg",
+    "gallery": [
+      {
+        "src": "/hardware/expanded/kabum-662405-1.jpg",
+        "alt": "Processador AMD Ryzen 7 9800X3D, 4.7GHz (5.2GHz Max Turbo), Cache 104MB, 8 Núcleos, 16 Threads, AM5, Com Vídeo Integrado - 100-100001084WOF — foto 1 publicada no cadastro da loja"
+      },
+      {
+        "src": "/hardware/expanded/kabum-662405-2.jpg",
+        "alt": "Processador AMD Ryzen 7 9800X3D, 4.7GHz (5.2GHz Max Turbo), Cache 104MB, 8 Núcleos, 16 Threads, AM5, Com Vídeo Integrado - 100-100001084WOF — foto 2 publicada no cadastro da loja"
+      }
+    ],
+    "description": "AMD Ryzen 7 9800X3D, 4.7GHz (5.2GHz Max Turbo). 4.7GHz (5.2GHz Max Turbo). Cache 104MB. 8 Núcleos. A variante anunciada é 100-100001084WOF. Confira os requisitos do seu conjunto e as informações detalhadas do fabricante antes de escolher.",
+    "highlights": [
+      "4.7GHz (5.2GHz Max Turbo)",
+      "Cache 104MB",
+      "8 Núcleos"
+    ],
+    "specifications": [
+      [
+        "Marca",
+        "AMD"
+      ],
+      [
+        "Modelo anunciado",
+        "100-100001084WOF"
+      ],
+      [
+        "Código na loja",
+        "662405"
+      ],
+      [
+        "Socket",
+        "AM5"
+      ]
+    ],
+    "compatibilityNote": "Confira BIOS, dimensões, conexões e instalação para o conjunto escolhido. Dados técnicos não identificados nesta ficha precisam de conferência e não são presumidos pelo montador.",
+    "manufacturerUrl": "https://www.kabum.com.br/produto/662405/processador-amd-ryzen-7-9800x3d-4-7ghz-5-2ghz-max-turbo-cache-104mb-8-nucleos-16-threads-am5-com-video-integrado-100-100001084wof",
+    "technicalSource": "https://www.kabum.com.br/produto/662405/processador-amd-ryzen-7-9800x3d-4-7ghz-5-2ghz-max-turbo-cache-104mb-8-nucleos-16-threads-am5-com-video-integrado-100-100001084wof",
+    "checkedAt": "2026-10-30",
+    "displayOrder": 2,
+    "hardware": {
+      "socket": "AM5"
+    },
+    "offers": [],
+    "sourceLabel": "Página do produto na KaBuM!"
+  },
+  {
+    "id": "kabum-1000741",
+    "slug": "kabum-1000741",
+    "category": "gpu",
+    "categoryName": "Placa de vídeo",
+    "brand": "MSI",
+    "name": "MSI RTX 5060 Shadow 2X OC NVIDIA GeForce, 8GB",
+    "fullName": "Placa de Vídeo MSI RTX 5060 Shadow 2X OC NVIDIA GeForce, 8GB, GDDR7, 128-bit - 912-V537-038",
+    "model": "912-V537-038",
+    "image": "/hardware/expanded/kabum-1000741-1.jpg",
+    "gallery": [
+      {
+        "src": "/hardware/expanded/kabum-1000741-1.jpg",
+        "alt": "Placa de Vídeo MSI RTX 5060 Shadow 2X OC NVIDIA GeForce, 8GB, GDDR7, 128-bit - 912-V537-038 — foto 1 publicada no cadastro da loja"
+      },
+      {
+        "src": "/hardware/expanded/kabum-1000741-2.jpg",
+        "alt": "Placa de Vídeo MSI RTX 5060 Shadow 2X OC NVIDIA GeForce, 8GB, GDDR7, 128-bit - 912-V537-038 — foto 2 publicada no cadastro da loja"
+      }
+    ],
+    "description": "MSI RTX 5060 Shadow 2X OC NVIDIA GeForce, 8GB. 8GB. GDDR7. 128-bit. A variante anunciada é 912-V537-038. Confira os requisitos do seu conjunto e as informações detalhadas do fabricante antes de escolher.",
+    "highlights": [
+      "8GB",
+      "GDDR7",
+      "128-bit"
+    ],
+    "specifications": [
+      [
+        "Marca",
+        "MSI"
+      ],
+      [
+        "Modelo anunciado",
+        "912-V537-038"
+      ],
+      [
+        "Código na loja",
+        "1000741"
+      ],
+      [
+        "Memória de vídeo",
+        "8 GB"
+      ]
+    ],
+    "compatibilityNote": "Confira BIOS, dimensões, conexões e instalação para o conjunto escolhido. Dados técnicos não identificados nesta ficha precisam de conferência e não são presumidos pelo montador.",
+    "manufacturerUrl": "https://www.kabum.com.br/produto/1000741/placa-de-video-msi-rtx-5060-shadow-2x-oc-nvidia-geforce-8gb-gddr7-128-bit-912-v537-038",
+    "technicalSource": "https://www.kabum.com.br/produto/1000741/placa-de-video-msi-rtx-5060-shadow-2x-oc-nvidia-geforce-8gb-gddr7-128-bit-912-v537-038",
+    "checkedAt": "2026-10-30",
+    "displayOrder": 3,
+    "hardware": {
+      "vramGb": 8
+    },
+    "offers": [
+      {
+        "store": "kabum",
+        "paymentMethod": "pix",
+        "availability": "in_stock",
+        "priceCents": 329999,
+        "sourceUrl": "https://www.kabum.com.br/produto/1000741/placa-de-video-msi-rtx-5060-shadow-2x-oc-nvidia-geforce-8gb-gddr7-128-bit-912-v537-038",
+        "checkedAt": "2026-10-30T15:37:29.269Z"
+      }
+    ],
+    "sourceLabel": "Página do produto na KaBuM!",
+    "inventory": {
+      "quantity": 100,
+      "unitPriceCents": 329999,
+      "updatedAt": "2026-11-03T12:00:00.000Z"
+    }
+  },
+  {
+    "id": "kabum-1029658",
+    "slug": "kabum-1029658",
+    "category": "ram",
+    "categoryName": "Memória RAM",
+    "brand": "Kingston",
+    "name": "Kingston Fury  Beast, 16GB",
+    "fullName": "Memoria RAM Kingston Fury  Beast, 16GB, 3200MT/s, DDR4, CL16, DIMM,  Preto - KF432C16BB/16",
+    "model": "KF432C16BB/16",
+    "image": "/hardware/expanded/kabum-1029658-availability-1.jpg",
+    "gallery": [
+      {
+        "src": "/hardware/expanded/kabum-1029658-availability-1.jpg",
+        "alt": "Memoria RAM Kingston Fury  Beast, 16GB, 3200MT/s, DDR4, CL16, DIMM,  Preto - KF432C16BB/16 — foto publicada pela loja"
+      },
+      {
+        "src": "/hardware/expanded/kabum-1029658-availability-2.jpg",
+        "alt": "Memoria RAM Kingston Fury  Beast, 16GB, 3200MT/s, DDR4, CL16, DIMM,  Preto - KF432C16BB/16 — foto publicada pela loja"
+      }
+    ],
+    "description": "Kingston Fury  Beast, 16GB. Variante anunciada: KF432C16BB/16. Consulte a ficha, os requisitos e as condições da oferta para o seu conjunto.",
+    "highlights": [
+      "Memória RAM",
+      "Kingston"
+    ],
+    "specifications": [
+      [
+        "Marca",
+        "Kingston"
+      ],
+      [
+        "Modelo anunciado",
+        "KF432C16BB/16"
+      ],
+      [
+        "Código na loja",
+        "1029658"
+      ]
+    ],
+    "compatibilityNote": "Dados não publicados nesta ficha precisam de conferência no manual. Disponibilidade para compra não certifica compatibilidade com o conjunto.",
+    "manufacturerUrl": "https://www.kabum.com.br/produto/1029658/memoria-ram-kingston-fury-beast-16gb-3200mt-s-ddr4-cl16-dimm-preto-kf432c16bb-16",
+    "technicalSource": "https://www.kabum.com.br/produto/1029658/memoria-ram-kingston-fury-beast-16gb-3200mt-s-ddr4-cl16-dimm-preto-kf432c16bb-16",
+    "checkedAt": "2026-10-30",
+    "displayOrder": 4,
+    "hardware": {
+      "ramType": "DDR4",
+      "capacityGb": 16,
+      "speedMts": 3200
+    },
+    "offers": [
+      {
+        "store": "kabum",
+        "paymentMethod": "pix",
+        "availability": "in_stock",
+        "priceCents": 119999,
+        "sourceUrl": "https://www.kabum.com.br/produto/1029658/memoria-ram-kingston-fury-beast-16gb-3200mt-s-ddr4-cl16-dimm-preto-kf432c16bb-16",
+        "checkedAt": "2026-10-30T21:07:08.457Z"
+      }
+    ],
+    "sourceLabel": "Página do produto na KaBuM!",
+    "inventory": {
+      "quantity": 100,
+      "unitPriceCents": 119999,
+      "updatedAt": "2026-11-03T12:00:00.000Z"
+    }
+  },
+  {
+    "id": "kabum-105015",
+    "slug": "kabum-105015",
+    "category": "storage",
+    "categoryName": "Armazenamento",
+    "brand": "Adata",
+    "name": "SSD Adata SU650, 240GB",
+    "fullName": "SSD Adata SU650, 240GB, 2.5\", SATA III, Leitura: 520 MB/s, Gravação: 450 MB/s, Preto - ASU650SS-240GT-R",
+    "model": "ASU650SS-240GT-R",
+    "image": "/hardware/expanded/kabum-105015-availability-1.jpg",
+    "gallery": [
+      {
+        "src": "/hardware/expanded/kabum-105015-availability-1.jpg",
+        "alt": "SSD Adata SU650, 240GB, 2.5\", SATA III, Leitura: 520 MB/s, Gravação: 450 MB/s, Preto - ASU650SS-240GT-R — foto publicada pela loja"
+      },
+      {
+        "src": "/hardware/expanded/kabum-105015-availability-2.jpg",
+        "alt": "SSD Adata SU650, 240GB, 2.5\", SATA III, Leitura: 520 MB/s, Gravação: 450 MB/s, Preto - ASU650SS-240GT-R — foto publicada pela loja"
+      }
+    ],
+    "description": "SSD Adata SU650, 240GB. Variante anunciada: ASU650SS-240GT-R. Consulte a ficha, os requisitos e as condições da oferta para o seu conjunto.",
+    "highlights": [
+      "Armazenamento",
+      "Adata"
+    ],
+    "specifications": [
+      [
+        "Marca",
+        "Adata"
+      ],
+      [
+        "Modelo anunciado",
+        "ASU650SS-240GT-R"
+      ],
+      [
+        "Código na loja",
+        "105015"
+      ]
+    ],
+    "compatibilityNote": "Dados não publicados nesta ficha precisam de conferência no manual. Disponibilidade para compra não certifica compatibilidade com o conjunto.",
+    "manufacturerUrl": "https://www.kabum.com.br/produto/105015/ssd-adata-su650-240gb-2-5-sata-iii-leitura-520-mb-s-gravacao-450-mb-s-preto-asu650ss-240gt-r",
+    "technicalSource": "https://www.adata.com/storage/downloadfile/datasheet_ultimate_su650_25_inch_sata_ssd_v2.pdf",
+    "checkedAt": "2026-10-30",
+    "displayOrder": 5,
+    "hardware": {
+      "capacityGb": 240,
+      "interface": "SATA 6Gb/s",
+      "formFactor": "2.5 inch"
+    },
+    "offers": [
+      {
+        "store": "kabum",
+        "paymentMethod": "pix",
+        "availability": "in_stock",
+        "priceCents": 35999,
+        "sourceUrl": "https://www.kabum.com.br/produto/105015/ssd-adata-su650-240gb-2-5-sata-iii-leitura-520-mb-s-gravacao-450-mb-s-preto-asu650ss-240gt-r",
+        "checkedAt": "2026-10-30T21:07:23.165Z"
+      }
+    ],
+    "sourceLabel": "Página do produto na KaBuM!",
+    "inventory": {
+      "quantity": 100,
+      "unitPriceCents": 35999,
+      "updatedAt": "2026-11-03T12:00:00.000Z"
+    }
+  }
+]

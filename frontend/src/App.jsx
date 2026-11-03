@@ -96,11 +96,13 @@ export default function App() {
       titles[location.pathname] ||
       (location.pathname.startsWith("/pedidos/")
         ? "Detalhes do pedido"
-        : location.pathname.startsWith("/finalizar/")
-          ? "Finalizar montagem"
-          : location.pathname.startsWith("/bancada/")
-            ? "Bancada didática"
-            : "Página não encontrada");
+        : location.pathname.startsWith("/ranking/")
+          ? "Montagem da comunidade"
+          : location.pathname.startsWith("/finalizar/")
+            ? "Finalizar montagem"
+            : location.pathname.startsWith("/bancada/")
+              ? "Bancada didática"
+              : "Página não encontrada");
     document.title = product
       ? `${product.name} | DreamBuild PC`
       : location.pathname === "/"
@@ -109,6 +111,11 @@ export default function App() {
   }, [location.pathname, products, loading]);
   useEffect(() => {
     if (loading) return;
+    // O catálogo pode terminar de carregar enquanto a pessoa já digita num
+    // formulário (ex.: /cadastro). Não tiramos o foco nem rolamos a página.
+    const active = document.activeElement;
+    if (active?.matches?.("input, textarea, select, [contenteditable='true']"))
+      return;
     if (location.hash) {
       const target = document.getElementById(location.hash.slice(1));
       target?.scrollIntoView();

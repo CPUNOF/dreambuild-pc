@@ -1,0 +1,609 @@
+
+▶ Back-end
+  C:\Program Files\nodejs\node.exe --test --experimental-test-coverage --test-coverage-exclude=test/** --test-coverage-exclude=../frontend/** --test-reporter=spec --test-reporter-destination=stdout --test-reporter=junit --test-reporter-destination=C:\Users\Kaio\Documents\GitHub\dreambuild-pc\reports\junit\backend.xml --test-reporter=lcov --test-reporter-destination=C:\Users\Kaio\Documents\GitHub\dreambuild-pc\reports\coverage\backend\lcov.info test/**/*.test.js
+(node:42544) MaxListenersExceededWarning: Possible EventEmitter memory leak detected. 11 end listeners added to [TestsStream]. MaxListeners is 10. Use emitter.setMaxListeners() to increase limit
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ metadados 3D aceitam somente GLB local com legenda e sinalização explícita (3.6049ms)
+✔ admin CRUD exige sessão e papel, valida dados e preserva URL; cliente recebe 403 (556.8164ms)
+✔ ofertas rejeitam preço inválido, fonte incompatível, duplicação e data futura (0.9658ms)
+✔ dados de componente não aceitam imagens com travessia e números técnicos inválidos (0.833ms)
+▶ CT-API-01 GET /api/auth/session
+  ✔ visitante recebe 200, user null, token CSRF e cookie HttpOnly (70.7249ms)
+✔ CT-API-01 GET /api/auth/session (159.0985ms)
+▶ CT-API-02 POST /api/auth/register
+  ✔ 201 cria CLIENT mesmo se o corpo pedir ADMIN e não devolve hash (142.1762ms)
+  ✔ 409 para e-mail já cadastrado (sem diferenciar maiúsculas) (80.1119ms)
+  ✔ 400 com nome com 1 caractere (32.1313ms)
+  ✔ 400 com e-mail inválido (26.2117ms)
+  ✔ 400 com senha com 7 caracteres (14.1063ms)
+  ✔ 403 CSRF_INVALID quando o token CSRF não é enviado (14.5963ms)
+✔ CT-API-02 POST /api/auth/register (311.363ms)
+▶ CT-API-03 POST /api/auth/login
+  ✔ 200 com credenciais válidas e renova o cookie de sessão (103.7877ms)
+  ✔ e-mail é aceito com maiúsculas e espaços (76.7196ms)
+  ✔ 401 genérico para senha incorreta (85.1612ms)
+  ✔ 401 genérico para e-mail inexistente (78.8446ms)
+  ✔ 401 genérico para conta desativada (93.6446ms)
+  ✔ 400 para corpo vazio (36.4464ms)
+  ✔ 400 para senha vazia (34.2721ms)
+  ✔ 400 para senha com 129 caracteres (34.524ms)
+  ✔ 400 para e-mail numérico (15.5914ms)
+✔ CT-API-03 POST /api/auth/login (565.3975ms)
+▶ CT-API-04 limite de tentativas de login
+  ✔ após o limite configurado a API responde 429 (952.2313ms)
+✔ CT-API-04 limite de tentativas de login (952.5229ms)
+▶ CT-API-05 POST /api/auth/logout
+  ✔ encerra a sessão: rota privada volta a responder 401 (122.3652ms)
+✔ CT-API-05 POST /api/auth/logout (122.6246ms)
+▶ CT-API-06 / CT-FUN-01 tabela de decisão de acesso
+  ✔ visitante em rota pública GET /api/components?limit=5 → 200 (5.1479ms)
+  ✔ visitante em rota privada GET /api/orders/my → 401 (2.964ms)
+  ✔ visitante em rota privada GET /api/builds/my → 401 (2.7798ms)
+  ✔ visitante em rota admin GET /api/admin/metrics → 401 (2.2059ms)
+  ✔ CLIENT em rota pública GET /api/components?limit=5 → 200 (93.4535ms)
+  ✔ CLIENT em rota privada GET /api/orders/my → 200 (88.8579ms)
+  ✔ CLIENT em rota privada GET /api/builds/my → 200 (110.1118ms)
+  ✔ CLIENT em rota admin GET /api/admin/metrics → 403 (91.9027ms)
+  ✔ ADMIN em rota pública GET /api/components?limit=5 → 200 (79.0332ms)
+  ✔ ADMIN em rota privada GET /api/orders/my → 200 (89.2937ms)
+  ✔ ADMIN em rota privada GET /api/builds/my → 200 (70.9567ms)
+  ✔ ADMIN em rota admin GET /api/admin/metrics → 200 (78.5358ms)
+  ✔ conta desativada após o login perde acesso (401) (79.6046ms)
+✔ CT-API-06 / CT-FUN-01 tabela de decisão de acesso (796.4243ms)
+▶ CT-API-07 GET /api/components (consulta pública)
+  ✔ 200 com lista, meta.limit e cursor nulo no fim (99.5854ms)
+  ✔ paginação por cursor percorre todos os itens sem repetir (50.4336ms)
+  ✔ filtro por categoria (maiúsculas aceitas) (9.8902ms)
+  ✔ 400 para parâmetro inválido: limit=0 (3.9153ms)
+  ✔ 400 para parâmetro inválido: limit=101 (5.4664ms)
+  ✔ 400 para parâmetro inválido: limit=abc (8.827ms)
+  ✔ 400 para parâmetro inválido: cursor=a%2Fb (5.3855ms)
+  ✔ 400 para parâmetro inválido: category=notebook (7.9437ms)
+  ✔ 400 para parâmetro inválido: category= (9.1715ms)
+  ✔ 503 sem detalhes internos quando o banco falha (67.6286ms)
+✔ CT-API-07 GET /api/components (consulta pública) (352.9886ms)
+▶ CT-API-08 GET /api/components/:id
+  ✔ 200 com a ficha do produto (15.4268ms)
+  ✔ 404 para produto inexistente (5.1276ms)
+  ✔ 400 para identificador com caracteres inválidos (4.2427ms)
+✔ CT-API-08 GET /api/components/:id (25.2325ms)
+▶ CT-API-09 CRUD /api/admin/components (ADMIN)
+  ✔ fluxo cadastrar → consultar → alterar → remover (232.4568ms)
+  ✔ 409 ao cadastrar produto com endereço já existente (136.5991ms)
+  ✔ 400 para dados incompletos e para troca de slug; 404 para inexistente (136.8429ms)
+  ✔ 400 para oferta com preço negativo no PUT (95.9146ms)
+✔ CT-API-09 CRUD /api/admin/components (ADMIN) (605.018ms)
+▶ CT-API-10 CRUD administrativo bloqueado para não-admin
+  ✔ visitante 401, cliente 403 e nada é gravado (134.1566ms)
+  ✔ admin sem token CSRF recebe 403 (106.2067ms)
+✔ CT-API-10 CRUD administrativo bloqueado para não-admin (241.037ms)
+▶ CT-UNI-13 Game.parse
+  ✔ título com 1 caractere (VL - 1) (4.3912ms)
+  ✔ título com 2 caracteres (VL) (0.7027ms)
+  ✔ título com 120 caracteres (VL) (0.2148ms)
+  ✔ título com 121 caracteres (VL + 1) (0.1465ms)
+  ✔ título de 120 caracteres + espaço no fim (DEF-04) (0.1143ms)
+  ✔ peso 0.09 (VL - 1) (0.1914ms)
+  ✔ peso 0.1 (VL) (0.2029ms)
+  ✔ peso 10 (VL) (9.3442ms)
+  ✔ peso 10.01 (VL + 1) (0.2131ms)
+  ✔ peso NaN (0.1604ms)
+  ✔ peso em texto (0.1018ms)
+  ✔ id com maiúscula (0.1766ms)
+  ✔ id com 100 caracteres (VL) (0.1324ms)
+  ✔ id com 101 caracteres (VL + 1) (0.1355ms)
+  ✔ imagem local com travessia (0.1125ms)
+  ✔ imagem HTTP sem TLS (0.1321ms)
+  ✔ fonte sem HTTPS (0.1289ms)
+  ✔ resultado é normalizado e sempre marcado como não calibrado (0.2152ms)
+✔ CT-UNI-13 Game.parse (20.4459ms)
+▶ CT-API-12 CRUD /api/admin/games
+  ✔ admin cadastra, lista, altera e remove um cenário (320.4496ms)
+  ✔ cliente recebe 403 e visitante 401 (104.1208ms)
+  ✔ listagem pública valida paginação (400) (3.7264ms)
+✔ CT-API-12 CRUD /api/admin/games (549.4374ms)
+▶ CT-API-13 a especificação é OpenAPI 3.0 válida
+  ✔ passa no validador oficial (swagger-parser) (426.8883ms)
+  ✔ toda operação tem resumo, tag, operationId único e resposta 500 (0.6178ms)
+  ✔ rotas autenticadas documentam 401; alterações documentam 403 (CSRF) (0.3909ms)
+✔ CT-API-13 a especificação é OpenAPI 3.0 válida (508.3359ms)
+▶ CT-API-14 documentação cobre exatamente as rotas reais
+  ✔ nenhuma rota do Express fica sem documentação e nada documentado deixa de existir (1.5427ms)
+✔ CT-API-14 documentação cobre exatamente as rotas reais (1.7209ms)
+▶ CT-API-15 a documentação é servida pela API
+  ✔ GET /openapi.json devolve a mesma especificação (109.9271ms)
+  ✔ docs/api/openapi.json exportado está atualizado (17.9085ms)
+  ✔ GET /api-docs/ devolve a interface Swagger UI (21.4192ms)
+✔ CT-API-15 a documentação é servida pela API (149.8787ms)
+▶ CT-API-16 respostas reais usam somente códigos documentados
+  ✔ cenários de visitante, cliente e administrador (1272.2778ms)
+✔ CT-API-16 respostas reais usam somente códigos documentados (1272.5444ms)
+✔ cadastro força CLIENT, remove hash da resposta, renova sessão e logout invalida cookie (294.7714ms)
+✔ CSRF ausente ou inválido bloqueia cadastro antes de criar usuário (52.2315ms)
+✔ conta desabilitada perde o perfil na consulta de sessão e acesso privado (111.4794ms)
+✔ login inválido é genérico; login válido preserva a conta e não o segredo (335.88ms)
+✔ tentativas malsucedidas de login atingem 429 (98.6225ms)
+✔ hashes usam salts distintos e aceitam somente a senha correta (272.8664ms)
+✔ quantidades de kits contam módulos/GB e multiplicam preço; excesso bloqueia (11.7588ms)
+✔ NVMe e SATA coexistem com quantidades; M.2 SATA não vira segundo NVMe (1.5467ms)
+✔ alocação considera SATA compartilhada no protocolo certo e restrição por CPU (3.133ms)
+✔ dados ausentes e SSD externo não são aprovados como conexão interna (0.5721ms)
+✔ cooler incluído só dispensa peça separada quando confirmado; socket do avulso é exato (0.9845ms)
+✔ configuração rejeita frações, negativos, quantidades de CPU e armazenamento duplicado (1.3591ms)
+✔ cadastro aceita nomes oficiais M.2_1 e rejeita protocolos inválidos (11.6437ms)
+✔ prévia pública preserva quantidades, custo unitário e RAM total sem inventar ganho de FPS (28.0986ms)
+✔ conjunto inicial completo passa nos critérios, com fonte de 1000 W e limites explicados (5.8784ms)
+✔ socket, DDR, tamanho e fonte incompatíveis são detectados no servidor (1.3478ms)
+✔ valores de energia ausentes não viram zero nem recomendação válida (0.9122ms)
+✔ fonte não recebe recomendação sem o piso publicado da GPU e considera potência máxima da CPU (0.7972ms)
+✔ water cooler exige tamanho de radiador suportado, sem comparar com altura de air cooler (0.7203ms)
+✔ peça removida, categoria trocada e ID inseguro são rejeitados; montagem parcial é marcada (1.0618ms)
+✔ comparador escolhe apenas lojas completas e calcula compra combinada por modalidade (1.6531ms)
+✔ carrinho valida limites e multiplica preços sem alterar a oferta original (8.2609ms)
+✔ peça avulsa mantém carrinho no login, exige cotação atual e checkout é privado/idempotente (704.4161ms)
+✔ consulta pública mantém envelope e transmite paginação validada ao DAO (100.1652ms)
+✔ parâmetros inválidos não consultam o banco (167.2233ms)
+✔ categoria é normalizada e produto individual retorna 404 sem consultar dados privados (33.0265ms)
+✔ falha de banco retorna 503 sem revelar erro interno (16.0643ms)
+✔ catálogo vazio é sucesso com cursor final nulo (20.5872ms)
+✔ Model converte ficha armazenada e exclui campos internos da resposta (1.1484ms)
+✔ base pública informa cópia local em cota excedida e compartilha uma única leitura (5.7936ms)
+✔ base ampliada tem 19 GPUs exatas, 12 jogos e 456 FPS com fonte; 8 GB não herda 16 GB (17.1187ms)
+✔ publicação exige consentimento explícito e rejeita FPS/preço forjados (7.8992ms)
+✔ Firestore DAO mantém uma publicação por montagem, separa resolução/versão e exclui custos incompletos (10.9782ms)
+✔ listagem privada pagina todos os registros; cota pública tem recuo sem repetir leituras (4.3422ms)
+✔ prévia privada usa peças atuais, não expõe dono e muda hash se uma cotação mudar (7.1557ms)
+✔ rotas públicas dispensam sessão; publicação exige sessão, CSRF, proprietário e prévia atual (594.6266ms)
+✔ seletor distingue chip de marca comercial e não recomenda fonte sem conectores/dimensões (1.8382ms)
+✔ Firebase Auth inicia mesmo quando o runtime não permite require de módulos ESM (886.6115ms)
+✔ entrada da nuvem recusa iniciar sem segredo mesmo se o provedor não definir NODE_ENV (2771.0739ms)
+✔ entrypoint da nuvem atende HTTP e restringe origens sem consultar o banco (683.3485ms)
+✔ credencial por variável rejeita JSON inválido/projeto divergente sem expor seu conteúdo (1.3576ms)
+✔ configuração de nuvem inicializa Admin com credencial em memória, sem arquivo nem consulta ao banco (68.2176ms)
+✔ configuração rejeita pasta, arquivo ausente e JSON inválido antes de conectar (7.3703ms)
+✔ saúde informa que o servidor responde sem declarar banco conectado (72.9547ms)
+✔ rota inexistente mantém envelope JSON e status HTTP de erro (11.5842ms)
+✔ JSON malformado recebe 400 sem revelar stack trace (30.9855ms)
+✔ payload excessivo recebe 413 (7.0922ms)
+✔ origem autorizada recebe permissão explícita com credenciais (8.8807ms)
+✔ origem não autorizada não recebe permissão CORS (2.4673ms)
+✔ preflight permite métodos do contrato sem wildcard de origem (2.9307ms)
+▶ CT-API-11 /api/cart
+  ✔ visitante tem carrinho vazio (53.4262ms)
+  ✔ PUT soma quantidades e calcula total; DELETE remove (66.2562ms)
+  ✔ 400 para quantidade 0 (16.2974ms)
+  ✔ 400 para quantidade 11 (29.1353ms)
+  ✔ 400 para quantidade 1.5 (14.9506ms)
+  ✔ 400 para quantidade "3" (31.3814ms)
+  ✔ 404 para produto inexistente e 409 para produto sem oferta PIX (47.7113ms)
+  ✔ 403 sem token CSRF (14.1163ms)
+✔ CT-API-11 /api/cart (331.5825ms)
+▶ CT-INT-01 carrinho do visitante é preservado ao entrar na conta
+  ✔ itens adicionados antes do login continuam após o login (105.8948ms)
+✔ CT-INT-01 carrinho do visitante é preservado ao entrar na conta (106.1809ms)
+▶ CT-INT-02 checkout completo do carrinho gera pedido no histórico
+  ✔ cartão → checkout 201 → pedido em /orders/my e /orders/:id; carrinho esvazia (167.3298ms)
+✔ CT-INT-02 checkout completo do carrinho gera pedido no histórico (167.6031ms)
+▶ CT-INT-03 checkout rejeita dados divergentes
+  ✔ 409 quando o carrinho mudou ou a cotação ficou desatualizada; 400 sem cartão (153.1575ms)
+  ✔ 401 para visitante no checkout (15.6409ms)
+✔ CT-INT-03 checkout rejeita dados divergentes (169.1471ms)
+▶ CT-INT-04 pedidos são isolados por proprietário
+  ✔ outro cliente recebe 404 ao consultar pedido alheio (229.8481ms)
+✔ CT-INT-04 pedidos são isolados por proprietário (230.1761ms)
+✔ 100 recargas do catálogo usam 320 leituras simuladas na janela, em vez de 32.000 (7.6287ms)
+✔ reiniciar o DAO reaproveita cache público do disco; invalidação remove o registro anterior (4.5847ms)
+✔ consulta iniciada antes de uma alteração não restaura um cache invalidado (0.3067ms)
+✔ ler sessão de prazo fixo não dispara escrita touch no Firestore (0.5806ms)
+✔ cartão fictício tem Luhn válido, pertence ao usuário e rejeita alteração/expiração (3.093ms)
+✔ montagens e pedidos respeitam proprietário, checkout repete sem duplicar e preserva histórico (481.4558ms)
+✔ sockets LGA e AM são exatos; DDR não é intercambiável e dados críticos ausentes bloqueiam (1.6268ms)
+✔ referências preservam resolução, fontes e preços; notebooks não herdam 1440p de desktop (0.2727ms)
+✔ estimativa identifica CPU/GPU e não inventa FPS de GPU desconhecida ou variante móvel (4.3987ms)
+✔ Google cria CLIENT, mantém vínculo por UID e não expõe UID na resposta pública (3.7636ms)
+✔ mesmo e-mail local exige vínculo autenticado e preserva o papel já existente (0.5236ms)
+✔ tokens Google ausentes ou excessivos são rejeitados antes de consultar Firebase (0.4733ms)
+✔ somente Gmail verificado pelo provedor Google recebe indicação de vínculo automático (0.5542ms)
+✔ Gmail verificado vincula cliente existente sem duplicar conta nem alterar senha, preferências ou papel (0.7003ms)
+✔ Gmail sem indicação verificada e conta administrativa continuam exigindo vínculo autenticado (0.7933ms)
+✔ vínculo automático rejeita conta desabilitada, outro UID ou índice de e-mail divergente sem gravar (0.8194ms)
+✔ catálogo compartilha consulta em andamento, descarta falha e limita o cache público (2.4921ms)
+✔ cópia pública é paginada sem duplicar produtos e nunca fornece credenciais (6.3815ms)
+✔ vitrine e rascunho assinado funcionam sem leitura de sessão; carrinho continua exigindo banco (99.0862ms)
+✔ gravação atrasada de carrinho não restaura sessão revogada pelo logout (2.2343ms)
+▶ CT-UNI-05 Cart.lines: quantidade 1..10 e até 30 modelos
+  ✔ quantidade 0 (VL inferior - 1) (2.2974ms)
+  ✔ quantidade 1 (VL inferior) (0.3186ms)
+  ✔ quantidade 10 (VL superior) (0.1578ms)
+  ✔ quantidade 11 (VL superior + 1) (0.1667ms)
+  ✔ quantidade -1 (PE negativa) (3.0032ms)
+  ✔ quantidade 1.5 (PE fracionária) (0.1393ms)
+  ✔ quantidade "2" (PE texto) (0.4042ms)
+  ✔ 30 modelos (VL superior) é aceito (26.1329ms)
+  ✔ 31 modelos (VL superior + 1) é rejeitado (0.3625ms)
+  ✔ entrada que não é lista é rejeitada (0.1912ms)
+  ✔ modelo repetido é rejeitado (0.187ms)
+  ✔ identificador 128 caracteres (VL) (0.1773ms)
+  ✔ identificador 129 caracteres (VL + 1) (0.1423ms)
+  ✔ identificador com barra (travessia) (0.1166ms)
+  ✔ identificador vazio (0.0867ms)
+  ✔ linhas saem ordenadas e só com os campos esperados (1.0997ms)
+✔ CT-UNI-05 Cart.lines: quantidade 1..10 e até 30 modelos (37.8038ms)
+▶ CT-UNI-06 Offer.eligible — tabela de decisão
+  ✔ in_stock / pix / 1000 → true (0.2716ms)
+  ✔ out_of_stock / pix / 1000 → false (0.0668ms)
+  ✔ unknown / pix / 1000 → false (0.0553ms)
+  ✔ in_stock / card / 1000 → false (0.0537ms)
+  ✔ in_stock / pix / 0 → false (0.0579ms)
+  ✔ in_stock / pix / -5 → false (0.0629ms)
+  ✔ in_stock / pix / 10.5 → false (0.0683ms)
+  ✔ in_stock / pix / null → false (0.0644ms)
+  ✔ oferta ausente não é elegível (0.0818ms)
+  ✔ método de pagamento pode ser escolhido (0.1001ms)
+✔ CT-UNI-06 Offer.eligible — tabela de decisão (1.2729ms)
+▶ CT-UNI-07 Offer.parseMany — validação de ofertas do admin
+  ✔ 9 ofertas (VL superior) aceitas (0.6917ms)
+  ✔ 10 ofertas (VL + 1) rejeitadas (0.1589ms)
+  ✔ mesma loja e pagamento duplicados (0.154ms)
+  ✔ rejeita loja desconhecida (0.1372ms)
+  ✔ rejeita URL de outra loja (0.0995ms)
+  ✔ rejeita URL sem HTTPS (0.0854ms)
+  ✔ rejeita URL com credenciais (0.0917ms)
+  ✔ rejeita data futura (0.1225ms)
+  ✔ rejeita data antes de 2000 (0.1155ms)
+  ✔ rejeita preço 0 (VL inferior - 1) (0.0953ms)
+  ✔ rejeita preço acima de 1.000.000.000 (VL + 1) (0.8809ms)
+  ✔ rejeita em estoque sem preço (0.1699ms)
+  ✔ aceita preço 1 (VL inferior) (0.1583ms)
+  ✔ aceita preço 1.000.000.000 (VL superior) (0.0855ms)
+  ✔ aceita sem estoque e sem preço (0.0867ms)
+  ✔ aceita subdomínio da loja (0.09ms)
+✔ CT-UNI-07 Offer.parseMany — validação de ofertas do admin (3.8616ms)
+▶ CT-UNI-08 pagination: limite 1..100 e cursor seguro
+  ✔ padrão sem parâmetros (0.5519ms)
+  ✔ limit "0" (VL - 1) (0.1658ms)
+  ✔ limit "1" (VL inferior) (0.0982ms)
+  ✔ limit "100" (VL superior) (0.0968ms)
+  ✔ limit "101" (VL + 1) (0.0837ms)
+  ✔ limit "abc" (PE não numérica) (0.1038ms)
+  ✔ limit "-1" (0.0899ms)
+  ✔ limit repetido na URL (array) (0.0876ms)
+  ✔ cursor válido (0.1257ms)
+  ✔ cursor com caractere inválido (1.235ms)
+  ✔ cursor com 129 caracteres (0.0977ms)
+  ✔ valor padrão é 20 (0.1951ms)
+✔ CT-UNI-08 pagination: limite 1..100 e cursor seguro (3.5138ms)
+▶ CT-UNI-01 nome: limites 2..80 após trim
+  ✔ vazio (PE inválida) (1.5216ms)
+  ✔ 1 caractere (VL inferior - 1) (0.1318ms)
+  ✔ 2 caracteres (VL inferior) (0.2329ms)
+  ✔ 80 caracteres (VL superior) (0.1337ms)
+  ✔ 81 caracteres (VL superior + 1) (0.1065ms)
+  ✔ só espaços vira vazio (0.1067ms)
+  ✔ espaços nas pontas são removidos (0.1022ms)
+  ✔ tipo não string (PE inválida) (0.1028ms)
+✔ CT-UNI-01 nome: limites 2..80 após trim (4.1684ms)
+▶ CT-UNI-02 e-mail: formato e limite de 254
+  ✔ formato válido (0.3246ms)
+  ✔ sem @ (PE inválida) (0.1682ms)
+  ✔ sem domínio de topo (0.1326ms)
+  ✔ com espaço interno (0.1352ms)
+  ✔ 254 caracteres (VL superior) (0.1113ms)
+  ✔ 255 caracteres (VL superior + 1) (0.1439ms)
+  ✔ não string (0.1616ms)
+  ✔ e-mail é normalizado para minúsculas e sem espaços nas pontas (0.1344ms)
+✔ CT-UNI-02 e-mail: formato e limite de 254 (1.8264ms)
+▶ CT-UNI-03 senha: limites 8..128
+  ✔ 7 caracteres (VL inferior - 1) (0.2742ms)
+  ✔ 8 caracteres (VL inferior) (0.0937ms)
+  ✔ 128 caracteres (VL superior) (0.1159ms)
+  ✔ 129 caracteres (VL superior + 1) (0.1394ms)
+  ✔ número em vez de texto (PE inválida) (0.088ms)
+  ✔ ausente (0.0831ms)
+  ✔ campos extras (ex.: role) não passam pela validação (1.2439ms)
+✔ CT-UNI-03 senha: limites 8..128 (2.3866ms)
+▶ CT-UNI-04 hash de senha (scrypt)
+  ✔ gera salts diferentes e só aceita a senha correta (162.9758ms)
+  ✔ hash malformado nunca é aceito (191.8036ms)
+  ✔ dados públicos não expõem hash nem UID do Google (0.7663ms)
+✔ CT-UNI-04 hash de senha (scrypt) (357.5099ms)
+✔ sugestão didática não inventa peça e rejeita upgrade incompatível (8.2286ms)
+✔ modelo é sintético, previsível, muda com resolução e apresenta alerta didático (6.2008ms)
+✔ WebSocket verifica origem, CSRF/sessão e dono; dados privados param no stop e logout (1521.9815ms)
+ℹ tests 249
+ℹ suites 29
+ℹ pass 249
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 8261.0299
+ℹ start of coverage report
+ℹ --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ℹ file                        | line % | branch % | funcs % | uncovered lines
+ℹ --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ℹ ..                          |        |          |         | 
+ℹ  api                        |        |          |         | 
+ℹ   server.js                 | 100.00 |   100.00 |  100.00 | 
+ℹ  shared                     |        |          |         | 
+ℹ   buildResources.js         |  93.18 |    89.05 |  100.00 | 19-20 73 105-107 112-114 122-124 132-134 172-174
+ℹ   selectionCompatibility.js |  94.03 |    97.06 |  100.00 | 46-49
+ℹ data                        |        |          |         | 
+ℹ  hardwareFacts.js           | 100.00 |   100.00 |  100.00 | 
+ℹ src                         |        |          |         | 
+ℹ  app.js                     |  88.02 |    91.53 |   82.46 | 93-119 178-180 327-339 365-367
+ℹ  config                     |        |          |         | 
+ℹ   corsConfig.js             | 100.00 |   100.00 |  100.00 | 
+ℹ   firebaseConfig.js         |  84.91 |    85.71 |   50.00 | 14-17 48-51
+ℹ   googleAuth.js             |  76.81 |    80.00 |  100.00 | 24-25 34-47
+ℹ   openapi.js                | 100.00 |    97.44 |  100.00 | 
+ℹ   sessionConfig.js          |  87.76 |   100.00 |   50.00 | 19-20 22-23 25-26
+ℹ  controllers                |        |          |         | 
+ℹ   AdminController.js        | 100.00 |   100.00 |   80.00 | 
+ℹ   AuthController.js         |  83.61 |   100.00 |   72.73 | 101-108 110-121
+ℹ   BuildController.js        |  79.22 |    65.22 |   76.92 | 26-40 42-56 63-64
+ℹ   CartController.js         | 100.00 |    91.67 |  100.00 | 
+ℹ   CommunityController.js    |  89.12 |    77.14 |   81.25 | 26-28 121-125 132-139
+ℹ   ComponentController.js    |  94.25 |    93.10 |  100.00 | 81-85
+ℹ   GameController.js         | 100.00 |   100.00 |  100.00 | 
+ℹ   HealthController.js       |  90.00 |    50.00 |  100.00 | 13-14
+ℹ   OrderController.js        |  98.77 |    86.00 |  100.00 | 87-89
+ℹ   ReferenceController.js    |  29.09 |   100.00 |   66.67 | 16-54
+ℹ  dao                        |        |          |         | 
+ℹ   BuildDAO.js               |  33.33 |   100.00 |   20.00 | 8-12 14-16 18-29 31-32
+ℹ   CommunityDAO.js           |  99.36 |    89.80 |  100.00 | 32
+ℹ   ComponentDAO.js           |  60.11 |    90.63 |   57.14 | 55-56 67-68 71-76 78-86 88-104 106-115 117-120 160-182
+ℹ   GameDAO.js                |  25.49 |   100.00 |   16.67 | 9-14 16-26 28-38 40-47 49-50
+ℹ   MetricsDAO.js             |  33.33 |   100.00 |   50.00 | 7-20
+ℹ   OrderDAO.js               |  17.65 |   100.00 |   16.67 | 6-7 14-19 21-38 40-71 73-84
+ℹ   PublicCatalogSnapshot.js  | 100.00 |   100.00 |  100.00 | 
+ℹ   ReferenceDAO.js           |  47.37 |    57.14 |   50.00 | 13-14 24-25 39-57 59-75
+ℹ   SessionDAO.js             |  76.92 |    73.33 |   83.33 | 15-17 43-51
+ℹ   UserDAO.js                |  73.77 |    86.67 |   57.14 | 11-13 15-20 22-41 71-73
+ℹ  errors                     |        |          |         | 
+ℹ   AppError.js               | 100.00 |   100.00 |  100.00 | 
+ℹ  httpServer.js              | 100.00 |   100.00 |  100.00 | 
+ℹ  middlewares                |        |          |         | 
+ℹ   authMiddleware.js         | 100.00 |   100.00 |  100.00 | 
+ℹ   csrfMiddleware.js         | 100.00 |   100.00 |  100.00 | 
+ℹ  models                     |        |          |         | 
+ℹ   Build.js                  |  87.03 |    82.14 |  100.00 | 67-68 129-132 165-168 175-178 189-192 201-204 209-212 223-226 256-259 291-294 297-300 305-308 311-314 362-365 387 390-393
+ℹ   Cart.js                   | 100.00 |   100.00 |  100.00 | 
+ℹ   CommunityBuild.js         |  96.25 |    81.82 |  100.00 | 36-38
+ℹ   Comparison.js             | 100.00 |   100.00 |   93.33 | 
+ℹ   Component.js              | 100.00 |   100.00 |  100.00 | 
+ℹ   ComponentInput.js         |  88.82 |    80.00 |   81.25 | 138-140 169-171 220 244-247 252-255 270-278 290-297 301-302
+ℹ   DemoCard.js               | 100.00 |   100.00 |  100.00 | 
+ℹ   Game.js                   | 100.00 |   100.00 |  100.00 | 
+ℹ   Offer.js                  |  97.75 |    92.68 |  100.00 | 35-36
+ℹ   Pagination.js             | 100.00 |   100.00 |  100.00 | 
+ℹ   ReferencePerformance.js   | 100.00 |    95.24 |   94.44 | 
+ℹ   Simulation.js             |  94.23 |    89.66 |  100.00 | 8-10 25-27
+ℹ   Upgrade.js                |  98.63 |    86.67 |   92.31 | 57
+ℹ   User.js                   | 100.00 |   100.00 |  100.00 | 
+ℹ  views                      |        |          |         | 
+ℹ   ApiResponseView.js        | 100.00 |   100.00 |  100.00 | 
+ℹ  websocket                  |        |          |         | 
+ℹ   telemetrySocket.js        |  91.88 |    66.67 |   83.33 | 83-85 135-140 150 182-187
+ℹ --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ℹ all files                   |  89.52 |    89.09 |   85.21 | 
+ℹ --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ℹ end of coverage report
+
+▶ Front-end
+  npx vitest run --coverage --reporter=default --reporter=junit --outputFile.junit=C:\Users\Kaio\Documents\GitHub\dreambuild-pc\reports\junit\frontend.xml
+(node:25948) [DEP0190] DeprecationWarning: Passing args to a child process with shell option true can lead to security vulnerabilities, as the arguments are not escaped, only concatenated.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+
+ RUN  v5.0.5 C:/Users/Kaio/Documents/GitHub/dreambuild-pc/frontend
+      Coverage enabled with v8
+
+ ✓ test/client.test.js (13 tests) 47ms
+ ✓ test/offers.test.js (35 tests) 29ms
+ ✓ test/ProductCatalog.test.jsx (12 tests) 860ms
+
+ Test Files  3 passed (3)
+      Tests  60 passed (60)
+   Start at  21:18:02
+   Duration  2.68s (environment 49%, tests 19%, setup 18%, import 7%, transform 5%, worker 2%)
+
+JUNIT report written to C:/Users/Kaio/Documents/GitHub/dreambuild-pc/reports/junit/frontend.xml
+[34m % [39m[2mCoverage report from [22m[33mv8[39m
+-------------------|---------|----------|---------|---------|-------------------
+File               | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
+-------------------|---------|----------|---------|---------|-------------------
+All files          |   81.77 |    74.57 |   78.26 |    81.6 |                   
+ api               |   72.63 |    69.38 |   72.72 |   73.86 |                   
+  client.js        |   72.63 |    69.38 |   72.72 |   73.86 | 73-74,148-177,193 
+ components        |   82.97 |    64.17 |   69.56 |   80.48 |                   
+  ...artButton.jsx |     100 |    84.61 |   66.66 |     100 | 15,28             
+  ...ctCatalog.jsx |   97.05 |    85.29 |   92.85 |   96.42 | 86                
+  ProductPrice.jsx |   22.22 |       15 |   16.66 |   22.22 | 25-64             
+ data              |      98 |    91.54 |     100 |   97.77 |                   
+  ...tSelection.js |   97.29 |    89.65 |     100 |   97.05 | 48                
+-------------------|---------|----------|---------|---------|-------------------
+
+=============================== Coverage summary ===============================
+Statements   : 81.77% ( 157/192 )
+Branches     : 74.57% ( 176/236 )
+Functions    : 78.26% ( 36/46 )
+Lines        : 81.6% ( 142/174 )
+================================================================================
+
+▶ iniciando API E2E (memória)
+API E2E (DAOs em memória) em http://127.0.0.1:3001
+
+▶ E2E Cypress com API simulada
+  npx cypress run --e2e --reporter junit --reporter-options mochaFile=C:\Users\Kaio\Documents\GitHub\dreambuild-pc\reports\junit\cypress-[hash].xml,toConsole=false
+
+Warning: The allowCypressEnv configuration option is enabled. This allows any browser code to read values from Cypress.env(). This is insecure and will be removed in a future major version.
+
+1. Replace Cypress.env() calls with cy.env() (for sensitive values) or Cypress.expose() (for public configuration)
+2. Set allowCypressEnv: false in your Cypress configuration to disable Cypress.env()
+
+Learn more: https://on.cypress.io/cypress-env-migration
+
+
+====================================================================================================
+
+  (Run Starting)
+
+  ┌────────────────────────────────────────────────────────────────────────────────────────────────┐
+  │ Cypress:        15.21.1                                                                        │
+  │ Browser:        Electron 138 (headless)                                                        │
+  │ Node Version:   v24.19.0 (C:\Program Files\nodejs\node.exe)                                    │
+  │ Specs:          4 found (carrinho.cy.js, catalogo.cy.js, conta.cy.js, produto.cy.js)           │
+  │ Searched:       cypress/e2e/**/*.cy.js                                                         │
+  └────────────────────────────────────────────────────────────────────────────────────────────────┘
+
+
+────────────────────────────────────────────────────────────────────────────────────────────────────
+                                                                                                    
+  Running:  carrinho.cy.js                                                                  (1 of 4)
+
+  (Results)
+
+  ┌────────────────────────────────────────────────────────────────────────────────────────────────┐
+  │ Tests:        7                                                                                │
+  │ Passing:      7                                                                                │
+  │ Failing:      0                                                                                │
+  │ Pending:      0                                                                                │
+  │ Skipped:      0                                                                                │
+  │ Screenshots:  0                                                                                │
+  │ Video:        false                                                                            │
+  │ Duration:     12 seconds                                                                       │
+  │ Spec Ran:     carrinho.cy.js                                                                   │
+  └────────────────────────────────────────────────────────────────────────────────────────────────┘
+
+
+────────────────────────────────────────────────────────────────────────────────────────────────────
+                                                                                                    
+  Running:  catalogo.cy.js                                                                  (2 of 4)
+
+  (Results)
+
+  ┌────────────────────────────────────────────────────────────────────────────────────────────────┐
+  │ Tests:        8                                                                                │
+  │ Passing:      8                                                                                │
+  │ Failing:      0                                                                                │
+  │ Pending:      0                                                                                │
+  │ Skipped:      0                                                                                │
+  │ Screenshots:  0                                                                                │
+  │ Video:        false                                                                            │
+  │ Duration:     21 seconds                                                                       │
+  │ Spec Ran:     catalogo.cy.js                                                                   │
+  └────────────────────────────────────────────────────────────────────────────────────────────────┘
+
+
+────────────────────────────────────────────────────────────────────────────────────────────────────
+                                                                                                    
+  Running:  conta.cy.js                                                                     (3 of 4)
+
+  (Results)
+
+  ┌────────────────────────────────────────────────────────────────────────────────────────────────┐
+  │ Tests:        9                                                                                │
+  │ Passing:      9                                                                                │
+  │ Failing:      0                                                                                │
+  │ Pending:      0                                                                                │
+  │ Skipped:      0                                                                                │
+  │ Screenshots:  0                                                                                │
+  │ Video:        false                                                                            │
+  │ Duration:     12 seconds                                                                       │
+  │ Spec Ran:     conta.cy.js                                                                      │
+  └────────────────────────────────────────────────────────────────────────────────────────────────┘
+
+
+────────────────────────────────────────────────────────────────────────────────────────────────────
+                                                                                                    
+  Running:  produto.cy.js                                                                   (4 of 4)
+
+  (Results)
+
+  ┌────────────────────────────────────────────────────────────────────────────────────────────────┐
+  │ Tests:        6                                                                                │
+  │ Passing:      6                                                                                │
+  │ Failing:      0                                                                                │
+  │ Pending:      0                                                                                │
+  │ Skipped:      0                                                                                │
+  │ Screenshots:  0                                                                                │
+  │ Video:        false                                                                            │
+  │ Duration:     13 seconds                                                                       │
+  │ Spec Ran:     produto.cy.js                                                                    │
+  └────────────────────────────────────────────────────────────────────────────────────────────────┘
+
+
+====================================================================================================
+
+  (Run Finished)
+
+
+       Spec                                              Tests  Passing  Failing  Pending  Skipped  
+  ┌────────────────────────────────────────────────────────────────────────────────────────────────┐
+  │ ✔  carrinho.cy.js                           00:12        7        7        -        -        - │
+  ├────────────────────────────────────────────────────────────────────────────────────────────────┤
+  │ ✔  catalogo.cy.js                           00:21        8        8        -        -        - │
+  ├────────────────────────────────────────────────────────────────────────────────────────────────┤
+  │ ✔  conta.cy.js                              00:12        9        9        -        -        - │
+  ├────────────────────────────────────────────────────────────────────────────────────────────────┤
+  │ ✔  produto.cy.js                            00:13        6        6        -        -        - │
+  └────────────────────────────────────────────────────────────────────────────────────────────────┘
+    ✔  All specs passed!                        00:59       30       30        -        -        -  
+
+
+▶ E2E Cypress fluxo completo (sem mocks)
+  npx cypress run --e2e --config-file cypress.fullstack.config.js --reporter junit --reporter-options mochaFile=C:\Users\Kaio\Documents\GitHub\dreambuild-pc\reports\junit\cypress-full-[hash].xml,toConsole=false
+
+Warning: The allowCypressEnv configuration option is enabled. This allows any browser code to read values from Cypress.env(). This is insecure and will be removed in a future major version.
+
+1. Replace Cypress.env() calls with cy.env() (for sensitive values) or Cypress.expose() (for public configuration)
+2. Set allowCypressEnv: false in your Cypress configuration to disable Cypress.env()
+
+Learn more: https://on.cypress.io/cypress-env-migration
+
+
+====================================================================================================
+
+  (Run Starting)
+
+  ┌────────────────────────────────────────────────────────────────────────────────────────────────┐
+  │ Cypress:        15.21.1                                                                        │
+  │ Browser:        Electron 138 (headless)                                                        │
+  │ Node Version:   v24.19.0 (C:\Program Files\nodejs\node.exe)                                    │
+  │ Specs:          1 found (fluxo-completo.cy.js)                                                 │
+  │ Searched:       cypress/fullstack/**/*.cy.js                                                   │
+  └────────────────────────────────────────────────────────────────────────────────────────────────┘
+
+
+────────────────────────────────────────────────────────────────────────────────────────────────────
+                                                                                                    
+  Running:  fluxo-completo.cy.js                                                            (1 of 1)
+
+  (Results)
+
+  ┌────────────────────────────────────────────────────────────────────────────────────────────────┐
+  │ Tests:        4                                                                                │
+  │ Passing:      4                                                                                │
+  │ Failing:      0                                                                                │
+  │ Pending:      0                                                                                │
+  │ Skipped:      0                                                                                │
+  │ Screenshots:  0                                                                                │
+  │ Video:        false                                                                            │
+  │ Duration:     22 seconds                                                                       │
+  │ Spec Ran:     fluxo-completo.cy.js                                                             │
+  └────────────────────────────────────────────────────────────────────────────────────────────────┘
+
+
+====================================================================================================
+
+  (Run Finished)
+
+
+       Spec                                              Tests  Passing  Failing  Pending  Skipped  
+  ┌────────────────────────────────────────────────────────────────────────────────────────────────┐
+  │ ✔  fluxo-completo.cy.js                     00:22        4        4        -        -        - │
+  └────────────────────────────────────────────────────────────────────────────────────────────────┘
+    ✔  All specs passed!                        00:22        4        4        -        -        -  
+
+
+Relatório: reports/relatorio-regressao.md — 343/343 aprovados, 0 reprovados.

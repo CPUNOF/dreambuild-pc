@@ -1,0 +1,91 @@
+
+Warning: The allowCypressEnv configuration option is enabled. This allows any browser code to read values from Cypress.env(). This is insecure and will be removed in a future major version.
+
+1. Replace Cypress.env() calls with cy.env() (for sensitive values) or Cypress.expose() (for public configuration)
+2. Set allowCypressEnv: false in your Cypress configuration to disable Cypress.env()
+
+Learn more: https://on.cypress.io/cypress-env-migration
+
+
+====================================================================================================
+
+  (Run Starting)
+
+  ┌────────────────────────────────────────────────────────────────────────────────────────────────┐
+  │ Cypress:        15.21.1                                                                        │
+  │ Browser:        Electron 138 (headless)                                                        │
+  │ Node Version:   v24.19.0 (C:\Program Files\nodejs\node.exe)                                    │
+  │ Specs:          1 found (produto.cy.js)                                                        │
+  │ Searched:       C:\Users\Kaio\Documents\GitHub\dreambuild-pc\frontend\cypress\e2e\produto.cy.j │
+  │                 s                                                                              │
+  └────────────────────────────────────────────────────────────────────────────────────────────────┘
+
+
+────────────────────────────────────────────────────────────────────────────────────────────────────
+                                                                                                    
+  Running:  produto.cy.js                                                                   (1 of 1)
+
+
+  Página de produto
+    √ abre o produto a partir do card e mostra detalhes, ficha e ofertas (3407ms)
+    √ indica produto sem oferta no PIX e desabilita a compra (2565ms)
+    √ volta para a categoria pelo breadcrumb (2681ms)
+    √ mostra 404 para produto inexistente (2642ms)
+    (Attempt 1 of 2) DEF-02 página de montagem pública não recebe título de 404
+    1) DEF-02 página de montagem pública não recebe título de 404
+    √ mostra 404 para rota desconhecida (448ms)
+
+
+  5 passing (31s)
+  1 failing
+
+  1) Página de produto
+       DEF-02 página de montagem pública não recebe título de 404:
+
+      Timed out retrying after 8000ms
+      + expected - actual
+
+      -'Página não encontrada | DreamBuild PC'
+      +'Montagem da comunidade | DreamBuild PC'
+      
+      at Context.eval (webpack://@dreambuild/frontend/./cypress/e2e/produto.cy.js:54:15)
+
+
+
+
+  (Results)
+
+  ┌────────────────────────────────────────────────────────────────────────────────────────────────┐
+  │ Tests:        6                                                                                │
+  │ Passing:      5                                                                                │
+  │ Failing:      1                                                                                │
+  │ Pending:      0                                                                                │
+  │ Skipped:      0                                                                                │
+  │ Screenshots:  2                                                                                │
+  │ Video:        false                                                                            │
+  │ Duration:     31 seconds                                                                       │
+  │ Spec Ran:     produto.cy.js                                                                    │
+  └────────────────────────────────────────────────────────────────────────────────────────────────┘
+
+
+  (Screenshots)
+
+  -  C:\Users\Kaio\Documents\GitHub\dreambuild-pc\reports\evidencias\DEF-02-antes\pro     (1280x720)
+     duto.cy.js\Página de produto -- DEF-02 página de montagem pública não recebe tít               
+     ulo de 404 (failed).png                                                                        
+  -  C:\Users\Kaio\Documents\GitHub\dreambuild-pc\reports\evidencias\DEF-02-antes\pro     (1280x720)
+     duto.cy.js\Página de produto -- DEF-02 página de montagem pública não recebe tít               
+     ulo de 404 (failed) (attempt 2).png                                                            
+
+
+====================================================================================================
+
+  (Run Finished)
+
+
+       Spec                                              Tests  Passing  Failing  Pending  Skipped  
+  ┌────────────────────────────────────────────────────────────────────────────────────────────────┐
+  │ ✖  produto.cy.js                            00:31        6        5        1        -        - │
+  └────────────────────────────────────────────────────────────────────────────────────────────────┘
+    ✖  1 of 1 failed (100%)                     00:31        6        5        1        -        -  
+

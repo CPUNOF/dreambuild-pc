@@ -14,3 +14,11 @@ Thumbs.db
 *-firebase-adminsdk-*.json
 firebase-service-account.json
 /docs/
+
+**/cypress/screenshots/
+**/cypress/videos/
+**/cypress/downloads/
+
+# Saídas geradas pelos testes (a CI guarda como artefato)
+reports/junit/
+reports/coverage/

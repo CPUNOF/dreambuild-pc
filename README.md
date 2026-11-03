@@ -11,7 +11,8 @@ Loja de hardware com catálogo, carrinho, montagem de computadores, verificaçã
 - Firebase Firestore para persistência e Firebase Authentication para login Google.
 - Sessões com cookie HttpOnly, proteção CSRF e autorização CLIENT/ADMIN no servidor.
 - Socket.IO para a simulação didática em tempo real.
-- OpenAPI/Swagger e testes com o executor nativo do Node.js.
+- OpenAPI/Swagger.
+- Testes: `node:test` (back-end), Vitest + Testing Library (front-end), Cypress (interface e fluxo completo) e GitHub Actions.
 
 ## Recursos
 
@@ -33,6 +34,17 @@ Entre com uma conta ADMIN e abra **Administração → Estoque de produtos**. Us
 A compra avulsa e a compra de uma montagem exigem saldo para todas as unidades. Pedido, baixas e histórico são gravados juntos; uma repetição da mesma confirmação não desconta duas vezes. A documentação da API está em `/api-docs/`, com link no rodapé para administradores; suas operações protegidas exigem sessão e autorização no servidor.
 
 Os testes automatizados usam dados isolados. Os fluxos de estoque também foram conferidos no navegador com Firestore, incluindo disputa pela última unidade e compra de montagem com quantidades de RAM e armazenamento.
+
+## Testes (VV&TS)
+
+```bash
+npm test                # unitários, API e integração (back-end + front-end)
+npm run test:e2e        # interface com Cypress (API simulada)
+npm run test:e2e:full   # fluxo completo navegador → API real com dados em memória
+npm run test:regressao  # tudo + JUnit + cobertura + relatório
+```
+
+Na primeira vez, rode `npx --workspace frontend cypress install` (o `.npmrc` desativa scripts de instalação). Plano, casos de teste, rastreabilidade, defeitos e relatório: [`docs/testes/`](docs/testes/README.md).
 
 ## Dados e limites
 

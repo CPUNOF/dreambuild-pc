@@ -7,7 +7,7 @@ export class Game {
       !/^[a-z0-9-]{1,100}$/.test(input.id) ||
       typeof input.title !== "string" ||
       input.title.trim().length < 2 ||
-      input.title.length > 120
+      input.title.trim().length > 120
     )
       throw new AppError(
         400,
