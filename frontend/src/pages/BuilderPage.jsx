@@ -6,9 +6,8 @@ import { apiRequest } from "../api/client.js";
 import { useAuth } from "../context/AuthContext.jsx";
 import { money } from "../data/offers.js";
 import StoreComparison from "../components/StoreComparison.jsx";
-import BuildWorkbench from "../components/BuildWorkbench.jsx";
+import AssemblyWorkspace from "../components/AssemblyWorkspace.jsx";
 import ComponentPicker from "../components/ComponentPicker.jsx";
-import AssemblySelection from "../components/AssemblySelection.jsx";
 import { selectionIssues } from "../../../shared/selectionCompatibility.js";
 import {
   buildResources,
@@ -17,6 +16,8 @@ import {
 } from "../../../shared/buildResources.js";
 import BuildResourcesPanel from "../components/BuildResourcesPanel.jsx";
 import "../resources.css";
+import "../shopping-experience.css";
+import { inventoryQuote } from "../../../shared/inventory.js";
 const categories = [
   "cpu",
   "mobo",
@@ -37,6 +38,8 @@ export default function BuilderPage({ products, onCatalogRefresh }) {
   const publicId = params.get("publicacao");
   const resumeDraft = params.get("retomar") === "1";
   const [partIds, setPartIds] = useState({});
+  const [activeCategory, setActiveCategory] = useState("cpu");
+  const [summaryExpanded, setSummaryExpanded] = useState(false);
   const [options, setOptions] = useState({ quantities: {}, storageIds: [] }),
     [addingStorage, setAddingStorage] = useState(false);
   const selectedParts = products.filter((p) =>
@@ -44,6 +47,13 @@ export default function BuilderPage({ products, onCatalogRefresh }) {
     ),
     resources = buildResources(selectedParts, options.quantities);
   const [name, setName] = useState("Meu próximo PC");
+  const storePreview = inventoryQuote(
+    selectedParts.map((p) => ({
+      componentId: p.id,
+      quantity: options.quantities[p.id] ?? 1,
+    })),
+    selectedParts,
+  );
   const [analysis, setAnalysis] = useState(null);
   const [payment, setPayment] = useState("pix");
   const [busy, setBusy] = useState(false);
@@ -241,6 +251,7 @@ export default function BuilderPage({ products, onCatalogRefresh }) {
     setMessage(null);
   }
   function pick(category) {
+    setActiveCategory(category);
     setAddingStorage(false);
     setPickerCategory(category);
   }
@@ -277,6 +288,7 @@ export default function BuilderPage({ products, onCatalogRefresh }) {
     setError(null);
     setPowerPreview(null);
     setPickerCategory(null);
+    setActiveCategory("cpu");
     setMessage(
       platformOnly
         ? "Plataforma removida. Escolha CPU, placa-mãe, RAM e cooler do novo conjunto."
@@ -334,14 +346,14 @@ export default function BuilderPage({ products, onCatalogRefresh }) {
     setMessage(null);
   }
   return (
-    <section className="builder-page">
+    <section className="builder-page builder-shopping">
       <div className="page-heading">
         <div>
           <p>MONTADOR DE PC</p>
-          <h1>Peça por peça, do seu jeito.</h1>
+          <h1>Monte seu PC, com tudo no lugar.</h1>
           <p>
-            Escolha os componentes e confira os critérios de compatibilidade
-            antes de salvar.
+            Escolha uma etapa. Modelo, quantidade, slots e compatibilidade ficam
+            juntos em cada peça.
           </p>
         </div>
         <Link className="secondary-button" to="/minhas-montagens">
@@ -366,30 +378,6 @@ export default function BuilderPage({ products, onCatalogRefresh }) {
           {message}
         </p>
       )}
-      <BuildWorkbench
-        products={products}
-        partIds={partIds}
-        onChange={change}
-        disabled={busy || initializing}
-        onPick={pick}
-        quantities={options.quantities}
-        resources={resources}
-        powerAnalysis={analysis || powerPreview}
-        onRemove={(category) => change(category, "")}
-      />
-      <BuildResourcesPanel
-        parts={selectedParts}
-        quantities={options.quantities}
-        resources={resources}
-        onQuantity={quantity}
-        onAddStorage={() => {
-          setAddingStorage(true);
-          setPickerCategory("storage");
-        }}
-        onRemoveStorage={removeStorage}
-        onPick={pick}
-        disabled={busy || initializing}
-      />
       <div className="builder-reset-tools">
         <button
           type="button"
@@ -397,7 +385,7 @@ export default function BuilderPage({ products, onCatalogRefresh }) {
           disabled={busy || initializing || !selectedCount}
           onClick={() => clearSelection(false)}
         >
-          Limpar toda a bancada
+          Limpar bancada
         </button>
         <button
           type="button"
@@ -409,7 +397,7 @@ export default function BuilderPage({ products, onCatalogRefresh }) {
           }
           onClick={() => clearSelection(true)}
         >
-          Trocar plataforma · limpar CPU, placa-mãe, RAM e cooler
+          Trocar plataforma
         </button>
         <Link className="text-button" to="/montar?retomar=1">
           Retomar rascunho salvo
@@ -420,117 +408,168 @@ export default function BuilderPage({ products, onCatalogRefresh }) {
       </div>
       <div className="builder-layout">
         <div className="builder-selections">
-          <div className="builder-toolbar">
-            <span>{selectedCount} de 8 categorias selecionadas</span>
-            <button
-              type="button"
-              className="text-button"
-              disabled={busy || initializing}
-              onClick={fill}
-            >
-              Preencher com peças de referência
-            </button>
-          </div>
-          <AssemblySelection
+          <AssemblyWorkspace
             products={products}
             partIds={partIds}
-            payment={payment}
             disabled={busy || initializing}
-            quantities={options.quantities}
-            resources={resources}
-            onPick={(category, action) =>
-              action === "remove" ? change(category, "") : pick(category)
+            onPick={pick}
+            onRemove={(category) =>
+              category === "storage"
+                ? removeStorage(partIds.storage)
+                : change(category, "")
             }
-          />
-        </div>
-        <aside className="build-summary">
-          <h2>Sua montagem</h2>
-          <label className="field-label">
-            Nome da montagem
-            <input
-              value={name}
-              maxLength={80}
-              onChange={(event) => {
-                setName(event.target.value);
-                setSavedId(null);
+            activeCategory={activeCategory}
+            onActiveCategory={setActiveCategory}
+            resources={resources}
+          >
+            <BuildResourcesPanel
+              category={activeCategory}
+              parts={selectedParts}
+              quantities={options.quantities}
+              resources={resources}
+              onQuantity={quantity}
+              onAddStorage={() => {
+                setActiveCategory("storage");
+                setAddingStorage(true);
+                setPickerCategory("storage");
               }}
+              onRemoveStorage={removeStorage}
+              onPick={(category, action) =>
+                action === "remove" ? change(category, "") : pick(category)
+              }
               disabled={busy || initializing}
             />
-          </label>
-          <label className="field-label">
-            Comparar preços em
-            <select
-              value={payment}
-              disabled={busy || initializing}
-              onChange={(event) => {
-                setPayment(event.target.value);
-                setAnalysis(null);
-              }}
-            >
-              <option value="pix">PIX</option>
-              <option value="cash">Boleto / à vista</option>
-              <option value="card">Cartão, valor total</option>
-            </select>
-          </label>
-          <div className="build-summary-price">
-            <span>Menor total combinado, sem frete</span>
-            <strong>
-              {analysis?.comparison.optimized.complete
-                ? money(analysis.comparison.optimized.totalCents)
-                : "Cotação incompleta"}
-            </strong>
-            <small>
-              {analysis
-                ? `${analysis.comparison.optimized.choices.filter((choice) => choice.offer).length} de ${selectedCount} peça(s) com oferta elegível.`
-                : "Faça a análise para consultar o conjunto."}
-            </small>
-          </div>
-          {analysis?.storeQuote && (
-            <div className="build-summary-price">
-              <span>Compra simulada na DreamBuild</span>
+          </AssemblyWorkspace>
+        </div>
+        <aside
+          className={`build-summary ${summaryExpanded ? "is-expanded" : ""}`}
+        >
+          <button
+            type="button"
+            className="mobile-summary-toggle"
+            aria-expanded={summaryExpanded}
+            aria-controls="assembly-summary-content"
+            onClick={() => setSummaryExpanded((open) => !open)}
+          >
+            <span>
+              Subtotal acadêmico
+              <strong>{money(storePreview.knownSubtotalCents)}</strong>
+            </span>
+            <span>
+              {selectedCount} categorias ·{" "}
+              {summaryExpanded ? "Recolher" : "Ver resumo"}
+            </span>
+          </button>
+          <div className="build-summary-content" id="assembly-summary-content">
+            <h2>Sua montagem</h2>
+            <div className="live-build-total" aria-live="polite">
+              <span>Subtotal acadêmico da seleção</span>
               <strong>
-                {analysis.storeQuote.totalCents === null
-                  ? "Sem estoque integral"
-                  : money(analysis.storeQuote.totalCents)}
+                {selectedCount
+                  ? money(storePreview.knownSubtotalCents)
+                  : money(0)}
               </strong>
               <small>
-                Saldo e preço próprios, separados das referências das lojas.
+                {selectedParts.reduce(
+                  (sum, p) => sum + (options.quantities[p.id] ?? 1),
+                  0,
+                )}{" "}
+                unidade(s) · {selectedCount} categorias
+                {storePreview.hasUnavailableProducts
+                  ? " · há itens para revisar"
+                  : ""}
               </small>
             </div>
-          )}
-          <button
-            className="primary-button"
-            type="button"
-            disabled={busy || initializing || selectedCount === 0}
-            onClick={analyze}
-          >
-            {busy ? "Aguarde..." : "Analisar montagem"}
-          </button>
-          <button
-            className="secondary-button"
-            type="button"
-            disabled={busy || initializing || selectedCount === 0}
-            onClick={save}
-          >
-            {auth.user ? "Salvar montagem" : "Entrar para salvar"}
-          </button>
-          {savedId &&
-            analysis?.compatible &&
-            analysis?.storeQuote &&
-            !analysis.storeQuote.hasUnavailableProducts && (
-              <Link className="primary-button" to={`/finalizar/${savedId}`}>
-                Continuar para compra simulada
+            <label className="field-label">
+              Nome da montagem
+              <input
+                value={name}
+                maxLength={80}
+                onChange={(event) => {
+                  setName(event.target.value);
+                  setSavedId(null);
+                }}
+                disabled={busy || initializing}
+              />
+            </label>
+            <details className="builder-reference-prices">
+              <summary>Comparar referências das lojas</summary>
+              <label className="field-label">
+                Forma de pagamento da referência
+                <select
+                  value={payment}
+                  disabled={busy || initializing}
+                  onChange={(event) => {
+                    setPayment(event.target.value);
+                    setAnalysis(null);
+                  }}
+                >
+                  <option value="pix">PIX</option>
+                  <option value="cash">Boleto / à vista</option>
+                  <option value="card">Cartão, valor total</option>
+                </select>
+              </label>
+              <div className="build-summary-price">
+                <span>Menor total combinado, sem frete</span>
+                <strong>
+                  {analysis?.comparison.optimized.complete
+                    ? money(analysis.comparison.optimized.totalCents)
+                    : "Cotação incompleta"}
+                </strong>
+                <small>
+                  {analysis
+                    ? `${analysis.comparison.optimized.choices.filter((choice) => choice.offer).length} de ${selectedCount} peça(s) com oferta elegível.`
+                    : "Faça a análise para consultar o conjunto."}
+                </small>
+              </div>
+            </details>
+            {analysis?.storeQuote && (
+              <div className="build-summary-price">
+                <span>Compra simulada na DreamBuild</span>
+                <strong>
+                  {analysis.storeQuote.totalCents === null
+                    ? "Sem estoque integral"
+                    : money(analysis.storeQuote.totalCents)}
+                </strong>
+                <small>
+                  Saldo e preço próprios, separados das referências das lojas.
+                </small>
+              </div>
+            )}
+            <button
+              className="primary-button"
+              type="button"
+              disabled={busy || initializing || selectedCount === 0}
+              onClick={analyze}
+            >
+              {busy ? "Aguarde..." : "Analisar montagem"}
+            </button>
+            <button
+              className="secondary-button"
+              type="button"
+              disabled={busy || initializing || selectedCount === 0}
+              onClick={save}
+            >
+              {auth.user ? "Salvar montagem" : "Entrar para salvar"}
+            </button>
+            {savedId &&
+              analysis?.compatible &&
+              analysis?.storeQuote &&
+              !analysis.storeQuote.hasUnavailableProducts && (
+                <Link className="primary-button" to={`/finalizar/${savedId}`}>
+                  Continuar para compra simulada
+                </Link>
+              )}
+            {savedId && analysis?.compatible && (
+              <Link className="secondary-button" to={`/bancada/${savedId}`}>
+                Abrir bancada didática
               </Link>
             )}
-          {savedId && analysis?.compatible && (
-            <Link className="secondary-button" to={`/bancada/${savedId}`}>
-              Abrir bancada didática
-            </Link>
-          )}
-          <p className="field-help">
-            Salvar cria um registro na sua conta. A compra será inteiramente
-            simulada. Nenhum valor será cobrado.
-          </p>
+            <p className="field-help">
+              Salvar cria um registro na sua conta. A compra será inteiramente
+              simulada. Nenhum valor será cobrado.
+            </p>
+          </div>
         </aside>
       </div>
       {analysis && (

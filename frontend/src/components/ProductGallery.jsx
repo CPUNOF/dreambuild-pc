@@ -1,12 +1,14 @@
 import { useRef, useState } from "react";
-import { ChevronLeft, ChevronRight, Maximize2, X } from "lucide-react";
+import { ChevronLeft, ChevronRight, Maximize2, X, ZoomIn, ZoomOut, RotateCcw } from "lucide-react";
 
 export default function ProductGallery({ product }) {
   const [index, setIndex] = useState(0);
+  const [zoom, setZoom] = useState(1);
   const dialog = useRef(null);
   const image = product.gallery[index];
   const multiple = product.gallery.length > 1;
   function move(amount) {
+    setZoom(1);
     setIndex(
       (current) =>
         (current + amount + product.gallery.length) % product.gallery.length,
@@ -26,7 +28,7 @@ export default function ProductGallery({ product }) {
         <button
           type="button"
           className="product-gallery-main"
-          onClick={() => dialog.current.showModal()}
+          onClick={() => { setZoom(1); dialog.current.showModal(); }}
           aria-label={`Ampliar imagem de ${product.name}`}
         >
           <img
@@ -97,6 +99,12 @@ export default function ProductGallery({ product }) {
         ref={dialog}
         className="image-lightbox"
         aria-label={`Imagem ampliada de ${product.name}`}
+        onKeyDown={event => {
+          if (event.key === "ArrowRight") { event.preventDefault(); move(1); }
+          if (event.key === "ArrowLeft") { event.preventDefault(); move(-1); }
+          if (["+", "="].includes(event.key)) { event.preventDefault(); setZoom(z => Math.min(3, z + .5)); }
+          if (event.key === "-") { event.preventDefault(); setZoom(z => Math.max(1, z - .5)); }
+        }}
         onClick={(event) => {
           if (event.target === event.currentTarget) dialog.current.close();
         }}
@@ -111,7 +119,8 @@ export default function ProductGallery({ product }) {
           >
             <X size={24} aria-hidden="true" />
           </button>
-          <img src={image.src} alt={image.alt} width="1200" height="900" />
+          <div className="lightbox-zoom-tools" role="group" aria-label="Zoom da imagem"><button type="button" aria-label="Diminuir zoom" disabled={zoom <= 1} onClick={() => setZoom(z => Math.max(1, z-.5))}><ZoomOut size={20} /></button><output aria-live="polite">{Math.round(zoom*100)}%</output><button type="button" aria-label="Aumentar zoom" disabled={zoom >= 3} onClick={() => setZoom(z => Math.min(3, z+.5))}><ZoomIn size={20} /></button><button type="button" aria-label="Restaurar zoom" onClick={() => setZoom(1)}><RotateCcw size={18} /></button></div>
+          <div className="lightbox-zoom-viewport"><img src={image.src} alt={image.alt} width="1200" height="900" style={{ transform: `scale(${zoom})`, transformOrigin: "top left" }} /></div>
           <div className="lightbox-navigation">
             {multiple && (
               <button

@@ -1,7 +1,7 @@
 import { ShoppingCart, PackageX } from "lucide-react";
 import { inventoryState, saleOffer } from "../../../shared/inventory.js";
 import { useCart } from "../context/CartContext.jsx";
-export default function AddToCartButton({ product, compact = false }) {
+export default function AddToCartButton({ product, compact = false, quick = false }) {
   const cart = useCart();
   const available = Boolean(saleOffer(product));
   const stock = inventoryState(product.inventory);
@@ -18,7 +18,7 @@ export default function AddToCartButton({ product, compact = false }) {
           compact ? "cart-add-compact" : "primary-button cart-add-button"
         }
         disabled={cart.busy || !available}
-        aria-label={`Adicionar ${product.name} ao carrinho`}
+        aria-label={`${quick ? "Compra rápida: adicionar" : "Adicionar"} ${product.name} ao carrinho`}
         onClick={() => cart.add(product).catch(() => {})}
       >
         {available ? (

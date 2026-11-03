@@ -29,6 +29,7 @@ import { useCart } from "./context/CartContext.jsx";
 import CartPage from "./pages/CartPage.jsx";
 import CartCheckoutPage from "./pages/CartCheckoutPage.jsx";
 import ThemeToggle from "./components/ThemeToggle.jsx";
+import "./shopping-experience.css";
 import AmbientBackground from "./components/AmbientBackground.jsx";
 import BattlePage from "./pages/BattlePage.jsx";
 import RankingPage from "./pages/RankingPage.jsx";

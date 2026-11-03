@@ -5,6 +5,8 @@ import { money, consultationDate } from "../data/offers.js";
 import { categoryNames } from "../data/hardwareFields.js";
 import { fpsLabel } from "./RankingPage.jsx";
 import FpsStage from "../components/FpsStage.jsx";
+import ShareBuildCard from "../components/ShareBuildCard.jsx";
+import { publicBuildUrl } from "../data/publicLinks.js";
 export default function PublicBuildPage() {
   const { id } = useParams(),
     [item, setItem] = useState(null),
@@ -68,6 +70,7 @@ export default function PublicBuildPage() {
             venda deste PC.
           </small>
           <div className="community-actions">
+            <ShareBuildCard item={item} resolution={resolution} />
             <Link
               className="primary-button"
               to={`/combate?publico=${item.id}&a=public-${item.id}`}
@@ -78,7 +81,7 @@ export default function PublicBuildPage() {
               className="secondary-button"
               onClick={async () => {
                 try {
-                  await navigator.clipboard.writeText(location.href);
+                  await navigator.clipboard.writeText(publicBuildUrl(item.id));
                   setCopied(true);
                 } catch {
                   setCopied(false);

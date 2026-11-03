@@ -21,6 +21,9 @@ Loja de hardware com catálogo, carrinho, montagem de computadores, verificaçã
 - Bancada com seleção e remoção de peças, kits de RAM, quantidades e múltiplos armazenamentos.
 - Verificação de socket, geração de RAM, slots DIMM, M.2 NVMe/SATA, portas compartilhadas, refrigeração e requisitos da fonte.
 - Cooler separado opcional quando a versão da CPU tem cooler incluído confirmado.
+- Montador por etapas, com quantidades e slots junto de cada peça, modelos incompatíveis ocultos e resumo recolhível no celular.
+- Vitrines por finalidade, carrinho lateral, zoom na galeria e comparação de vantagens entre setups.
+- Cartão PNG da montagem pública, com peças, preço, data e indicação de referências/estimativas de FPS.
 - Montagens privadas, pedido simulado, recibo, histórico e perfis de administração.
 - Estoque próprio simulado com preço por unidade, entradas, saídas, inventário, alertas e histórico; a compra aprovada dá baixa em uma transação no Firestore.
 - Referências de FPS, comparação de PCs/notebooks e publicação voluntária de montagens com ranking por resolução/desempenho/custo.
@@ -30,6 +33,8 @@ Loja de hardware com catálogo, carrinho, montagem de computadores, verificaçã
 Aplicação: https://dreambuild-pc.vercel.app/ · Código: https://github.com/CPUNOF/dreambuild-pc
 
 Entre com uma conta ADMIN e abra **Administração → Estoque de produtos**. Use **Gerenciar** para receber unidades, cadastrar o preço simulado, ajustar o limite de alerta ou registrar uma contagem. É obrigatório informar o motivo. Produtos sem cadastro começam com saldo zero; preços e disponibilidade das outras lojas não criam estoque na DreamBuild.
+
+Na preparação da demonstração, foram cadastradas 50 unidades por produto e completados os preços próprios com valores acadêmicos quando não havia cotação. As movimentações posteriores alteram os saldos normalmente. Esses preços permitem exercitar o carrinho e o checkout; as ofertas externas continuam com suas fontes e datas, separadas dos valores da simulação.
 
 A compra avulsa e a compra de uma montagem exigem saldo para todas as unidades. Pedido, baixas e histórico são gravados juntos; uma repetição da mesma confirmação não desconta duas vezes. A documentação da API está em `/api-docs/`, com link no rodapé para administradores; suas operações protegidas exigem sessão e autorização no servidor.
 

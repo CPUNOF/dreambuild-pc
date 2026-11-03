@@ -2,6 +2,7 @@ import { createContext, useContext, useEffect, useRef, useState } from "react";
 import { Link } from "react-router";
 import { apiRequest } from "../api/client.js";
 import { useAuth } from "./AuthContext.jsx";
+import CartDrawer from "../components/CartDrawer.jsx";
 const Context = createContext(null);
 export const useCart = () => useContext(Context);
 export function CartProvider({ children }) {
@@ -12,6 +13,7 @@ export function CartProvider({ children }) {
     [toastError, setToastError] = useState(null),
     [notice, setNotice] = useState(null);
   const lock = useRef(false);
+  const [drawerOpen, setDrawerOpen] = useState(false);
   const generation = useRef(0);
   async function refresh() {
     const version = ++generation.current;
@@ -77,7 +79,10 @@ export function CartProvider({ children }) {
       return;
     }
     const result = await update(product.id, current + 1);
-    if (result) setNotice({ name: product.name, id: Date.now() });
+    if (result) {
+      setNotice({ name: product.name, id: Date.now() });
+      setDrawerOpen(true);
+    }
   }
   return (
     <Context.Provider
@@ -88,6 +93,7 @@ export function CartProvider({ children }) {
         refresh,
         update,
         add,
+        openDrawer: () => setDrawerOpen(true),
         dismissError: () => {
           setError(null);
           setToastError(null);
@@ -95,6 +101,18 @@ export function CartProvider({ children }) {
       }}
     >
       {children}
+      <CartDrawer
+        open={drawerOpen}
+        onClose={() => {
+          setDrawerOpen(false);
+          setNotice(null);
+        }}
+        cart={cart}
+        busy={busy}
+        error={error}
+        notice={notice}
+        onUpdate={update}
+      />
       {toastError && (
         <aside className="cart-toast cart-toast-error" role="alert">
           <span>{toastError}</span>
@@ -109,7 +127,7 @@ export function CartProvider({ children }) {
           </button>
         </aside>
       )}
-      {notice && (
+      {notice && !drawerOpen && (
         <aside className="cart-toast" role="status">
           <span>
             <strong>Adicionado ao carrinho</strong>

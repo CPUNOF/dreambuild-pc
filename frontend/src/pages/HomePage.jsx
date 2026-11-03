@@ -5,6 +5,7 @@ import FeaturedCarousel from "../components/FeaturedCarousel.jsx";
 import StoreSelections from "../components/StoreSelections.jsx";
 import { useEffect } from "react";
 import ReadySystemsTeaser from "../components/ReadySystemsTeaser.jsx";
+import ShopByNeed from "../components/ShopByNeed.jsx";
 
 export default function HomePage({
   products,
@@ -64,6 +65,9 @@ export default function HomePage({
           </button>
         ))}
       </div>
+      {category === "all" && !query.trim() && (
+        <ShopByNeed products={products} />
+      )}
       {category === "all" && !query.trim() && (
         <StoreSelections
           products={products}

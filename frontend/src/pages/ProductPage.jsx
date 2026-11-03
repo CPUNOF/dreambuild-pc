@@ -2,6 +2,9 @@ import { Link, useParams } from "react-router";
 import { Check, FileText, Info, ArrowLeft } from "lucide-react";
 import ProductMedia from "../components/ProductMedia.jsx";
 import AddToCartButton from "../components/AddToCartButton.jsx";
+import ComponentFacts from "../components/ComponentFacts.jsx";
+import { inventoryState } from "../../../shared/inventory.js";
+import { money } from "../data/offers.js";
 import {
   ProductPriceSummary,
   StoreOffers,
@@ -52,6 +55,7 @@ export default function ProductPage({ products, onBrowseCategory }) {
           <p className="product-brand-label">{product.brand}</p>
           <h1 id="product-title">{product.fullName}</h1>
           <p className="product-model-code">Modelo: {product.model}</p>
+          <ComponentFacts product={product} />
         </div>
         <ProductMedia key={product.id} product={product} />
         <aside className="product-summary" aria-label="Resumo do produto">
@@ -141,6 +145,20 @@ export default function ProductPage({ products, onBrowseCategory }) {
         <ArrowLeft size={17} aria-hidden="true" />
         Voltar para os produtos
       </Link>
+      <aside
+        className="mobile-purchase-bar"
+        aria-label="Compra rápida do produto"
+      >
+        <div>
+          <small>Preço acadêmico</small>
+          <strong>
+            {inventoryState(product.inventory).configured
+              ? money(product.inventory.unitPriceCents)
+              : "Preço pendente"}
+          </strong>
+        </div>
+        <AddToCartButton product={product} compact quick />
+      </aside>
     </>
   );
 }

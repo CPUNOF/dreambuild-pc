@@ -12,6 +12,7 @@ import { bestOffer, money, availabilityLabel } from "../data/offers.js";
 import { platformOf, psuFit } from "../data/componentSelection.js";
 import { selectionIssues } from "../../../shared/selectionCompatibility.js";
 import { buildResources } from "../../../shared/buildResources.js";
+import { saleOffer, inventoryState } from "../../../shared/inventory.js";
 export default function ComponentPicker({
   category,
   products,
@@ -67,6 +68,27 @@ export default function ComponentPicker({
       .normalize("NFD")
       .replace(/[\u0300-\u036f]/g, "")
       .toLowerCase();
+  function compatibility(product) {
+    const candidateParts = addingStorage
+      ? [...parts.filter((p) => p.id !== product.id), product]
+      : [...parts.filter((p) => p.category !== category), product];
+    const candidateQuantities = { ...quantities };
+    if (addingStorage && parts.some((p) => p.id === product.id))
+      candidateQuantities[product.id] = (quantities[product.id] ?? 1) + 1;
+    const issues = [
+      ...selectionIssues(candidateParts),
+      ...buildResources(candidateParts, candidateQuantities).issues,
+    ];
+    if (
+      category === "psu" &&
+      psuFit(product, powerAnalysis, parts).status === "fail"
+    )
+      issues.push({
+        code: "PSU_FIT",
+        message: "A fonte não atende ao conjunto.",
+      });
+    return issues;
+  }
   const filtered = pool
     .filter(
       (p) =>
@@ -78,12 +100,13 @@ export default function ComponentPicker({
               socket.replace(/[\s-]/g, "").toUpperCase(),
           )) &&
         (brand === "Todas" || p.brand === brand) &&
-        (!stock || bestOffer(p)) &&
+        (!stock || saleOffer(p)) &&
         normalize(p.fullName + " " + p.model).includes(normalize(query)) &&
         (!safe || psuFit(p, powerAnalysis, parts).status === "pass"),
     )
+    .filter((p) => compatibility(p).length === 0)
     .sort(
-      (a, b) => Number(Boolean(bestOffer(b))) - Number(Boolean(bestOffer(a))),
+      (a, b) => Number(Boolean(saleOffer(b))) - Number(Boolean(saleOffer(a))),
     );
   return (
     <dialog
@@ -253,21 +276,40 @@ export default function ComponentPicker({
         </aside>
       )}
       <p className="picker-count" role="status">
-        {filtered.length} modelos · selecione uma foto para usar a peça
+        {filtered.length} modelos compatíveis · selecione uma foto para usar a
+        peça
       </p>
+      {parts.length > 0 && (
+        <aside className="picker-context">
+          <div>
+            <strong>Compatível com sua seleção atual</strong>
+            <small>
+              {parts
+                .filter((p) => ["cpu", "mobo", "ram"].includes(p.category))
+                .map((p) =>
+                  [p.categoryName, p.hardware?.socket, p.hardware?.ramType]
+                    .filter(Boolean)
+                    .join(" · "),
+                )
+                .join(" / ") ||
+                "Os critérios das peças selecionadas são aplicados automaticamente."}
+            </small>
+          </div>
+          {["cpu", "mobo", "ram", "cooler"].includes(category) && (
+            <button
+              type="button"
+              className="text-button"
+              onClick={onResetPlatform}
+            >
+              Trocar plataforma
+            </button>
+          )}
+        </aside>
+      )}
       <div className="picker-results">
         {filtered.map((product) => {
-          const candidateParts = addingStorage
-            ? [...parts.filter((p) => p.id !== product.id), product]
-            : [...parts.filter((p) => p.category !== category), product];
-          const candidateQuantities = { ...quantities };
-          if (addingStorage && parts.some((p) => p.id === product.id))
-            candidateQuantities[product.id] = (quantities[product.id] ?? 1) + 1;
-          const conflicts = [
-            ...selectionIssues(candidateParts),
-            ...buildResources(candidateParts, candidateQuantities).issues,
-          ];
-          const offer = bestOffer(product),
+          const offer = saleOffer(product),
+            stockState = inventoryState(product.inventory),
             selected = selectedId === product.id,
             fit =
               category === "psu" ? psuFit(product, powerAnalysis, parts) : null;
@@ -277,7 +319,6 @@ export default function ComponentPicker({
               className={`picker-product ${selected ? "is-selected" : ""}`}
               aria-label={`Selecionar ${product.name}`}
               aria-pressed={selected}
-              disabled={conflicts.length > 0}
               onClick={() => onChoose(product.id)}
             >
               <span className="picker-product-photo">
@@ -304,6 +345,20 @@ export default function ComponentPicker({
                     ` · ${platformOf(product)}`}
                 </small>
                 <strong>{product.name}</strong>
+                <span className="picker-facts">
+                  {[
+                    product.hardware?.socket,
+                    product.hardware?.ramType,
+                    product.hardware?.capacityGb &&
+                      `${product.hardware.capacityGb} GB`,
+                    product.hardware?.modules &&
+                      `${product.hardware.modules} módulo(s)`,
+                    product.hardware?.wattage &&
+                      `${product.hardware.wattage} W`,
+                  ]
+                    .filter(Boolean)
+                    .join(" · ")}
+                </span>
                 {category === "cooler" && (
                   <span className="picker-sku">
                     Sockets confirmados:{" "}
@@ -311,20 +366,20 @@ export default function ComponentPicker({
                       "Ainda não informados"}
                   </span>
                 )}
-                {conflicts.length > 0 && (
-                  <span className="selection-conflict">
-                    <AlertTriangle size={14} />
-                    {conflicts[0].message} Remova ou troque primeiro a peça que
-                    está em conflito.
-                  </span>
-                )}
                 <span className="picker-sku">{product.model}</span>
                 <span
                   className={`stock-status ${offer ? "in-stock" : "out-stock"}`}
                 >
-                  {availabilityLabel(product)}
+                  {offer
+                    ? `Estoque DreamBuild · ${stockState.quantity} un.`
+                    : "Sem saldo para compra · disponível para análise"}
                 </span>
-                <b>{offer ? money(offer.priceCents) : "Somente consulta"}</b>
+                <b>
+                  {stockState.configured
+                    ? money(stockState.unitPriceCents)
+                    : "Preço pendente"}
+                </b>
+                <small>Preço acadêmico simulado</small>
                 {fit && (
                   <span className={`picker-fit fit-${fit.status}`}>
                     <AlertTriangle size={13} />
@@ -346,8 +401,20 @@ export default function ComponentPicker({
       </div>
       {!filtered.length && (
         <div className="empty-state">
-          <h3>Nenhuma peça com estes filtros.</h3>
-          <p>Experimente outra marca, plataforma ou disponibilidade.</p>
+          <h3>Nenhuma peça compatível com estes filtros.</h3>
+          <p>
+            Peças incompatíveis ficam ocultas. Revise os filtros ou troque a
+            plataforma para escolher outro conjunto de CPU, placa-mãe e memória.
+          </p>
+          {["cpu", "mobo", "ram", "cooler"].includes(category) && (
+            <button
+              type="button"
+              className="secondary-button"
+              onClick={onResetPlatform}
+            >
+              Trocar plataforma e escolher novamente
+            </button>
+          )}
         </div>
       )}
     </dialog>

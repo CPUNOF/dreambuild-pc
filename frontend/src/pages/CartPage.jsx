@@ -3,6 +3,7 @@ import { useEffect } from "react";
 import { ShoppingCart, Trash2, ArrowRight, Minus, Plus } from "lucide-react";
 import { useCart } from "../context/CartContext.jsx";
 import { money } from "../data/offers.js";
+import ComponentFacts from "../components/ComponentFacts.jsx";
 export default function CartPage() {
   const { cart, busy, error, update, refresh } = useCart();
   useEffect(() => {
@@ -76,6 +77,9 @@ export default function CartPage() {
                     )}
                   </h2>
                   <p>{item.component?.model}</p>
+                  {item.component && (
+                    <ComponentFacts product={item.component} />
+                  )}
                   {item.unavailable && (
                     <span className="stock-status out-stock">
                       Indisponível para compra. Remova este item para continuar.

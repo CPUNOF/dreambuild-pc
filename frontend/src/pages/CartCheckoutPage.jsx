@@ -135,6 +135,40 @@ export default function CartCheckoutPage() {
       ) : (
         <div className="cart-layout">
           <div className="checkout-review cart-checkout-review">
+            <ol
+              className="purchase-checklist"
+              aria-label="Preparação do pedido"
+            >
+              <li className={!summary.hasUnavailableProducts ? "is-ready" : ""}>
+                <span>1</span>
+                <div>
+                  <strong>Confira suas peças</strong>
+                  <small>{summary.itemCount} unidade(s) no pedido</small>
+                </div>
+              </li>
+              <li className={card ? "is-ready" : ""}>
+                <span>2</span>
+                <div>
+                  <strong>Prepare o DreamCard</strong>
+                  <small>
+                    {card
+                      ? "Cartão fictício pronto"
+                      : "Gere seu cartão no resumo ao lado"}
+                  </small>
+                </div>
+              </li>
+              <li className={accepted ? "is-ready" : ""}>
+                <span>3</span>
+                <div>
+                  <strong>Confirme a simulação</strong>
+                  <small>
+                    {accepted
+                      ? "Consentimento confirmado"
+                      : "Revise e marque a confirmação"}
+                  </small>
+                </div>
+              </li>
+            </ol>
             <h2>Itens do seu pedido</h2>
             {summary.items.map((item) => (
               <article className="checkout-cart-line" key={item.componentId}>

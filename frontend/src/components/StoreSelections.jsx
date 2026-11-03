@@ -7,6 +7,7 @@ import {
   ArrowRight,
 } from "lucide-react";
 import { bestOffer } from "../data/offers.js";
+import { saleOffer } from "../../../shared/inventory.js";
 import { categoryNames } from "../data/hardwareFields.js";
 import ProductTile from "./ProductTile.jsx";
 const categories = [
@@ -20,7 +21,7 @@ const categories = [
   "cooler",
 ];
 export default function StoreSelections({ products, onCategoryChange }) {
-  const available = products.filter((p) => bestOffer(p));
+  const available = products.filter((p) => saleOffer(p));
   const picks = categories
     .map((category) => available.find((p) => p.category === category))
     .filter(Boolean);

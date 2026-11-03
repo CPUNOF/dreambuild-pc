@@ -13,7 +13,7 @@ export function CardPrice({ product }) {
       <div className="card-price">
         <small>DreamBuild · compra simulada</small>
         <strong>{money(stock.unitPriceCents)}</strong>
-        <span>Preço próprio · sem cobrança real</span>
+        <span>Preço acadêmico · sem cobrança real</span>
       </div>
     );
   const offer = bestOffer(product);

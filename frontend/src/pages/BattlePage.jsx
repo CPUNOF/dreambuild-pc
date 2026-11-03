@@ -12,6 +12,7 @@ import { apiRequest, listRecords } from "../api/client.js";
 import { useAuth } from "../context/AuthContext.jsx";
 import { money, consultationDate } from "../data/offers.js";
 import FpsStage from "../components/FpsStage.jsx";
+import BattleAdvantages from "../components/BattleAdvantages.jsx";
 const fpsLabel = (n) =>
   Number.isFinite(n)
     ? `${n.toLocaleString("pt-BR", { maximumFractionDigits: 1 })} FPS`
@@ -214,8 +215,8 @@ export default function BattlePage({ showQuotaNotice = true }) {
       {showQuotaNotice &&
         systems.some((s) => s.dataOrigin === "curated-local") && (
           <p className="battle-method-note">
-            Cota de consultas do banco atingida. Exibindo as cotações
-            verificadas e salvas, com a data de cada consulta.
+            Referências salvas para consulta. Confira a data dos preços e as
+            condições de cada teste antes de comparar.
           </p>
         )}
       {error && (
@@ -386,6 +387,24 @@ export default function BattlePage({ showQuotaNotice = true }) {
           </section>
           {a && b && (
             <section className="battle-arena" id="arena">
+              <BattleAdvantages
+                a={a}
+                b={b}
+                averages={averages}
+                gameCount={common.length}
+                resolution={resolution}
+                onSwap={() =>
+                  setParams(
+                    (old) => {
+                      const next = new URLSearchParams(old);
+                      next.set("a", b.id);
+                      next.set("b", a.id);
+                      return next;
+                    },
+                    { replace: true },
+                  )
+                }
+              />
               <div className="battle-section-heading">
                 <div>
                   <p className="section-kicker">FRENTE A FRENTE</p>
