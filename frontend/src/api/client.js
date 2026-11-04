@@ -1,4 +1,5 @@
 const apiUrl = (import.meta.env.VITE_API_URL || "/api").replace(/\/$/, "");
+import { withVerifiedHardware } from "../../../shared/verifiedHardware.js";
 let csrfToken = null;
 let sessionRequest = null;
 
@@ -81,6 +82,7 @@ export function clearCatalogCache() {
   }
 }
 async function attachInventory(items, signal) {
+  for (const item of items) Object.assign(item, withVerifiedHardware(item));
   let records = [];
   try {
     records = await listRecords("/inventory", signal);

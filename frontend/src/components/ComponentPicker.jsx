@@ -8,11 +8,14 @@ import {
   AlertTriangle,
 } from "lucide-react";
 import { categoryNames } from "../data/hardwareFields.js";
-import { bestOffer, money, availabilityLabel } from "../data/offers.js";
+import { money } from "../data/offers.js";
 import { platformOf, psuFit } from "../data/componentSelection.js";
-import { selectionIssues } from "../../../shared/selectionCompatibility.js";
-import { buildResources } from "../../../shared/buildResources.js";
 import { saleOffer, inventoryState } from "../../../shared/inventory.js";
+import {
+  assemblyIssues,
+  assemblyReadiness,
+  issuesForCategory,
+} from "../../../shared/assemblyCompatibility.js";
 export default function ComponentPicker({
   category,
   products,
@@ -48,7 +51,8 @@ export default function ComponentPicker({
     [stock, setStock] = useState(false),
     [safe, setSafe] = useState(false);
   useEffect(() => {
-    if (category === "psu" && powerAnalysis?.recommendedPsuWatts) setSafe(true);
+    if (category === "psu")
+      setSafe(Boolean(powerAnalysis?.recommendedPsuWatts));
   }, [category, powerAnalysis?.recommendedPsuWatts]);
   useEffect(() => {
     const element = dialog.current,
@@ -75,13 +79,14 @@ export default function ComponentPicker({
     const candidateQuantities = { ...quantities };
     if (addingStorage && parts.some((p) => p.id === product.id))
       candidateQuantities[product.id] = (quantities[product.id] ?? 1) + 1;
-    const issues = [
-      ...selectionIssues(candidateParts),
-      ...buildResources(candidateParts, candidateQuantities).issues,
-    ];
+    const issues = issuesForCategory(
+      assemblyIssues(candidateParts, candidateQuantities),
+      category,
+    );
     if (
       category === "psu" &&
-      psuFit(product, powerAnalysis, parts).status === "fail"
+      psuFit(product, powerAnalysis, parts, { allowPendingCase: true })
+        .status === "fail"
     )
       issues.push({
         code: "PSU_FIT",
@@ -102,9 +107,14 @@ export default function ComponentPicker({
         (brand === "Todas" || p.brand === brand) &&
         (!stock || saleOffer(p)) &&
         normalize(p.fullName + " " + p.model).includes(normalize(query)) &&
-        (!safe || psuFit(p, powerAnalysis, parts).status === "pass"),
+        (!safe ||
+          ["pass", "pending-case"].includes(
+            psuFit(p, powerAnalysis, parts, { allowPendingCase: true }).status,
+          )),
     )
-    .filter((p) => compatibility(p).length === 0)
+    .filter(
+      (p) => assemblyReadiness(p).length === 0 && compatibility(p).length === 0,
+    )
     .sort(
       (a, b) => Number(Boolean(saleOffer(b))) - Number(Boolean(saleOffer(a))),
     );
@@ -279,6 +289,10 @@ export default function ComponentPicker({
         {filtered.length} modelos compatíveis · selecione uma foto para usar a
         peça
       </p>
+      <p className="field-help">
+        A bancada exibe modelos com ficha técnica suficiente para conferir o
+        conjunto. Os demais continuam disponíveis no catálogo da loja.
+      </p>
       {parts.length > 0 && (
         <aside className="picker-context">
           <div>
@@ -312,7 +326,11 @@ export default function ComponentPicker({
             stockState = inventoryState(product.inventory),
             selected = selectedId === product.id,
             fit =
-              category === "psu" ? psuFit(product, powerAnalysis, parts) : null;
+              category === "psu"
+                ? psuFit(product, powerAnalysis, parts, {
+                    allowPendingCase: true,
+                  })
+                : null;
           return (
             <button
               key={product.id}
@@ -405,6 +423,10 @@ export default function ComponentPicker({
           <p>
             Peças incompatíveis ficam ocultas. Revise os filtros ou troque a
             plataforma para escolher outro conjunto de CPU, placa-mãe e memória.
+          </p>
+          <p>
+            Modelos com ficha técnica incompleta também ficam fora da bancada
+            para evitar uma montagem que trava só na finalização.
           </p>
           {["cpu", "mobo", "ram", "cooler"].includes(category) && (
             <button

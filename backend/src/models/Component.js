@@ -1,4 +1,5 @@
 import { inventoryState } from "../../../shared/inventory.js";
+import { withVerifiedHardware } from "../../../shared/verifiedHardware.js";
 const publicFields = [
   "slug",
   "category",
@@ -18,6 +19,7 @@ const publicFields = [
   "checkedAt",
   "displayOrder",
   "hardware",
+  "hardwareVerifiedAt",
   "offers",
   "simulationScore",
   "model3d",
@@ -26,6 +28,7 @@ const publicFields = [
 
 export class Component {
   constructor(id, document) {
+    document = withVerifiedHardware({ ...document, id });
     // Firestore não armazena arrays diretamente dentro de arrays.
     document = {
       ...document,

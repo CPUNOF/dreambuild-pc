@@ -9,7 +9,6 @@ import { money } from "../data/offers.js";
 import StoreComparison from "../components/StoreComparison.jsx";
 import AssemblyWorkspace from "../components/AssemblyWorkspace.jsx";
 import ComponentPicker from "../components/ComponentPicker.jsx";
-import { selectionIssues } from "../../../shared/selectionCompatibility.js";
 import {
   buildResources,
   buildComponentIds,
@@ -19,6 +18,13 @@ import BuildResourcesPanel from "../components/BuildResourcesPanel.jsx";
 import "../resources.css";
 import "../shopping-experience.css";
 import { inventoryQuote } from "../../../shared/inventory.js";
+import {
+  assemblyIssues,
+  introducedIssues,
+  issuesForCategory,
+  assemblyReadiness,
+} from "../../../shared/assemblyCompatibility.js";
+import { suggestAssembly } from "../../../shared/suggestAssembly.js";
 const categories = [
   "cpu",
   "mobo",
@@ -115,14 +121,23 @@ export default function BuilderPage({ products, onCatalogRefresh }) {
       if (addedId) {
         const added = products.find((product) => product.id === addedId);
         if (added) {
-          const candidate = { ...next, [added.category]: added.id };
-          const conflicts = selectionIssues(
-            products.filter((p) => Object.values(candidate).includes(p.id)),
-          );
-          if (conflicts.length) setError(conflicts[0].message);
-          else {
-            next[added.category] = added.id;
-            if (added.category === "storage") storageIds = [];
+          if (assemblyReadiness(added).length) {
+            setError(
+              "Esta peça ainda tem ficha técnica incompleta para a bancada. Escolha um modelo validado pelo seletor ou use Sugerir PC compatível.",
+            );
+          } else {
+            const candidate = { ...next, [added.category]: added.id };
+            const conflicts = issuesForCategory(
+              assemblyIssues(
+                products.filter((p) => Object.values(candidate).includes(p.id)),
+              ),
+              added.category,
+            );
+            if (conflicts.length) setError(conflicts[0].message);
+            else {
+              next[added.category] = added.id;
+              if (added.category === "storage") storageIds = [];
+            }
           }
         } else
           throw new Error("A peça escolhida não está disponível no catálogo.");
@@ -166,6 +181,13 @@ export default function BuilderPage({ products, onCatalogRefresh }) {
   }, [sourceId, addedId, resumeDraft, publicId]);
   const selectedCount = Object.values(partIds).filter(Boolean).length;
   function change(category, id) {
+    const candidate = products.find((p) => p.id === id);
+    if (candidate && assemblyReadiness(candidate).length) {
+      setError(
+        "Esta peça tem ficha técnica incompleta para montagem. Escolha outro modelo no seletor.",
+      );
+      return false;
+    }
     const next = { ...partIds, [category]: id };
     const nextOptions = {
       storageIds: category === "storage" ? [] : options.storageIds,
@@ -174,17 +196,15 @@ export default function BuilderPage({ products, onCatalogRefresh }) {
     const ids = buildComponentIds(next, nextOptions);
     for (const key of Object.keys(nextOptions.quantities))
       if (!ids.includes(key)) delete nextOptions.quantities[key];
-    const conflicts = selectionIssues(
-      products.filter((p) => ids.includes(p.id)),
-    );
-    conflicts.push(
-      ...buildResources(
+    const introduced = issuesForCategory(
+      assemblyIssues(
         products.filter((p) => ids.includes(p.id)),
         nextOptions.quantities,
-      ).issues,
+      ),
+      category,
     );
-    if (id && conflicts.length) {
-      setError(conflicts[0].message);
+    if (id && introduced.length) {
+      setError(introduced[0].message);
       return false;
     }
     setError(null);
@@ -200,10 +220,10 @@ export default function BuilderPage({ products, onCatalogRefresh }) {
     const parts = products.filter((p) =>
         buildComponentIds(nextIds, next).includes(p.id),
       ),
-      conflicts = [
-        ...selectionIssues(parts),
-        ...buildResources(parts, next.quantities).issues,
-      ];
+      conflicts = introducedIssues(
+        assemblyIssues(selectedParts, options.quantities),
+        assemblyIssues(parts, next.quantities),
+      );
     if (conflicts.length) {
       setError(conflicts[0].message);
       return false;
@@ -393,17 +413,43 @@ export default function BuilderPage({ products, onCatalogRefresh }) {
       setBusy(false);
     }
   }
-  function fill() {
-    setOptions({ quantities: {}, storageIds: [] });
-    const next = {};
-    for (const category of categories) {
-      const product = products.find((item) => item.category === category);
-      if (product) next[category] = product.id;
+  async function suggest() {
+    setBusy(true);
+    setError(null);
+    try {
+      const next = suggestAssembly(products, partIds.cpu);
+      if (!next)
+        throw new Error(
+          "Ainda não há um conjunto completo em estoque com fichas suficientes para validar. Atualize o catálogo ou escolha outra CPU.",
+        );
+      const result = await apiRequest("/builds/analyze", {
+        method: "POST",
+        body: {
+          partIds: next,
+          quantities: {},
+          storageIds: [],
+          paymentMethod: payment,
+        },
+      });
+      if (!result.complete || !result.compatible)
+        throw new Error(
+          result.notes.find((n) => n.level === "error")?.message ||
+            "O conjunto sugerido precisa de revisão.",
+        );
+      setPartIds(next);
+      setOptions({ quantities: {}, storageIds: [] });
+      setAnalysis(result);
+      setSavedId(null);
+      setActiveCategory("cooler");
+      setCompletionError(null);
+      setMessage(
+        "Sugestão montada e conferida. Revise as peças e o total antes de enviar ao carrinho. Suas montagens salvas não foram alteradas.",
+      );
+    } catch (failure) {
+      setError(failure.message);
+    } finally {
+      setBusy(false);
     }
-    setPartIds(next);
-    setAnalysis(null);
-    setSavedId(null);
-    setMessage(null);
   }
   return (
     <section className="builder-page builder-shopping">
@@ -439,6 +485,14 @@ export default function BuilderPage({ products, onCatalogRefresh }) {
         </p>
       )}
       <div className="builder-reset-tools">
+        <button
+          type="button"
+          className="primary-button"
+          disabled={busy || initializing}
+          onClick={suggest}
+        >
+          Sugerir PC compatível
+        </button>
         <button
           type="button"
           className="secondary-button"

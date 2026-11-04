@@ -30,7 +30,12 @@ export function platformOf(product) {
     );
   return product.brand;
 }
-export function psuFit(product, analysis, parts) {
+export function psuFit(
+  product,
+  analysis,
+  parts,
+  { allowPendingCase = false } = {},
+) {
   const watts = analysis?.recommendedPsuWatts,
     gpu = parts.find((p) => p.category === "gpu"),
     enclosure = parts.find((p) => p.category === "case"),
@@ -64,6 +69,12 @@ export function psuFit(product, analysis, parts) {
       status: "unknown",
       label: "Conectores ATX/EPS da placa-mãe precisam de confirmação",
     };
+  if (!enclosure?.hardware?.maxPsuLengthMm || !h.lengthMm)
+    if (allowPendingCase && !enclosure && h.lengthMm > 0)
+      return {
+        status: "pending-case",
+        label: `Potência e conectores atendem · mínimo ${watts} W. Escolha um gabinete com espaço para a fonte.`,
+      };
   if (!enclosure?.hardware?.maxPsuLengthMm || !h.lengthMm)
     return {
       status: "unknown",

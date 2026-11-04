@@ -59,6 +59,64 @@ afterAll(() => {
 });
 
 describe("Bancada: seleção contextual e compatibilidade", () => {
+  test("fonte adequada aparece antes de escolher gabinete, com espaço ainda pendente", () => {
+    const source = product("Fonte 650 W", "psu", {
+      wattage: 650,
+      lengthMm: 140,
+      connectors: ["atx24", "eps8", "pcie8"],
+    });
+    render(
+      <ComponentPicker
+        category="psu"
+        products={[source]}
+        parts={[
+          { ...cpu, hardware: { ...cpu.hardware, tdpWatts: 65 } },
+          product("GPU teste", "gpu", {
+            powerConnector: "pcie8",
+            referencePowerWatts: 145,
+            recommendedPsuWatts: 550,
+            lengthMm: 197,
+          }),
+        ]}
+        powerAnalysis={{ recommendedPsuWatts: 550 }}
+        onChoose={vi.fn()}
+        onClose={vi.fn()}
+      />,
+    );
+    expect(
+      screen.getByRole("button", { name: "Selecionar Fonte 650 W" }),
+    ).toBeEnabled();
+    expect(
+      screen.getByText(/Escolha um gabinete com espaço/),
+    ).toBeInTheDocument();
+  });
+  test("RAM antiga com ficha incompleta não esvazia a lista de GPUs válidas", () => {
+    const gpu = product("GPU validada", "gpu", {
+      powerConnector: "pcie8",
+      referencePowerWatts: 145,
+      recommendedPsuWatts: 550,
+      lengthMm: 197,
+    });
+    render(
+      <ComponentPicker
+        category="gpu"
+        products={[gpu, product("GPU sem ficha", "gpu", {})]}
+        parts={[
+          { ...cpu, hardware: { ...cpu.hardware, tdpWatts: 65 } },
+          board,
+          product("RAM antiga", "ram", { ramType: "DDR4", capacityGb: 16 }),
+        ]}
+        onChoose={vi.fn()}
+        onClose={vi.fn()}
+      />,
+    );
+    expect(
+      screen.getByRole("button", { name: "Selecionar GPU validada" }),
+    ).toBeEnabled();
+    expect(
+      screen.queryByRole("button", { name: "Selecionar GPU sem ficha" }),
+    ).not.toBeInTheDocument();
+  });
   test("última etapa oferece carrinho e benchmark e não mostra próxima peça", async () => {
     const finish = vi.fn();
     render(

@@ -13,28 +13,34 @@ const card = {
   token: "test-only",
 };
 describe("Revisão da compra", () => {
-  test("aceita apenas dados do DreamCard emitido e invalida quando um campo é alterado", async () => {
+  test("pagamento não renderiza campos que o Chrome possa preencher com cartões salvos", async () => {
     const user = userEvent.setup(),
       onValid = vi.fn();
-    render(
+    const { container, rerender } = render(
       <DreamCardForm card={card} onGenerate={vi.fn()} onValid={onValid} />,
     );
     expect(
-      screen.getByText("Preencha os quatro campos para continuar."),
-    ).toBeInTheDocument();
+      container.querySelectorAll(
+        "input,textarea,select,[contenteditable=true]",
+      ),
+    ).toHaveLength(0);
     await user.click(
-      screen.getByRole("button", { name: "Preencher com meu DreamCard" }),
+      screen.getByRole("button", { name: "Usar este DreamCard" }),
     );
     expect(onValid).toHaveBeenLastCalledWith(
       expect.objectContaining({ number: card.number, token: card.token }),
     );
-    await user.clear(screen.getByLabelText("Código de demonstração"));
-    await user.type(screen.getByLabelText("Código de demonstração"), "999");
-    expect(onValid).toHaveBeenLastCalledWith(null);
+    rerender(
+      <DreamCardForm
+        card={{ ...card, token: "other-issued-card" }}
+        onGenerate={vi.fn()}
+        onValid={onValid}
+      />,
+    );
+    await waitFor(() => expect(onValid).toHaveBeenLastCalledWith(null));
   });
-  test("cartão expirado não autoriza avançar mesmo com os campos preenchidos", async () => {
-    const onValid = vi.fn(),
-      user = userEvent.setup();
+  test("DreamCard expirado não pode ser selecionado", () => {
+    const onValid = vi.fn();
     render(
       <DreamCardForm
         card={{ ...card, validUntil: Date.now() - 5000 }}
@@ -42,9 +48,9 @@ describe("Revisão da compra", () => {
         onValid={onValid}
       />,
     );
-    await user.click(
-      screen.getByRole("button", { name: "Preencher com meu DreamCard" }),
-    );
+    expect(
+      screen.getByRole("button", { name: "Usar este DreamCard" }),
+    ).toBeDisabled();
     expect(screen.getByRole("alert")).toHaveTextContent("expirou");
     expect(onValid).toHaveBeenLastCalledWith(null);
   });

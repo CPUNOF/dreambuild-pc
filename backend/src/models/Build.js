@@ -1,6 +1,7 @@
 import { AppError } from "../errors/AppError.js";
 import { Comparison } from "./Comparison.js";
 import { selectionIssues } from "../../../shared/selectionCompatibility.js";
+import { assemblyIssues } from "../../../shared/assemblyCompatibility.js";
 import {
   normalizeBuildOptions,
   buildComponentIds,
@@ -412,6 +413,9 @@ export class Build {
         "A análise não mede temperaturas nem garante capacidade térmica; confira o suporte do fabricante e a instalação.",
       );
     const complete = missingCategories.length === 0;
+    for (const issue of assemblyIssues(allParts, quantities))
+      if (!notes.some((note) => note.code === issue.code))
+        add("error", issue.code, issue.message);
     for (const issue of resources.issues)
       if (!notes.some((n) => n.code === issue.code))
         add("error", issue.code, issue.message);
