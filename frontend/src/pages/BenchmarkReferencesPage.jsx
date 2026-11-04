@@ -37,11 +37,29 @@ export default function BenchmarkReferencesPage() {
       </p>
     );
   const profiles = Object.keys(data.gpuProfiles).sort(),
-    current = data.games.find((g) => g.id === selected) || data.games[0],
-    game = { ...current, results: current.results[gpu] },
+    covered = data.games.filter((g) =>
+      Number.isFinite(g.results[gpu]?.[resolution]),
+    ),
+    current = covered.find((g) => g.id === selected) || covered[0],
+    game = { ...current, results: current?.results[gpu] || {} },
     other = opponent
-      ? { ...current, results: current.results[opponent] }
+      ? { ...current, results: current?.results[opponent] || {} }
       : null;
+  const setup =
+    current?.resultSetups?.[gpu] ||
+    data.gpuProfiles[gpu].testSetup ||
+    data.testSetup;
+  const source = current?.resultSources?.[gpu] || data.gpuProfiles[gpu].source;
+  const resultCount = data.games.reduce(
+    (n, g) =>
+      n +
+      Object.values(g.results).reduce(
+        (sum, results) =>
+          sum + Object.values(results).filter(Number.isFinite).length,
+        0,
+      ),
+    0,
+  );
   return (
     <section className="community-page">
       <header className="battle-section-heading">
@@ -49,9 +67,8 @@ export default function BenchmarkReferencesPage() {
           <p className="section-kicker">DREAMBUILD / LABORATÓRIO</p>
           <h1>Hardware em jogo.</h1>
           <p>
-            {profiles.length} GPUs · {data.games.length} jogos ·{" "}
-            {profiles.length * data.games.length * 2} resultados publicados em
-            1080p e 1440p.
+            {profiles.length} GPUs · {data.games.length} jogos · {resultCount}{" "}
+            resultados publicados em 1080p e 1440p.
           </p>
         </div>
         <Link className="secondary-button" to="/ranking">
@@ -125,16 +142,18 @@ export default function BenchmarkReferencesPage() {
           </b>
         </span>
         <span>
-          CPU de teste <b>{data.testSetup.cpu}</b>
+          CPU de teste <b>{setup.cpu}</b>
         </span>
         <span>
           GPU B <b>{opponent || "Não selecionada"}</b>
         </span>
       </div>
-      <h2 className="battle-game-title">{current.name}</h2>
+      <h2 className="battle-game-title">
+        {current?.name || "Sem teste nesta resolução"}
+      </h2>
       <FpsStage game={game} opponentGame={other} resolution={resolution} />
       <div className="benchmark-game-grid">
-        {data.games.map((g) => (
+        {covered.map((g) => (
           <button
             key={g.id}
             className={current.id === g.id ? "is-active" : ""}
@@ -146,7 +165,9 @@ export default function BenchmarkReferencesPage() {
             <small>
               {g.preset} · {resolution}
             </small>
-            {opponent && <b>B: {fpsLabel(g.results[opponent][resolution])}</b>}
+            {opponent && (
+              <b>B: {fpsLabel(g.results[opponent]?.[resolution])}</b>
+            )}
           </button>
         ))}
       </div>
@@ -154,15 +175,15 @@ export default function BenchmarkReferencesPage() {
         <summary>Condições e fontes dos testes</summary>
         <p>{data.methodology}</p>
         <p>
-          PC de teste: {data.testSetup.cpu} · {data.testSetup.ram}.{" "}
+          PC de teste: {setup.cpu} · {setup.ram}.{" "}
           {data.gpuProfiles[gpu].testNotes}
         </p>
-        <a href={data.gpuProfiles[gpu].source} target="_blank" rel="noreferrer">
+        <a href={source} target="_blank" rel="noreferrer">
           Resultados originais da GPU A ↗
         </a>{" "}
         ·{" "}
         <a
-          href={data.gpuProfiles[gpu].setupSource}
+          href={setup.source || data.gpuProfiles[gpu].setupSource}
           target="_blank"
           rel="noreferrer"
         >

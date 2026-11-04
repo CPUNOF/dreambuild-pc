@@ -2,15 +2,40 @@ import { useEffect, useRef, useState } from "react";
 export default function GamePreview({ preview, playing }) {
   const video = useRef(null);
   const [failed, setFailed] = useState(false);
+  const [visible, setVisible] = useState(false);
+  const [pageVisible, setPageVisible] = useState(() => !document.hidden);
+  useEffect(() => {
+    const element = video.current;
+    // Load media only while it is visible: https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API
+    const observer =
+      typeof IntersectionObserver === "undefined"
+        ? null
+        : new IntersectionObserver(
+            ([entry]) => setVisible(entry.isIntersecting),
+            { threshold: 0.05 },
+          );
+    if (observer) observer.observe(element);
+    else setVisible(true);
+    const visibility = () => setPageVisible(!document.hidden);
+    document.addEventListener("visibilitychange", visibility);
+    return () => {
+      observer?.disconnect();
+      document.removeEventListener("visibilitychange", visibility);
+    };
+  }, []);
   useEffect(() => {
     setFailed(false);
     const element = video.current;
     let cancelled = false,
       hls;
-    if (!playing || !preview?.video || !element) return;
+    if (!playing || !visible || !pageVisible || !preview?.video || !element)
+      return;
     (async () => {
       try {
-        if (element.canPlayType("application/vnd.apple.mpegurl"))
+        if (
+          /\.(mp4|webm)(?:\?|$)/i.test(preview.video) ||
+          element.canPlayType("application/vnd.apple.mpegurl")
+        )
           element.src = preview.video;
         else {
           const { default: Hls } = await import("hls.js/light");
@@ -37,25 +62,20 @@ export default function GamePreview({ preview, playing }) {
         if (!cancelled) setFailed(true);
       }
     })();
-    const hide = () => {
-      if (document.hidden) element.pause();
-      else if (playing) element.play().catch(() => {});
-    };
-    document.addEventListener("visibilitychange", hide);
     return () => {
       cancelled = true;
-      document.removeEventListener("visibilitychange", hide);
       hls?.destroy();
       element.pause();
       element.removeAttribute("src");
       element.load();
     };
-  }, [preview?.video, playing]);
+  }, [preview?.video, playing, visible, pageVisible]);
   return (
     <div className="game-preview">
       <video
         ref={video}
         muted
+        autoPlay={playing && visible && pageVisible}
         loop
         playsInline
         preload="none"

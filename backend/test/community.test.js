@@ -37,7 +37,7 @@ test("base pública informa cópia local em cota excedida e compartilha uma úni
   assert.equal(a, b);
   assert.equal(a.dataOrigin, "curated-local");
   assert.equal(a.version, data.version);
-  assert.equal(Object.keys(a.gpuProfiles).length, 19);
+  assert.equal(Object.keys(a.gpuProfiles).length, 20);
 });
 export function memoryFirestore() {
   const docs = new Map();
@@ -164,16 +164,17 @@ const record = (price = 100000) => ({
     ["1080p", "1440p"].map((r) => [r, performanceReport(analysis, data, r)]),
   ),
 });
-test("base ampliada tem 19 GPUs exatas, 12 jogos e 456 FPS com fonte; 8 GB não herda 16 GB", () => {
-  assert.equal(Object.keys(data.gpuProfiles).length, 19);
+test("base ampliada identifica GPUs exatas e preserva a coorte original; 8 GB não herda 16 GB", () => {
+  assert.equal(Object.keys(data.gpuProfiles).length, 20);
   assert.equal(data.rankingGameIds.length, 10);
   for (const [name, p] of Object.entries(data.gpuProfiles)) {
     assert.ok(p.source.startsWith("https://www.tomshardware.com/"));
     assert.equal(identifyGpu({ name: `${p.chip} ${p.vramGb}GB` }, data), name);
-    for (const g of data.games)
+    for (const g of data.games.filter((g) => g.results[name]))
       for (const r of ["1080p", "1440p"])
         assert.ok(
-          Number.isFinite(g.results[name][r]) && g.results[name][r] > 0,
+          g.results[name][r] === undefined ||
+            (Number.isFinite(g.results[name][r]) && g.results[name][r] > 0),
         );
   }
   assert.equal(identifyGpu({ name: "RTX 5060 Ti" }, data), null);
@@ -196,7 +197,8 @@ test("base ampliada tem 19 GPUs exatas, 12 jogos e 456 FPS com fonte; 8 GB não 
     data,
   );
   assert.equal(unknown.rankEligible, false);
-  assert.equal(unknown.averageFps, null);
+  assert.equal(unknown.kind, "gpu-reference");
+  assert.ok(unknown.averageFps > 0);
   const partial = structuredClone(data);
   delete partial.games[0].results["RTX 4090"]["1080p"];
   const report = performanceReport(analysis, partial);
@@ -420,7 +422,10 @@ test("rotas públicas dispensam sessão; publicação exige sessão, CSRF, propr
       anonymous = client();
     assert.equal((await anonymous("/community/ranking")).status, "success");
     assert.equal(sessionReads, 0);
-    assert.equal((await anonymous("/benchmarks")).data.games.length, 12);
+    assert.equal(
+      (await anonymous("/benchmarks")).data.games.length,
+      data.games.length,
+    );
     assert.equal((await anonymous("/community/builds", "POST", {})).code, 401);
     for (const [c, email] of [
       [a, "a@example.test"],

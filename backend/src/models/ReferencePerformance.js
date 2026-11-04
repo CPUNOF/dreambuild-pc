@@ -34,11 +34,16 @@ export function performanceReport(analysis, dataset, resolution = "1080p") {
   const gpuProfile = identifyGpu(gpu, dataset),
     profile = dataset.gpuProfiles[gpuProfile],
     supported = Boolean(cpuProfile && gpuProfile && ram),
-    ratio = cpuProfile
-      ? cpuProfile[1] / dataset.cpuScores[dataset.testSetup.cpu]
-      : null;
+    referenceOnly = Boolean(!supported && cpu && gpuProfile && ram);
   const games = dataset.games.map((game) => {
     const referenceFps = game.results[gpuProfile]?.[resolution] ?? null;
+    const testSetup =
+      game.resultSetups?.[gpuProfile] ||
+      profile?.testSetup ||
+      dataset.testSetup;
+    const ratio = cpuProfile
+      ? cpuProfile[1] / dataset.cpuScores[testSetup.cpu]
+      : null;
     const ceiling = Math.max(
       ...Object.values(game.results)
         .map((r) => r[resolution])
@@ -49,22 +54,29 @@ export function performanceReport(analysis, dataset, resolution = "1080p") {
         ? Math.round(
             Math.min(referenceFps, ceiling * Math.min(ratio, 1)) * 10,
           ) / 10
-        : null;
+        : referenceOnly
+          ? referenceFps
+          : null;
     return {
       id: game.id,
       name: game.name,
       preset: game.preset,
       steamId: game.steamId,
-      source: profile?.source || game.source,
+      source:
+        game.resultSources?.[gpuProfile] || profile?.source || game.source,
+      comparisonKey: game.comparisonKey || null,
+      testSetup,
       preview: game.preview || null,
       results: { [resolution]: fps },
       referenceFps,
-      kind: "estimate",
+      kind: referenceOnly ? "gpu-reference" : "estimate",
     };
   });
   const covered = games.filter((g) => Number.isFinite(g.results[resolution])),
     cohort = dataset.rankingGameIds.map((id) => games.find((g) => g.id === id)),
     rankEligible =
+      supported &&
+      !dataset.cpuScoreDetails?.[cpuProfile?.[0]] &&
       cohort.length >= 10 &&
       cohort.every((g) => g && Number.isFinite(g.results[resolution]));
   const mean = (rows) =>
@@ -74,16 +86,18 @@ export function performanceReport(analysis, dataset, resolution = "1080p") {
   return {
     version: dataset.version,
     resolution,
-    kind: "estimate",
+    kind: referenceOnly ? "gpu-reference" : "estimate",
     cpuProfile: cpuProfile?.[0] ?? null,
     gpuProfile,
     source: profile?.source || dataset.source,
     testSetup: {
       ...dataset.testSetup,
+      ...profile?.testSetup,
       source: profile?.setupSource || dataset.testSetup.source,
       notes: profile?.testNotes || "",
     },
-    cpuSource: dataset.cpuSource,
+    cpuSource:
+      dataset.cpuScoreDetails?.[cpuProfile?.[0]]?.source || dataset.cpuSource,
     games,
     averageFps: covered.length ? mean(covered) : null,
     coveredGames: covered.length,
@@ -91,7 +105,12 @@ export function performanceReport(analysis, dataset, resolution = "1080p") {
     rankAverageFps: rankEligible ? mean(cohort) : null,
     rankingGameIds: dataset.rankingGameIds,
     notes: [
-      "Estimativa experimental: menor valor entre a referência da GPU e a curva da GPU mais rápida da base ajustada pelo índice médio da CPU, limitado à CPU de teste. Não é medição deste PC nem modelo validado por jogo.",
+      referenceOnly
+        ? "Referência da GPU: sua CPU ainda não tem índice comparável. Estes são os FPS publicados no PC de teste da fonte, não uma estimativa desta montagem. Esta configuração não participa do ranking."
+        : "Estimativa experimental: menor valor entre a referência da GPU e a curva da GPU mais rápida da base ajustada pelo índice médio da CPU, limitado à CPU de teste. Não é medição deste PC nem modelo validado por jogo.",
+      ...(dataset.cpuScoreDetails?.[cpuProfile?.[0]]
+        ? [dataset.cpuScoreDetails[cpuProfile[0]].note]
+        : []),
       "RAM, BIOS, drivers, refrigeração e cenas podem alterar os resultados; não há correção numérica inventada para essas diferenças.",
       dataset.methodology,
       ...(supported

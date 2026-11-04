@@ -1,6 +1,6 @@
 {
   "version": "reference-2026-10-30-v2",
-  "checkedAt": "2026-10-30",
+  "checkedAt": "2026-11-03",
   "source": "https://www.tomshardware.com/pc-components/gpus/nvidia-geforce-rtx-5080-review/4",
   "testSetup": {
     "cpu": "Ryzen 7 9800X3D",
@@ -41,7 +41,20 @@
     "Core i7-12700K": 65.8,
     "Core Ultra 5 225": 62.5,
     "Core i5-12600K": 60.8,
-    "Core i5-14400": 58
+    "Core i5-14400": 58,
+    "Ryzen 7 5800X3D": 75.99,
+    "Ryzen 7 7700": 69.37,
+    "Ryzen 9 7900": 68.21,
+    "Ryzen 5 7600": 64.18,
+    "Ryzen 9 5950X": 57.98,
+    "Ryzen 9 5900X": 57.7,
+    "Ryzen 7 5800X": 57.06,
+    "Ryzen 7 5700X": 55.94,
+    "Ryzen 5 5600X": 54.34,
+    "Core i5-12400": 53.62,
+    "Ryzen 7 5700G*": 51.59,
+    "Core i3-10100": 41.67,
+    "Ryzen 7 4750G*": 39.35
   },
   "cpuSource": "https://www.tomshardware.com/reviews/cpu-hierarchy,4312.html",
   "games": [
@@ -1136,6 +1149,1342 @@
         "source": "https://store.steampowered.com/app/1643320/",
         "title": "S.T.A.L.K.E.R. 2: Heart of Chornobyl"
       }
+    },
+    {
+      "id": "nbc-gta-v-2015",
+      "name": "GTA V",
+      "preset": "Highest 16xAF 4xMSAA + FXAA",
+      "comparisonKey": "nbc-gta-v-2015:highest-16xaf-4xmsaa-fxaa",
+      "source": "https://www.notebookcheck.net/Asus-Prime-GeForce-RTX-5060-OC-review-Strong-price-performance-GPU-for-1080p-gaming.1039116.0.html",
+      "kind": "reference",
+      "results": {
+        "RTX 5060": {
+          "1080p": 171.2,
+          "1440p": 131.2
+        }
+      },
+      "preview": {
+        "poster": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/271590/header.jpg?t=1765387725",
+        "video": "https://video.akamai.steamstatic.com/store_trailers/271590/844302/de4ad49997171bd3f4d05299cc3e718cfe0307ee/1751269402/hls_264_master.m3u8?t=1741119978",
+        "source": "https://store.steampowered.com/app/271590/",
+        "title": "Grand Theft Auto V Legacy"
+      },
+      "resultSources": {
+        "RTX 5060": "https://www.notebookcheck.net/Asus-Prime-GeForce-RTX-5060-OC-review-Strong-price-performance-GPU-for-1080p-gaming.1039116.0.html"
+      },
+      "resultSetups": {
+        "RTX 5060": {
+          "cpu": "Ryzen 7 9800X3D",
+          "ram": "32 GB DDR5-6000 CL28",
+          "source": "https://www.notebookcheck.net/Asus-Prime-GeForce-RTX-5060-OC-review-Strong-price-performance-GPU-for-1080p-gaming.1039116.0.html"
+        }
+      }
+    },
+    {
+      "id": "nbc-the-witcher-3-2015",
+      "name": "The Witcher 3",
+      "preset": "Ultra Graphics & Postprocessing (HBAO+) AF AA",
+      "comparisonKey": "nbc-the-witcher-3-2015:ultra-graphics-postprocessing-hbao-af-aa",
+      "source": "https://www.notebookcheck.net/Asus-Prime-GeForce-RTX-5060-OC-review-Strong-price-performance-GPU-for-1080p-gaming.1039116.0.html",
+      "kind": "reference",
+      "results": {
+        "RTX 5060": {
+          "1080p": 142.4,
+          "1440p": 106.4
+        },
+        "RTX 5070": {
+          "1080p": 211,
+          "1440p": 162.7
+        }
+      },
+      "preview": {
+        "poster": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/292030/e8afc4252e3fee8ed2525ab2fd7675cca39aa38d/header_alt_assets_1.jpg?t=1790845156",
+        "video": "https://video.akamai.steamstatic.com/store_trailers/292030/1018852715/bf5e4c4a6409b1714754e691e778ae9f66ab9907/1790683068/hls_264_master.m3u8?t=1790693333",
+        "source": "https://store.steampowered.com/app/292030/",
+        "title": "The Witcher 3: Wild Hunt — Remastered"
+      },
+      "resultSources": {
+        "RTX 5060": "https://www.notebookcheck.net/Asus-Prime-GeForce-RTX-5060-OC-review-Strong-price-performance-GPU-for-1080p-gaming.1039116.0.html",
+        "RTX 5070": "https://www.notebookcheck.net/Nvidia-GeForce-RTX-5070-Founders-Edition-Review-549-Blackwell-goodness-under-imminent-threat-from-AMD-RDNA-4.971586.0.html"
+      },
+      "resultSetups": {
+        "RTX 5060": {
+          "cpu": "Ryzen 7 9800X3D",
+          "ram": "32 GB DDR5-6000 CL28",
+          "source": "https://www.notebookcheck.net/Asus-Prime-GeForce-RTX-5060-OC-review-Strong-price-performance-GPU-for-1080p-gaming.1039116.0.html"
+        },
+        "RTX 5070": {
+          "cpu": "Core i9-14900K",
+          "ram": "RAM conforme bancada da fonte",
+          "source": "https://www.notebookcheck.net/Nvidia-GeForce-RTX-5070-Founders-Edition-Review-549-Blackwell-goodness-under-imminent-threat-from-AMD-RDNA-4.971586.0.html"
+        }
+      }
+    },
+    {
+      "id": "nbc-dota-2-reborn-2015",
+      "name": "Dota 2 Reborn",
+      "preset": "ultra (3/3) best looking AF AA",
+      "comparisonKey": "nbc-dota-2-reborn-2015:ultra-3-3-best-looking-af-aa",
+      "source": "https://www.notebookcheck.net/Asus-Prime-GeForce-RTX-5060-OC-review-Strong-price-performance-GPU-for-1080p-gaming.1039116.0.html",
+      "kind": "reference",
+      "results": {
+        "RTX 5060": {
+          "1080p": 291.7
+        }
+      },
+      "preview": {
+        "poster": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/570/header.jpg?t=1791407503",
+        "video": "https://video.akamai.steamstatic.com/store_trailers/570/116737/313addee2092d0bd6f538d164610061ea8bbe79c/1749859757/hls_264_master.m3u8?t=1762820639",
+        "source": "https://store.steampowered.com/app/570/",
+        "title": "Dota 2"
+      },
+      "resultSources": {
+        "RTX 5060": "https://www.notebookcheck.net/Asus-Prime-GeForce-RTX-5060-OC-review-Strong-price-performance-GPU-for-1080p-gaming.1039116.0.html"
+      },
+      "resultSetups": {
+        "RTX 5060": {
+          "cpu": "Ryzen 7 9800X3D",
+          "ram": "32 GB DDR5-6000 CL28",
+          "source": "https://www.notebookcheck.net/Asus-Prime-GeForce-RTX-5060-OC-review-Strong-price-performance-GPU-for-1080p-gaming.1039116.0.html"
+        }
+      }
+    },
+    {
+      "id": "nbc-final-fantasy-xv-benchmark-2018",
+      "name": "Final Fantasy XV Benchmark",
+      "preset": "High Quality AF AA",
+      "comparisonKey": "nbc-final-fantasy-xv-benchmark-2018:high-quality-af-aa",
+      "source": "https://www.notebookcheck.net/Asus-Prime-GeForce-RTX-5060-OC-review-Strong-price-performance-GPU-for-1080p-gaming.1039116.0.html",
+      "kind": "reference",
+      "results": {
+        "RTX 5060": {
+          "1080p": 147,
+          "1440p": 106.1
+        }
+      },
+      "preview": {
+        "poster": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/637650/header.jpg?t=1775105127",
+        "video": "https://video.akamai.steamstatic.com/store_trailers/637650/195232/d64451d849dc73fa7bef6c71ab8ae43b278421d7/1750565040/hls_264_master.m3u8?t=1542104574",
+        "source": "https://store.steampowered.com/app/637650/",
+        "title": "FINAL FANTASY XV WINDOWS EDITION"
+      },
+      "resultSources": {
+        "RTX 5060": "https://www.notebookcheck.net/Asus-Prime-GeForce-RTX-5060-OC-review-Strong-price-performance-GPU-for-1080p-gaming.1039116.0.html"
+      },
+      "resultSetups": {
+        "RTX 5060": {
+          "cpu": "Ryzen 7 9800X3D",
+          "ram": "32 GB DDR5-6000 CL28",
+          "source": "https://www.notebookcheck.net/Asus-Prime-GeForce-RTX-5060-OC-review-Strong-price-performance-GPU-for-1080p-gaming.1039116.0.html"
+        }
+      }
+    },
+    {
+      "id": "nbc-x-plane-11-11-2018",
+      "name": "X-Plane 11.11",
+      "preset": "high (fps_test=3) AF AA",
+      "comparisonKey": "nbc-x-plane-11-11-2018:high-fps-test-3-af-aa",
+      "source": "https://www.notebookcheck.net/Asus-Prime-GeForce-RTX-5060-OC-review-Strong-price-performance-GPU-for-1080p-gaming.1039116.0.html",
+      "kind": "reference",
+      "results": {
+        "RTX 5060": {
+          "1080p": 177.7
+        },
+        "RTX 5070": {
+          "1080p": 150.6
+        }
+      },
+      "preview": {
+        "poster": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/269950/header.jpg?t=1791020865",
+        "video": "https://video.akamai.steamstatic.com/store_trailers/269950/84835/5a004c9a2083b5db09d0fad42e3b3495bdbbd477/1750499565/hls_264_master.m3u8?t=1482444216",
+        "source": "https://store.steampowered.com/app/269950/",
+        "title": "X-Plane 11"
+      },
+      "resultSources": {
+        "RTX 5060": "https://www.notebookcheck.net/Asus-Prime-GeForce-RTX-5060-OC-review-Strong-price-performance-GPU-for-1080p-gaming.1039116.0.html",
+        "RTX 5070": "https://www.notebookcheck.net/Nvidia-GeForce-RTX-5070-Founders-Edition-Review-549-Blackwell-goodness-under-imminent-threat-from-AMD-RDNA-4.971586.0.html"
+      },
+      "resultSetups": {
+        "RTX 5060": {
+          "cpu": "Ryzen 7 9800X3D",
+          "ram": "32 GB DDR5-6000 CL28",
+          "source": "https://www.notebookcheck.net/Asus-Prime-GeForce-RTX-5060-OC-review-Strong-price-performance-GPU-for-1080p-gaming.1039116.0.html"
+        },
+        "RTX 5070": {
+          "cpu": "Core i9-14900K",
+          "ram": "RAM conforme bancada da fonte",
+          "source": "https://www.notebookcheck.net/Nvidia-GeForce-RTX-5070-Founders-Edition-Review-549-Blackwell-goodness-under-imminent-threat-from-AMD-RDNA-4.971586.0.html"
+        }
+      }
+    },
+    {
+      "id": "nbc-far-cry-5-2018",
+      "name": "Far Cry 5",
+      "preset": "Ultra Preset AF TAA",
+      "comparisonKey": "nbc-far-cry-5-2018:ultra-preset-af-taa",
+      "source": "https://www.notebookcheck.net/Asus-Prime-GeForce-RTX-5060-OC-review-Strong-price-performance-GPU-for-1080p-gaming.1039116.0.html",
+      "kind": "reference",
+      "results": {
+        "RTX 5060": {
+          "1080p": 212,
+          "1440p": 144
+        }
+      },
+      "preview": {
+        "poster": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/552520/0dbbd22689fafc2b5b86996257a8e115ff935e81/header.jpg?t=1792530774",
+        "video": "https://video.akamai.steamstatic.com/store_trailers/552520/1470190032/cadcba83da028861b79cd904fa195c970f3003eb/1792529945/hls_264_master.m3u8?t=1792530773",
+        "source": "https://store.steampowered.com/app/552520/",
+        "title": "Far Cry® 5"
+      },
+      "resultSources": {
+        "RTX 5060": "https://www.notebookcheck.net/Asus-Prime-GeForce-RTX-5060-OC-review-Strong-price-performance-GPU-for-1080p-gaming.1039116.0.html"
+      },
+      "resultSetups": {
+        "RTX 5060": {
+          "cpu": "Ryzen 7 9800X3D",
+          "ram": "32 GB DDR5-6000 CL28",
+          "source": "https://www.notebookcheck.net/Asus-Prime-GeForce-RTX-5060-OC-review-Strong-price-performance-GPU-for-1080p-gaming.1039116.0.html"
+        }
+      }
+    },
+    {
+      "id": "nbc-far-cry-new-dawn-2019",
+      "name": "Far Cry New Dawn",
+      "preset": "Ultra Preset AF AA",
+      "comparisonKey": "nbc-far-cry-new-dawn-2019:ultra-preset-af-aa",
+      "source": "https://www.notebookcheck.net/Asus-Prime-GeForce-RTX-5060-OC-review-Strong-price-performance-GPU-for-1080p-gaming.1039116.0.html",
+      "kind": "reference",
+      "results": {
+        "RTX 5060": {
+          "1080p": 189,
+          "1440p": 138
+        }
+      },
+      "preview": null,
+      "resultSources": {
+        "RTX 5060": "https://www.notebookcheck.net/Asus-Prime-GeForce-RTX-5060-OC-review-Strong-price-performance-GPU-for-1080p-gaming.1039116.0.html"
+      },
+      "resultSetups": {
+        "RTX 5060": {
+          "cpu": "Ryzen 7 9800X3D",
+          "ram": "32 GB DDR5-6000 CL28",
+          "source": "https://www.notebookcheck.net/Asus-Prime-GeForce-RTX-5060-OC-review-Strong-price-performance-GPU-for-1080p-gaming.1039116.0.html"
+        }
+      }
+    },
+    {
+      "id": "nbc-far-cry-6-2021",
+      "name": "Far Cry 6",
+      "preset": "Ultra Graphics Quality + HD Textures AF TAA",
+      "comparisonKey": "nbc-far-cry-6-2021:ultra-graphics-quality-hd-textures-af-taa",
+      "source": "https://www.notebookcheck.net/Asus-Prime-GeForce-RTX-5060-OC-review-Strong-price-performance-GPU-for-1080p-gaming.1039116.0.html",
+      "kind": "reference",
+      "results": {
+        "RTX 5060": {
+          "1080p": 150.3,
+          "1440p": 106.2
+        }
+      },
+      "preview": null,
+      "resultSources": {
+        "RTX 5060": "https://www.notebookcheck.net/Asus-Prime-GeForce-RTX-5060-OC-review-Strong-price-performance-GPU-for-1080p-gaming.1039116.0.html"
+      },
+      "resultSetups": {
+        "RTX 5060": {
+          "cpu": "Ryzen 7 9800X3D",
+          "ram": "32 GB DDR5-6000 CL28",
+          "source": "https://www.notebookcheck.net/Asus-Prime-GeForce-RTX-5060-OC-review-Strong-price-performance-GPU-for-1080p-gaming.1039116.0.html"
+        }
+      }
+    },
+    {
+      "id": "nbc-the-witcher-3-v4-2023",
+      "name": "The Witcher 3 v4",
+      "preset": "Ultra Preset / On AF FXAA",
+      "comparisonKey": "nbc-the-witcher-3-v4-2023:ultra-preset-on-af-fxaa",
+      "source": "https://www.notebookcheck.net/Asus-Prime-GeForce-RTX-5060-OC-review-Strong-price-performance-GPU-for-1080p-gaming.1039116.0.html",
+      "kind": "reference",
+      "results": {
+        "RTX 5060": {
+          "1080p": 163.2,
+          "1440p": 111.4
+        }
+      },
+      "preview": null,
+      "resultSources": {
+        "RTX 5060": "https://www.notebookcheck.net/Asus-Prime-GeForce-RTX-5060-OC-review-Strong-price-performance-GPU-for-1080p-gaming.1039116.0.html"
+      },
+      "resultSetups": {
+        "RTX 5060": {
+          "cpu": "Ryzen 7 9800X3D",
+          "ram": "32 GB DDR5-6000 CL28",
+          "source": "https://www.notebookcheck.net/Asus-Prime-GeForce-RTX-5060-OC-review-Strong-price-performance-GPU-for-1080p-gaming.1039116.0.html"
+        }
+      }
+    },
+    {
+      "id": "nbc-hogwarts-legacy-2023",
+      "name": "Hogwarts Legacy",
+      "preset": "Ultra Preset AF High TAA",
+      "comparisonKey": "nbc-hogwarts-legacy-2023:ultra-preset-af-high-taa",
+      "source": "https://www.notebookcheck.net/Asus-Prime-GeForce-RTX-5060-OC-review-Strong-price-performance-GPU-for-1080p-gaming.1039116.0.html",
+      "kind": "reference",
+      "results": {
+        "RTX 5060": {
+          "1080p": 80,
+          "1440p": 58.2
+        }
+      },
+      "preview": {
+        "poster": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/990080/be2971b1023bccb04f993887d70ef4d2060262cf/header.jpg?t=1790708992",
+        "video": "https://video.akamai.steamstatic.com/store_trailers/990080/1375135040/954f940cc193696b7733f9eacfa43a2cdadb1db5/1778796137/hls_264_master.m3u8?t=1778797472",
+        "source": "https://store.steampowered.com/app/990080/",
+        "title": "Hogwarts Legacy"
+      },
+      "resultSources": {
+        "RTX 5060": "https://www.notebookcheck.net/Asus-Prime-GeForce-RTX-5060-OC-review-Strong-price-performance-GPU-for-1080p-gaming.1039116.0.html"
+      },
+      "resultSetups": {
+        "RTX 5060": {
+          "cpu": "Ryzen 7 9800X3D",
+          "ram": "32 GB DDR5-6000 CL28",
+          "source": "https://www.notebookcheck.net/Asus-Prime-GeForce-RTX-5060-OC-review-Strong-price-performance-GPU-for-1080p-gaming.1039116.0.html"
+        }
+      }
+    },
+    {
+      "id": "nbc-baldur-s-gate-3-2023",
+      "name": "Baldur's Gate 3",
+      "preset": "Ultra Preset AF TAA",
+      "comparisonKey": "nbc-baldur-s-gate-3-2023:ultra-preset-af-taa",
+      "source": "https://www.notebookcheck.net/Asus-Prime-GeForce-RTX-5060-OC-review-Strong-price-performance-GPU-for-1080p-gaming.1039116.0.html",
+      "kind": "reference",
+      "results": {
+        "RTX 5060": {
+          "1080p": 125.4,
+          "1440p": 88.4
+        },
+        "RTX 5070": {
+          "1080p": 186.8,
+          "1440p": 132
+        }
+      },
+      "preview": {
+        "poster": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1086940/48a2fcbda8565bb45025e98fd8ebde8a7203f6a0/header.jpg?t=1777363040",
+        "video": "https://video.akamai.steamstatic.com/store_trailers/1086940/637951/59ca25b847b0e471638d1e2474acf71b068d57f0/1750615003/hls_264_master.m3u8?t=1702007645",
+        "source": "https://store.steampowered.com/app/1086940/",
+        "title": "Baldur's Gate 3"
+      },
+      "resultSources": {
+        "RTX 5060": "https://www.notebookcheck.net/Asus-Prime-GeForce-RTX-5060-OC-review-Strong-price-performance-GPU-for-1080p-gaming.1039116.0.html",
+        "RTX 5070": "https://www.notebookcheck.net/Nvidia-GeForce-RTX-5070-Founders-Edition-Review-549-Blackwell-goodness-under-imminent-threat-from-AMD-RDNA-4.971586.0.html"
+      },
+      "resultSetups": {
+        "RTX 5060": {
+          "cpu": "Ryzen 7 9800X3D",
+          "ram": "32 GB DDR5-6000 CL28",
+          "source": "https://www.notebookcheck.net/Asus-Prime-GeForce-RTX-5060-OC-review-Strong-price-performance-GPU-for-1080p-gaming.1039116.0.html"
+        },
+        "RTX 5070": {
+          "cpu": "Core i9-14900K",
+          "ram": "RAM conforme bancada da fonte",
+          "source": "https://www.notebookcheck.net/Nvidia-GeForce-RTX-5070-Founders-Edition-Review-549-Blackwell-goodness-under-imminent-threat-from-AMD-RDNA-4.971586.0.html"
+        }
+      }
+    },
+    {
+      "id": "nbc-cyberpunk-2077-2023",
+      "name": "Cyberpunk 2077",
+      "preset": "Ultra Preset (FSR off) AF AA",
+      "comparisonKey": "nbc-cyberpunk-2077-2023:ultra-preset-fsr-off-af-aa",
+      "source": "https://www.notebookcheck.net/Asus-Prime-GeForce-RTX-5060-OC-review-Strong-price-performance-GPU-for-1080p-gaming.1039116.0.html",
+      "kind": "reference",
+      "results": {
+        "RTX 5060": {
+          "1080p": 108.4,
+          "1440p": 68.2
+        },
+        "RTX 5070": {
+          "1080p": 164.7,
+          "1440p": 107.6
+        }
+      },
+      "preview": {
+        "poster": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1091500/48a93d6445a67520ea49833c93dae8f2e68fc540/header_alt_assets_9.jpg?t=1792682505",
+        "video": "https://video.akamai.steamstatic.com/store_trailers/1091500/512843956/7ddc0c953816d19d719b299eb76b1ce188e17225/1792676918/hls_264_master.m3u8?t=1792682496",
+        "source": "https://store.steampowered.com/app/1091500/",
+        "title": "Cyberpunk 2077"
+      },
+      "resultSources": {
+        "RTX 5060": "https://www.notebookcheck.net/Asus-Prime-GeForce-RTX-5060-OC-review-Strong-price-performance-GPU-for-1080p-gaming.1039116.0.html",
+        "RTX 5070": "https://www.notebookcheck.net/Nvidia-GeForce-RTX-5070-Founders-Edition-Review-549-Blackwell-goodness-under-imminent-threat-from-AMD-RDNA-4.971586.0.html"
+      },
+      "resultSetups": {
+        "RTX 5060": {
+          "cpu": "Ryzen 7 9800X3D",
+          "ram": "32 GB DDR5-6000 CL28",
+          "source": "https://www.notebookcheck.net/Asus-Prime-GeForce-RTX-5060-OC-review-Strong-price-performance-GPU-for-1080p-gaming.1039116.0.html"
+        },
+        "RTX 5070": {
+          "cpu": "Core i9-14900K",
+          "ram": "RAM conforme bancada da fonte",
+          "source": "https://www.notebookcheck.net/Nvidia-GeForce-RTX-5070-Founders-Edition-Review-549-Blackwell-goodness-under-imminent-threat-from-AMD-RDNA-4.971586.0.html"
+        }
+      }
+    },
+    {
+      "id": "nbc-total-war-pharaoh-2023",
+      "name": "Total War Pharaoh",
+      "preset": "Ultra Preset AF AA",
+      "comparisonKey": "nbc-total-war-pharaoh-2023:ultra-preset-af-aa",
+      "source": "https://www.notebookcheck.net/Asus-Prime-GeForce-RTX-5060-OC-review-Strong-price-performance-GPU-for-1080p-gaming.1039116.0.html",
+      "kind": "reference",
+      "results": {
+        "RTX 5060": {
+          "1080p": 159.2,
+          "1440p": 107.8
+        }
+      },
+      "preview": {
+        "poster": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1937780/header.jpg?t=1763646681",
+        "video": "https://video.akamai.steamstatic.com/store_trailers/1937780/650277/e5d59b30ba654831acff839607ab31ebdbc966f4/1750741495/hls_264_master.m3u8?t=1705417145",
+        "source": "https://store.steampowered.com/app/1937780/",
+        "title": "Total War: PHARAOH"
+      },
+      "resultSources": {
+        "RTX 5060": "https://www.notebookcheck.net/Asus-Prime-GeForce-RTX-5060-OC-review-Strong-price-performance-GPU-for-1080p-gaming.1039116.0.html"
+      },
+      "resultSetups": {
+        "RTX 5060": {
+          "cpu": "Ryzen 7 9800X3D",
+          "ram": "32 GB DDR5-6000 CL28",
+          "source": "https://www.notebookcheck.net/Asus-Prime-GeForce-RTX-5060-OC-review-Strong-price-performance-GPU-for-1080p-gaming.1039116.0.html"
+        }
+      }
+    },
+    {
+      "id": "nbc-alan-wake-2-2023",
+      "name": "Alan Wake 2",
+      "preset": "High Preset AF AA",
+      "comparisonKey": "nbc-alan-wake-2-2023:high-preset-af-aa",
+      "source": "https://www.notebookcheck.net/Asus-Prime-GeForce-RTX-5060-OC-review-Strong-price-performance-GPU-for-1080p-gaming.1039116.0.html",
+      "kind": "reference",
+      "results": {
+        "RTX 5060": {
+          "1080p": 75.2,
+          "1440p": 50
+        },
+        "RTX 5070": {
+          "1080p": 107.5,
+          "1440p": 73.7
+        }
+      },
+      "preview": null,
+      "resultSources": {
+        "RTX 5060": "https://www.notebookcheck.net/Asus-Prime-GeForce-RTX-5060-OC-review-Strong-price-performance-GPU-for-1080p-gaming.1039116.0.html",
+        "RTX 5070": "https://www.notebookcheck.net/Nvidia-GeForce-RTX-5070-Founders-Edition-Review-549-Blackwell-goodness-under-imminent-threat-from-AMD-RDNA-4.971586.0.html"
+      },
+      "resultSetups": {
+        "RTX 5060": {
+          "cpu": "Ryzen 7 9800X3D",
+          "ram": "32 GB DDR5-6000 CL28",
+          "source": "https://www.notebookcheck.net/Asus-Prime-GeForce-RTX-5060-OC-review-Strong-price-performance-GPU-for-1080p-gaming.1039116.0.html"
+        },
+        "RTX 5070": {
+          "cpu": "Core i9-14900K",
+          "ram": "RAM conforme bancada da fonte",
+          "source": "https://www.notebookcheck.net/Nvidia-GeForce-RTX-5070-Founders-Edition-Review-549-Blackwell-goodness-under-imminent-threat-from-AMD-RDNA-4.971586.0.html"
+        }
+      }
+    },
+    {
+      "id": "nbc-avatar-frontiers-of-pandora-2023",
+      "name": "Avatar Frontiers of Pandora",
+      "preset": "Ultra Preset AF TAA",
+      "comparisonKey": "nbc-avatar-frontiers-of-pandora-2023:ultra-preset-af-taa",
+      "source": "https://www.notebookcheck.net/Asus-Prime-GeForce-RTX-5060-OC-review-Strong-price-performance-GPU-for-1080p-gaming.1039116.0.html",
+      "kind": "reference",
+      "results": {
+        "RTX 5060": {
+          "1080p": 58,
+          "1440p": 38
+        },
+        "RTX 5070": {
+          "1080p": 94,
+          "1440p": 63.2
+        }
+      },
+      "preview": null,
+      "resultSources": {
+        "RTX 5060": "https://www.notebookcheck.net/Asus-Prime-GeForce-RTX-5060-OC-review-Strong-price-performance-GPU-for-1080p-gaming.1039116.0.html",
+        "RTX 5070": "https://www.notebookcheck.net/Nvidia-GeForce-RTX-5070-Founders-Edition-Review-549-Blackwell-goodness-under-imminent-threat-from-AMD-RDNA-4.971586.0.html"
+      },
+      "resultSetups": {
+        "RTX 5060": {
+          "cpu": "Ryzen 7 9800X3D",
+          "ram": "32 GB DDR5-6000 CL28",
+          "source": "https://www.notebookcheck.net/Asus-Prime-GeForce-RTX-5060-OC-review-Strong-price-performance-GPU-for-1080p-gaming.1039116.0.html"
+        },
+        "RTX 5070": {
+          "cpu": "Core i9-14900K",
+          "ram": "RAM conforme bancada da fonte",
+          "source": "https://www.notebookcheck.net/Nvidia-GeForce-RTX-5070-Founders-Edition-Review-549-Blackwell-goodness-under-imminent-threat-from-AMD-RDNA-4.971586.0.html"
+        }
+      }
+    },
+    {
+      "id": "nbc-alone-in-the-dark-2024",
+      "name": "Alone in the Dark",
+      "preset": "Cinematic Preset AF AA",
+      "comparisonKey": "nbc-alone-in-the-dark-2024:cinematic-preset-af-aa",
+      "source": "https://www.notebookcheck.net/Asus-Prime-GeForce-RTX-5060-OC-review-Strong-price-performance-GPU-for-1080p-gaming.1039116.0.html",
+      "kind": "reference",
+      "results": {
+        "RTX 5060": {
+          "1080p": 148.4,
+          "1440p": 84.2
+        }
+      },
+      "preview": null,
+      "resultSources": {
+        "RTX 5060": "https://www.notebookcheck.net/Asus-Prime-GeForce-RTX-5060-OC-review-Strong-price-performance-GPU-for-1080p-gaming.1039116.0.html"
+      },
+      "resultSetups": {
+        "RTX 5060": {
+          "cpu": "Ryzen 7 9800X3D",
+          "ram": "32 GB DDR5-6000 CL28",
+          "source": "https://www.notebookcheck.net/Asus-Prime-GeForce-RTX-5060-OC-review-Strong-price-performance-GPU-for-1080p-gaming.1039116.0.html"
+        }
+      }
+    },
+    {
+      "id": "nbc-f1-24-2024",
+      "name": "F1 24",
+      "preset": "Ultra High Preset 16xAF TAA",
+      "comparisonKey": "nbc-f1-24-2024:ultra-high-preset-16xaf-taa",
+      "source": "https://www.notebookcheck.net/Asus-Prime-GeForce-RTX-5060-OC-review-Strong-price-performance-GPU-for-1080p-gaming.1039116.0.html",
+      "kind": "reference",
+      "results": {
+        "RTX 5060": {
+          "1080p": 85.4,
+          "1440p": 52.6
+        },
+        "RTX 5070": {
+          "1080p": 138.8,
+          "1440p": 90.1
+        }
+      },
+      "preview": {
+        "poster": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2488620/header.jpg?t=1788548633",
+        "video": "https://video.akamai.steamstatic.com/store_trailers/2488620/707813/e5c92df07ab91bcc370815887312efaf9371a407/1750924284/hls_264_master.m3u8?t=1717208070",
+        "source": "https://store.steampowered.com/app/2488620/",
+        "title": "F1® 24"
+      },
+      "resultSources": {
+        "RTX 5060": "https://www.notebookcheck.net/Asus-Prime-GeForce-RTX-5060-OC-review-Strong-price-performance-GPU-for-1080p-gaming.1039116.0.html",
+        "RTX 5070": "https://www.notebookcheck.net/Nvidia-GeForce-RTX-5070-Founders-Edition-Review-549-Blackwell-goodness-under-imminent-threat-from-AMD-RDNA-4.971586.0.html"
+      },
+      "resultSetups": {
+        "RTX 5060": {
+          "cpu": "Ryzen 7 9800X3D",
+          "ram": "32 GB DDR5-6000 CL28",
+          "source": "https://www.notebookcheck.net/Asus-Prime-GeForce-RTX-5060-OC-review-Strong-price-performance-GPU-for-1080p-gaming.1039116.0.html"
+        },
+        "RTX 5070": {
+          "cpu": "Core i9-14900K",
+          "ram": "RAM conforme bancada da fonte",
+          "source": "https://www.notebookcheck.net/Nvidia-GeForce-RTX-5070-Founders-Edition-Review-549-Blackwell-goodness-under-imminent-threat-from-AMD-RDNA-4.971586.0.html"
+        }
+      },
+      "steamId": 2488620
+    },
+    {
+      "id": "nbc-black-myth-wukong-2024",
+      "name": "Black Myth: Wukong",
+      "preset": "cinematic TSR 100 AF AA",
+      "comparisonKey": "nbc-black-myth-wukong-2024:cinematic-tsr-100-af-aa",
+      "source": "https://www.notebookcheck.net/Asus-Prime-GeForce-RTX-5060-OC-review-Strong-price-performance-GPU-for-1080p-gaming.1039116.0.html",
+      "kind": "reference",
+      "results": {
+        "RTX 5060": {
+          "1080p": 36,
+          "1440p": 26
+        },
+        "RTX 5070": {
+          "1080p": 57,
+          "1440p": 43
+        }
+      },
+      "preview": {
+        "poster": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2358720/header.jpg?t=1760601605",
+        "video": "https://video.akamai.steamstatic.com/store_trailers/2358720/743632/6acf4311bb6a59d300b902ab6a3f445215089d9c/1750812851/hls_264_master.m3u8?t=1729236218",
+        "source": "https://store.steampowered.com/app/2358720/",
+        "title": "Black Myth: Wukong"
+      },
+      "resultSources": {
+        "RTX 5060": "https://www.notebookcheck.net/Asus-Prime-GeForce-RTX-5060-OC-review-Strong-price-performance-GPU-for-1080p-gaming.1039116.0.html",
+        "RTX 5070": "https://www.notebookcheck.net/Nvidia-GeForce-RTX-5070-Founders-Edition-Review-549-Blackwell-goodness-under-imminent-threat-from-AMD-RDNA-4.971586.0.html"
+      },
+      "resultSetups": {
+        "RTX 5060": {
+          "cpu": "Ryzen 7 9800X3D",
+          "ram": "32 GB DDR5-6000 CL28",
+          "source": "https://www.notebookcheck.net/Asus-Prime-GeForce-RTX-5060-OC-review-Strong-price-performance-GPU-for-1080p-gaming.1039116.0.html"
+        },
+        "RTX 5070": {
+          "cpu": "Core i9-14900K",
+          "ram": "RAM conforme bancada da fonte",
+          "source": "https://www.notebookcheck.net/Nvidia-GeForce-RTX-5070-Founders-Edition-Review-549-Blackwell-goodness-under-imminent-threat-from-AMD-RDNA-4.971586.0.html"
+        }
+      }
+    },
+    {
+      "id": "nbc-star-wars-outlaws-2024",
+      "name": "Star Wars Outlaws",
+      "preset": "cinem. ultra AF AA",
+      "comparisonKey": "nbc-star-wars-outlaws-2024:cinem-ultra-af-aa",
+      "source": "https://www.notebookcheck.net/Asus-Prime-GeForce-RTX-5060-OC-review-Strong-price-performance-GPU-for-1080p-gaming.1039116.0.html",
+      "kind": "reference",
+      "results": {
+        "RTX 5060": {
+          "1080p": 49.2,
+          "1440p": 35.2
+        },
+        "RTX 5070": {
+          "1080p": 74.5,
+          "1440p": 56.2
+        }
+      },
+      "preview": {
+        "poster": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2842040/header.jpg?t=1773407100",
+        "video": "https://video.akamai.steamstatic.com/store_trailers/2842040/812116/7bf777c1c24dfb57df700b9d0975fbfdc0c32761/1750820601/hls_264_master.m3u8?t=1736874445",
+        "source": "https://store.steampowered.com/app/2842040/",
+        "title": "Star Wars Outlaws"
+      },
+      "resultSources": {
+        "RTX 5060": "https://www.notebookcheck.net/Asus-Prime-GeForce-RTX-5060-OC-review-Strong-price-performance-GPU-for-1080p-gaming.1039116.0.html",
+        "RTX 5070": "https://www.notebookcheck.net/Nvidia-GeForce-RTX-5070-Founders-Edition-Review-549-Blackwell-goodness-under-imminent-threat-from-AMD-RDNA-4.971586.0.html"
+      },
+      "resultSetups": {
+        "RTX 5060": {
+          "cpu": "Ryzen 7 9800X3D",
+          "ram": "32 GB DDR5-6000 CL28",
+          "source": "https://www.notebookcheck.net/Asus-Prime-GeForce-RTX-5060-OC-review-Strong-price-performance-GPU-for-1080p-gaming.1039116.0.html"
+        },
+        "RTX 5070": {
+          "cpu": "Core i9-14900K",
+          "ram": "RAM conforme bancada da fonte",
+          "source": "https://www.notebookcheck.net/Nvidia-GeForce-RTX-5070-Founders-Edition-Review-549-Blackwell-goodness-under-imminent-threat-from-AMD-RDNA-4.971586.0.html"
+        }
+      },
+      "steamId": 2842040
+    },
+    {
+      "id": "nbc-until-dawn-2024",
+      "name": "Until Dawn",
+      "preset": "Ultra Preset AF AA",
+      "comparisonKey": "nbc-until-dawn-2024:ultra-preset-af-aa",
+      "source": "https://www.notebookcheck.net/Asus-Prime-GeForce-RTX-5060-OC-review-Strong-price-performance-GPU-for-1080p-gaming.1039116.0.html",
+      "kind": "reference",
+      "results": {
+        "RTX 5060": {
+          "1080p": 53.8,
+          "1440p": 36.3
+        }
+      },
+      "preview": {
+        "poster": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2172010/header.jpg?t=1750959555",
+        "video": "https://video.akamai.steamstatic.com/store_trailers/2172010/760742/35c094b8e4b0a4dfca40d451b6b7a0830d4796a9/1750791789/hls_264_master.m3u8?t=1728053803",
+        "source": "https://store.steampowered.com/app/2172010/",
+        "title": "Until Dawn™"
+      },
+      "resultSources": {
+        "RTX 5060": "https://www.notebookcheck.net/Asus-Prime-GeForce-RTX-5060-OC-review-Strong-price-performance-GPU-for-1080p-gaming.1039116.0.html"
+      },
+      "resultSetups": {
+        "RTX 5060": {
+          "cpu": "Ryzen 7 9800X3D",
+          "ram": "32 GB DDR5-6000 CL28",
+          "source": "https://www.notebookcheck.net/Asus-Prime-GeForce-RTX-5060-OC-review-Strong-price-performance-GPU-for-1080p-gaming.1039116.0.html"
+        }
+      },
+      "steamId": 2172010
+    },
+    {
+      "id": "nbc-call-of-duty-black-ops-6-2024",
+      "name": "Call of Duty Black Ops 6",
+      "preset": "Extreme Preset AF AA",
+      "comparisonKey": "nbc-call-of-duty-black-ops-6-2024:extreme-preset-af-aa",
+      "source": "https://www.notebookcheck.net/Asus-Prime-GeForce-RTX-5060-OC-review-Strong-price-performance-GPU-for-1080p-gaming.1039116.0.html",
+      "kind": "reference",
+      "results": {
+        "RTX 5060": {
+          "1080p": 105,
+          "1440p": 77
+        }
+      },
+      "preview": null,
+      "resultSources": {
+        "RTX 5060": "https://www.notebookcheck.net/Asus-Prime-GeForce-RTX-5060-OC-review-Strong-price-performance-GPU-for-1080p-gaming.1039116.0.html"
+      },
+      "resultSetups": {
+        "RTX 5060": {
+          "cpu": "Ryzen 7 9800X3D",
+          "ram": "32 GB DDR5-6000 CL28",
+          "source": "https://www.notebookcheck.net/Asus-Prime-GeForce-RTX-5060-OC-review-Strong-price-performance-GPU-for-1080p-gaming.1039116.0.html"
+        }
+      }
+    },
+    {
+      "id": "nbc-stalker-2-2024",
+      "name": "Stalker 2",
+      "preset": "Epic Preset AF AA",
+      "comparisonKey": "nbc-stalker-2-2024:epic-preset-af-aa",
+      "source": "https://www.notebookcheck.net/Asus-Prime-GeForce-RTX-5060-OC-review-Strong-price-performance-GPU-for-1080p-gaming.1039116.0.html",
+      "kind": "reference",
+      "results": {
+        "RTX 5060": {
+          "1080p": 53.9,
+          "1440p": 6.43
+        },
+        "RTX 5070": {
+          "1080p": 81.2,
+          "1440p": 61.8
+        }
+      },
+      "preview": null,
+      "resultSources": {
+        "RTX 5060": "https://www.notebookcheck.net/Asus-Prime-GeForce-RTX-5060-OC-review-Strong-price-performance-GPU-for-1080p-gaming.1039116.0.html",
+        "RTX 5070": "https://www.notebookcheck.net/Nvidia-GeForce-RTX-5070-Founders-Edition-Review-549-Blackwell-goodness-under-imminent-threat-from-AMD-RDNA-4.971586.0.html"
+      },
+      "resultSetups": {
+        "RTX 5060": {
+          "cpu": "Ryzen 7 9800X3D",
+          "ram": "32 GB DDR5-6000 CL28",
+          "source": "https://www.notebookcheck.net/Asus-Prime-GeForce-RTX-5060-OC-review-Strong-price-performance-GPU-for-1080p-gaming.1039116.0.html"
+        },
+        "RTX 5070": {
+          "cpu": "Core i9-14900K",
+          "ram": "RAM conforme bancada da fonte",
+          "source": "https://www.notebookcheck.net/Nvidia-GeForce-RTX-5070-Founders-Edition-Review-549-Blackwell-goodness-under-imminent-threat-from-AMD-RDNA-4.971586.0.html"
+        }
+      }
+    },
+    {
+      "id": "nbc-indiana-jones-and-the-great-circle-2024",
+      "name": "Indiana Jones and the Great Circle",
+      "preset": "Very Ultra Preset AF AA",
+      "comparisonKey": "nbc-indiana-jones-and-the-great-circle-2024:very-ultra-preset-af-aa",
+      "source": "https://www.notebookcheck.net/Asus-Prime-GeForce-RTX-5060-OC-review-Strong-price-performance-GPU-for-1080p-gaming.1039116.0.html",
+      "kind": "reference",
+      "results": {
+        "RTX 5060": {
+          "1080p": 79.9
+        },
+        "RTX 5070": {
+          "1080p": 131,
+          "1440p": 103.6
+        }
+      },
+      "preview": {
+        "poster": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2677660/151ae5a881f05ef630defef85d99b38146b7055c/header.jpg?t=1778168392",
+        "video": "https://video.akamai.steamstatic.com/store_trailers/2677660/791012/102dce50e8b41d127d2c45878d8e6edef2dd85b3/1750818456/hls_264_master.m3u8?t=1749403442",
+        "source": "https://store.steampowered.com/app/2677660/",
+        "title": "Indiana Jones and the Great Circle"
+      },
+      "resultSources": {
+        "RTX 5060": "https://www.notebookcheck.net/Asus-Prime-GeForce-RTX-5060-OC-review-Strong-price-performance-GPU-for-1080p-gaming.1039116.0.html",
+        "RTX 5070": "https://www.notebookcheck.net/Nvidia-GeForce-RTX-5070-Founders-Edition-Review-549-Blackwell-goodness-under-imminent-threat-from-AMD-RDNA-4.971586.0.html"
+      },
+      "resultSetups": {
+        "RTX 5060": {
+          "cpu": "Ryzen 7 9800X3D",
+          "ram": "32 GB DDR5-6000 CL28",
+          "source": "https://www.notebookcheck.net/Asus-Prime-GeForce-RTX-5060-OC-review-Strong-price-performance-GPU-for-1080p-gaming.1039116.0.html"
+        },
+        "RTX 5070": {
+          "cpu": "Core i9-14900K",
+          "ram": "RAM conforme bancada da fonte",
+          "source": "https://www.notebookcheck.net/Nvidia-GeForce-RTX-5070-Founders-Edition-Review-549-Blackwell-goodness-under-imminent-threat-from-AMD-RDNA-4.971586.0.html"
+        }
+      },
+      "steamId": 2677660
+    },
+    {
+      "id": "nbc-kingdom-come-deliverance-2-2025",
+      "name": "Kingdom Come Deliverance 2",
+      "preset": "Ultra Preset AF AA",
+      "comparisonKey": "nbc-kingdom-come-deliverance-2-2025:ultra-preset-af-aa",
+      "source": "https://www.notebookcheck.net/Asus-Prime-GeForce-RTX-5060-OC-review-Strong-price-performance-GPU-for-1080p-gaming.1039116.0.html",
+      "kind": "reference",
+      "results": {
+        "RTX 5060": {
+          "1080p": 74.5,
+          "1440p": 53.4
+        }
+      },
+      "preview": null,
+      "resultSources": {
+        "RTX 5060": "https://www.notebookcheck.net/Asus-Prime-GeForce-RTX-5060-OC-review-Strong-price-performance-GPU-for-1080p-gaming.1039116.0.html"
+      },
+      "resultSetups": {
+        "RTX 5060": {
+          "cpu": "Ryzen 7 9800X3D",
+          "ram": "32 GB DDR5-6000 CL28",
+          "source": "https://www.notebookcheck.net/Asus-Prime-GeForce-RTX-5060-OC-review-Strong-price-performance-GPU-for-1080p-gaming.1039116.0.html"
+        }
+      }
+    },
+    {
+      "id": "nbc-civilization-7-2025",
+      "name": "Civilization 7",
+      "preset": "High Preset AF MSAA",
+      "comparisonKey": "nbc-civilization-7-2025:high-preset-af-msaa",
+      "source": "https://www.notebookcheck.net/Asus-Prime-GeForce-RTX-5060-OC-review-Strong-price-performance-GPU-for-1080p-gaming.1039116.0.html",
+      "kind": "reference",
+      "results": {
+        "RTX 5060": {
+          "1080p": 180.9,
+          "1440p": 113.7
+        }
+      },
+      "preview": null,
+      "resultSources": {
+        "RTX 5060": "https://www.notebookcheck.net/Asus-Prime-GeForce-RTX-5060-OC-review-Strong-price-performance-GPU-for-1080p-gaming.1039116.0.html"
+      },
+      "resultSetups": {
+        "RTX 5060": {
+          "cpu": "Ryzen 7 9800X3D",
+          "ram": "32 GB DDR5-6000 CL28",
+          "source": "https://www.notebookcheck.net/Asus-Prime-GeForce-RTX-5060-OC-review-Strong-price-performance-GPU-for-1080p-gaming.1039116.0.html"
+        }
+      }
+    },
+    {
+      "id": "nbc-assassin-s-creed-shadows-2025",
+      "name": "Assassin's Creed Shadows",
+      "preset": "Ultra High AF AA",
+      "comparisonKey": "nbc-assassin-s-creed-shadows-2025:ultra-high-af-aa",
+      "source": "https://www.notebookcheck.net/Asus-Prime-GeForce-RTX-5060-OC-review-Strong-price-performance-GPU-for-1080p-gaming.1039116.0.html",
+      "kind": "reference",
+      "results": {
+        "RTX 5060": {
+          "1080p": 43,
+          "1440p": 35
+        }
+      },
+      "preview": {
+        "poster": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3159330/header.jpg?t=1792778493",
+        "video": "https://video.akamai.steamstatic.com/store_trailers/3159330/945119520/7643be217d9d4d581bcecbfc6b109d269d2ced96/1758297532/hls_264_master.m3u8?t=1770145728",
+        "source": "https://store.steampowered.com/app/3159330/",
+        "title": "Assassin’s Creed Shadows"
+      },
+      "resultSources": {
+        "RTX 5060": "https://www.notebookcheck.net/Asus-Prime-GeForce-RTX-5060-OC-review-Strong-price-performance-GPU-for-1080p-gaming.1039116.0.html"
+      },
+      "resultSetups": {
+        "RTX 5060": {
+          "cpu": "Ryzen 7 9800X3D",
+          "ram": "32 GB DDR5-6000 CL28",
+          "source": "https://www.notebookcheck.net/Asus-Prime-GeForce-RTX-5060-OC-review-Strong-price-performance-GPU-for-1080p-gaming.1039116.0.html"
+        }
+      },
+      "steamId": 3159330
+    },
+    {
+      "id": "nbc-f1-25-2025",
+      "name": "F1 25",
+      "preset": "Ultra Max Preset 16xAF TAA",
+      "comparisonKey": "nbc-f1-25-2025:ultra-max-preset-16xaf-taa",
+      "source": "https://www.notebookcheck.net/Asus-Prime-GeForce-RTX-5060-OC-review-Strong-price-performance-GPU-for-1080p-gaming.1039116.0.html",
+      "kind": "reference",
+      "results": {
+        "RTX 5060": {
+          "1080p": 23.9,
+          "1440p": 12.1
+        }
+      },
+      "preview": {
+        "poster": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3059520/76dc8ac45f1bd6dec26e04434ca1c8814e7bb330/header.jpg?t=1786646076",
+        "video": "https://video.akamai.steamstatic.com/store_trailers/3059520/726532497/0dee7e07ec859bcc95732704cdd0817902051e02/1780587262/hls_264_master.m3u8?t=1780590543",
+        "source": "https://store.steampowered.com/app/3059520/",
+        "title": "F1® 25"
+      },
+      "resultSources": {
+        "RTX 5060": "https://www.notebookcheck.net/Asus-Prime-GeForce-RTX-5060-OC-review-Strong-price-performance-GPU-for-1080p-gaming.1039116.0.html"
+      },
+      "resultSetups": {
+        "RTX 5060": {
+          "cpu": "Ryzen 7 9800X3D",
+          "ram": "32 GB DDR5-6000 CL28",
+          "source": "https://www.notebookcheck.net/Asus-Prime-GeForce-RTX-5060-OC-review-Strong-price-performance-GPU-for-1080p-gaming.1039116.0.html"
+        }
+      },
+      "steamId": 3059520
+    },
+    {
+      "id": "nbc-assassin-s-creed-mirage-2023",
+      "name": "Assassin's Creed Mirage",
+      "preset": "Ultra High Preset (Adaptive Quality Off) AF AA",
+      "comparisonKey": "nbc-assassin-s-creed-mirage-2023:ultra-high-preset-adaptive-quality-off-af-aa",
+      "source": "https://www.notebookcheck.net/Nvidia-GeForce-RTX-5070-Founders-Edition-Review-549-Blackwell-goodness-under-imminent-threat-from-AMD-RDNA-4.971586.0.html",
+      "kind": "reference",
+      "results": {
+        "RTX 5070": {
+          "1080p": 163,
+          "1440p": 126
+        }
+      },
+      "preview": {
+        "poster": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3035570/header.jpg?t=1792777978",
+        "video": "https://video.akamai.steamstatic.com/store_trailers/3035570/765019/929fdbfbb946a6ac54ced94844a708f7bcb0cdd6/1750823088/hls_264_master.m3u8?t=1763405438",
+        "source": "https://store.steampowered.com/app/3035570/",
+        "title": "Assassin's Creed Mirage"
+      },
+      "resultSources": {
+        "RTX 5070": "https://www.notebookcheck.net/Nvidia-GeForce-RTX-5070-Founders-Edition-Review-549-Blackwell-goodness-under-imminent-threat-from-AMD-RDNA-4.971586.0.html"
+      },
+      "resultSetups": {
+        "RTX 5070": {
+          "cpu": "Core i9-14900K",
+          "ram": "RAM conforme bancada da fonte",
+          "source": "https://www.notebookcheck.net/Nvidia-GeForce-RTX-5070-Founders-Edition-Review-549-Blackwell-goodness-under-imminent-threat-from-AMD-RDNA-4.971586.0.html"
+        }
+      }
+    },
+    {
+      "id": "toms-5050-wukong",
+      "name": "Black Myth: Wukong",
+      "preset": "Very High · nativo · sem FG",
+      "source": "https://www.tomshardware.com/pc-components/gpus/nvidia-geforce-rtx-5050-review/4",
+      "steamId": 2358720,
+      "preview": {
+        "poster": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2358720/header.jpg?t=1760601605",
+        "video": "https://video.akamai.steamstatic.com/store_trailers/2358720/743632/6acf4311bb6a59d300b902ab6a3f445215089d9c/1750812851/hls_264_master.m3u8?t=1729236218",
+        "source": "https://store.steampowered.com/app/2358720/",
+        "title": "Black Myth: Wukong"
+      },
+      "comparisonKey": "toms-2025:wukong:very-high",
+      "results": {
+        "RTX 5050": {
+          "1080p": 37.9,
+          "1440p": 25.8
+        }
+      },
+      "resultSources": {
+        "RTX 5050": "https://www.tomshardware.com/pc-components/gpus/nvidia-geforce-rtx-5050-review/4"
+      },
+      "resultSetups": {
+        "RTX 5050": {
+          "cpu": "Ryzen 7 9800X3D",
+          "ram": "G.Skill Trident Z5 Neo 32 GB DDR5-6000",
+          "mobo": "ASUS TUF Gaming X670E-Plus WiFi",
+          "storage": "Inland Gaming Performance Plus 4 TB NVMe",
+          "psu": "Corsair RM1000x",
+          "source": "https://www.tomshardware.com/pc-components/gpus/nvidia-geforce-rtx-5050-review/3"
+        }
+      },
+      "sourceCharts": {
+        "1080p": "https://cdn.mos.cms.futurecdn.net/RtaNd4KFt3hgdEvBJnUJ4H.png",
+        "1440p": "https://cdn.mos.cms.futurecdn.net/VP66Thu5hNuoKwqdVLhR4H.png"
+      }
+    },
+    {
+      "id": "toms-5050-alan-wake-2",
+      "name": "Alan Wake II",
+      "preset": "High · nativo · sem FG",
+      "source": "https://www.tomshardware.com/pc-components/gpus/nvidia-geforce-rtx-5050-review/4",
+      "steamId": null,
+      "preview": null,
+      "comparisonKey": "toms-2025:alan-wake-2:high",
+      "results": {
+        "RTX 5050": {
+          "1080p": 40.6,
+          "1440p": 23.3
+        }
+      },
+      "resultSources": {
+        "RTX 5050": "https://www.tomshardware.com/pc-components/gpus/nvidia-geforce-rtx-5050-review/4"
+      },
+      "resultSetups": {
+        "RTX 5050": {
+          "cpu": "Ryzen 7 9800X3D",
+          "ram": "G.Skill Trident Z5 Neo 32 GB DDR5-6000",
+          "mobo": "ASUS TUF Gaming X670E-Plus WiFi",
+          "storage": "Inland Gaming Performance Plus 4 TB NVMe",
+          "psu": "Corsair RM1000x",
+          "source": "https://www.tomshardware.com/pc-components/gpus/nvidia-geforce-rtx-5050-review/3"
+        }
+      },
+      "sourceCharts": {
+        "1080p": "https://cdn.mos.cms.futurecdn.net/5gZrYwmnDvNvp7yTY3di67.png",
+        "1440p": "https://cdn.mos.cms.futurecdn.net/qPSovMxKZU4nqzHTE3hW77.png"
+      }
+    },
+    {
+      "id": "toms-5050-cs2",
+      "name": "Counter-Strike 2",
+      "preset": "Very High · nativo · sem FG",
+      "source": "https://www.tomshardware.com/pc-components/gpus/nvidia-geforce-rtx-5050-review/4",
+      "steamId": 730,
+      "preview": {
+        "poster": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/730/162664aa5da85f418105350c5d67ca565f6c3713/header.jpg?t=1793054556",
+        "video": "https://video.akamai.steamstatic.com/store_trailers/730/612468/aa5a28c78f12232e6b6839034550c28b162fad3e/1748810724/hls_264_master.m3u8?t=1696005467",
+        "source": "https://store.steampowered.com/app/730/",
+        "title": "Counter-Strike 2"
+      },
+      "comparisonKey": "toms-2025:cs2:very-high",
+      "results": {
+        "RTX 5050": {
+          "1080p": 239.4,
+          "1440p": 162
+        }
+      },
+      "resultSources": {
+        "RTX 5050": "https://www.tomshardware.com/pc-components/gpus/nvidia-geforce-rtx-5050-review/4"
+      },
+      "resultSetups": {
+        "RTX 5050": {
+          "cpu": "Ryzen 7 9800X3D",
+          "ram": "G.Skill Trident Z5 Neo 32 GB DDR5-6000",
+          "mobo": "ASUS TUF Gaming X670E-Plus WiFi",
+          "storage": "Inland Gaming Performance Plus 4 TB NVMe",
+          "psu": "Corsair RM1000x",
+          "source": "https://www.tomshardware.com/pc-components/gpus/nvidia-geforce-rtx-5050-review/3"
+        }
+      },
+      "sourceCharts": {
+        "1080p": "https://cdn.mos.cms.futurecdn.net/Wwagw6RWyWZMQD2qNMwrvj.png",
+        "1440p": "https://cdn.mos.cms.futurecdn.net/2tVbFZx2PhpXqf4vyrPuvj.png"
+      }
+    },
+    {
+      "id": "toms-5050-flight-2024",
+      "name": "Microsoft Flight Simulator 2024",
+      "preset": "Ultra · nativo · sem FG",
+      "source": "https://www.tomshardware.com/pc-components/gpus/nvidia-geforce-rtx-5050-review/4",
+      "steamId": 2537590,
+      "preview": {
+        "poster": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2537590/header.jpg?t=1791557822",
+        "video": "https://video.akamai.steamstatic.com/store_trailers/2537590/827511385/d26d8722335317080ea548c0006fe57f9f86e582/1780852466/hls_264_master.m3u8?t=1787591448",
+        "source": "https://store.steampowered.com/app/2537590/",
+        "title": "Microsoft Flight Simulator 2024"
+      },
+      "comparisonKey": "toms-2025:flight-2024:ultra",
+      "results": {
+        "RTX 5050": {
+          "1080p": 33.2,
+          "1440p": 16.2
+        }
+      },
+      "resultSources": {
+        "RTX 5050": "https://www.tomshardware.com/pc-components/gpus/nvidia-geforce-rtx-5050-review/4"
+      },
+      "resultSetups": {
+        "RTX 5050": {
+          "cpu": "Ryzen 7 9800X3D",
+          "ram": "G.Skill Trident Z5 Neo 32 GB DDR5-6000",
+          "mobo": "ASUS TUF Gaming X670E-Plus WiFi",
+          "storage": "Inland Gaming Performance Plus 4 TB NVMe",
+          "psu": "Corsair RM1000x",
+          "source": "https://www.tomshardware.com/pc-components/gpus/nvidia-geforce-rtx-5050-review/3"
+        }
+      },
+      "sourceCharts": {
+        "1080p": "https://cdn.mos.cms.futurecdn.net/whgS5GnQvnrEGQ2fFGgrGc.png",
+        "1440p": "https://cdn.mos.cms.futurecdn.net/9A8rtLM3zuV7GFHS6LWCHc.png"
+      }
+    },
+    {
+      "id": "toms-5050-fortnite",
+      "name": "Fortnite",
+      "preset": "High · Lumen + Nanite High · nativo · sem FG",
+      "source": "https://www.tomshardware.com/pc-components/gpus/nvidia-geforce-rtx-5050-review/4",
+      "steamId": null,
+      "preview": null,
+      "comparisonKey": "toms-2025:fortnite:high-lumen-nanite-high",
+      "results": {
+        "RTX 5050": {
+          "1080p": 83.7,
+          "1440p": 55.6
+        }
+      },
+      "resultSources": {
+        "RTX 5050": "https://www.tomshardware.com/pc-components/gpus/nvidia-geforce-rtx-5050-review/4"
+      },
+      "resultSetups": {
+        "RTX 5050": {
+          "cpu": "Ryzen 7 9800X3D",
+          "ram": "G.Skill Trident Z5 Neo 32 GB DDR5-6000",
+          "mobo": "ASUS TUF Gaming X670E-Plus WiFi",
+          "storage": "Inland Gaming Performance Plus 4 TB NVMe",
+          "psu": "Corsair RM1000x",
+          "source": "https://www.tomshardware.com/pc-components/gpus/nvidia-geforce-rtx-5050-review/3"
+        }
+      },
+      "sourceCharts": {
+        "1080p": "https://cdn.mos.cms.futurecdn.net/ByMrmcyz2TX9XGNYNDDriN.png",
+        "1440p": "https://cdn.mos.cms.futurecdn.net/mKCaojM58Bk3DAXANHumjN.png"
+      }
+    },
+    {
+      "id": "toms-5050-apex-legends",
+      "name": "Apex Legends",
+      "preset": "Very High · nativo · sem FG",
+      "source": "https://www.tomshardware.com/pc-components/gpus/nvidia-geforce-rtx-5050-review/4",
+      "steamId": 1172470,
+      "preview": {
+        "poster": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1172470/4219c147f1e094297c726d537518babba7f3ae2d/header.jpg?t=1793731328",
+        "video": "https://video.akamai.steamstatic.com/store_trailers/1172470/756891131/fee6a815b821b7a2d21ecba7f994564efe82cd12/1793730568/hls_264_master.m3u8?t=1793731323",
+        "source": "https://store.steampowered.com/app/1172470/",
+        "title": "Apex Legends™"
+      },
+      "comparisonKey": "toms-2025:apex-legends:very-high",
+      "results": {
+        "RTX 5050": {
+          "1080p": 211.1,
+          "1440p": 154.4
+        }
+      },
+      "resultSources": {
+        "RTX 5050": "https://www.tomshardware.com/pc-components/gpus/nvidia-geforce-rtx-5050-review/4"
+      },
+      "resultSetups": {
+        "RTX 5050": {
+          "cpu": "Ryzen 7 9800X3D",
+          "ram": "G.Skill Trident Z5 Neo 32 GB DDR5-6000",
+          "mobo": "ASUS TUF Gaming X670E-Plus WiFi",
+          "storage": "Inland Gaming Performance Plus 4 TB NVMe",
+          "psu": "Corsair RM1000x",
+          "source": "https://www.tomshardware.com/pc-components/gpus/nvidia-geforce-rtx-5050-review/3"
+        }
+      },
+      "sourceCharts": {
+        "1080p": "https://cdn.mos.cms.futurecdn.net/k9kZxi8dn9J8MSH8Fey3uD.png",
+        "1440p": "https://cdn.mos.cms.futurecdn.net/qM6YYFHeEDahykRGvmh9uD.png"
+      }
+    },
+    {
+      "id": "toms-5050-marvel-rivals",
+      "name": "Marvel Rivals",
+      "preset": "High · nativo · sem FG",
+      "source": "https://www.tomshardware.com/pc-components/gpus/nvidia-geforce-rtx-5050-review/4",
+      "steamId": 2767030,
+      "preview": {
+        "poster": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2767030/c61f65c5968af5d85b0393005991ecee0184fcaf/header.jpg?t=1792140776",
+        "video": "https://video.akamai.steamstatic.com/store_trailers/2767030/838245032/e9ce45a69f675a9b5580cd75e84610098c4c9d0c/1791528757/hls_264_master.m3u8?t=1791536404",
+        "source": "https://store.steampowered.com/app/2767030/",
+        "title": "Marvel Rivals"
+      },
+      "comparisonKey": "toms-2025:marvel-rivals:high",
+      "results": {
+        "RTX 5050": {
+          "1080p": 87.2,
+          "1440p": 60.2
+        }
+      },
+      "resultSources": {
+        "RTX 5050": "https://www.tomshardware.com/pc-components/gpus/nvidia-geforce-rtx-5050-review/4"
+      },
+      "resultSetups": {
+        "RTX 5050": {
+          "cpu": "Ryzen 7 9800X3D",
+          "ram": "G.Skill Trident Z5 Neo 32 GB DDR5-6000",
+          "mobo": "ASUS TUF Gaming X670E-Plus WiFi",
+          "storage": "Inland Gaming Performance Plus 4 TB NVMe",
+          "psu": "Corsair RM1000x",
+          "source": "https://www.tomshardware.com/pc-components/gpus/nvidia-geforce-rtx-5050-review/3"
+        }
+      },
+      "sourceCharts": {
+        "1080p": "https://cdn.mos.cms.futurecdn.net/5wWy7rAbHTj59LvtenDSrk.png",
+        "1440p": "https://cdn.mos.cms.futurecdn.net/XFbyxhPNacQFbgVKMDDXsk.png"
+      }
+    },
+    {
+      "id": "toms-5050-expedition-33",
+      "name": "Clair Obscur: Expedition 33",
+      "preset": "Epic · nativo · sem FG",
+      "source": "https://www.tomshardware.com/pc-components/gpus/nvidia-geforce-rtx-5050-review/4",
+      "steamId": 1903340,
+      "preview": {
+        "poster": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1903340/be3305b02d4db0dffa3458537118423bf2792d7e/header.jpg?t=1782830877",
+        "video": "https://video.akamai.steamstatic.com/store_trailers/1903340/876247/5c4709c3a98d932003a6b85bd5e4bfcd6a777e7a/1748581603/hls_264_master.m3u8?t=1745478082",
+        "source": "https://store.steampowered.com/app/1903340/",
+        "title": "Clair Obscur: Expedition 33"
+      },
+      "comparisonKey": "toms-2025:expedition-33:epic",
+      "results": {
+        "RTX 5050": {
+          "1080p": 39.9,
+          "1440p": 24.6
+        }
+      },
+      "resultSources": {
+        "RTX 5050": "https://www.tomshardware.com/pc-components/gpus/nvidia-geforce-rtx-5050-review/4"
+      },
+      "resultSetups": {
+        "RTX 5050": {
+          "cpu": "Ryzen 7 9800X3D",
+          "ram": "G.Skill Trident Z5 Neo 32 GB DDR5-6000",
+          "mobo": "ASUS TUF Gaming X670E-Plus WiFi",
+          "storage": "Inland Gaming Performance Plus 4 TB NVMe",
+          "psu": "Corsair RM1000x",
+          "source": "https://www.tomshardware.com/pc-components/gpus/nvidia-geforce-rtx-5050-review/3"
+        }
+      },
+      "sourceCharts": {
+        "1080p": "https://cdn.mos.cms.futurecdn.net/VRJ4t6Dek9k2EGaQPrfUHa.png",
+        "1440p": "https://cdn.mos.cms.futurecdn.net/y7zYWfT4wJ6CSYM8Z78DJa.png"
+      }
+    },
+    {
+      "id": "toms-5050-ratchet-clank",
+      "name": "Ratchet & Clank: Rift Apart",
+      "preset": "Very High · nativo · sem FG",
+      "source": "https://www.tomshardware.com/pc-components/gpus/nvidia-geforce-rtx-5050-review/4",
+      "steamId": 1895880,
+      "preview": {
+        "poster": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1895880/header.jpg?t=1787838873",
+        "video": "https://video.akamai.steamstatic.com/store_trailers/1895880/590492/d48d35f066a7eecee44530b4991ba8a276f2714d/1750740363/hls_264_master.m3u8?t=1690383390",
+        "source": "https://store.steampowered.com/app/1895880/",
+        "title": "Ratchet & Clank: Rift Apart"
+      },
+      "comparisonKey": "toms-2025:ratchet-clank:very-high",
+      "results": {
+        "RTX 5050": {
+          "1080p": 77.6,
+          "1440p": 56.2
+        }
+      },
+      "resultSources": {
+        "RTX 5050": "https://www.tomshardware.com/pc-components/gpus/nvidia-geforce-rtx-5050-review/4"
+      },
+      "resultSetups": {
+        "RTX 5050": {
+          "cpu": "Ryzen 7 9800X3D",
+          "ram": "G.Skill Trident Z5 Neo 32 GB DDR5-6000",
+          "mobo": "ASUS TUF Gaming X670E-Plus WiFi",
+          "storage": "Inland Gaming Performance Plus 4 TB NVMe",
+          "psu": "Corsair RM1000x",
+          "source": "https://www.tomshardware.com/pc-components/gpus/nvidia-geforce-rtx-5050-review/3"
+        }
+      },
+      "sourceCharts": {
+        "1080p": "https://cdn.mos.cms.futurecdn.net/wrQX8u65gGEY3Cg4KMP3cN.png",
+        "1440p": "https://cdn.mos.cms.futurecdn.net/a29jxCQNzbKb8bf4b5JFcN.png"
+      }
+    },
+    {
+      "id": "toms-5050-spider-man-2",
+      "name": "Marvel’s Spider-Man 2",
+      "preset": "Very High · nativo · sem FG",
+      "source": "https://www.tomshardware.com/pc-components/gpus/nvidia-geforce-rtx-5050-review/4",
+      "steamId": 2651280,
+      "preview": {
+        "poster": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2651280/header.jpg?t=1763569811",
+        "video": "https://video.akamai.steamstatic.com/store_trailers/2651280/820778/e9b06e98d15624caa4e550f4a6e54067e1dcc995/1746999933/hls_264_master.m3u8?t=1738262051",
+        "source": "https://store.steampowered.com/app/2651280/",
+        "title": "Marvel's Spider-Man 2"
+      },
+      "comparisonKey": "toms-2025:spider-man-2:very-high",
+      "results": {
+        "RTX 5050": {
+          "1080p": 48.4,
+          "1440p": 31.3
+        }
+      },
+      "resultSources": {
+        "RTX 5050": "https://www.tomshardware.com/pc-components/gpus/nvidia-geforce-rtx-5050-review/4"
+      },
+      "resultSetups": {
+        "RTX 5050": {
+          "cpu": "Ryzen 7 9800X3D",
+          "ram": "G.Skill Trident Z5 Neo 32 GB DDR5-6000",
+          "mobo": "ASUS TUF Gaming X670E-Plus WiFi",
+          "storage": "Inland Gaming Performance Plus 4 TB NVMe",
+          "psu": "Corsair RM1000x",
+          "source": "https://www.tomshardware.com/pc-components/gpus/nvidia-geforce-rtx-5050-review/3"
+        }
+      },
+      "sourceCharts": {
+        "1080p": "https://cdn.mos.cms.futurecdn.net/Uwqu5gXchgQodX89W3Q7MB.png",
+        "1440p": "https://cdn.mos.cms.futurecdn.net/Y2CxBRzqhRmSGrju2gNBMB.png"
+      }
+    },
+    {
+      "id": "toms-5050-stalker",
+      "name": "Stalker 2",
+      "preset": "Epic · nativo · sem FG",
+      "source": "https://www.tomshardware.com/pc-components/gpus/nvidia-geforce-rtx-5050-review/4",
+      "steamId": 1643320,
+      "preview": {
+        "poster": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1643320/b22b59aeed7ff6305f91e6198cea1df6e9a489d3/header_alt_assets_8_portuguese.jpg?t=1793009305",
+        "video": "https://video.akamai.steamstatic.com/store_trailers/1643320/660577322/19dcb9b32cdb9cf62d51cd34e0b79e8cc43bb987/1790240404/hls_264_master.m3u8?t=1790259591",
+        "source": "https://store.steampowered.com/app/1643320/",
+        "title": "S.T.A.L.K.E.R. 2: Heart of Chornobyl"
+      },
+      "comparisonKey": "toms-2025:stalker:epic",
+      "results": {
+        "RTX 5050": {
+          "1080p": 42.5,
+          "1440p": 15.5
+        }
+      },
+      "resultSources": {
+        "RTX 5050": "https://www.tomshardware.com/pc-components/gpus/nvidia-geforce-rtx-5050-review/4"
+      },
+      "resultSetups": {
+        "RTX 5050": {
+          "cpu": "Ryzen 7 9800X3D",
+          "ram": "G.Skill Trident Z5 Neo 32 GB DDR5-6000",
+          "mobo": "ASUS TUF Gaming X670E-Plus WiFi",
+          "storage": "Inland Gaming Performance Plus 4 TB NVMe",
+          "psu": "Corsair RM1000x",
+          "source": "https://www.tomshardware.com/pc-components/gpus/nvidia-geforce-rtx-5050-review/3"
+        }
+      },
+      "sourceCharts": {
+        "1080p": "https://cdn.mos.cms.futurecdn.net/tEDvEFSD9Gf2ryDXvFf2ER.png",
+        "1440p": "https://cdn.mos.cms.futurecdn.net/uafvAiJYKx2SYjS46AP5ER.png"
+      }
+    },
+    {
+      "id": "toms-5050-cyberpunk-2023",
+      "name": "Cyberpunk 2077",
+      "preset": "Ultra · nativo · sem FG",
+      "source": "https://www.tomshardware.com/pc-components/gpus/nvidia-geforce-rtx-5050-review/4",
+      "steamId": null,
+      "preview": {
+        "poster": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1091500/48a93d6445a67520ea49833c93dae8f2e68fc540/header_alt_assets_9.jpg?t=1792682505",
+        "video": "https://video.akamai.steamstatic.com/store_trailers/1091500/512843956/7ddc0c953816d19d719b299eb76b1ce188e17225/1792676918/hls_264_master.m3u8?t=1792682496",
+        "source": "https://store.steampowered.com/app/1091500/",
+        "title": "Cyberpunk 2077"
+      },
+      "comparisonKey": "toms-2025:cyberpunk-2023:ultra",
+      "results": {
+        "RTX 5050": {
+          "1080p": 74.1,
+          "1440p": 44.9
+        }
+      },
+      "resultSources": {
+        "RTX 5050": "https://www.tomshardware.com/pc-components/gpus/nvidia-geforce-rtx-5050-review/4"
+      },
+      "resultSetups": {
+        "RTX 5050": {
+          "cpu": "Ryzen 7 9800X3D",
+          "ram": "G.Skill Trident Z5 Neo 32 GB DDR5-6000",
+          "mobo": "ASUS TUF Gaming X670E-Plus WiFi",
+          "storage": "Inland Gaming Performance Plus 4 TB NVMe",
+          "psu": "Corsair RM1000x",
+          "source": "https://www.tomshardware.com/pc-components/gpus/nvidia-geforce-rtx-5050-review/3"
+        }
+      },
+      "sourceCharts": {
+        "1080p": "https://cdn.mos.cms.futurecdn.net/LcEZnUhDSuqUzeA64revpL.png",
+        "1440p": "https://cdn.mos.cms.futurecdn.net/jDYKk33ahSLBDneE7XvvqL.png"
+      }
     }
   ],
   "rankingGameIds": [
@@ -1279,6 +2628,21 @@
       "vramGb": 16,
       "source": "https://www.tomshardware.com/pc-components/gpus/amd-radeon-rx-9070-xt-review/4",
       "setupSource": "https://www.tomshardware.com/pc-components/gpus/amd-radeon-rx-9070-xt-review/3"
+    },
+    "RTX 5050": {
+      "chip": "RTX 5050",
+      "vramGb": 8,
+      "source": "https://www.tomshardware.com/pc-components/gpus/nvidia-geforce-rtx-5050-review/4",
+      "setupSource": "https://www.tomshardware.com/pc-components/gpus/nvidia-geforce-rtx-5050-review/3",
+      "testSetup": {
+        "cpu": "Ryzen 7 9800X3D",
+        "ram": "G.Skill Trident Z5 Neo 32 GB DDR5-6000",
+        "mobo": "ASUS TUF Gaming X670E-Plus WiFi",
+        "storage": "Inland Gaming Performance Plus 4 TB NVMe",
+        "psu": "Corsair RM1000x",
+        "source": "https://www.tomshardware.com/pc-components/gpus/nvidia-geforce-rtx-5050-review/3"
+      },
+      "testNotes": "Gigabyte RTX 5050 Windforce 2X. Suíte raster de setembro/2025, resolução nativa, sem upscaling nem geração de quadros."
     }
   },
   "sources": [
@@ -1286,5 +2650,112 @@
     "https://www.tomshardware.com/pc-components/gpus/amd-radeon-rx-9060-xt-16gb-review/4",
     "https://www.tomshardware.com/pc-components/gpus/amd-radeon-rx-9070-xt-review/4"
   ],
-  "methodology": "Referências rasterizadas em resolução nativa, sem geração de quadros. Cada GPU tem fonte própria. Estimativas do conjunto usam índice médio da CPU, sem calibração por jogo. O ranking usa os mesmos 10 jogos, resolução e versão; não é um teste controlado entre os computadores reais. Baldur’s Gate 3 (patches divergentes) e Flight Simulator 2024 ficam fora da média do ranking."
+  "methodology": "Referências rasterizadas em resolução nativa, sem geração de quadros. Cada GPU tem fonte própria. Estimativas do conjunto usam índice médio da CPU, sem calibração por jogo. O ranking usa os mesmos 10 jogos, resolução e versão; não é um teste controlado entre os computadores reais. Baldur’s Gate 3 (patches divergentes) e Flight Simulator 2024 ficam fora da média do ranking.",
+  "cpuScoreDetails": {
+    "Ryzen 7 5800X3D": {
+      "kind": "legacy-normalized",
+      "rawGamingScore": 94.42,
+      "anchor": "Ryzen 5 7600X",
+      "anchorRawScore": 83.62,
+      "source": "https://www.tomshardware.com/reviews/cpu-hierarchy,4312-2.html",
+      "note": "Índice experimental normalizado entre suítes antigas de jogos por uma CPU em comum. Não é FPS medido por jogo; excluído do ranking."
+    },
+    "Ryzen 7 7700": {
+      "kind": "legacy-normalized",
+      "rawGamingScore": 86.19,
+      "anchor": "Ryzen 5 7600X",
+      "anchorRawScore": 83.62,
+      "source": "https://www.tomshardware.com/reviews/cpu-hierarchy,4312-2.html",
+      "note": "Índice experimental normalizado entre suítes antigas de jogos por uma CPU em comum. Não é FPS medido por jogo; excluído do ranking."
+    },
+    "Ryzen 9 7900": {
+      "kind": "legacy-normalized",
+      "rawGamingScore": 84.75,
+      "anchor": "Ryzen 5 7600X",
+      "anchorRawScore": 83.62,
+      "source": "https://www.tomshardware.com/reviews/cpu-hierarchy,4312-2.html",
+      "note": "Índice experimental normalizado entre suítes antigas de jogos por uma CPU em comum. Não é FPS medido por jogo; excluído do ranking."
+    },
+    "Ryzen 5 7600": {
+      "kind": "legacy-normalized",
+      "rawGamingScore": 79.74,
+      "anchor": "Ryzen 5 7600X",
+      "anchorRawScore": 83.62,
+      "source": "https://www.tomshardware.com/reviews/cpu-hierarchy,4312-2.html",
+      "note": "Índice experimental normalizado entre suítes antigas de jogos por uma CPU em comum. Não é FPS medido por jogo; excluído do ranking."
+    },
+    "Ryzen 9 5950X": {
+      "kind": "legacy-normalized",
+      "rawGamingScore": 72.04,
+      "anchor": "Ryzen 5 7600X",
+      "anchorRawScore": 83.62,
+      "source": "https://www.tomshardware.com/reviews/cpu-hierarchy,4312-2.html",
+      "note": "Índice experimental normalizado entre suítes antigas de jogos por uma CPU em comum. Não é FPS medido por jogo; excluído do ranking."
+    },
+    "Ryzen 9 5900X": {
+      "kind": "legacy-normalized",
+      "rawGamingScore": 71.69,
+      "anchor": "Ryzen 5 7600X",
+      "anchorRawScore": 83.62,
+      "source": "https://www.tomshardware.com/reviews/cpu-hierarchy,4312-2.html",
+      "note": "Índice experimental normalizado entre suítes antigas de jogos por uma CPU em comum. Não é FPS medido por jogo; excluído do ranking."
+    },
+    "Ryzen 7 5800X": {
+      "kind": "legacy-normalized",
+      "rawGamingScore": 70.9,
+      "anchor": "Ryzen 5 7600X",
+      "anchorRawScore": 83.62,
+      "source": "https://www.tomshardware.com/reviews/cpu-hierarchy,4312-2.html",
+      "note": "Índice experimental normalizado entre suítes antigas de jogos por uma CPU em comum. Não é FPS medido por jogo; excluído do ranking."
+    },
+    "Ryzen 7 5700X": {
+      "kind": "legacy-normalized",
+      "rawGamingScore": 69.5,
+      "anchor": "Ryzen 5 7600X",
+      "anchorRawScore": 83.62,
+      "source": "https://www.tomshardware.com/reviews/cpu-hierarchy,4312-2.html",
+      "note": "Índice experimental normalizado entre suítes antigas de jogos por uma CPU em comum. Não é FPS medido por jogo; excluído do ranking."
+    },
+    "Ryzen 5 5600X": {
+      "kind": "legacy-normalized",
+      "rawGamingScore": 67.52,
+      "anchor": "Ryzen 5 7600X",
+      "anchorRawScore": 83.62,
+      "source": "https://www.tomshardware.com/reviews/cpu-hierarchy,4312-2.html",
+      "note": "Índice experimental normalizado entre suítes antigas de jogos por uma CPU em comum. Não é FPS medido por jogo; excluído do ranking."
+    },
+    "Core i5-12400": {
+      "kind": "legacy-normalized",
+      "rawGamingScore": 66.62,
+      "anchor": "Ryzen 5 7600X",
+      "anchorRawScore": 83.62,
+      "source": "https://www.tomshardware.com/reviews/cpu-hierarchy,4312-2.html",
+      "note": "Índice experimental normalizado entre suítes antigas de jogos por uma CPU em comum. Não é FPS medido por jogo; excluído do ranking."
+    },
+    "Ryzen 7 5700G*": {
+      "kind": "legacy-normalized",
+      "rawGamingScore": 76.61,
+      "anchor": "Core i7-12700K",
+      "anchorRawScore": 97.71,
+      "source": "https://www.tomshardware.com/reviews/cpu-hierarchy,4312-2.html",
+      "note": "Índice experimental normalizado entre suítes antigas de jogos por uma CPU em comum. Não é FPS medido por jogo; excluído do ranking."
+    },
+    "Core i3-10100": {
+      "kind": "legacy-normalized",
+      "rawGamingScore": 61.88,
+      "anchor": "Core i7-12700K",
+      "anchorRawScore": 97.71,
+      "source": "https://www.tomshardware.com/reviews/cpu-hierarchy,4312-2.html",
+      "note": "Índice experimental normalizado entre suítes antigas de jogos por uma CPU em comum. Não é FPS medido por jogo; excluído do ranking."
+    },
+    "Ryzen 7 4750G*": {
+      "kind": "legacy-normalized",
+      "rawGamingScore": 58.43,
+      "anchor": "Core i7-12700K",
+      "anchorRawScore": 97.71,
+      "source": "https://www.tomshardware.com/reviews/cpu-hierarchy,4312-2.html",
+      "note": "Índice experimental normalizado entre suítes antigas de jogos por uma CPU em comum. Não é FPS medido por jogo; excluído do ranking."
+    }
+  },
+  "revision": "coverage-2026-11-03"
 }

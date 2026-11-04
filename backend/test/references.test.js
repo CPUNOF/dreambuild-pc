@@ -4,6 +4,10 @@ import { readFileSync } from "node:fs";
 import { createHash } from "node:crypto";
 import { selectionIssues } from "../../shared/selectionCompatibility.js";
 import { performanceReport } from "../src/models/ReferencePerformance.js";
+import {
+  commonBenchmarks,
+  sameBenchmark,
+} from "../../shared/benchmarkComparison.js";
 import { UserDAO } from "../src/dao/UserDAO.js";
 import {
   verifyGoogleToken,
@@ -61,20 +65,79 @@ test("sockets LGA e AM são exatos; DDR não é intercambiável e dados crítico
   );
 });
 test("referências preservam resolução, fontes e preços; notebooks não herdam 1440p de desktop", () => {
-  assert.equal(data.games.length, 12);
+  assert.ok(data.games.length >= 40);
   assert.equal(data.games[0].results["RTX 4090"]["1080p"], 217.6);
   assert.equal(data.games[0].results["RTX 4090"]["1440p"], 192.3);
-  assert.equal(systems.length, 4);
+  assert.ok(systems.length >= 10);
   for (const system of systems) {
     assert.ok(Number.isSafeInteger(system.priceCents) && system.priceCents > 0);
-    assert.ok(system.offerUrl.startsWith("https://www.kabum.com.br/produto/"));
-    assert.ok(system.sellerName);
+    if (system.priceKind === "academic")
+      assert.equal(system.offerUrl, undefined);
+    else {
+      assert.ok(
+        system.offerUrl.startsWith("https://www.kabum.com.br/produto/"),
+      );
+      assert.ok(system.sellerName);
+    }
     assert.ok(Number.isFinite(Date.parse(system.priceCheckedAt)));
     assert.equal(typeof system.available, "boolean");
-    assert.ok(system.games.length >= 10);
-    if (system.type === "laptop")
+    assert.ok(system.games.length >= 8);
+    if (["acer-nitro-v15-51uz", "asus-tuf-a15-7735hs"].includes(system.id))
       assert.ok(system.games.every((g) => g.results["1440p"] === undefined));
   }
+});
+test("PCs e notebooks usam presets equivalentes e não copiam QHD ausente", () => {
+  const pc = systems.find((s) => s.id === "reference-desktop5060");
+  const laptop = systems.find((s) => s.id === "reference-laptop5060");
+  for (const resolution of ["1080p", "1440p"])
+    assert.ok(commonBenchmarks(pc.games, laptop.games, resolution).length >= 7);
+  assert.ok(commonBenchmarks(pc.games, systems[2].games, "1080p").length >= 5);
+  assert.equal(commonBenchmarks(pc.games, systems[2].games, "1440p").length, 0);
+  assert.equal(
+    sameBenchmark(
+      { id: "cyberpunk16", preset: "Ultra" },
+      laptop.games.find((g) => g.name.includes("Cyberpunk")),
+    ),
+    false,
+  );
+  assert.equal(
+    laptop.games.find((g) => g.name.includes("Cyberpunk")).results["1080p"],
+    90.8,
+  );
+  assert.equal(
+    systems.find((s) => s.id === "reference-desktop5050").games.length,
+    12,
+  );
+});
+test("GPU conhecida com CPU sem índice mostra somente referência, sem entrar no ranking", () => {
+  const parts = [
+    { category: "cpu", name: "CPU sem índice" },
+    { category: "gpu", name: "RTX 5050 8 GB" },
+    { category: "ram", name: "32 GB DDR5" },
+  ];
+  const report = performanceReport({ parts }, data);
+  assert.equal(report.kind, "gpu-reference");
+  assert.equal(report.rankEligible, false);
+  assert.equal(report.coveredGames, 12);
+  assert.equal(
+    report.games.find((g) => g.id === "toms-5050-cs2").referenceFps,
+    239.4,
+  );
+  assert.ok(report.notes[0].includes("não uma estimativa"));
+});
+test("fonte e CPU de teste acompanham cada resultado; índices antigos ficam fora do ranking", () => {
+  const parts = [
+    { category: "cpu", name: "Ryzen 5 7600" },
+    { category: "gpu", name: "RTX 5070 12 GB" },
+    { category: "ram", name: "DDR5" },
+  ];
+  const report = performanceReport({ parts }, data);
+  assert.equal(report.cpuProfile, "Ryzen 5 7600");
+  assert.equal(report.rankEligible, false);
+  const nbc = report.games.find((g) => g.id === "nbc-baldur-s-gate-3-2023");
+  assert.equal(nbc.testSetup.cpu, "Core i9-14900K");
+  assert.ok(nbc.source.includes("notebookcheck.net"));
+  assert.ok(report.cpuSource.includes("4312-2"));
 });
 test("estimativa identifica CPU/GPU e não inventa FPS de GPU desconhecida ou variante móvel", () => {
   const parts = [

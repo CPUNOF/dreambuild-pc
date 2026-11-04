@@ -16,6 +16,10 @@ import BattleAdvantages from "../components/BattleAdvantages.jsx";
 import BattleSetupPicker from "../components/BattleSetupPicker.jsx";
 import BattleGamesChart from "../components/BattleGamesChart.jsx";
 import "../combat.css";
+import {
+  commonBenchmarks,
+  sameBenchmark,
+} from "../../../shared/benchmarkComparison.js";
 const fpsLabel = (n) =>
   Number.isFinite(n)
     ? `${n.toLocaleString("pt-BR", { maximumFractionDigits: 1 })} FPS`
@@ -24,9 +28,11 @@ export function SystemPrice({ system }) {
   return (
     <div className="system-price">
       <small>
-        {system.available === false
-          ? "Preço exibido pela loja · sem estoque"
-          : "Valor consultado à vista"}
+        {system.priceKind === "academic"
+          ? "Preço acadêmico simulado"
+          : system.available === false
+            ? "Preço exibido pela loja · sem estoque"
+            : "Valor consultado à vista"}
       </small>
       <strong>
         {Number.isSafeInteger(system.priceCents)
@@ -117,6 +123,7 @@ export default function BattlePage({ showQuotaNotice = true }) {
       (old) => {
         const next = new URLSearchParams(old);
         next.set(side, id);
+        if (side === "a" || side === "b") next.delete("jogo");
         return next;
       },
       { replace: true },
@@ -159,31 +166,34 @@ export default function BattlePage({ showQuotaNotice = true }) {
             cpu: custom.configuration.cpu,
             gpu: custom.configuration.gpu,
             ram: custom.configuration.ram,
-            subtitle: "Seu PC · estimativa experimental",
+            subtitle:
+              custom.kind === "gpu-reference"
+                ? "Seu PC · referência da GPU na bancada da fonte"
+                : "Seu PC · estimativa experimental",
           },
         ]
       : []),
   ];
-  const a = available.find((s) => s.id === params.get("a")) || available[0],
-    b = available.find((s) => s.id === params.get("b")) || available[1];
-  const gameId = params.get("jogo") || a?.games?.[0]?.id;
+  const a = available.find((s) => s.id === params.get("a")) || available[0];
+  const suggestedOpponent = available
+    .filter((s) => s.id !== a?.id)
+    .sort(
+      (left, right) =>
+        commonBenchmarks(a?.games, right.games, resolution).length -
+        commonBenchmarks(a?.games, left.games, resolution).length,
+    )[0];
+  const b =
+    available.find((s) => s.id === params.get("b")) || suggestedOpponent;
+  const common = commonBenchmarks(a?.games, b?.games, resolution);
+  const gameId = params.get("jogo") || common[0]?.a.id || a?.games?.[0]?.id;
   const game = a?.games?.find((g) => g.id === gameId) || a?.games?.[0];
-  const other = b?.games?.find((g) => g.id === game?.id);
+  const other = b?.games?.find((g) => sameBenchmark(game, g));
   const comparable =
     game &&
     other &&
-    game.preset === other.preset &&
+    sameBenchmark(game, other) &&
     Number.isFinite(game.results[resolution]) &&
     Number.isFinite(other.results[resolution]);
-  const common = (a?.games || [])
-    .map((g) => ({ a: g, b: b?.games?.find((t) => t.id === g.id) }))
-    .filter(
-      (p) =>
-        p.b &&
-        p.a.preset === p.b.preset &&
-        Number.isFinite(p.a.results[resolution]) &&
-        Number.isFinite(p.b.results[resolution]),
-    );
   const averages = common.length
     ? [
         common.reduce((n, p) => n + p.a.results[resolution], 0) / common.length,
@@ -335,11 +345,13 @@ export default function BattlePage({ showQuotaNotice = true }) {
                             : "system-stock"
                         }
                       >
-                        {s.available === false
-                          ? "Sem estoque na consulta"
-                          : s.type === "custom"
-                            ? "Cotação das peças selecionadas"
-                            : "Disponível na consulta"}
+                        {s.priceKind === "academic"
+                          ? "Configuração de referência · valor simulado"
+                          : s.available === false
+                            ? "Sem estoque na consulta"
+                            : s.type === "custom"
+                              ? "Cotação das peças selecionadas"
+                              : "Disponível na consulta"}
                       </span>
                       {s.offerUrl && (
                         <a
@@ -601,12 +613,38 @@ export default function BattlePage({ showQuotaNotice = true }) {
                       )}
                   </>
                 ) : (
-                  <p>
-                    Não há cobertura comum nesta resolução. Nenhuma média entre
-                    grupos diferentes será exibida.
-                  </p>
+                  <div>
+                    <p>
+                      Não há cobertura comum nesta resolução. Nenhuma média
+                      entre grupos diferentes será exibida.
+                    </p>
+                    {resolution === "1440p" &&
+                    commonBenchmarks(a.games, b.games, "1080p").length > 0 ? (
+                      <button
+                        className="secondary-button"
+                        onClick={() => choose("res", "1080p")}
+                      >
+                        Comparar os testes em 1080p
+                      </button>
+                    ) : suggestedOpponent &&
+                      commonBenchmarks(
+                        a.games,
+                        suggestedOpponent.games,
+                        resolution,
+                      ).length > 0 ? (
+                      <button
+                        className="secondary-button"
+                        onClick={() => choose("b", suggestedOpponent.id)}
+                      >
+                        Escolher adversário com testes em comum
+                      </button>
+                    ) : null}
+                  </div>
                 )}
                 <p>
+                  {a.priceKind === "academic" || b.priceKind === "academic"
+                    ? "O custo deste duelo inclui preço acadêmico simulado. Não representa uma oferta comercial. "
+                    : ""}
                   Laboratórios, versões e cenas podem diferir. Uma referência ou
                   estimativa não comprova o desempenho do equipamento anunciado.
                 </p>

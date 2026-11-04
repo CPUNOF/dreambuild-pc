@@ -2,13 +2,20 @@ import { useEffect, useState } from "react";
 import { Play, Pause, Activity } from "lucide-react";
 import GamePreview from "./GamePreview.jsx";
 export default function FpsStage({ game, opponentGame, resolution }) {
-  const [playing, setPlaying] = useState(false),
+  const [reduced, setReduced] = useState(
+    () =>
+      window.matchMedia?.("(prefers-reduced-motion: reduce)").matches ?? false,
+  );
+  const [paused, setPaused] = useState(null),
     [tick, setTick] = useState(0);
-  const reduced =
-    typeof window !== "undefined" &&
-    window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const playing = paused === null ? !reduced : !paused;
   useEffect(() => {
-    setPlaying(false);
+    const preference = window.matchMedia?.("(prefers-reduced-motion: reduce)");
+    const update = () => setReduced(preference.matches);
+    preference?.addEventListener("change", update);
+    return () => preference?.removeEventListener("change", update);
+  }, []);
+  useEffect(() => {
     setTick(0);
   }, [game?.id, resolution]);
   useEffect(() => {
@@ -60,11 +67,7 @@ export default function FpsStage({ game, opponentGame, resolution }) {
         </svg>
       </div>
       <div className="fps-stage-controls">
-        <button
-          className="secondary-button"
-          onClick={() => setPlaying((v) => !v)}
-          disabled={!Number.isFinite(a)}
-        >
+        <button className="secondary-button" onClick={() => setPaused(playing)}>
           {playing ? <Pause size={15} /> : <Play size={15} />}{" "}
           {playing ? "Pausar prévia" : "Ver prévia animada"}
         </button>

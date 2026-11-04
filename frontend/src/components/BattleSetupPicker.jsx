@@ -148,6 +148,9 @@ export default function BattleSetupPicker({
                       : "Cotação incompleta"}
                   </strong>
                   <span>
+                    {system.priceKind === "academic"
+                      ? "Preço acadêmico simulado · "
+                      : ""}
                     {system.priceCheckedAt
                       ? consultationDate(system.priceCheckedAt)
                       : "Data da cotação não informada"}

@@ -29,7 +29,10 @@ export default function PerformanceBenchPage() {
       });
     return () => c.abort();
   }, [buildId, resolution, attempt, mode]);
-  const game = report?.games.find((g) => g.id === selected) || report?.games[0];
+  const covered =
+    report?.games.filter((g) => Number.isFinite(g.results?.[resolution])) || [];
+  const game =
+    covered.find((g) => g.id === selected) || covered[0] || report?.games[0];
   return (
     <section className="performance-bench-page">
       <div
@@ -62,8 +65,10 @@ export default function PerformanceBenchPage() {
             <Link to="/combate">Comparar com PCs prontos e notebooks →</Link>
           </header>
           <p className="battle-method-note">
-            Estimativa experimental baseada em testes publicados e índice médio
-            da CPU. Não é uma medição do seu computador. A animação de FPS é
+            {report?.kind === "gpu-reference"
+              ? "Referência da GPU na bancada da fonte; sua CPU não tem índice comparável. "
+              : "Estimativa experimental baseada em testes publicados e índice médio da CPU. "}{" "}
+            Não é uma medição do seu computador. A animação de FPS é
             ilustrativa.
           </p>
           <p>
@@ -115,7 +120,7 @@ export default function PerformanceBenchPage() {
                   ))}
                 </div>
                 <div className="battle-game-nav">
-                  {report.games.map((g) => (
+                  {(covered.length ? covered : report.games).map((g) => (
                     <button
                       key={g.id}
                       aria-pressed={game?.id === g.id}
@@ -142,10 +147,15 @@ export default function PerformanceBenchPage() {
                     {report.coveredGames} jogos.
                   </p>
                   <p>
-                    Bancada da fonte: {report.testSetup.cpu} ·{" "}
-                    {report.testSetup.ram}.
+                    Bancada da fonte:{" "}
+                    {(game?.testSetup || report.testSetup).cpu} ·{" "}
+                    {(game?.testSetup || report.testSetup).ram}.
                   </p>
-                  <a href={report.source} target="_blank" rel="noreferrer">
+                  <a
+                    href={game?.source || report.source}
+                    target="_blank"
+                    rel="noreferrer"
+                  >
                     Testes gráficos originais ↗
                   </a>{" "}
                   ·{" "}

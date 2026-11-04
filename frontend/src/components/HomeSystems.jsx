@@ -146,11 +146,15 @@ export default function HomeSystems() {
                     : "Preço não informado"}
                 </strong>
                 <small>
-                  Preço consultado{" "}
+                  {item.priceKind === "academic"
+                    ? "Preço acadêmico simulado · "
+                    : "Preço consultado "}
                   {item.priceCheckedAt
                     ? consultationDate(item.priceCheckedAt)
                     : "sem data"}
-                  . Pode mudar na loja.
+                  {item.priceKind === "academic"
+                    ? ". Não é oferta de loja."
+                    : ". Pode mudar na loja."}
                 </small>
                 <Link
                   className="secondary-button"
@@ -174,8 +178,9 @@ export default function HomeSystems() {
         </div>
       )}
       <p className="field-help">
-        Configurações de referência de lojas externas. FPS com fontes e
-        condições na página de combate; não são medições executadas neste site.
+        Configurações de referência de lojas e bancadas de teste. Valores
+        simulados identificados. FPS com fontes e condições na página de
+        combate; não são medições executadas neste site.
       </p>
     </section>
   );
