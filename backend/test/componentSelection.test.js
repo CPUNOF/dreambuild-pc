@@ -4,7 +4,7 @@ import {
   platformOf,
   psuFit,
 } from "../../frontend/src/data/componentSelection.js";
-test("seletor distingue chip de marca comercial e não recomenda fonte sem conectores/dimensões", () => {
+test("seletor distingue chip de marca comercial e não recomenda fonte sem potência/conectores", () => {
   assert.equal(
     platformOf({
       category: "gpu",
@@ -59,7 +59,7 @@ test("seletor distingue chip de marca comercial e não recomenda fonte sem conec
       analysis,
       parts,
     ).status,
-    "fail",
+    "pass",
   );
   assert.equal(
     psuFit({ hardware: { wattage: 1600 } }, null, parts).status,

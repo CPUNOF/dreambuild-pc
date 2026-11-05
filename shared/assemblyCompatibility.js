@@ -28,13 +28,8 @@ export function assemblyReadiness(product) {
       "lengthMm",
     ],
     storage: ["interface", "formFactor"],
-    psu: ["wattage", "connectors", "lengthMm"],
-    case: [
-      "formFactors",
-      "maxGpuLengthMm",
-      "maxCoolerHeightMm",
-      "maxPsuLengthMm",
-    ],
+    psu: ["wattage", "connectors"],
+    case: ["formFactors", "maxGpuLengthMm", "maxCoolerHeightMm"],
     cooler: [
       "supportedSockets",
       h.coolingType === "liquid" ? "radiatorSizeMm" : "heightMm",
@@ -74,7 +69,6 @@ export function assemblyIssues(components, quantities = {}) {
   }
   for (const [category, dimension, max, code, label] of [
     ["gpu", "lengthMm", "maxGpuLengthMm", "GPU_LENGTH", "placa de vídeo"],
-    ["psu", "lengthMm", "maxPsuLengthMm", "PSU_LENGTH", "fonte"],
     ["cooler", "heightMm", "maxCoolerHeightMm", "COOLER_HEIGHT", "cooler"],
   ]) {
     if (
@@ -189,7 +183,6 @@ export function issuesForCategory(issues, category) {
     CASE: ["mobo", "case"],
     CASE_FORMAT: ["mobo", "case"],
     GPU_LENGTH: ["gpu", "case"],
-    PSU_LENGTH: ["psu", "case"],
     COOLER_HEIGHT: ["cooler", "case", "cpu"],
     COOLER: ["cooler", "cpu"],
     COOLER_SOCKET: ["cooler", "cpu"],

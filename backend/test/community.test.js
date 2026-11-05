@@ -164,6 +164,19 @@ const record = (price = 100000) => ({
     ["1080p", "1440p"].map((r) => [r, performanceReport(analysis, data, r)]),
   ),
 });
+
+test("relatório ampliado pode ser gravado no Firestore mesmo sem Steam ID", () => {
+  const report = performanceReport(analysis, data);
+  const inspect = (value, path = "report") => {
+    assert.notEqual(value, undefined, `Campo não serializável: ${path}`);
+    if (Array.isArray(value))
+      value.forEach((v, i) => inspect(v, `${path}.${i}`));
+    else if (value && typeof value === "object")
+      for (const [k, v] of Object.entries(value)) inspect(v, `${path}.${k}`);
+  };
+  inspect(report);
+  assert.ok(report.games.some((g) => g.steamId === null));
+});
 test("base ampliada identifica GPUs exatas e preserva a coorte original; 8 GB não herda 16 GB", () => {
   assert.equal(Object.keys(data.gpuProfiles).length, 20);
   assert.equal(data.rankingGameIds.length, 10);

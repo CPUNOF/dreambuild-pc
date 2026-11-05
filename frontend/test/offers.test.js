@@ -145,7 +145,7 @@ describe("CT-UNI-10 seletor de peças (partições e tabela de decisão)", () =>
     expect(platformOf(product)).toBe(expected);
   });
 
-  // Tabela de decisão da fonte (PSU): potência × conectores × gabinete.
+  // Tabela de decisão da fonte (PSU): potência e conectores.
   const gpu = { category: "gpu", hardware: { powerConnector: "pcie8" } };
   const mobo = { category: "mobo", hardware: { powerConnector: "eps8" } };
   const enclosure = { category: "case", hardware: { maxPsuLengthMm: 180 } };
@@ -192,13 +192,19 @@ describe("CT-UNI-10 seletor de peças (partições e tabela de decisão)", () =>
       [gpu, mobo],
       "unknown",
     ],
-    ["sem gabinete para medir", psu(ok), 600, [gpu, mobo], "unknown"],
     [
-      "maior que o gabinete (181 > 180)",
+      "sem gabinete não bloqueia fonte adequada",
+      psu(ok),
+      600,
+      [gpu, mobo],
+      "pass",
+    ],
+    [
+      "comprimento não participa do bloqueio",
       psu({ ...ok, lengthMm: 181 }),
       600,
       [gpu, mobo, enclosure],
-      "fail",
+      "pass",
     ],
     [
       "cabe no limite (180 = 180)",

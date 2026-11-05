@@ -25,6 +25,11 @@ import {
   assemblyReadiness,
 } from "../../../shared/assemblyCompatibility.js";
 import { suggestAssembly } from "../../../shared/suggestAssembly.js";
+import {
+  assemblyDraftKey,
+  readAssemblyDraft,
+  writeAssemblyDraft,
+} from "../data/assemblyDraft.js";
 const categories = [
   "cpu",
   "mobo",
@@ -38,6 +43,8 @@ const categories = [
 
 export default function BuilderPage({ products, onCatalogRefresh }) {
   const auth = useAuth();
+  const draftKey = assemblyDraftKey(auth.user?.id);
+  const readyDraftKey = useRef(null);
   const cart = useCart();
   const [params] = useSearchParams();
   const navigate = useNavigate();
@@ -91,12 +98,14 @@ export default function BuilderPage({ products, onCatalogRefresh }) {
   }, [pickerCategory, partIds, payment, options]);
   useEffect(() => {
     let active = true;
+    readyDraftKey.current = null;
     setInitializing(true);
     setError(null);
     (async () => {
       const shared = publicId
         ? await apiRequest(`/community/builds/${publicId}`)
         : null;
+      const localDraft = readAssemblyDraft(sessionStorage, draftKey);
       const source = shared
         ? {
             partIds: Object.fromEntries(
@@ -112,9 +121,10 @@ export default function BuilderPage({ products, onCatalogRefresh }) {
               .slice(0, -1)
               .map((p) => p.id),
           }
-        : sourceId || resumeDraft
-          ? await apiRequest(sourceId ? `/builds/${sourceId}` : "/builds/draft")
-          : { partIds: {} };
+        : sourceId
+          ? await apiRequest(`/builds/${sourceId}`)
+          : localDraft ||
+            (resumeDraft ? await apiRequest("/builds/draft") : { partIds: {} });
       if (!active) return;
       const next = { ...source.partIds };
       let storageIds = source.storageIds || [];
@@ -152,6 +162,9 @@ export default function BuilderPage({ products, onCatalogRefresh }) {
         storageIds,
       });
       setName(source.name || "Meu próximo PC");
+      if (!params.get("etapa") && categories.includes(source.activeCategory))
+        setActiveCategory(source.activeCategory);
+      setPayment(source.paymentMethod || "pix");
       setSavedId(sourceId && !addedId && !publicId ? sourceId : null);
       setAnalysis(null);
       if (sourceId && !addedId && !publicId) {
@@ -173,12 +186,25 @@ export default function BuilderPage({ products, onCatalogRefresh }) {
         if (active) setError(failure.message);
       })
       .finally(() => {
-        if (active) setInitializing(false);
+        if (active) {
+          readyDraftKey.current = draftKey;
+          setInitializing(false);
+        }
       });
     return () => {
       active = false;
     };
-  }, [sourceId, addedId, resumeDraft, publicId]);
+  }, [sourceId, addedId, resumeDraft, publicId, draftKey]);
+  useEffect(() => {
+    if (initializing || readyDraftKey.current !== draftKey) return;
+    writeAssemblyDraft(sessionStorage, draftKey, {
+      partIds,
+      ...options,
+      name,
+      activeCategory,
+      paymentMethod: payment,
+    });
+  }, [draftKey, initializing, partIds, options, name, activeCategory, payment]);
   const selectedCount = Object.values(partIds).filter(Boolean).length;
   function change(category, id) {
     const candidate = products.find((p) => p.id === id);
@@ -297,6 +323,13 @@ export default function BuilderPage({ products, onCatalogRefresh }) {
         : { quantities: {}, storageIds: [] },
     );
     if (!platformOnly) {
+      writeAssemblyDraft(sessionStorage, draftKey, {
+        partIds: {},
+        quantities: {},
+        storageIds: [],
+        name: "Meu próximo PC",
+        activeCategory: "cpu",
+      });
       setName("Meu próximo PC");
       navigate("/montar", { replace: true });
     }

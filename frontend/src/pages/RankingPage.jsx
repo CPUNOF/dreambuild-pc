@@ -27,7 +27,9 @@ export default function RankingPage() {
         : "/community/gallery",
       { signal: c.signal },
     )
-      .then(setRows)
+      .then((items) => {
+        if (!c.signal.aborted) setRows(items);
+      })
       .catch((e) => {
         if (!c.signal.aborted) setError(e.message);
       })
@@ -74,14 +76,15 @@ export default function RankingPage() {
             Uma disputa mais justa.
           </strong>
           <span>1080p ou 1440p · mesmos 10 jogos · mesma versão da base.</span>
-          <Link to="/referencias-fps">Explorar os testes de 19 GPUs →</Link>
+          <Link to="/referencias-fps">Explorar a base de testes de GPUs →</Link>
         </div>
       </header>
       <p className="battle-method-note">
         Ranking de <strong>estimativas experimentais</strong>, não de medições
-        dos PCs. A média usa 10 jogos fixos; a ficha mostra 12. Custo-benefício
-        exige cotação PIX de todas as peças, sem frete. Datas e fontes ficam
-        públicas. Não usamos votos ou FPS enviados pelo participante.
+        dos PCs. A média usa 10 jogos fixos; a ficha detalha os testes
+        disponíveis. Custo-benefício exige preço de todas as peças, sem frete.
+        Preços acadêmicos são identificados. Datas e fontes ficam públicas. Não
+        usamos votos ou FPS enviados pelo participante.
       </p>
       <div className="community-controls">
         <div
@@ -187,7 +190,10 @@ export default function RankingPage() {
               </span>
               <img src={row.image} alt="" width={96} height={96} />
               <div className="ranking-build">
-                <span>{row.nickname}</span>
+                <span>
+                  {row.nickname}
+                  {row.demo ? " · DEMONSTRAÇÃO" : ""}
+                </span>
                 <h2>
                   <Link to={`/ranking/${row.id}`}>{row.title}</Link>
                 </h2>
@@ -205,6 +211,9 @@ export default function RankingPage() {
                 )}
               </div>
               <div className="ranking-cost">
+                {row.priceKind === "academic-simulated" && (
+                  <small>Preço acadêmico simulado</small>
+                )}
                 <strong>
                   {row.priceCents
                     ? money(row.priceCents)
@@ -227,7 +236,10 @@ export default function RankingPage() {
           {rows.map((row) => (
             <article key={row.id}>
               <img src={row.image} alt="" width={240} height={190} />
-              <small>POR {row.nickname}</small>
+              <small>
+                POR {row.nickname}
+                {row.demo ? " · DEMONSTRAÇÃO" : ""}
+              </small>
               <h2>
                 <Link to={`/ranking/${row.id}`}>{row.title}</Link>
               </h2>
@@ -237,11 +249,14 @@ export default function RankingPage() {
                 {row.configuration.gpu}
               </p>
               <strong>
-                {fpsLabel(row.performance[resolution].rankAverageFps)}
+                {fpsLabel(row.performance?.[resolution]?.rankAverageFps)}
               </strong>
               <span>
                 {row.priceCents ? money(row.priceCents) : "Cotação incompleta"}
               </span>
+              {row.priceKind === "academic-simulated" && (
+                <small>Preço acadêmico simulado</small>
+              )}
               <Link className="secondary-button" to={`/ranking/${row.id}`}>
                 Explorar montagem <ArrowUpRight size={16} />
               </Link>

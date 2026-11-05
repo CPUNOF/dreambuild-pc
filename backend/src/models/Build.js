@@ -241,13 +241,6 @@ export class Build {
         "COOLER_HEIGHT",
         "A altura do cooler excede o limite cadastrado do gabinete.",
       ],
-      [
-        "psu",
-        "lengthMm",
-        "maxPsuLengthMm",
-        "PSU_LENGTH",
-        "O comprimento da fonte excede o limite cadastrado do gabinete.",
-      ],
     ]) {
       if (category === "cooler" && h("cooler").coolingType === "liquid")
         continue;

@@ -61,7 +61,7 @@ export function performanceReport(analysis, dataset, resolution = "1080p") {
       id: game.id,
       name: game.name,
       preset: game.preset,
-      steamId: game.steamId,
+      steamId: game.steamId ?? null,
       source:
         game.resultSources?.[gpuProfile] || profile?.source || game.source,
       comparisonKey: game.comparisonKey || null,

@@ -58,6 +58,12 @@ export default function PublicBuildPage() {
         <img src={item.image} alt="" width={220} height={200} />
         <div>
           <p className="section-kicker">MONTADO POR {item.nickname}</p>
+          {item.demo && (
+            <p className="battle-method-note">
+              PC de demonstração · apelido fictício · configuração de exemplo
+              com estimativas calculadas pelo servidor.
+            </p>
+          )}
           <h1>{item.title}</h1>
           <p>
             Publicado em {consultationDate(item.publishedAt)} · {item.version}
@@ -66,8 +72,10 @@ export default function PublicBuildPage() {
             {item.priceCents ? money(item.priceCents) : "Cotação incompleta"}
           </strong>
           <small>
-            Snapshot de cotações PIX · frete não incluído · não é oferta de
-            venda deste PC.
+            {item.priceKind === "academic-simulated"
+              ? "Preço acadêmico simulado DreamBuild"
+              : "Snapshot de cotações PIX"}{" "}
+            · frete não incluído · não é oferta de venda deste PC.
           </small>
           <div className="community-actions">
             <ShareBuildCard item={item} resolution={resolution} />

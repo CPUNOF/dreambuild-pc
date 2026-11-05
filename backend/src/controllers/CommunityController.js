@@ -8,6 +8,7 @@ import {
 import { ApiResponseView } from "../views/ApiResponseView.js";
 import { AppError } from "../errors/AppError.js";
 import { pagination } from "../models/Pagination.js";
+import { inventoryQuote } from "../../../shared/inventory.js";
 export class CommunityController {
   constructor({ community, builds, components, references }) {
     Object.assign(this, { community, builds, components, references });
@@ -33,17 +34,39 @@ export class CommunityController {
         performanceReport(analysis, dataset, r),
       ]),
     );
-    const quotes = analysis.comparison.optimized.choices
-      .filter((c) => c.offer)
-      .map((c) => ({
-        componentId: c.componentId,
-        store: c.offer.store,
-        priceCents: c.offer.priceCents,
-        checkedAt: c.offer.checkedAt,
-        sourceUrl: c.offer.sourceUrl,
-        quantity: c.offer.quantity ?? 1,
-        unitPriceCents: c.offer.unitPriceCents ?? c.offer.priceCents,
-      }));
+    const store = inventoryQuote(
+      parts.map((p) => ({
+        componentId: p.id,
+        quantity: config.quantities[p.id] ?? 1,
+      })),
+      parts,
+    );
+    const ownPrices =
+      store.items.length > 0 &&
+      store.items.every(
+        (i) => Number.isSafeInteger(i.unitPriceCents) && i.unitPriceCents > 0,
+      );
+    const quotes = ownPrices
+      ? store.items.map((i) => ({
+          componentId: i.componentId,
+          store: "DreamBuild · preço acadêmico simulado",
+          priceCents: i.lineTotalCents,
+          checkedAt: i.component.inventory.updatedAt || null,
+          sourceUrl: `/produto/${i.component.slug}`,
+          quantity: i.quantity,
+          unitPriceCents: i.unitPriceCents,
+        }))
+      : analysis.comparison.optimized.choices
+          .filter((c) => c.offer)
+          .map((c) => ({
+            componentId: c.componentId,
+            store: c.offer.store,
+            priceCents: c.offer.priceCents,
+            checkedAt: c.offer.checkedAt,
+            sourceUrl: c.offer.sourceUrl,
+            quantity: c.offer.quantity ?? 1,
+            unitPriceCents: c.offer.unitPriceCents ?? c.offer.priceCents,
+          }));
     const data = {
       version: dataset.version,
       gameCount: dataset.rankingGameIds.length,
@@ -61,10 +84,17 @@ export class CommunityController {
         model: p.model || "",
         image: p.image,
       })),
-      priceCents: analysis.comparison.optimized.complete
-        ? analysis.comparison.optimized.totalCents
-        : null,
-      quotedAt: quotes.length ? quotes.map((q) => q.checkedAt).sort()[0] : null,
+      priceKind: ownPrices ? "academic-simulated" : "store-reference",
+      priceCents: ownPrices
+        ? store.knownSubtotalCents
+        : analysis.comparison.optimized.complete
+          ? analysis.comparison.optimized.totalCents
+          : null,
+      quotedAt:
+        quotes
+          .map((q) => q.checkedAt)
+          .filter(Boolean)
+          .sort()[0] || null,
       quotes,
       shippingIncluded: false,
       paymentMethod: "pix",

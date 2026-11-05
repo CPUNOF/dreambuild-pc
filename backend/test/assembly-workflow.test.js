@@ -34,16 +34,16 @@ for (const [name, cpu] of [
     assert.equal(result.compatible, true, JSON.stringify(result.notes));
     assert.equal(result.missingCategories.includes("cooler"), false);
   });
-test("escolher fonte antes do gabinete mantém opções elétricas e identifica dimensão pendente", () => {
+test("fonte é validada pela potência e conectores sem bloqueio por comprimento", () => {
   const parts = products.filter((p) =>
       ["kabum-283713", "kabum-941241", "kabum-1000741"].includes(p.id),
     ),
     psu = products.find((p) => p.id === "kabum-369658"),
     power = { recommendedPsuWatts: 550 };
-  assert.equal(psuFit(psu, power, parts).status, "unknown");
+  assert.equal(psuFit(psu, power, parts).status, "pass");
   assert.equal(
     psuFit(psu, power, parts, { allowPendingCase: true }).status,
-    "pending-case",
+    "pass",
   );
   assert.equal(
     psuFit(

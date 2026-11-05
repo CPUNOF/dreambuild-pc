@@ -117,6 +117,7 @@ export default function HomeSystems() {
                 <img
                   src={item.image}
                   alt={item.name}
+                  title={item.imageNote}
                   loading="lazy"
                   width="400"
                   height="300"

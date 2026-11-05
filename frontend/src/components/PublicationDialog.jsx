@@ -119,7 +119,10 @@ export default function PublicationDialog({ buildId, onClose }) {
                   : "Cotação incompleta"}
               </b>
               <small>
-                PIX · frete não incluído · preços com data na ficha pública
+                {data.priceKind === "academic-simulated"
+                  ? "Preço acadêmico simulado da DreamBuild · "
+                  : "PIX · "}
+                frete não incluído · preços com data na ficha pública
               </small>
             </div>
           </div>

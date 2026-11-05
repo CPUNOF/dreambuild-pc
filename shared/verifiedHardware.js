@@ -1,4 +1,41 @@
 const verified = {
+  "kabum-905395": {
+    hardware: {
+      formFactors: ["ATX", "microATX", "miniITX"],
+      maxGpuLengthMm: 305,
+      maxCoolerHeightMm: 160,
+      radiatorSizes: [120, 240],
+    },
+    source: "https://www.montechpc.com/x3-mesh",
+  },
+  "kabum-910418": {
+    hardware: {
+      formFactors: ["ATX", "microATX", "miniITX"],
+      maxGpuLengthMm: 420,
+      maxCoolerHeightMm: 178,
+      radiatorSizes: [120, 240, 280, 360],
+    },
+    source: "https://lian-li.com/product/vector-v100/",
+  },
+  "kabum-518940": {
+    hardware: {
+      formFactors: ["ATX", "microATX", "miniITX"],
+      maxGpuLengthMm: 395,
+      maxCoolerHeightMm: 175,
+      radiatorSizes: [240, 280, 360],
+    },
+    source: "https://www.redragon.com.br/wideload-pro",
+  },
+  "kabum-510871": {
+    hardware: {
+      formFactors: ["microATX", "miniITX"],
+      maxGpuLengthMm: 330,
+      maxCoolerHeightMm: 160,
+      radiatorSizes: [],
+    },
+    source:
+      "https://www.kabum.com.br/produto/510871/gabinete-gamer-rise-mode-x1-mid-tower-atx-lateral-em-vidro-temperado-sem-fans-preto-rm-x1-01-fb",
+  },
   "kabum-1003731": {
     hardware: {
       wattage: 1000,
@@ -43,6 +80,7 @@ export function withVerifiedHardware(product) {
     ...product,
     hardware: { ...product.hardware, ...record.hardware },
     technicalSource: record.source,
-    hardwareVerifiedAt: "2026-11-03",
+    hardwareVerifiedAt:
+      product.category === "case" ? "2026-11-05" : "2026-11-03",
   };
 }

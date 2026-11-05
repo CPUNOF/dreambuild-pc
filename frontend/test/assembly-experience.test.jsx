@@ -59,7 +59,7 @@ afterAll(() => {
 });
 
 describe("Bancada: seleção contextual e compatibilidade", () => {
-  test("fonte adequada aparece antes de escolher gabinete, com espaço ainda pendente", () => {
+  test("fonte adequada aparece antes de escolher gabinete sem exigir comprimento", () => {
     const source = product("Fonte 650 W", "psu", {
       wattage: 650,
       lengthMm: 140,
@@ -87,7 +87,7 @@ describe("Bancada: seleção contextual e compatibilidade", () => {
       screen.getByRole("button", { name: "Selecionar Fonte 650 W" }),
     ).toBeEnabled();
     expect(
-      screen.getByText(/Escolha um gabinete com espaço/),
+      screen.getByText(/Atende aos critérios cadastrados/),
     ).toBeInTheDocument();
   });
   test("RAM antiga com ficha incompleta não esvazia a lista de GPUs válidas", () => {
