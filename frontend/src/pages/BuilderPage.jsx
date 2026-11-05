@@ -9,6 +9,7 @@ import { money } from "../data/offers.js";
 import StoreComparison from "../components/StoreComparison.jsx";
 import AssemblyWorkspace from "../components/AssemblyWorkspace.jsx";
 import ComponentPicker from "../components/ComponentPicker.jsx";
+import PublicationDialog from "../components/PublicationDialog.jsx";
 import {
   buildResources,
   buildComponentIds,
@@ -80,6 +81,7 @@ export default function BuilderPage({ products, onCatalogRefresh }) {
   const [error, setError] = useState(null);
   const [message, setMessage] = useState(null);
   const [savedId, setSavedId] = useState(null);
+  const [publicationBuildId, setPublicationBuildId] = useState(null);
   const [pickerCategory, setPickerCategory] = useState(null),
     [powerPreview, setPowerPreview] = useState(null);
   useEffect(() => setCompletionError(null), [partIds, options]);
@@ -438,7 +440,8 @@ export default function BuilderPage({ products, onCatalogRefresh }) {
               body: { ...input, name },
             });
         setSavedId(saved.id);
-        navigate(`/bancada/${saved.id}`);
+        if (destination === "publish") setPublicationBuildId(saved.id);
+        else navigate(`/bancada/${saved.id}`);
       }
     } catch (failure) {
       setCompletionError(failure.message);
@@ -799,6 +802,12 @@ export default function BuilderPage({ products, onCatalogRefresh }) {
           </section>
           <StoreComparison comparison={analysis.comparison} />
         </>
+      )}
+      {publicationBuildId && (
+        <PublicationDialog
+          buildId={publicationBuildId}
+          onClose={() => setPublicationBuildId(null)}
+        />
       )}
       {pickerCategory && (
         <ComponentPicker

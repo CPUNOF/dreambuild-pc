@@ -12,6 +12,7 @@ export default function CartDrawer({
   error,
   notice,
   onUpdate,
+  onClear,
 }) {
   const dialog = useRef(null);
   useEffect(() => {
@@ -156,6 +157,16 @@ export default function CartDrawer({
         )}
       </div>
       <footer>
+        {!!cart?.items.length && (
+          <button
+            type="button"
+            className="text-button"
+            disabled={busy}
+            onClick={() => onClear().catch(() => {})}
+          >
+            <Trash2 size={15} /> Limpar carrinho
+          </button>
+        )}
         <div className="drawer-total">
           <span>Total simulado</span>
           <strong>

@@ -5,7 +5,7 @@ import { useCart } from "../context/CartContext.jsx";
 import { money } from "../data/offers.js";
 import ComponentFacts from "../components/ComponentFacts.jsx";
 export default function CartPage() {
-  const { cart, busy, error, update, refresh } = useCart();
+  const { cart, busy, error, update, refresh, clear } = useCart();
   useEffect(() => {
     refresh().catch(() => {});
   }, []);
@@ -24,9 +24,22 @@ export default function CartPage() {
           </h1>
           <p>Uma peça, um upgrade ou o PC inteiro. Você escolhe.</p>
         </div>
-        <Link className="text-button" to="/#produtos">
-          Continuar comprando
-        </Link>
+        <div className="cart-heading-actions">
+          {!!cart?.items.length && (
+            <button
+              type="button"
+              className="secondary-button"
+              disabled={busy}
+              onClick={() => clear().catch(() => {})}
+            >
+              <Trash2 size={16} />
+              Limpar carrinho
+            </button>
+          )}
+          <Link className="text-button" to="/#produtos">
+            Continuar comprando
+          </Link>
+        </div>
       </div>
       {error && (
         <p className="form-error" role="alert">

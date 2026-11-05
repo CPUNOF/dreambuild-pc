@@ -43,7 +43,7 @@ export function CartProvider({ children }) {
     const timer = setTimeout(() => setNotice(null), 5500);
     return () => clearTimeout(timer);
   }, [notice]);
-  async function update(id, quantity) {
+  async function mutate(path, options) {
     if (lock.current) return;
     lock.current = true;
     setBusy(true);
@@ -52,10 +52,7 @@ export function CartProvider({ children }) {
     const version = ++generation.current;
     setNotice(null);
     try {
-      const result = await apiRequest("/cart/items/" + id, {
-        method: quantity ? "PUT" : "DELETE",
-        ...(quantity ? { body: { quantity } } : {}),
-      });
+      const result = await apiRequest(path, options);
       if (version === generation.current) {
         setCart(result);
         return result;
@@ -68,6 +65,22 @@ export function CartProvider({ children }) {
       lock.current = false;
       setBusy(false);
     }
+  }
+  function update(id, quantity) {
+    return mutate("/cart/items/" + id, {
+      method: quantity ? "PUT" : "DELETE",
+      ...(quantity ? { body: { quantity } } : {}),
+    });
+  }
+  async function clear() {
+    if (lock.current || !cart?.items.length) return;
+    if (
+      !window.confirm(
+        "Remover todos os produtos do carrinho? Sua bancada e suas montagens salvas serão preservadas.",
+      )
+    )
+      return;
+    return mutate("/cart", { method: "DELETE" });
   }
   async function add(product) {
     const current =
@@ -92,6 +105,7 @@ export function CartProvider({ children }) {
         error,
         refresh,
         update,
+        clear,
         add,
         openDrawer: () => setDrawerOpen(true),
         dismissError: () => {
@@ -112,6 +126,7 @@ export function CartProvider({ children }) {
         error={error}
         notice={notice}
         onUpdate={update}
+        onClear={clear}
       />
       {toastError && (
         <aside className="cart-toast cart-toast-error" role="alert">

@@ -142,6 +142,10 @@ describe("Bancada: seleção contextual e compatibilidade", () => {
       screen.getByRole("button", { name: "Testar desempenho" }),
     );
     expect(finish).toHaveBeenLastCalledWith("benchmark");
+    await userEvent.click(
+      screen.getByRole("button", { name: "Publicar no ranking" }),
+    );
+    expect(finish).toHaveBeenLastCalledWith("publish");
   });
   test("RAM incompatível não aparece na lista da plataforma AM4", () => {
     render(

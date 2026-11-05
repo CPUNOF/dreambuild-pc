@@ -271,7 +271,7 @@ export default function AssemblyWorkspace({
             >
               <h3>Qual é o próximo passo do seu PC?</h3>
               <p>
-                Confira as peças no carrinho ou abra o benchmark da montagem. A
+                Envie ao carrinho, teste o desempenho ou publique no ranking. A
                 compatibilidade é verificada antes de continuar.
               </p>
               {completionError && (
@@ -295,6 +295,14 @@ export default function AssemblyWorkspace({
                   onClick={() => onFinish?.("benchmark")}
                 >
                   Testar desempenho
+                </button>
+                <button
+                  type="button"
+                  className="secondary-button"
+                  disabled={disabled}
+                  onClick={() => onFinish?.("publish")}
+                >
+                  Publicar no ranking
                 </button>
               </div>
             </section>
