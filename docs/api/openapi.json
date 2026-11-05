@@ -5933,6 +5933,305 @@
         ]
       }
     },
+    "/api/admin/community/demos": {
+      "get": {
+        "tags": [
+          "Administração"
+        ],
+        "summary": "Listar PCs de demonstração com paginação",
+        "description": "**Acesso:** somente ADMIN (sessão + CSRF).",
+        "operationId": "getAdminCommunityDemos",
+        "parameters": [
+          {
+            "in": "query",
+            "name": "limit",
+            "schema": {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 100,
+              "default": 20
+            }
+          },
+          {
+            "in": "query",
+            "name": "cursor",
+            "schema": {
+              "type": "string",
+              "pattern": "^[a-zA-Z0-9_-]{1,128}$"
+            },
+            "description": "Deixe vazio na 1ª página; depois use meta.nextCursor."
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Sucesso",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/Envelope"
+                    },
+                    {
+                      "type": "object",
+                      "properties": {
+                        "status": {
+                          "type": "string",
+                          "enum": [
+                            "success"
+                          ]
+                        },
+                        "data": {
+                          "type": "array",
+                          "items": {
+                            "type": "object"
+                          }
+                        },
+                        "meta": {
+                          "$ref": "#/components/schemas/PageMeta"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Parâmetros de consulta inválidos",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                },
+                "example": {
+                  "status": "error",
+                  "message": "Informe um e-mail válido.",
+                  "data": null,
+                  "errors": [],
+                  "meta": {}
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Sem sessão, sessão expirada ou conta desativada",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                },
+                "example": {
+                  "status": "error",
+                  "message": "Entre na sua conta para continuar.",
+                  "data": null,
+                  "errors": [],
+                  "meta": {}
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Perfil sem permissão (exige ADMIN)",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                },
+                "example": {
+                  "status": "error",
+                  "message": "Acesso permitido somente a administradores.",
+                  "data": null,
+                  "errors": [],
+                  "meta": {}
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Erro interno",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                },
+                "example": {
+                  "status": "error",
+                  "message": "Erro interno do servidor.",
+                  "data": null,
+                  "errors": [],
+                  "meta": {}
+                }
+              }
+            }
+          },
+          "503": {
+            "description": "Banco indisponível ou cota temporariamente excedida",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                },
+                "example": {
+                  "status": "error",
+                  "message": "O banco atingiu um limite temporário de consultas. Tente novamente quando a cota for renovada.",
+                  "data": null,
+                  "errors": [],
+                  "meta": {}
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "cookieAuth": []
+          }
+        ]
+      }
+    },
+    "/api/admin/community/demos/{id}": {
+      "delete": {
+        "tags": [
+          "Administração"
+        ],
+        "summary": "Remover um PC de demonstração da galeria e dos rankings",
+        "description": "**Acesso:** somente ADMIN (sessão + CSRF).\n\nExige sessão ADMIN e CSRF. A transação só aceita public.demo=true; preserva publicações e montagens privadas dos usuários.",
+        "operationId": "deleteAdminCommunityDemosBy_id",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "pattern": "^[a-zA-Z0-9_-]{1,128}$",
+              "example": "kabum-105015"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Sucesso",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Envelope"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Identificador inválido (use letras, números, - ou _)",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                },
+                "example": {
+                  "status": "error",
+                  "message": "Informe um e-mail válido.",
+                  "data": null,
+                  "errors": [],
+                  "meta": {}
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Sem sessão, sessão expirada ou conta desativada",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                },
+                "example": {
+                  "status": "error",
+                  "message": "Entre na sua conta para continuar.",
+                  "data": null,
+                  "errors": [],
+                  "meta": {}
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Perfil sem permissão (exige ADMIN); Token CSRF ausente ou inválido (errors[0].code = CSRF_INVALID)",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                },
+                "example": {
+                  "status": "error",
+                  "message": "Acesso permitido somente a administradores.",
+                  "data": null,
+                  "errors": [],
+                  "meta": {}
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "PC de demonstração não encontrado",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                },
+                "example": {
+                  "status": "error",
+                  "message": "PC de demonstração não encontrado.",
+                  "data": null,
+                  "errors": [],
+                  "meta": {}
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Erro interno",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                },
+                "example": {
+                  "status": "error",
+                  "message": "Erro interno do servidor.",
+                  "data": null,
+                  "errors": [],
+                  "meta": {}
+                }
+              }
+            }
+          },
+          "503": {
+            "description": "Banco indisponível ou cota temporariamente excedida",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                },
+                "example": {
+                  "status": "error",
+                  "message": "O banco atingiu um limite temporário de consultas. Tente novamente quando a cota for renovada.",
+                  "data": null,
+                  "errors": [],
+                  "meta": {}
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "cookieAuth": [],
+            "csrfToken": []
+          }
+        ]
+      }
+    },
     "/api/games": {
       "get": {
         "tags": [

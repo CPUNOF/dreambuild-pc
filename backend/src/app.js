@@ -288,6 +288,12 @@ export function createApp({
       : next(new AppError(400, "Identificador inválido.")),
   );
   app.use("/api/admin", requireAuth(userDAO), adminOnly, csrfProtection);
+  app.get("/api/admin/community/demos", (req, res) =>
+    community.demos(req, res),
+  );
+  app.delete("/api/admin/community/demos/:id", (req, res) =>
+    community.removeDemo(req, res),
+  );
   app.get("/api/admin/inventory", (req, res) => inventory.list(req, res, true));
   app.get("/api/admin/inventory/:id", (req, res) => inventory.detail(req, res));
   app.post("/api/admin/inventory/:id/movements", (req, res) =>

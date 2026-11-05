@@ -1205,6 +1205,31 @@ endpoint(
   "Contagens globais sem expor dados pessoais",
   { admin: true },
 );
+endpoint(
+  "/api/admin/community/demos",
+  "get",
+  "Administração",
+  "Listar PCs de demonstração com paginação",
+  {
+    admin: true,
+    parameters: page,
+    paged: true,
+    data: { type: "array", items: { type: "object" } },
+  },
+);
+endpoint(
+  "/api/admin/community/demos/{id}",
+  "delete",
+  "Administração",
+  "Remover um PC de demonstração da galeria e dos rankings",
+  {
+    admin: true,
+    parameters: [parameter],
+    errors: { 404: "PC de demonstração não encontrado" },
+    description:
+      "Exige sessão ADMIN e CSRF. A transação só aceita public.demo=true; preserva publicações e montagens privadas dos usuários.",
+  },
+);
 
 // ---- Simulação ------------------------------------------------------------
 endpoint("/api/games", "get", "Simulação", "Listar cenários didáticos", {

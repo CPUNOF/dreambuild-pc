@@ -277,6 +277,38 @@ test("Firestore DAO mantém uma publicação por montagem, separa resolução/ve
     false,
   );
 });
+test("admin retira somente demonstrações e remove todas as entradas sem tocar em montagens privadas", async () => {
+  const m = memoryFirestore(),
+    dao = new CommunityDAO(() => m.db);
+  const ordinary = await dao.publish("owner", "private", record());
+  const demo = await dao.publish("demo-owner", "demo", {
+    ...record(),
+    demo: true,
+  });
+  m.docs.set("builds/private", { userId: "owner", name: "Preservada" });
+  const opts = {
+    version: data.version,
+    resolution: "1080p",
+    sort: "performance",
+    limit: 20,
+  };
+  assert.equal((await dao.list(opts)).length, 2);
+  assert.deepEqual(
+    (await dao.demos()).items.map((p) => p.id),
+    [demo.id],
+  );
+  await assert.rejects(dao.remove("other", demo.id), { statusCode: 404 });
+  await assert.rejects(dao.remove(null, ordinary.id, { demoOnly: true }), {
+    statusCode: 404,
+  });
+  await dao.remove(null, demo.id, { demoOnly: true });
+  assert.equal((await dao.demos()).items.length, 0);
+  assert.equal(await dao.detail(demo.id), null);
+  assert.equal((await dao.list(opts)).length, 1);
+  assert.ok(m.docs.has("builds/private"));
+  assert.ok(![...m.docs.keys()].some((p) => p.endsWith("/" + demo.id)));
+});
+
 test("listagem privada pagina todos os registros; cota pública tem recuo sem repetir leituras", async () => {
   const m = memoryFirestore(),
     dao = new CommunityDAO(() => m.db);
@@ -481,6 +513,50 @@ test("rotas públicas dispensam sessão; publicação exige sessão, CSRF, propr
     const published = await a("/community/builds", "POST", body);
     assert.equal(published.status, "success");
     const id = published.data.id;
+    const demo = await dao.publish("demo-owner", "demo", {
+      ...record(),
+      demo: true,
+    });
+    assert.equal((await anonymous("/admin/community/demos")).code, 401);
+    assert.equal((await a("/admin/community/demos")).code, 403);
+    assert.equal(
+      (await a(`/admin/community/demos/${demo.id}`, "DELETE")).code,
+      403,
+    );
+    users.push({
+      id: "admin",
+      name: "Admin",
+      email: "admin@example.test",
+      role: "ADMIN",
+      passwordHash: hash,
+    });
+    const admin = client();
+    await admin("/auth/session");
+    await admin("/auth/login", "POST", {
+      email: "admin@example.test",
+      password: "teste-password-123",
+    });
+    assert.equal((await admin("/admin/community/demos")).data.length, 1);
+    assert.equal(
+      (
+        await admin(
+          `/admin/community/demos/${demo.id}`,
+          "DELETE",
+          undefined,
+          false,
+        )
+      ).code,
+      403,
+    );
+    assert.equal(
+      (await admin(`/admin/community/demos/${id}`, "DELETE")).code,
+      404,
+    );
+    assert.equal(
+      (await admin(`/admin/community/demos/${demo.id}`, "DELETE")).code,
+      200,
+    );
+    assert.equal((await anonymous(`/community/builds/${demo.id}`)).code, 404);
     const pub = await anonymous(`/community/builds/${id}`);
     assert.ok(!JSON.stringify(pub).includes("example.test"));
     assert.ok(!JSON.stringify(pub).includes("Nome privado"));

@@ -174,4 +174,20 @@ export class CommunityController {
       data: { id: req.params.id },
     });
   }
+  async demos(req, res) {
+    const options = pagination(req.query),
+      result = await this.community.demos(options);
+    return ApiResponseView.send(res, {
+      message: "PCs de demonstração da comunidade.",
+      data: result.items,
+      meta: { limit: options.limit, nextCursor: result.nextCursor },
+    });
+  }
+  async removeDemo(req, res) {
+    await this.community.remove(null, req.params.id, { demoOnly: true });
+    return ApiResponseView.send(res, {
+      message: "PC de demonstração retirado da galeria e dos rankings.",
+      data: { id: req.params.id },
+    });
+  }
 }

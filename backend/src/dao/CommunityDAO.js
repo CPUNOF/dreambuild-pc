@@ -135,12 +135,30 @@ export class CommunityDAO {
     this.cache.clear();
     return data;
   }
-  async remove(ownerId, id) {
+  async demos({ limit = 20, cursor = null } = {}) {
+    let query = this.database()
+      .collection("public_builds")
+      .where("public.demo", "==", true)
+      .orderBy(FieldPath.documentId());
+    if (cursor) query = query.startAfter(cursor);
+    const result = await query.limit(limit + 1).get();
+    const docs = result.docs.slice(0, limit);
+    return {
+      items: docs.map((d) => publicPublication({ id: d.id, ...d.data() })),
+      nextCursor: result.docs.length > limit ? docs.at(-1).id : null,
+    };
+  }
+  async remove(ownerId, id, { demoOnly = false } = {}) {
     const db = this.database(),
       root = db.collection("public_builds").doc(id);
     await db.runTransaction(async (tx) => {
       const snap = await tx.get(root);
-      if (!snap.exists || snap.data().ownerId !== ownerId)
+      if (
+        !snap.exists ||
+        (demoOnly
+          ? snap.data().public?.demo !== true
+          : snap.data().ownerId !== ownerId)
+      )
         throw new AppError(404, "Publicação não encontrada.");
       for (const profile of snap.data().profiles || [])
         tx.delete(

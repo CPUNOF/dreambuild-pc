@@ -96,6 +96,7 @@ export default function App() {
       "/admin": "Administração",
       "/admin/estoque": "Estoque de produtos",
       "/admin/jogos": "Cenários didáticos",
+      "/admin/comunidade": "PCs de demonstração",
       "/combate": "Combate de PCs e notebooks",
     };
     const routeTitle =
@@ -370,6 +371,14 @@ export default function App() {
             element={
               <RequireUser role="ADMIN">
                 <AdminGamesPage />
+              </RequireUser>
+            }
+          />
+          <Route
+            path="/admin/comunidade"
+            element={
+              <RequireUser role="ADMIN">
+                <MyPublicationsPage demoAdmin />
               </RequireUser>
             }
           />

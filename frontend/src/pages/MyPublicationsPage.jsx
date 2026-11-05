@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router";
 import { apiRequest, listRecords } from "../api/client.js";
-export default function MyPublicationsPage() {
+import AdminNav from "../components/AdminNav.jsx";
+export default function MyPublicationsPage({ demoAdmin = false }) {
   const [items, setItems] = useState(null),
     [error, setError] = useState(null),
     [busy, setBusy] = useState(null),
@@ -9,24 +10,35 @@ export default function MyPublicationsPage() {
   useEffect(() => {
     const c = new AbortController();
     setError(null);
-    listRecords("/community/my", c.signal)
-      .then(setItems)
+    setItems(null);
+    listRecords(
+      demoAdmin ? "/admin/community/demos" : "/community/my",
+      c.signal,
+    )
+      .then((data) => {
+        if (!c.signal.aborted) setItems(data);
+      })
       .catch((e) => {
         if (!c.signal.aborted) setError(e.message);
       });
     return () => c.abort();
-  }, [attempt]);
+  }, [attempt, demoAdmin]);
   async function remove(item) {
     if (
       !confirm(
-        `Retirar “${item.title}” do ranking e da galeria? Sua montagem privada será preservada.`,
+        `Retirar “${item.title}” do ranking e da galeria? ${demoAdmin ? "Somente este exemplo será removido. Montagens dos usuários serão preservadas." : "Sua montagem privada será preservada."}`,
       )
     )
       return;
     setBusy(item.id);
     setError(null);
     try {
-      await apiRequest(`/community/builds/${item.id}`, { method: "DELETE" });
+      await apiRequest(
+        demoAdmin
+          ? `/admin/community/demos/${item.id}`
+          : `/community/builds/${item.id}`,
+        { method: "DELETE" },
+      );
       setItems((old) => old.filter((t) => t.id !== item.id));
     } catch (e) {
       setError(e.message);
@@ -36,14 +48,22 @@ export default function MyPublicationsPage() {
   }
   return (
     <section className="records-page">
+      {demoAdmin && <AdminNav />}
       <div className="page-heading">
         <div>
-          <p>MINHA CONTA</p>
-          <h1>Minhas publicações</h1>
-          <p>Você decide quando retirar um PC da comunidade.</p>
+          <p>{demoAdmin ? "ADMINISTRAÇÃO / COMUNIDADE" : "MINHA CONTA"}</p>
+          <h1>{demoAdmin ? "PCs de demonstração" : "Minhas publicações"}</h1>
+          <p>
+            {demoAdmin
+              ? "Remova os exemplos que não quiser manter na galeria e nos rankings. Publicações dos usuários não aparecem nesta lista."
+              : "Você decide quando retirar um PC da comunidade."}
+          </p>
         </div>
-        <Link className="primary-button" to="/minhas-montagens">
-          Publicar outra montagem
+        <Link
+          className="primary-button"
+          to={demoAdmin ? "/ranking" : "/minhas-montagens"}
+        >
+          {demoAdmin ? "Ver comunidade" : "Publicar outra montagem"}
         </Link>
       </div>
       {error && (
@@ -75,10 +95,14 @@ export default function MyPublicationsPage() {
               </div>
               <button
                 className="secondary-button"
-                disabled={busy === item.id}
+                disabled={busy !== null}
                 onClick={() => remove(item)}
               >
-                {busy === item.id ? "Retirando..." : "Retirar publicação"}
+                {busy === item.id
+                  ? "Retirando..."
+                  : demoAdmin
+                    ? "Remover demonstração"
+                    : "Retirar publicação"}
               </button>
             </article>
           ))}
@@ -86,13 +110,21 @@ export default function MyPublicationsPage() {
       ) : (
         !error && (
           <div className="empty-state">
-            <h2>Você ainda não publicou um PC.</h2>
+            <h2>
+              {demoAdmin
+                ? "Nenhum PC de demonstração cadastrado."
+                : "Você ainda não publicou um PC."}
+            </h2>
             <p>
-              Suas montagens permanecem privadas até você confirmar uma
-              publicação.
+              {demoAdmin
+                ? "As publicações dos usuários continuam disponíveis na comunidade."
+                : "Suas montagens permanecem privadas até você confirmar uma publicação."}
             </p>
-            <Link className="primary-button" to="/minhas-montagens">
-              Ver minhas montagens
+            <Link
+              className="primary-button"
+              to={demoAdmin ? "/ranking" : "/minhas-montagens"}
+            >
+              {demoAdmin ? "Ver comunidade" : "Ver minhas montagens"}
             </Link>
           </div>
         )
