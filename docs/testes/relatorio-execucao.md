@@ -1,24 +1,29 @@
 # Relatório de execução dos testes
 
-Período: 31/10/2026 · Ambiente: Windows 11, Node 24.19.0, Cypress 15.21.1 (Electron headless), Vitest 5.0.5.
-O relatório com **cada caso executado** e o respectivo status é gerado automaticamente em [`reports/relatorio-regressao.md`](../../reports/relatorio-regressao.md). O log completo da execução final está em [`reports/evidencias/regressao-console.txt`](../../reports/evidencias/regressao-console.txt).
+Períodos: 31/10/2026 (R0–R6) e 09/11/2026 (R7, sobre o commit `3a4c511`, depois das entregas de 03 a 05/11).
+Ambientes: Windows 11 com Node 24.19.0, Cypress 15.21.1 (Electron headless) e Vitest 5.0.5 nas rodadas R0–R6; Linux com Node 22.23.4 e Vitest 5.0.5 nas suítes `node:test` e Vitest da R7.
+O relatório com **cada caso executado** e o respectivo status é gerado automaticamente em [`reports/relatorio-regressao.md`](../../reports/relatorio-regressao.md). O log completo da execução de 31/10 está em [`reports/evidencias/regressao-console.txt`](../../reports/evidencias/regressao-console.txt).
 
 ## 1. Resultado final
 
+Rodada R7 (09/11/2026):
+
 | Suíte | Ferramenta | Casos | Aprovados | Reprovados |
 | --- | --- | ---: | ---: | ---: |
-| Back-end — legado do projeto | node:test | 77 | 77 | 0 |
-| Back-end — unitários novos | node:test | 80 | 80 | 0 |
+| Back-end — suíte do projeto (77 da linha de base + 28 das entregas de 03 a 05/11) | node:test | 105 | 105 | 0 |
+| Back-end — unitários do trabalho | node:test | 80 | 80 | 0 |
 | Back-end — API REST (inclui cenários de jogos e contrato Swagger) | node:test | 79 | 79 | 0 |
 | Back-end — integração | node:test | 13 | 13 | 0 |
-| Front-end — unitários e componentes | Vitest | 60 | 60 | 0 |
-| Interface — Cypress com API simulada | Cypress | 30 | 30 | 0 |
-| Interface — fluxo completo sem mocks | Cypress | 4 | 4 | 0 |
-| **Total** | | **343** | **343** | **0** |
+| Front-end — unitários e componentes (60 + 25 novos) | Vitest | 85 | 85 | 0 |
+| Interface — Cypress com API simulada (30 + 5 novos) | Cypress | 35 | ⏳ pendente | ⏳ pendente |
+| Interface — fluxo completo sem mocks | Cypress | 4 | ⏳ pendente | ⏳ pendente |
+| **Total** | | **401** | **362 de 362 executados** | **0** |
 
-**Critério de saída atendido**: 100% executados, 0 reprovados, todos os defeitos de aplicação corrigidos e com teste de regressão, cobertura de linhas do back-end ≥ 80% (89,52%).
+As suítes Cypress da R7 ainda precisam ser executadas com `npm run test:regressao` no Windows: o ambiente Linux usado para a R7 não tem acesso ao download do binário do Cypress. Depois dessa execução, preencha as duas linhas marcadas com ⏳ e o total a partir de `reports/relatorio-regressao.md`, que é regenerado pelo próprio script.
 
-As duas suítes Cypress também foram executadas **com retries desligados** (`--config '{"retries":0}'`), com 30/30 e 4/4 aprovados. Ou seja, nenhum caso depende de uma nova tentativa para passar.
+**Critério de saída**: nas suítes já executadas da R7, 100% dos casos foram aprovados, sem nenhum reprovado, e a cobertura de linhas do back-end ficou ≥ 80% (90,68%). Todos os defeitos de aplicação estão corrigidos e cobertos por teste de regressão. O critério só fica totalmente atendido depois da execução Cypress pendente.
+
+Na R6 (31/10) as duas suítes Cypress também foram executadas **com retries desligados** (`--config '{"retries":0}'`), com 30/30 e 4/4 aprovados. Ou seja, nenhum caso dependia de uma nova tentativa para passar.
 
 ## 2. Rodadas de execução (regressão)
 
@@ -30,9 +35,10 @@ As duas suítes Cypress também foram executadas **com retries desligados** (`--
 | R3 — correções | DEF-01..04 corrigidos; mock alinhado (DEF-06) | Suítes afetadas | Todas ✔ | Casos `DEF-xx` passam a fazer parte da regressão |
 | R4 — regressão | `node scripts/regressao.mjs` | 335 | 335 ✔ | JUnit, cobertura e relatório gerados |
 | R5 — documentação Swagger | Revisão da especificação; **DEF-07** corrigido; 8 testes de contrato | 8 | 1ª verificação ✘ (56 violações) → 8 ✔ | `docs/api/openapi.json` exportado |
-| **R6 — regressão final** | `node scripts/regressao.mjs` | **343** | **343 ✔** | Inclui o contrato Swagger |
+| R6 — regressão de 31/10 | `node scripts/regressao.mjs` | 343 | 343 ✔ | Inclui o contrato Swagger |
+| **R7 — regressão após as entregas de 03 a 05/11** | `node scripts/regressao.mjs` (back-end e front-end) | **362** + 39 Cypress pendentes | **362 ✔** | Estoque próprio, endereço e frete, PC completo no carrinho, limpar carrinho, revisão da compra, Combate, galeria da comunidade; 53 casos novos de `node:test` e Vitest e 5 novos no Cypress |
 
-Na regressão final, os 77 testes legados foram executados de novo **depois** das correções em `Game.js`, `App.jsx` e `ProductCatalog.jsx`, sem nenhuma reprovação.
+Na R6, os 77 testes legados foram executados de novo **depois** das correções em `Game.js`, `App.jsx` e `ProductCatalog.jsx`, sem nenhuma reprovação. Na R7, os 343 casos da R6 que continuam existindo foram executados de novo junto com os novos, também sem reprovação nas suítes `node:test` e Vitest. A R7 não encontrou novos defeitos.
 
 ## 3. Defeitos
 
@@ -65,24 +71,29 @@ Separar o erro do teste do erro do sistema também faz parte da verificação:
 
 ## 5. Cobertura de código (bônus)
 
+Números da R7 (09/11/2026).
+
 ### 5.1 Back-end — `node --experimental-test-coverage` (arquivos de teste excluídos)
 
 | Métrica | Linhas | Ramos | Funções |
 | --- | ---: | ---: | ---: |
-| **Todos os arquivos** | **89,52%** | **89,09%** | **85,21%** |
+| **Todos os arquivos** | **90,68%** | **89,16%** | **87,05%** |
 
 | Camada | Destaques |
 | --- | --- |
-| Models | `User`, `Cart`, `Pagination`, `Component`, `DemoCard`, `Comparison`, `Game` e `ReferencePerformance`: **100%** de linhas · `Offer` 97,8% · `Upgrade` 98,6% · `Build` 87,0% · `ComponentInput` 88,8% |
+| Models | `User`, `Cart`, `Pagination`, `Component`, `DemoCard`, `Comparison`, `Game`, `ReferencePerformance`, `Delivery` e `Inventory`: **100%** de linhas · `Upgrade` 98,6% · `Offer` 97,8% · `CommunityBuild` 96,3% · `Simulation` 94,2% · `ComponentInput` 89,4% · `Build` 88,8% |
 | Middlewares | `authMiddleware` e `csrfMiddleware`: **100%** |
-| Controllers | `AdminController`, `CartController` e `GameController`: 100% · `OrderController` 98,8% · `ComponentController` 94,3% · `CommunityController` 89,1% · `AuthController` 83,6% · `BuildController` 79,2% · `ReferenceController` 29,1% |
-| DAOs (Firestore) | `CommunityDAO` 99,4% · `UserDAO` 73,8% · `ComponentDAO` 60,1% · `ReferenceDAO` 47,4% · `BuildDAO` 33,3% · `MetricsDAO` 33,3% · `GameDAO` 25,5% · `OrderDAO` 17,6% |
+| Controllers | `AddressController`, `AdminController`, `CartController` e `GameController`: 100% · `OrderController` 96,7% · `ComponentController` 94,3% · `CommunityController` 87,6% · `AuthController` 83,6% · `InventoryController` 82,9% · `BuildController` 80,8% · `ReferenceController` 29,1% |
+| Regras compartilhadas (`shared/`) | `delivery`, `inventory` e `verifiedHardware`: 100% · `suggestAssembly` 97,2% · `selectionCompatibility` 94,0% · `buildResources` 93,2% · `assemblyCompatibility` 75,7% |
+| DAOs (Firestore) | `CommunityDAO` 99,4% · `SessionDAO` 76,9% · `UserDAO` 76,6% · `InventoryDAO` 76,1% · `OrderDAO` 75,9% · `ComponentDAO` 63,1% · `ReferenceDAO` 47,4% · `BuildDAO` 33,3% · `MetricsDAO` 33,3% · `GameDAO` 25,5% |
 
 **Áreas não cobertas e justificativa**
 
-- **DAOs do Firestore (17–60%)**: são o adaptador para o banco externo. Testá-los exigiria um projeto Firebase com credenciais, ou o emulador do Firestore, que depende de Java e de configuração extra. A estratégia substitui esses DAOs por implementações em memória **com a mesma interface**, então tudo acima deles (rotas, sessão, CSRF, regras, controllers) é exercitado. A lógica de cache e de cota que fica dentro dos DAOs é coberta pelos testes legados com um banco falso (`CommunityDAO` 99%).
-- **`ReferenceController` (29%) e `BuildController` (79%)**: geram os relatórios de desempenho e a análise de montagem pela interface do montador. As regras de compatibilidade e de FPS estão nos models (`Build` 87%, `ReferencePerformance` 100%) e nos testes legados; faltam testes de rota para `/builds/:id/performance` e `/systems`.
+- **DAOs do Firestore (25–77%)**: são o adaptador para o banco externo. Testá-los exigiria um projeto Firebase com credenciais, ou o emulador do Firestore, que depende de Java e de configuração extra. A estratégia substitui esses DAOs por implementações em memória **com a mesma interface**, então tudo acima deles (rotas, sessão, CSRF, regras, controllers) é exercitado. A lógica de cache e de cota que fica dentro dos DAOs é coberta pelos testes legados com um banco falso (`CommunityDAO` 99%).
+- **`ReferenceController` (29%) e `BuildController` (81%)**: geram os relatórios de desempenho e a análise de montagem pela interface do montador. As regras de compatibilidade e de FPS estão nos models (`Build` 89%, `ReferencePerformance` 100%) e nos testes legados; faltam testes de rota para `/builds/:id/performance` e `/systems`.
 - **`AuthController` (84%)**: as linhas descobertas são os ramos de login e de vínculo com o Google, que dependem da verificação do token pelo Firebase Auth.
+- **`InventoryController` (83%)**: as linhas descobertas são a listagem paginada do histórico de movimentações pelo painel do administrador; as regras de movimentação estão em `Inventory` e `shared/inventory.js`, ambos com 100% de linhas.
+- **`shared/assemblyCompatibility.js` (76%)**: ramos de mensagens de incompatibilidade de combinações raras (portas e conectores específicos); os bloqueios principais são cobertos por CT-UNI-14 e CT-INT-09.
 - **`googleAuth.js` (77%), `firebaseConfig.js` (85%) e `sessionConfig.js` (88%)**: ramos que só rodam com credenciais de produção ou com `NODE_ENV=production`.
 
 ### 5.2 Front-end — `@vitest/coverage-v8` (módulos com testes unitários)
@@ -90,14 +101,14 @@ Separar o erro do teste do erro do sistema também faz parte da verificação:
 | Módulo | Linhas | Ramos | Funções |
 | --- | ---: | ---: | ---: |
 | `src/data/offers.js` | 100% | 100% | 100% |
-| `src/data/componentSelection.js` | 97,1% | 89,7% | 100% |
-| `src/components/ProductCatalog.jsx` | 96,4% | 85,3% | 92,9% |
-| `src/components/AddToCartButton.jsx` | 100% | 84,6% | 66,7% |
-| `src/api/client.js` | 73,9% | 69,4% | 72,7% |
-| `src/components/ProductPrice.jsx` | 22,2% | 15,0% | 16,7% |
-| **Total medido** | **81,6%** | **74,6%** | **78,3%** |
+| `src/components/AddToCartButton.jsx` | 100% | 83,3% | 66,7% |
+| `src/data/componentSelection.js` | 96,6% | 90,4% | 100% |
+| `src/components/ProductCatalog.jsx` | 96,6% | 86,1% | 93,3% |
+| `src/api/client.js` | 91,0% | 80,8% | 84,6% |
+| `src/components/ProductPrice.jsx` | 41,7% | 18,2% | 16,7% |
+| **Total medido** | **90,3%** | **79,2%** | **81,3%** |
 
-**Justificativa**: a cobertura unitária do front-end foi medida só nos módulos com lógica de regra (preço, busca, seleção e cliente HTTP). Páginas e componentes visuais (montador, combate, ranking, 3D) são verificados pelos 34 testes Cypress, que não geram cobertura de código. `ProductPrice.jsx` aparece baixo porque só o `CardPrice` é usado pelo catálogo; `ProductPriceSummary` e `StoreOffers` são exercitados pelo Cypress (CT-E2E-09 e 10). Em `client.js`, falta cobrir `listRecords`, usado nas telas de histórico (coberto pelo fluxo completo).
+**Justificativa**: a cobertura unitária do front-end foi medida só nos módulos com lógica de regra (preço, busca, seleção e cliente HTTP). Páginas e componentes visuais (montador, combate, ranking, 3D) são verificados pelos 34 testes Cypress, que não geram cobertura de código. `ProductPrice.jsx` aparece baixo porque só o `CardPrice` é usado pelo catálogo; `ProductPriceSummary` e `StoreOffers` são exercitados pelo Cypress (CT-E2E-09 e 10). Em `client.js` (91%), as linhas restantes são ramos de erro de rede pouco frequentes. Os testes de componente novos (CT-INT-09 a 16) exercitam páginas como a bancada, o Combate e a revisão da compra, mas essas páginas não entram na lista de arquivos medidos da configuração de cobertura.
 
 Relatórios navegáveis: `reports/coverage/frontend/index.html` e `reports/coverage/backend/lcov.info` (gerados pela regressão e publicados como artefato da CI).
 
@@ -112,4 +123,4 @@ Relatórios navegáveis: `reports/coverage/frontend/index.html` e `reports/cover
 
 ## 7. Conclusão
 
-A aplicação atende aos critérios de aceite dos requisitos avaliados. Os testes encontraram **quatro defeitos reais**: três no front-end (um de acessibilidade, de severidade média) e um de valor limite no back-end. Todos foram corrigidos e agora estão protegidos por casos de regressão. As regras de segurança mais sensíveis — CSRF, perfis de acesso, mensagem de login que não revela contas, isolamento de pedidos e erros sem detalhes internos — passaram em todos os cenários, inclusive nos de erro. A principal limitação é não exercitar o Firestore e o login com Google reais. Ela foi mitigada com DAOs em memória de mesma interface e com a trava que impede rodar o fluxo completo contra o banco real.
+A aplicação atende aos critérios de aceite dos requisitos avaliados, inclusive dos que entraram com as entregas de 03 a 05/11 (RF19 estoque próprio, RF20 endereço e frete, RF21 Combate e as ampliações de RF06, RF14 e RF15), que passaram em todos os casos `node:test` e Vitest da R7. Os testes encontraram **quatro defeitos reais**: três no front-end (um de acessibilidade, de severidade média) e um de valor limite no back-end. Todos foram corrigidos e agora estão protegidos por casos de regressão. As regras de segurança mais sensíveis — CSRF, perfis de acesso, mensagem de login que não revela contas, isolamento de pedidos e erros sem detalhes internos — passaram em todos os cenários, inclusive nos de erro. A principal limitação é não exercitar o Firestore e o login com Google reais. Ela foi mitigada com DAOs em memória de mesma interface e com a trava que impede rodar o fluxo completo contra o banco real.

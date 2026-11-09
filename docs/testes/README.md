@@ -33,9 +33,14 @@ Verificar se o DreamBuild PC atende às regras de negócio e de segurança imple
 | RF10 | CRUD administrativo de cenários de jogos | Unitário, API |
 | RF11 | Robustez e segurança da API (CSRF, limite de tentativas, envelope JSON, erros sem detalhes internos, CORS) | API |
 | RF12 | Ofertas e preços (melhor oferta, validação de ofertas do admin) | Unitário |
-| RF13 | Interface e acessibilidade (título da página, foco, tema, erros) | E2E |
+| RF13 | Interface e acessibilidade (título da página, foco, tema, erros, movimento reduzido) | E2E, componente |
 | RF18 | Documentação da API (Swagger/OpenAPI) | Contrato automatizado |
-| RF14–RF16 | Montador e compatibilidade, ranking da comunidade, telemetria em tempo real | Suíte legada do projeto (77 testes), mantida na regressão |
+| RF14 | Montador e compatibilidade | Unitário, componente, E2E, suíte do projeto |
+| RF15 | Ranking, galeria e publicação na comunidade | Componente, suíte do projeto |
+| RF16 | Telemetria em tempo real (WebSocket) | Suíte do projeto |
+| RF19 | Estoque próprio administrado pela loja | Integração (HTTP real) |
+| RF20 | Endereço de entrega e frete | Integração, componente, fluxo completo |
+| RF21 | Combate de desempenho | Componente, suíte do projeto |
 
 ### 2.2 Fora do escopo
 
@@ -51,20 +56,20 @@ Pirâmide de testes: muitos testes rápidos e isolados na base e poucos fluxos c
                 ┌───────────────────────────────┐
                 │ Fluxo completo FE + BE (4)    │  Cypress → Vite → Express real
                 ├───────────────────────────────┤
-                │ E2E com API simulada (30)     │  Cypress + cy.intercept
+                │ E2E com API simulada (35)     │  Cypress + cy.intercept
                 ├───────────────────────────────┤
-                │ API e integração (92 + 12)    │  HTTP real no Express; DAOs em memória
+                │ API e integração (92 + 37)    │  HTTP real no Express; DAOs em memória
                 ├───────────────────────────────┤
                 │ Unitários (80 + 48)           │  models e regras puras do front
                 └───────────────────────────────┘
-        + 77 testes legados do projeto, executados em toda regressão
+        + 105 testes da suíte do projeto (77 da linha de base), executados em toda regressão
 ```
 
 | Nível | Ferramenta | O que é exercitado | Onde |
 | --- | --- | --- | --- |
 | Unitário (back-end) | `node:test` | `User`, `Cart`, `Offer`, `Pagination`, `Game` isolados | `backend/test/unit/`, `backend/test/api/games.api.test.js` |
 | Unitário (front-end) | Vitest | `offers.js`, `componentSelection.js`, `api/client.js` (com `fetch` simulado) | `frontend/test/*.test.js` |
-| Integração (front-end) | Vitest + Testing Library | `ProductCatalog` + `ProductTile` + `CardPrice` + `AddToCartButton` renderizados juntos | `frontend/test/ProductCatalog.test.jsx` |
+| Integração (front-end) | Vitest + Testing Library | `ProductCatalog` + `ProductTile` + `CardPrice` + `AddToCartButton` renderizados juntos; bancada, Combate, revisão da compra, carrinho, busca com sugestões e galeria (CT-INT-09 a 16) | `frontend/test/*.test.jsx` |
 | API REST | `node:test` + `fetch` | Requisições HTTP reais ao Express: status, envelope, dados e erros | `backend/test/api/` |
 | Contrato da documentação | `node:test` + swagger-parser | Swagger válido, igual às rotas reais e com os códigos de status que a API devolve | `backend/test/api/openapi.contract.test.js` |
 | Integração (back-end) | `node:test` | Rotas → middlewares → controllers → models → DAO, incluindo sessão e CSRF | `backend/test/integration/` |
@@ -108,7 +113,7 @@ Pirâmide de testes: muitos testes rápidos e isolados na base e poucos fluxos c
 
 - 100% dos casos executados na regressão final, com 0 reprovados.
 - Todo defeito encontrado registrado em [defeitos.md](defeitos.md) com evidência, corrigido e coberto por um teste de regressão, ou justificado.
-- Cobertura de linhas do back-end ≥ 80% (obtido: 89,52%), com análise das áreas descobertas.
+- Cobertura de linhas do back-end ≥ 80% (obtido: 90,68% na R7; 89,52% na R6), com análise das áreas descobertas.
 - Relatório de regressão gerado (`reports/relatorio-regressao.md`) e execução na CI.
 
 ## 8. Limitações
@@ -118,7 +123,7 @@ Pirâmide de testes: muitos testes rápidos e isolados na base e poucos fluxos c
 | DAOs do Firestore (`OrderDAO`, `BuildDAO`, `GameDAO`, parte de `ComponentDAO` e `UserDAO`) não são exercitados contra o banco real | Exigem credenciais e um projeto Firebase; rodar testes ali criaria dados reais e consumiria a cota | DAOs em memória com a mesma interface; os testes legados `optimization`, `community` e `sessionDAO` cobrem a lógica com um banco falso; trava `X-DreamBuild-E2E` |
 | Login com Google não automatizado | Popup OAuth de terceiros não é automatizável com segurança e exige conta real | Regras de vínculo cobertas por `references.test.js` (12 casos); botão testado como desabilitado quando o provedor está desligado |
 | Animações, som e modelo 3D (Three.js) | Saída visual e sonora sem critério objetivo automatizável | Verificação manual durante a demonstração |
-| Montador de PC, Combate e Ranking pela interface | Telas extensas; a lógica de compatibilidade fica no servidor e já tem 21 testes legados | Regras cobertas em `build*.test.js`, `community.test.js` e `upgrade.test.js` |
+| Montador de PC, Combate e Ranking pela interface | Telas extensas; só parte delas é exercitada no navegador real (CT-E2E-35) | Testes de componente da bancada, do Combate e da galeria (CT-INT-09 a 11 e 14) e regras cobertas em `assembly-workflow`, `build*`, `community` e `upgrade` |
 | Testes do navegador só em Electron | O Cypress usa Electron por padrão; não houve matriz Chrome/Firefox/Safari | Dá para estender com `--browser` na CI |
 
 ## 9. Como executar

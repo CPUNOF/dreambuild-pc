@@ -13,7 +13,12 @@ Thumbs.db
 .secrets/
 *-firebase-adminsdk-*.json
 firebase-service-account.json
-/docs/
+# Anotações locais em docs/ ficam fora do repositório, mas a documentação
+# entregue (índice, API e testes VV&TS) continua versionada.
+/docs/*
+!/docs/README.md
+!/docs/api/
+!/docs/testes/
 
 **/cypress/screenshots/
 **/cypress/videos/

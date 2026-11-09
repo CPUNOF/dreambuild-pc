@@ -1,8 +1,8 @@
 # Especificação dos casos de teste
 
-Cada caso tem um identificador `CT-<nível>-<nº>` que aparece **no nome do teste automatizado**, então o resultado de cada um pode ser localizado nos relatórios JUnit e em [`reports/relatorio-regressao.md`](../../reports/relatorio-regressao.md). Casos com várias entradas (valor limite, partição, tabela de decisão) listam os dados em tabela; cada linha da tabela é um teste automatizado separado.
+Cada caso tem um identificador `CT-<nível>-<nº>`. Nos casos criados para o trabalho (até 31/10) o identificador aparece **no nome do teste automatizado**. Nos casos que vieram com as entregas de 03 a 05/11 (CT-UNI-14, CT-INT-06 a 16 e CT-E2E-31 a 35), a especificação indica o arquivo e o nome exato de cada teste. Assim, o resultado de qualquer caso pode ser localizado nos relatórios JUnit e em [`reports/relatorio-regressao.md`](../../reports/relatorio-regressao.md). Casos com várias entradas (valor limite, partição, tabela de decisão) listam os dados em tabela; cada linha da tabela é um teste automatizado separado.
 
-**Resultado obtido / status** referem-se à regressão final (31/10/2026, 343/343 aprovados). Quando a primeira execução revelou um defeito, isso aparece em *Histórico*.
+**Resultado obtido / status** referem-se à rodada R7 (09/11/2026), executada sobre o commit `3a4c511`: back-end 277/277 e front-end 85/85 aprovados. A situação das suítes Cypress (35 + 4 casos) está no [relatório de execução](relatorio-execucao.md#1-resultado-final). Quando a primeira execução revelou um defeito, isso aparece em *Histórico*.
 
 Prefixos: `UNI` unitário · `INT` integração · `API` API REST · `FUN` funcional caixa-preta · `E2E` interface com API simulada · `E2E-FULL` fluxo completo sem mocks.
 
@@ -109,6 +109,16 @@ Regra: **elegível ⇔ disponível ∧ forma de pagamento pedida ∧ preço inte
 | Resultado obtido / Status | Conforme esperado · **Aprovado** (18 testes) |
 | Histórico | 1ª execução: **reprovado** no caso "120 + espaço" → [DEF-04](defeitos.md#def-04) |
 
+### CT-UNI-14 — Fluxo de montagem e compatibilidade no servidor
+| Campo | Descrição |
+| --- | --- |
+| Funcionalidade / Técnica | RF14 · tabela de decisão (fonte × conectores × gabinete) + PE por plataforma (AM4, AM5, LGA1700) + transição de estado (erro antigo × erro novo) |
+| Arquivo | `backend/test/assembly-workflow.test.js` |
+| Pré-condições | Catálogo real `backend/data/publicCatalogSnapshot.json` com `withVerifiedHardware`; funções puras `suggestAssembly`, `Build` e `psuFit` |
+| Dados / passos | Sugestões automáticas para AM4, AM5 e Intel LGA1700 enviadas à análise do servidor; fonte sem comprimento informado; montagem com erro antigo de RAM e troca de outra categoria; fonte e gabinete incompatíveis na finalização |
+| Resultado esperado | Sugestões chegam completas à análise sem remover bloqueios; a fonte é validada por potência e conectores, sem bloqueio por comprimento; o erro antigo de RAM não impede trocar outra peça, mas um erro novo continua bloqueando; fonte e gabinete incompatíveis são rejeitados antes da finalização |
+| Resultado obtido / Status | Conforme esperado · **Aprovado** (6 testes) |
+
 ## 2. Testes unitários — front-end (Vitest)
 
 ### CT-UNI-09 — Melhor oferta, disponibilidade e formatação (`offers.js`)
@@ -190,9 +200,27 @@ Todos os 13 casos foram **aprovados**. A mesma regra também é validada pela in
 
 Histórico do CT-INT-05: na 1ª execução, os 3 casos de DEF-01 foram **reprovados** → [DEF-01](defeitos.md#def-01).
 
+### 4.1 Casos adicionados com as entregas de 03 a 05/11
+
+Estes casos acompanham as funcionalidades de estoque próprio, endereço e frete, PC completo no carrinho, revisão da compra, Combate e galeria da comunidade. Os do back-end usam o Express real com DAOs em memória (`startServer()` de `backend/test/support/memory.js`) ou o controller diretamente; os do front-end usam Vitest + Testing Library com `fetch` simulado.
+
+| ID | Integração verificada | Arquivo | Pré-condições / passos | Resultado esperado | Status |
+| --- | --- | --- | --- | --- | --- |
+| CT-INT-06 | Estoque próprio: rotas → `InventoryController` → `Inventory` → `InventoryDAO` → checkout | `backend/test/inventory.test.js` | Admin movimenta e recebe estoque; duas compras simultâneas da última unidade; pedido com item insuficiente ou preço alterado; inventário com versão antiga; cliente e visitante consultam e tentam escrever | Preço vem do estoque DreamBuild, sem presumir saldo de ofertas externas; movimentação valida inteiros, dinheiro, limite, versão e motivo; recebimento idempotente com responsável real; só **uma** das compras da última unidade é aprovada; sem baixa parcial nem recibo; versão antiga não sobrescreve venda; exclusão protege saldo positivo; estoque público sem histórico; escrita exige ADMIN e CSRF; frete adulterado rejeitado | Aprovado (9) |
+| CT-INT-07 | Endereço, frete e cartão: `AddressController` → `Delivery` → `UserDAO`; `DemoCard`; checkout | `backend/test/delivery.test.js` | Salvar endereços com campos longos e mais de um padrão; cartão digitado com validade errada e assinatura falsa; outro usuário lê endereços; alteração sem CSRF; repetir pedido com o mesmo frete | Endereço normalizado, campos limitados, um único padrão; cartão exige validade correta e assinatura do emissor fictício; endereços privados e persistidos na conta; alteração sem CSRF → 403; frete calculado no servidor e incluído na tentativa idempotente | Aprovado (4) |
+| CT-INT-08 | PC completo no carrinho: `CartController` + catálogo + `hardwareFacts` | `backend/test/cart-build.test.js` | Enviar uma montagem completa; repetir com a mesma chave; montagem incompleta; quantidade acima do limite; saldo insuficiente em uma peça | Todas as peças entram de uma vez e a repetição não duplica; montagem incompleta, quantidade acima do limite ou saldo insuficiente preservam o carrinho inteiro, sem adição parcial | Aprovado (3) |
+| CT-INT-09 | Bancada (montador) pela interface | `frontend/test/assembly-experience.test.jsx` | Renderizar a bancada com catálogo e escolhas por etapa | Fonte adequada aparece antes do gabinete; RAM antiga com ficha incompleta não esvazia a lista de GPUs; RAM incompatível com AM4 e socket LGA diferente ficam ocultos, com saída para trocar a plataforma; RAM respeita os 2 slots (VL); cooler incluído reduz as etapas; última etapa oferece carrinho e benchmark | Aprovado (7) |
+| CT-INT-10 | Sessão da bancada | `frontend/test/builder-session.test.jsx` | Selecionar peças, sair da bancada e voltar; depois pedir para zerar | Seleção mantida ao voltar; só é zerada quando solicitado (transição de estado) | Aprovado (1) |
+| CT-INT-11 | Combate de desempenho | `frontend/test/battle-experience.test.jsx` | Escolher jogo, prioridade e resolução; sem jogos equivalentes; copiar link | Referências do jogo escolhido; sem dados equivalentes não inventa barras nem vencedor; prioridade alterna entre maior FPS e menor preço; link compartilha só seleções públicas | Aprovado (4) |
+| CT-INT-12 | Limpar carrinho | `frontend/test/cart-clear.test.jsx` | Clicar em "Limpar carrinho" e confirmar | Exige confirmação, faz **uma** única exclusão e mostra o estado vazio | Aprovado (1) |
+| CT-INT-13 | Revisão da compra | `frontend/test/checkout-experience.test.jsx` | Abrir o pagamento; DreamCard expirado; endereço não salvo | Sem campos que o navegador preencha com cartões reais; cartão expirado não pode ser selecionado; endereço não salvo é usado sem gravar no servidor | Aprovado (3) |
+| CT-INT-14 | Galeria da comunidade | `frontend/test/community-regression.test.jsx` | Trocar classificação por galeria; publicação sem cobertura | Linha do ranking não é usada como relatório completo; galeria não fica em branco | Aprovado (2) |
+| CT-INT-15 | Prévia de jogo (acessibilidade) | `frontend/test/game-preview.test.jsx` | Prévia visível e fora da tela; trocar de jogo; `prefers-reduced-motion` | Inicia sem som quando visível e pausa fora da tela; respeita a pausa ao trocar; com movimento reduzido começa pausada e permite ativar | Aprovado (2) |
+| CT-INT-16 | Busca com sugestões locais | `frontend/test/store-search.test.jsx` | Campo vazio; termo com acento; Enter com e sem opção ativa; Escape; termo sem correspondência | Sugestões e atalhos sem rede; preço sem diferenciar acentos; Enter abre a opção ativa ou todos os resultados; Escape fecha e preserva o texto; sem correspondência não lista todo o catálogo (mesma classe do DEF-01) | Aprovado (5) |
+
 ## 5. Testes funcionais pela interface — Cypress com API simulada
 
-Pré-condições comuns: Vite rodando em `127.0.0.1:5173`; `cy.mockApi()` responde às rotas `/api/**` no mesmo formato do back-end, usando `cypress/fixtures/catalog.json` (5 produtos reais, 1 sem oferta). Rotas não previstas respondem 404 em vez de chegar ao servidor real.
+Pré-condições comuns: Vite rodando em `127.0.0.1:5173`; `cy.mockApi()` responde às rotas `/api/**` no mesmo formato do back-end, usando `cypress/fixtures/catalog.json` (5 produtos reais; 4 com estoque próprio DreamBuild, que define o preço de venda, e 1 sem estoque). Desde 03/11 o mock também responde a `GET /api/inventory`. O status de CT-E2E-01 a 30 e de CT-E2E-FULL-01 a 04 é o da R6 (31/10); a reexecução da R7 está pendente (ver [relatório de execução](relatorio-execucao.md#1-resultado-final)). Rotas não previstas respondem 404 em vez de chegar ao servidor real.
 
 | ID | Funcionalidade | Passos principais | Resultado esperado | Status |
 | --- | --- | --- | --- | --- |
@@ -227,17 +255,32 @@ Pré-condições comuns: Vite rodando em `127.0.0.1:5173`; `cy.mockApi()` respon
 | CT-E2E-29 | RF02 | cliente em `/admin` | "Acesso restrito"; sem link da documentação da API | Aprovado |
 | CT-E2E-30 | RF02 | admin em `/conta` | "Administrar catálogo" e link `/api-docs/` | Aprovado |
 
+Casos adicionados em 03 a 05/11 (`frontend/cypress/e2e/experiencia.cy.js`, bloco "Experiência de compra e montagem"):
+
+| ID | Funcionalidade | Teste (nome no Cypress) | Passos principais | Resultado esperado | Status |
+| --- | --- | --- | --- | --- | --- |
+| CT-E2E-31 | RF04 Sugestões | sugere produtos ao digitar e abre a opção escolhida pelo teclado | digitar "3200G" → seta para baixo → Enter | lista de sugestões com 1 opção; abre `/produto/kabum-102248` com "Ryzen 3 3200G" | ver [relatório](relatorio-execucao.md#1-resultado-final) |
+| CT-E2E-32 | RF04 Teclado | fecha sugestões com Escape e mantém a busca para ver todos os resultados | digitar "ssd" + Escape → Enter | lista fechada, texto preservado; 1 resultado na vitrine | ver relatório |
+| CT-E2E-33 | RF06 Carrinho lateral | permite revisar quantidade e remover a peça no carrinho lateral | adicionar pela página do produto → +1 → remover | `PUT {quantity:1}` e `{quantity:2}`; total R$ 799,98; `DELETE`; estado vazio; contador 0 | ver relatório |
+| CT-E2E-34 | RF05 Zoom da foto | amplia detalhes do produto e restaura o zoom | abrir a foto → ampliar → restaurar → fechar | 200% → 100%; lightbox fechado | ver relatório |
+| CT-E2E-35 | RF14 Compatibilidade | oculta a RAM DDR5 da CPU AM4 e permite trocar de plataforma | `/montar?adicionar=kabum-102248` → etapa Memória RAM | "Nenhuma peça compatível com estes filtros."; "Trocar plataforma" zera o progresso | ver relatório |
+
 ## 6. Fluxos completos — Cypress sem mocks
 
 Pré-condições: `backend/scripts/e2eServer.js` (Express real, DAOs em memória, porta 3001) e Vite com proxy `/api`. Trava: o teste só roda se `/api/health` responder com `X-DreamBuild-E2E: memory`. Arquivo: `frontend/cypress/fullstack/fluxo-completo.cy.js`.
 
 | ID | Fluxo | Passos | Resultado esperado | Status |
 | --- | --- | --- | --- | --- |
-| CT-E2E-FULL-01 | RF01→RF06→RF07→RF08 | cadastrar conta nova → buscar "Adata SU650" → adicionar → +1 no carrinho → revisão → gerar cartão → aceitar → confirmar → "Acompanhar meu pedido" → `/pedidos` | total R$ 719,98; modal "Seu pedido está confirmado!"; contador volta a 0; 1 pedido no histórico | Aprovado |
+| CT-E2E-FULL-01 | RF01→RF06→RF20→RF07→RF08 | cadastrar conta nova → buscar "Adata SU650" → adicionar → +1 no carrinho → revisão → adicionar endereço (exemplo fictício) → continuar para pagamento → gerar e usar DreamCard → revisar pedido → aceitar a simulação → confirmar → "Acompanhar meu pedido" → `/pedidos` | total do carrinho R$ 719,98; modal "Seu pedido está confirmado!"; contador volta a 0; 1 pedido no histórico | Aprovado |
 | CT-E2E-FULL-02 | RF01/RF02 | cadastrar → sair → login com senha errada → login correto → sair → `/pedidos` | 401 exibido; login; redireciona para `/entrar` | Aprovado · falhou antes da correção do DEF-03 |
 | CT-E2E-FULL-03 | RF01 | cadastrar e-mail já usado | mensagem do servidor "já possui cadastro" (409) | Aprovado |
 | CT-E2E-FULL-04 | RF02 | admin → `/admin`; cliente → `/admin` | admin entra; cliente vê "Acesso restrito" | Aprovado |
 
-## 7. Suíte legada do projeto (regressão)
+## 7. Suíte do projeto (regressão)
 
-Os 77 testes que já existiam no repositório rodam em toda regressão, sem alterações. A rastreabilidade por arquivo está em [rastreabilidade.md](rastreabilidade.md#suite-legada). Resultado final: **77/77 aprovados**.
+São os testes de `backend/test/*.test.js` escritos durante o desenvolvimento da aplicação. Os **77** que existiam em 31/10 (linha de base R0) continuam rodando em toda regressão. Com as entregas de 03 a 05/11, a suíte passou a ter **105** testes:
+
+- 22 em arquivos novos, especificados acima como CT-UNI-14 (`assembly-workflow`, 6), CT-INT-06 (`inventory`, 9), CT-INT-07 (`delivery`, 4) e CT-INT-08 (`cart-build`, 3);
+- 6 acrescentados a arquivos existentes: `admin.test.js` (+1, tamanhos de radiador), `community.test.js` (+2: relatório ampliado gravado sem Steam ID; admin retira só as demonstrações, sem tocar em montagens privadas) e `references.test.js` (+3: presets equivalentes entre PC e notebook; GPU com CPU sem índice fica fora do ranking; fonte e CPU de teste acompanham cada resultado).
+
+A rastreabilidade por arquivo está em [rastreabilidade.md](rastreabilidade.md#suite-legada). Resultado na R7: **105/105 aprovados**.
